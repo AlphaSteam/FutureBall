@@ -9,6 +9,7 @@ var velocity = Vector2()
 var on_ground = false
 var dash = false
 var speed = 120
+var cooldown = false
 
 func _physics_process(delta):
 	
@@ -25,7 +26,7 @@ func _physics_process(delta):
 		velocity.x = 0
 		
 	
-	if Input.is_key_pressed(KEY_W):
+	if Input.is_action_just_pressed("Up"):
 		if on_ground == true:
 			velocity.y = JUMP_POWER
 			on_ground = false
@@ -45,12 +46,21 @@ func _physics_process(delta):
 
 
 func _dash():
-	speed = 400
-	dash = true
-	$Timer.start()
+	if(cooldown == false):
+		speed = 400
+		dash = true
+		cooldown = true
+		$"Dash Time".start()
 
 
 
-func _on_Timer_timeout():
+func _on_Dash_Time_timeout():
 	speed = DEFSPEED
 	dash = false
+	
+	print("dash time")
+	$"Dash Cooldown".start()
+
+func _on_Dash_Cooldown_timeout():
+	cooldown = false
+	print("test")
