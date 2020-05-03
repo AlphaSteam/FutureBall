@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Ball/Scripts/ball_dead.gd" type="Script" id=1]
+[ext_resource path="res://Ball/Scripts/Bola.gd" type="Script" id=2]
+[ext_resource path="res://Ball/ball_dead.png" type="Texture" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 4.14329
+
+[node name="Bola" type="RigidBody2D"]
+script = ExtResource( 2 )
+
+[node name="Physics Box" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.113, 0.113 )
+texture = ExtResource( 3 )
+script = ExtResource( 1 )
+[connection signal="body_entered" from="." to="." method="_on_Bola_body_entered"]
