@@ -39,7 +39,7 @@ func _ready():
 
 
 #Señal de que la bola tocó algo
-func _on_Bola_body_entered(body):
+func _on_Bola_body_entered(body: Node):
 	if live_ball == true: #Si la bola esta viva
 		print('toque algo')
 		live_ball = false
@@ -71,7 +71,7 @@ func _on_Area2D_body_entered(body):
 			picked = false
 			print("golpeó y murió")
 		elif live_ball == false and not picked:
-			pick()
+			call_deferred("pick")
 			print("agarra la bola")
 
 func _pickup(picked):
@@ -132,6 +132,7 @@ func _physics_process(delta):
 ##			apply_impulse(Vector2(), dir * 5)
 #			live_ball = true
 #			picked = false
+
 
 
 
