@@ -19,6 +19,10 @@ config/name="platformer"
 run/main_scene="res://MainStage.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Globals="*res://MainStage.gd"
+
 [display]
 
 window/size/width=320
