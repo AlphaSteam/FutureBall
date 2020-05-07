@@ -1,4 +1,16 @@
 CC5408-1 Taller de Diseño y Desarrollo de Videojuegos 2020, Otoño
 
 
-Branch para probar la bola
+Versión 0.1
+Updates:
++ FallingPlatforms
++ Player Movements
++ Ball
++ Tilemap scenario
++ Player animation
+
+Pending:
++ Simple menu
++ Respawn 
++ Enemies
++ Platform display
