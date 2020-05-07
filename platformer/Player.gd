@@ -18,8 +18,8 @@ var speed = DEFSPEED
 var friction = DEFFRICTION
 var acceleration = DEFACC
 var cooldown = false
-var jumps_available = INITJUMPS   # Do I have jumps available?
-var dashes_available = INITDASHES # Do I have dashes available?
+var jumps_available = INITJUMPS
+var dashes_available = INITDASHES # Do I have jumps available?
 var end_jump = false
 var end_jump_after = false
 
