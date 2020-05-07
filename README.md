@@ -1,7 +1,8 @@
 CC5408-1 Taller de Diseño y Desarrollo de Videojuegos 2020, Otoño
 
 
-Versión 0.1
+Version 0.1 
+
 Updates:
 + FallingPlatforms
 + Player Movements
