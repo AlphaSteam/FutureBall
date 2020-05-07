@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tiles/platformPack_tile001.png" type="Texture" id=2]
@@ -7,10 +7,32 @@
 [ext_resource path="res://Backgrounds/backgroundForest.png" type="Texture" id=5]
 [ext_resource path="res://Tiles/platformPack_tile007.png" type="Texture" id=6]
 
+[sub_resource type="GDScript" id=2]
+script/source = "extends Node2D
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	if Input.is_action_just_pressed(\"Toggle full screen\"):
+		 OS.window_fullscreen = !OS.window_fullscreen
+
+"
+
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )
 
 [node name="MainStage" type="Node2D"]
+script = SubResource( 2 )
 __meta__ = {
 "_edit_vertical_guides_": [ 0.0, 160.0 ]
 }
@@ -23,7 +45,7 @@ wait_time = 0.1
 one_shot = true
 
 [node name="Dash Cooldown" type="Timer" parent="Player"]
-wait_time = 0.657
+wait_time = 0.3
 one_shot = true
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -32,7 +54,7 @@ one_shot = true
 motion_mirroring = Vector2( 160, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 80, 88 )
+position = Vector2( 79.416, 85.6641 )
 scale = Vector2( 0.15625, 0.179688 )
 texture = ExtResource( 5 )
 
@@ -182,7 +204,7 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="Ground20" type="Sprite" parent="Node"]
-position = Vector2( 232, 171.747 )
+position = Vector2( 231.124, 171.747 )
 scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 2 )
 __meta__ = {

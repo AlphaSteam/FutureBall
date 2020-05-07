@@ -1,0 +1,12 @@
+[gd_scene format=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -37.5243
+margin_top = -18.2484
+margin_right = -37.5243
+margin_bottom = -18.2484
+__meta__ = {
+"_edit_use_anchors_": false
+}

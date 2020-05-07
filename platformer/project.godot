@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="platformer"
+config/name="DodgeBall"
 run/main_scene="res://MainStage.tscn"
 config/icon="res://icon.png"
 
@@ -48,6 +48,11 @@ Dash={
 Up={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":87,"unicode":0,"echo":false,"script":null)
+ ]
+}
+"Toggle full screen"={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":true,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777221,"unicode":0,"echo":false,"script":null)
  ]
 }
 
