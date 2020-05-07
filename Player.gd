@@ -31,17 +31,21 @@ var end_jump_after = false
 func _physics_process(delta):
 	var input_velocity = Vector2.ZERO
 	if Input.is_action_pressed("Right"):
+		$AnimatedSprite.play("run")
+		$AnimatedSprite.flip_h = false
 		input_velocity.x += 1
 		if Input.is_action_just_pressed("Dash"):
 			
 			_dash()
 			
-	if Input.is_action_pressed("Left"):
+	elif Input.is_action_pressed("Left"):
+		$AnimatedSprite.play("run")
+		$AnimatedSprite.flip_h = true
 		input_velocity.x -= 1
 		if Input.is_action_just_pressed("Dash"):
 			_dash()
 	
-	if Input.is_action_just_pressed("Up"):
+	elif Input.is_action_just_pressed("Up"):
 		
 		if jumps_available > 0:
 			
@@ -53,6 +57,9 @@ func _physics_process(delta):
 			end_jump = false
 			
 			$"Minimun jump duration".start()
+
+	else:
+		$AnimatedSprite.play("idle")
 
 	if(dash == false):		
 		velocity.y += GRAVITY
@@ -77,6 +84,10 @@ func _physics_process(delta):
 			speed = DEFSPEED
 		
 	else:
+		if velocity.y < 0:
+			$AnimatedSprite.play("jump")
+		else:
+			$AnimatedSprite.play("fall")
 		on_ground = false
 		if(dash == false):
 			speed=4.0*DEFSPEED/6
@@ -92,6 +103,12 @@ func _physics_process(delta):
 		jumps_available = INITJUMPS
 		dashes_available = INITDASHES
 	velocity = move_and_slide(velocity,FLOOR)
+	
+	# Plataforma con la que estoy colisionando
+	for i in get_slide_count():
+		var collision = get_slide_collision(i)
+		if collision.collider.has_method("collide_with"):
+			collision.collider.collide_with(collision,self)
 	
 	
 func _end_jump():
@@ -133,4 +150,4 @@ func _on_Minimun_jump_duration_timeout():
 
 
 func _on_New_jump_threshold_timeout():
-	jumps_available = 0
+		jumps_available = 0

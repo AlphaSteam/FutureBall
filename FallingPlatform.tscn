@@ -37,3 +37,5 @@ shape = SubResource( 1 )
 anims/shake = SubResource( 2 )
 
 [node name="ResetTimer" type="Timer" parent="."]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+[connection signal="timeout" from="ResetTimer" to="." method="_on_ResetTimer_timeout"]
