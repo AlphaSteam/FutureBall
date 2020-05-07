@@ -48,6 +48,10 @@ one_shot = true
 wait_time = 0.3
 one_shot = true
 
+[node name="Minimun jump duration" type="Timer" parent="Player"]
+wait_time = 0.15
+one_shot = true
+
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -399,7 +403,7 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="Ground17" type="Sprite" parent="Node"]
-position = Vector2( 40, 91.7473 )
+position = Vector2( 38.3823, 94.012 )
 scale = Vector2( 0.25, 0.25 )
 texture = ExtResource( 4 )
 __meta__ = {
@@ -409,6 +413,32 @@ __meta__ = {
 [node name="StaticBody2D" type="StaticBody2D" parent="Node/Ground17"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Ground17/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Ground31" type="Sprite" parent="Node"]
+position = Vector2( 11.9894, 155.888 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node/Ground31"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Ground31/StaticBody2D"]
+shape = SubResource( 1 )
+
+[node name="Ground32" type="Sprite" parent="Node"]
+position = Vector2( 57.4438, 155.538 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node/Ground32"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node/Ground32/StaticBody2D"]
 shape = SubResource( 1 )
 
 [node name="Ground05" type="Sprite" parent="Node"]
@@ -464,3 +494,4 @@ __meta__ = {
 shape = SubResource( 1 )
 [connection signal="timeout" from="Player/Dash Time" to="Player" method="_on_Dash_Time_timeout"]
 [connection signal="timeout" from="Player/Dash Cooldown" to="Player" method="_on_Dash_Cooldown_timeout"]
+[connection signal="timeout" from="Player/Minimun jump duration" to="Player" method="_on_Minimun_jump_duration_timeout"]
