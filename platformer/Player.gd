@@ -6,7 +6,6 @@ const DEFACC = 0.8
 const GRAVITY = 10
 const JUMP_POWER = -250
 const FLOOR = Vector2(0,-1)
-const DRAG = 10
 const INITJUMPS =3
 const INITDASHES =2
 
@@ -44,8 +43,6 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("Up"):
 		
 		if jumps_available > 0:
-			
-			#if on_ground == true:
 			jumps_available = jumps_available - 1
 			
 			velocity.y = JUMP_POWER
