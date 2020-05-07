@@ -22,7 +22,7 @@ var jumps_available = INITJUMPS   # Do I have jumps available?
 var dashes_available = INITDASHES # Do I have dashes available?
 var end_jump = false
 var end_jump_after = false
-
+var idle = true
 
 
 	
@@ -30,18 +30,24 @@ var end_jump_after = false
 func _physics_process(delta):
 	var input_velocity = Vector2.ZERO
 	if Input.is_action_pressed("Right"):
+		idle = false
+		$AnimatedSprite.play("run")
+		$AnimatedSprite.flip_h = false
 		input_velocity.x += 1
 		if Input.is_action_just_pressed("Dash"):
 			
 			_dash()
 			
 	if Input.is_action_pressed("Left"):
+		idle = false
+		$AnimatedSprite.play("run")
+		$AnimatedSprite.flip_h = true
 		input_velocity.x -= 1
 		if Input.is_action_just_pressed("Dash"):
 			_dash()
 	
 	if Input.is_action_just_pressed("Up"):
-		
+		idle = false
 		if jumps_available > 0:
 			jumps_available = jumps_available - 1
 			
@@ -50,7 +56,8 @@ func _physics_process(delta):
 			end_jump = false
 			
 			$"Minimun jump duration".start()
-
+	if !Input.is_action_pressed("Up") && !Input.is_action_pressed("Left") && !Input.is_action_pressed("Right"): 
+		$AnimatedSprite.play("idle")
 	if(dash == false):		
 		velocity.y += GRAVITY
 	
@@ -74,6 +81,10 @@ func _physics_process(delta):
 			speed = DEFSPEED
 		
 	else:
+		if velocity.y < 0:
+			$AnimatedSprite.play("jump")
+		else:
+			$AnimatedSprite.play("fall")
 		on_ground = false
 		if(dash == false):
 			speed=4.0*DEFSPEED/6
@@ -89,10 +100,13 @@ func _physics_process(delta):
 		jumps_available = INITJUMPS
 		dashes_available = INITDASHES
 	velocity = move_and_slide(velocity,FLOOR)
-	
+	for i in get_slide_count():
+		var collision = get_slide_collision(i)
+		if collision.collider.has_method("collide_with"):
+			collision.collider.collide_with(collision,self)
 	
 func _end_jump():
-	velocity.y += - velocity.y*0.98#Jump Height depends on how long you will hold key
+	velocity.y += - velocity.y*0.9 # It doesn't kill the momentum inmediatly
 	end_jump = false
 
 
