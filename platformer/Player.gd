@@ -8,6 +8,8 @@ const JUMP_POWER = -250
 const FLOOR = Vector2(0,-1)
 const DRAG = 10
 const INITJUMPS =3
+const INITDASHES =2
+
 
 var velocity = Vector2(0,0)
 var on_ground = false
@@ -17,7 +19,8 @@ var speed = DEFSPEED
 var friction = DEFFRICTION
 var acceleration = DEFACC
 var cooldown = false
-var jumps_available = INITJUMPS # Do I have jumps available?
+var jumps_available = INITJUMPS
+var dashes_available = INITDASHES # Do I have jumps available?
 var end_jump = false
 var end_jump_after = false
 
@@ -48,18 +51,18 @@ func _physics_process(delta):
 			velocity.y = JUMP_POWER
 			on_ground = false
 			end_jump = false
-			$"New jump threshold".start()
+			
 			$"Minimun jump duration".start()
-			
-		else:
-			print("test")
-			
+
 	if(dash == false):		
 		velocity.y += GRAVITY
 	
 	
 	
+	if Input.is_action_pressed("Up"):
+		$"New jump threshold".start()
 	
+		
 		
 	if velocity.y < 0 && Input.is_action_just_released("Up") && end_jump == true:
 		_end_jump()
@@ -68,7 +71,7 @@ func _physics_process(delta):
 		end_jump_after = true
 	
 	if is_on_floor():
-		jumps_available = INITJUMPS
+		
 		on_ground = true
 		if(dash== false):
 			speed = DEFSPEED
@@ -85,8 +88,11 @@ func _physics_process(delta):
 		# If there's no input, slow down to (0, 0)
 		velocity.x = velocity.linear_interpolate(Vector2.ZERO, friction).x
 	#print(velocity)
+	if on_ground && velocity.y > 0:
+		jumps_available = INITJUMPS
+		dashes_available = INITDASHES
 	velocity = move_and_slide(velocity,FLOOR)
-	print(jumps_available)
+	
 	
 func _end_jump():
 	velocity.y += - velocity.y*0.98#Jump Height depends on how long you will hold key
@@ -94,12 +100,13 @@ func _end_jump():
 
 
 func _dash():
-	if(cooldown == false):
+	if(cooldown == false && dashes_available > 0):
 		acceleration = 0.5
 		speed = speed + (DEFSPEED * 3 - speed) * 0.8
 		velocity.y = 0
 		dash = true
 		cooldown = true
+		dashes_available -=1
 		$"New jump threshold".start()
 		$"New jump threshold".paused = true
 		$"Dash Time".start()
@@ -119,7 +126,6 @@ func _on_Dash_Cooldown_timeout():
 
 
 func _on_Minimun_jump_duration_timeout():
-	print("test 2")
 	end_jump = true
 	if (end_jump_after):
 		_end_jump()
