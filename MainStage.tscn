@@ -3,12 +3,33 @@
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tiles/platformPack_tilesheet.png" type="Texture" id=2]
 [ext_resource path="res://FallingPlatform.tscn" type="PackedScene" id=3]
-[ext_resource path="res://MainStage.gd" type="Script" id=4]
 [ext_resource path="res://Backgrounds/test.png" type="Texture" id=5]
 [ext_resource path="res://Bola.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Backgrounds/parallax/skill-desc_0002_far-buildings.png" type="Texture" id=8]
 [ext_resource path="res://Backgrounds/parallax/skill-desc_0001_buildings.png" type="Texture" id=9]
 [ext_resource path="res://Backgrounds/parallax/skill-desc_0000_foreground.png" type="Texture" id=10]
+
+[sub_resource type="GDScript" id=11]
+script/source = "extends Node2D
+
+
+# Declare member variables here. Examples:
+# var a = 2
+# var b = \"text\"
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+func _process(delta):
+	if Input.is_action_just_pressed(\"Toggle full screen\"):
+		 OS.window_fullscreen = !OS.window_fullscreen
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
 
 [sub_resource type="PhysicsMaterial" id=1]
 bounce = 3.074
@@ -208,7 +229,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 7/z_index = 0
 
 [node name="MainStage" type="Node2D"]
-script = ExtResource( 4 )
+script = SubResource( 11 )
 __meta__ = {
 "_edit_horizontal_guides_": [ -24.0 ],
 "_edit_vertical_guides_": [ 0.0, 160.0 ]
@@ -258,6 +279,9 @@ limit_bottom = 284
 position = Vector2( 200, 80 )
 scale = Vector2( 1.25, 1.25 )
 texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2( 272, 0 )
@@ -300,10 +324,6 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="FallingPlatform" parent="FallingPlatforms" instance=ExtResource( 3 )]
-position = Vector2( 168, 212.092 )
-collision_layer = 4
-
 [node name="FallingPlatform2" parent="FallingPlatforms" instance=ExtResource( 3 )]
 position = Vector2( 184, 212.092 )
 collision_layer = 4
@@ -314,6 +334,10 @@ collision_layer = 4
 
 [node name="FallingPlatform5" parent="FallingPlatforms" instance=ExtResource( 3 )]
 position = Vector2( 216, 212.092 )
+collision_layer = 4
+
+[node name="FallingPlatform" parent="FallingPlatforms" instance=ExtResource( 3 )]
+position = Vector2( 168, 212.092 )
 collision_layer = 4
 
 [node name="Position2D" type="Position2D" parent="."]

@@ -22,7 +22,7 @@ var jumps_available = INITJUMPS   # Do I have jumps available?
 var dashes_available = INITDASHES # Do I have dashes available?
 var end_jump = false
 var end_jump_after = false
-var idle = true
+
 
 
 	
@@ -30,7 +30,6 @@ var idle = true
 func _physics_process(delta):
 	var input_velocity = Vector2.ZERO
 	if Input.is_action_pressed("Right"):
-		idle = false
 		$AnimatedSprite.play("run")
 		$AnimatedSprite.flip_h = false
 		input_velocity.x += 1
@@ -39,7 +38,6 @@ func _physics_process(delta):
 			_dash()
 			
 	if Input.is_action_pressed("Left"):
-		idle = false
 		$AnimatedSprite.play("run")
 		$AnimatedSprite.flip_h = true
 		input_velocity.x -= 1
@@ -47,7 +45,6 @@ func _physics_process(delta):
 			_dash()
 	
 	if Input.is_action_just_pressed("Up"):
-		idle = false
 		if jumps_available > 0:
 			jumps_available = jumps_available - 1
 			
@@ -75,11 +72,9 @@ func _physics_process(delta):
 		end_jump_after = true
 	
 	if is_on_floor():
-		
 		on_ground = true
 		if(dash== false):
 			speed = DEFSPEED
-		
 	else:
 		if velocity.y < 0:
 			$AnimatedSprite.play("jump")
@@ -88,6 +83,8 @@ func _physics_process(delta):
 		on_ground = false
 		if(dash == false):
 			speed=4.0*DEFSPEED/6
+	if is_on_wall():
+		print("test")
 		
 	input_velocity = input_velocity.normalized() * speed
 	if input_velocity.length() > 0:

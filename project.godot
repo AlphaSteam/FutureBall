@@ -21,7 +21,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Globals="*res://MainStage.gd"
+Globals="*res://Global_vars.gd"
 
 [display]
 
