@@ -21,7 +21,7 @@ var live_ball = false
 var picked = false
 
 onready var reset_position = global_position
-
+onready var reset_arrow = arrow.rect_size 
 #Detectar contactos
 func _ready():
 	#set_physics_process(false)
@@ -30,6 +30,7 @@ func _ready():
 	contact_monitor = true
 	set_max_contacts_reported(3 > 0)
 	set_mode(0)
+	arrow.hide()
 
 #func _physics_change(mode):
 #	if picked == true:
@@ -90,11 +91,12 @@ func _physics_process(delta):
 			drag_start = get_global_mouse_position()
 			arrow.visible = true
 		elif Input.is_action_pressed("attack"):
+			arrow.show()
 			var drag = get_global_mouse_position() - drag_start
-			arrow_head.rotation = drag.angle()
+#			arrow_head.rotation = drag.angle()
 			arrow.rect_rotation = rad2deg(drag.angle())
 			arrow.rect_size.x = drag.length() * 2
-			arrow_head.global_position = player.global_position + drag
+#			arrow_head.global_position = player.global_position + drag
 		if Input.is_action_just_released("attack"):
 #			yield(get_tree().create_timer(0.01), "timeout")
 			$Sprite.texture = ball_live
@@ -102,6 +104,8 @@ func _physics_process(delta):
 			drop()
 			apply_central_impulse(drag * 3)
 			live_ball = true
+			arrow.rect_size.x = reset_arrow.x
+			arrow.hide()
 			
 	if position.y > 400:
 		position = reset_position
