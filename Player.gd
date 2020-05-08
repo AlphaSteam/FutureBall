@@ -30,6 +30,9 @@ onready var reset_position = global_position
 
 func _physics_process(delta):
 	var input_velocity = Vector2.ZERO
+	if Input.is_action_pressed("ui_cancel"):
+		get_tree().change_scene("res://Titlescreen.tscn")
+	
 	if Input.is_action_just_pressed("Right"):
 		$AnimatedSprite.flip_h = false
 	if Input.is_action_pressed("Right"):
