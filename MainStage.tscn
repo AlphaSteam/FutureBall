@@ -336,20 +336,12 @@ collision_layer = 4
 position = Vector2( 80, -8 )
 collision_layer = 4
 
-[node name="FallingPlatform10" parent="FallingPlatforms" instance=ExtResource( 3 )]
-position = Vector2( 296, -8 )
-collision_layer = 4
-
 [node name="FallingPlatform11" parent="FallingPlatforms" instance=ExtResource( 3 )]
 position = Vector2( 312, -8 )
 collision_layer = 4
 
 [node name="FallingPlatform12" parent="FallingPlatforms" instance=ExtResource( 3 )]
 position = Vector2( 328, -8 )
-collision_layer = 4
-
-[node name="FallingPlatform8" parent="FallingPlatforms" instance=ExtResource( 3 )]
-position = Vector2( 112, -8 )
 collision_layer = 4
 
 [node name="FallingPlatform9" parent="FallingPlatforms" instance=ExtResource( 3 )]

@@ -20,6 +20,7 @@ var live_ball = false
 #Si la tiene agarrada un jugador o no
 var picked = false
 
+onready var reset_position = global_position
 
 #Detectar contactos
 func _ready():
@@ -101,7 +102,9 @@ func _physics_process(delta):
 			drop()
 			apply_central_impulse(drag * 3)
 			live_ball = true
-		
+			
+	if position.y > 400:
+		position = reset_position
 		
 
 
