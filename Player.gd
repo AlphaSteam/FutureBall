@@ -141,6 +141,7 @@ func _end_jump():
 	end_jump = false
 
 
+
 func _dash():
 	if(cooldown == false && dashes_available > 0):
 		acceleration = 0.5
