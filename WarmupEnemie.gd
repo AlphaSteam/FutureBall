@@ -8,14 +8,13 @@ var velocity = Vector2()
 var is_dead = false
 const INITALPHA = 1.0
 var alpha = INITALPHA
-var timer = 20.0
+var timer = 30.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
 func _physics_process(delta):
-	print(timer)
 #	velocity = move_and_slide(velocity)
 #	for i in get_slide_count():
 #		var collision = get_slide_collision(i)
@@ -29,7 +28,7 @@ func _physics_process(delta):
 	if timer < 0:
 		$Sprite.modulate = Color(1,1,1,1)			
 		$CollisionShape2D.disabled = false
-		timer = 20.0
+		timer = 30.0
 		is_dead = false
 
 func dead():

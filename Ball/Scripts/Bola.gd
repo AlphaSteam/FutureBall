@@ -25,7 +25,6 @@ var live_ball = false
 #Si la tiene agarrada un jugador o no
 var picked = false
 var cancel = false
-
 onready var reset_position = global_position
 onready var reset_arrow = arrow.rect_size 
 #Detectar contactos
