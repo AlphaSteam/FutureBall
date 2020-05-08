@@ -26,7 +26,7 @@ var end_jump_after = false
 var on_wall = false
 var flip_character_once = false # Used to flip the character when sliding through a wall, so I don't do it more than once.
 
-onready var reset_position = global_position
+onready var reset_position2 = position
 
 func _physics_process(delta):
 	var input_velocity = Vector2.ZERO
@@ -125,7 +125,7 @@ func _physics_process(delta):
 		gravity = DEFGRAVITY
 		
 	if position.y > 400:
-		position = reset_position
+		position = reset_position2
 	
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)

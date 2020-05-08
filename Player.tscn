@@ -16,6 +16,11 @@ animations = [ {
 "name": "idle",
 "speed": 0.0
 }, {
+"frames": [ ExtResource( 7 ) ],
+"loop": false,
+"name": "fall",
+"speed": 0.0
+}, {
 "frames": [ ExtResource( 8 ), ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "run",
@@ -24,11 +29,6 @@ animations = [ {
 "frames": [ ExtResource( 9 ) ],
 "loop": false,
 "name": "jump",
-"speed": 0.0
-}, {
-"frames": [ ExtResource( 7 ) ],
-"loop": false,
-"name": "fall",
 "speed": 0.0
 } ]
 
@@ -48,6 +48,7 @@ frame = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 4.09237 )
 shape = SubResource( 2 )
+one_way_collision_margin = 0.0
 
 [node name="Arrow" type="NinePatchRect" parent="."]
 margin_left = 0.178616
