@@ -4,7 +4,7 @@ const MAXPOW = 100
 const DEFPOWMULT = 4
 var power_multiplier = DEFPOWMULT
 var power = 0
-
+var rebote = 0
 export var player_path : NodePath
 onready var player = get_node(player_path)
 #onready var arrow_head = player.get_node("ArrowHead")
@@ -49,9 +49,11 @@ func _ready():
 #Señal de que la bola tocó algo
 func _on_Bola_body_entered(body: Node):
 	if live_ball == true: #Si la bola esta viva
-		#print('toque algo')
+		if 'WarmupEnemie' in body.name:
+			body.dead()
 		live_ball = false
-		$Sprite.texture = ball_dead
+		$Sprite.texture = ball_dead	
+
 
 func pick():
 	picked = true
@@ -136,7 +138,7 @@ func _physics_process(delta):
 			
 	if position.y > 400:
 		position = reset_position
-		
+		linear_velocity = Vector2.ZERO
 
 
 
