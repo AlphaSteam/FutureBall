@@ -26,13 +26,14 @@ func _process(delta):
 		 OS.window_fullscreen = !OS.window_fullscreen
 
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
 "
 
 [sub_resource type="PhysicsMaterial" id=2]
-bounce = 3.074
+bounce = 1.0
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
@@ -239,6 +240,7 @@ __meta__ = {
 position = Vector2( 200, 40 )
 collision_layer = 2
 collision_mask = 4
+mode = 1
 physics_material_override = SubResource( 2 )
 gravity_scale = 3.0
 contact_monitor = true
@@ -320,6 +322,7 @@ __meta__ = {
 }
 
 [node name="FallingPlatforms" type="Node2D" parent="."]
+z_index = 1
 __meta__ = {
 "_edit_lock_": true
 }
@@ -333,19 +336,19 @@ position = Vector2( 24, 176 )
 collision_layer = 4
 
 [node name="FallingPlatform7" parent="FallingPlatforms" instance=ExtResource( 3 )]
-position = Vector2( 80, -8 )
+position = Vector2( 80, -16 )
 collision_layer = 4
 
 [node name="FallingPlatform11" parent="FallingPlatforms" instance=ExtResource( 3 )]
-position = Vector2( 312, -8 )
+position = Vector2( 312, -16 )
 collision_layer = 4
 
 [node name="FallingPlatform12" parent="FallingPlatforms" instance=ExtResource( 3 )]
-position = Vector2( 328, -8 )
+position = Vector2( 328, -16 )
 collision_layer = 4
 
 [node name="FallingPlatform9" parent="FallingPlatforms" instance=ExtResource( 3 )]
-position = Vector2( 96, -8 )
+position = Vector2( 96, -16 )
 collision_layer = 4
 
 [node name="FallingPlatform6" parent="FallingPlatforms" instance=ExtResource( 3 )]
@@ -363,9 +366,6 @@ collision_layer = 4
 [node name="FallingPlatform" parent="FallingPlatforms" instance=ExtResource( 3 )]
 position = Vector2( 168, 212.092 )
 collision_layer = 4
-
-[node name="Position2D" type="Position2D" parent="."]
-position = Vector2( 400, 283.092 )
 [connection signal="timeout" from="Player/Dash Time" to="Player" method="_on_Dash_Time_timeout"]
 [connection signal="timeout" from="Player/Dash Cooldown" to="Player" method="_on_Dash_Cooldown_timeout"]
 [connection signal="timeout" from="Player/Minimun jump duration" to="Player" method="_on_Minimun_jump_duration_timeout"]

@@ -21,15 +21,15 @@ animations = [ {
 "name": "fall",
 "speed": 0.0
 }, {
-"frames": [ ExtResource( 8 ), ExtResource( 5 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "run",
-"speed": 10.0
-}, {
 "frames": [ ExtResource( 9 ) ],
 "loop": false,
 "name": "jump",
 "speed": 0.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "run",
+"speed": 10.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -51,10 +51,10 @@ shape = SubResource( 2 )
 one_way_collision_margin = 0.0
 
 [node name="Arrow" type="NinePatchRect" parent="."]
-margin_left = 0.178616
-margin_top = -0.535847
-margin_right = 25.1786
-margin_bottom = 4.46415
+margin_left = 1.03322
+margin_top = 0.440845
+margin_right = 26.0332
+margin_bottom = 5.44084
 rect_rotation = -7.7
 rect_scale = Vector2( 0.5, 0.5 )
 rect_pivot_offset = Vector2( 0, 5 )
