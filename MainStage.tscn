@@ -4,6 +4,7 @@
 [ext_resource path="res://Tiles/platformPack_tilesheet.png" type="Texture" id=2]
 [ext_resource path="res://FallingPlatform.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Backgrounds/City Background/City Foreground.png" type="Texture" id=4]
+[ext_resource path="res://Score0.gd" type="Script" id=5]
 [ext_resource path="res://Backgrounds/City Background/City Background.png" type="Texture" id=6]
 [ext_resource path="res://Bola.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Backgrounds/parallax/skill-desc_0002_far-buildings.png" type="Texture" id=8]
@@ -11,6 +12,7 @@
 [ext_resource path="res://Backgrounds/parallax/skill-desc_0000_foreground.png" type="Texture" id=10]
 [ext_resource path="res://Backgrounds/nebula09.png" type="Texture" id=11]
 [ext_resource path="res://CamaraMultiplayer.gd" type="Script" id=12]
+[ext_resource path="res://Score4.gd" type="Script" id=13]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
@@ -37,6 +39,7 @@ func _process(delta):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
 "
 
 [sub_resource type="PhysicsMaterial" id=2]
@@ -254,6 +257,37 @@ object1 = NodePath("../Player")
 object2 = NodePath("../Player2")
 object3 = NodePath("../Bola")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
+
+[node name="Score4" type="Label" parent="Camera2D/CanvasLayer"]
+anchor_top = 0.029
+anchor_bottom = 0.029
+margin_left = 9.93417
+margin_top = -0.090445
+margin_right = 81.9342
+margin_bottom = 36.9096
+text = "0"
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score0" type="Label" parent="Camera2D/CanvasLayer"]
+anchor_left = 1.0
+anchor_top = 0.012
+anchor_right = 1.0
+anchor_bottom = 0.012
+margin_left = -83.2158
+margin_top = -1.01543
+margin_right = -11.2158
+margin_bottom = 35.9846
+text = "0"
+align = 2
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Bola" parent="." instance=ExtResource( 7 )]
 position = Vector2( 200, 40 )
 collision_layer = 2
@@ -304,6 +338,9 @@ __meta__ = {
 position = Vector2( 224, 0 )
 scale = Vector2( 0.706255, 0.706255 )
 texture = ExtResource( 11 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="1" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
 visible = false
