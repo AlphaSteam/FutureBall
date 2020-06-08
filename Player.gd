@@ -25,29 +25,29 @@ var end_jump = false
 var end_jump_after = false
 var on_wall = false
 var flip_character_once = false # Used to flip the character when sliding through a wall, so I don't do it more than once.
- 
+
 onready var reset_position2 = position
-export var id = 0;
+
 func _physics_process(delta):
 	var input_velocity = Vector2.ZERO
-	if Input.is_action_just_pressed("Right%s" % id):
+	if Input.is_action_just_pressed("Right"):
 		$AnimatedSprite.flip_h = false
-	if Input.is_action_pressed("Right%s" % id):
+	if Input.is_action_pressed("Right"):
 		$AnimatedSprite.play("run")
 		
 		input_velocity.x += 1
-		if Input.is_action_just_pressed("Dash%s" % id):
+		if Input.is_action_just_pressed("Dash"):
 			
 			_dash()
-	if Input.is_action_just_pressed("Left%s" % id):
+	if Input.is_action_just_pressed("Left"):
 		$AnimatedSprite.flip_h = true	
-	if Input.is_action_pressed("Left%s" % id):
+	if Input.is_action_pressed("Left"):
 		$AnimatedSprite.play("run")
 		input_velocity.x -= 1
-		if Input.is_action_just_pressed("Dash%s" % id):
+		if Input.is_action_just_pressed("Dash"):
 			_dash()
 	
-	if Input.is_action_just_pressed("Up%s" % id):
+	if Input.is_action_just_pressed("Up"):
 		if jumps_available > 0 and on_wall == false:
 			jumps_available = jumps_available - 1
 			
@@ -56,22 +56,22 @@ func _physics_process(delta):
 			end_jump = false
 			
 			$"Minimun jump duration".start()
-	if  !Input.is_action_pressed("Left%s" % id) && !Input.is_action_pressed("Right%s" % id) && on_ground: 
+	if  !Input.is_action_pressed("Left") && !Input.is_action_pressed("Right") && on_ground: 
 		$AnimatedSprite.play("idle")
 	if(dash == false):		
 		velocity.y += gravity
 	
 	
 	
-	if Input.is_action_pressed("Up%s" % id):
+	if Input.is_action_pressed("Up"):
 		$"New jump threshold".start()
 	
 		
 		
-	if velocity.y < 0 && Input.is_action_just_released("Up%s" % id) && end_jump == true:
+	if velocity.y < 0 && Input.is_action_just_released("Up") && end_jump == true:
 		_end_jump()
 		
-	elif velocity.y < 0 && Input.is_action_just_released("Up%s" % id) && end_jump == false:
+	elif velocity.y < 0 && Input.is_action_just_released("Up") && end_jump == false:
 		end_jump_after = true
 	
 	
@@ -102,7 +102,7 @@ func _physics_process(delta):
 		on_ground = false
 		if(dash == false):
 			speed=4.0*DEFSPEED/6
-	if is_on_wall() && (Input.is_action_pressed("Left%s" % id) || Input.is_action_pressed("Right%s" % id)) && is_on_floor()==false:
+	if is_on_wall() && (Input.is_action_pressed("Left") || Input.is_action_pressed("Right")) && is_on_floor()==false:
 		on_wall = true
 		if flip_character_once == false:
 			

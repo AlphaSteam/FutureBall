@@ -1,14 +1,24 @@
-extends Camera2D
+extends Node
+#
 
-onready var p1 = get_tree().get_root().find_node("Player", true, false)
-onready var p2 = get_tree().get_root().find_node("Player1", true, false)
+onready var screen_size = Vector2(ProjectSettings.get_setting("display/window/size/width") ,ProjectSettings.get_setting("display/window/size/height") )
+onready var player = get_tree().get_root().find_node("Player", true, false)
+onready var last_player_pos = player.get_position()
 
+## Called when the node enters the scene tree for the first time.
+#func _ready():
+#	var pos_x = last_player_pos.x
+#	var pos_y = last_player_pos.y
+#	var aux = Vector2(pos_x+150,pos_y-120)
+#	var canvas_transform = get_viewport().get_canvas_transform()
+#	canvas_transform[2] = screen_size/2 
+#	get_viewport().set_canvas_transform(canvas_transform)
 
-func _ready():
-	if p1!=null&&p2!=null: 
-		set_process(true)
-
-func _process(delta):
-	var newpos = ((p1.position-Vector2(19,20))+p2.position*0.5)
-	global_position = newpos
-	#then comes the zoom
+#func _process(delta):
+#	var player_offset = last_player_pos - player.get_position()
+#	last_player_pos = player.get_position()
+#
+#	var canvas_transform = get_viewport().get_canvas_transform()
+#	canvas_transform[2] += player_offset
+#	get_viewport().set_canvas_transform(canvas_transform)
+#	return player_offset

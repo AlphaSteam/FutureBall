@@ -4,7 +4,7 @@
 [ext_resource path="res://Tiles/platformPack_tilesheet.png" type="Texture" id=2]
 [ext_resource path="res://FallingPlatform.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Backgrounds/City Background/City Foreground.png" type="Texture" id=4]
-[ext_resource path="res://Camera2D.gd" type="Script" id=5]
+[ext_resource path="res://WarmupEnemy.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Backgrounds/City Background/City Background.png" type="Texture" id=6]
 [ext_resource path="res://Bola.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Backgrounds/parallax/skill-desc_0002_far-buildings.png" type="Texture" id=8]
@@ -252,11 +252,12 @@ physics_material_override = SubResource( 2 )
 gravity_scale = 3.0
 contact_monitor = true
 sleeping = true
+player_path = NodePath("../Player")
 
 [node name="Player" parent="." groups=[
 "Jugador",
 ] instance=ExtResource( 1 )]
-position = Vector2( 39.2858, 225.051 )
+position = Vector2( 60.671, 216 )
 collision_mask = 4
 
 [node name="Dash Time" type="Timer" parent="Player"]
@@ -275,65 +276,17 @@ one_shot = true
 wait_time = 0.3
 one_shot = true
 
-[node name="Player1" parent="." groups=[
-"Jugador",
-] instance=ExtResource( 1 )]
-position = Vector2( 359.158, 223.25 )
-rotation = -0.00956289
-collision_mask = 4
-id = 1
-
-[node name="Dash Time" type="Timer" parent="Player1"]
-wait_time = 0.1
-one_shot = true
-
-[node name="Dash Cooldown" type="Timer" parent="Player1"]
-wait_time = 0.657
-one_shot = true
-
-[node name="Minimun jump duration" type="Timer" parent="Player1"]
-wait_time = 0.15
-one_shot = true
-
-[node name="New jump threshold" type="Timer" parent="Player1"]
-wait_time = 0.3
-one_shot = true
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+limit_left = 0
+limit_right = 400
+limit_bottom = 284
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="0" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
-position = Vector2( 194.971, -178.363 )
-texture = ExtResource( 11 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="1" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
-position = Vector2( 216, 133 )
-scale = Vector2( 0.669, 0.669 )
-texture = ExtResource( 6 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="2" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
-position = Vector2( 216, 141.092 )
-scale = Vector2( 0.669349, 0.669349 )
-texture = ExtResource( 4 )
-__meta__ = {
-"_edit_lock_": true
-}
-
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
 motion_mirroring = Vector2( 272, 0 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="2" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 104, 212.092 )
@@ -355,6 +308,22 @@ texture = ExtResource( 10 )
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="0" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 194.971, -178.363 )
+texture = ExtResource( 11 )
+
+[node name="1" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 216, 133 )
+scale = Vector2( 0.669, 0.669 )
+texture = ExtResource( 6 )
+
+[node name="2" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 216, 141.092 )
+scale = Vector2( 0.669349, 0.669349 )
+texture = ExtResource( 4 )
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( 0, 4 )
@@ -414,22 +383,24 @@ collision_layer = 4
 position = Vector2( 168, 212.092 )
 collision_layer = 4
 
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 205.029, 147.002 )
-current = true
-limit_left = 0
-limit_top = -1000000000
-limit_right = 400
-limit_bottom = 275
-drag_margin_h_enabled = true
-drag_margin_v_enabled = true
-smoothing_speed = 8.0
-script = ExtResource( 5 )
+[node name="Node" type="Node" parent="."]
+
+[node name="WarmupEnemie" parent="Node" instance=ExtResource( 5 )]
+position = Vector2( 336, 78.6231 )
+collision_layer = 4
+
+[node name="WarmupEnemie3" parent="Node" instance=ExtResource( 5 )]
+position = Vector2( 368, -130.62 )
+collision_layer = 4
+
+[node name="WarmupEnemie4" parent="Node" instance=ExtResource( 5 )]
+position = Vector2( 32, -130.62 )
+collision_layer = 4
+
+[node name="WarmupEnemie2" parent="Node" instance=ExtResource( 5 )]
+position = Vector2( 73.1962, 78.6231 )
+collision_layer = 4
 [connection signal="timeout" from="Player/Dash Time" to="Player" method="_on_Dash_Time_timeout"]
 [connection signal="timeout" from="Player/Dash Cooldown" to="Player" method="_on_Dash_Cooldown_timeout"]
 [connection signal="timeout" from="Player/Minimun jump duration" to="Player" method="_on_Minimun_jump_duration_timeout"]
 [connection signal="timeout" from="Player/New jump threshold" to="Player" method="_on_New_jump_threshold_timeout"]
-[connection signal="timeout" from="Player1/Dash Time" to="Player1" method="_on_Dash_Time_timeout"]
-[connection signal="timeout" from="Player1/Dash Cooldown" to="Player1" method="_on_Dash_Cooldown_timeout"]
-[connection signal="timeout" from="Player1/Minimun jump duration" to="Player1" method="_on_Minimun_jump_duration_timeout"]
-[connection signal="timeout" from="Player1/New jump threshold" to="Player1" method="_on_New_jump_threshold_timeout"]
