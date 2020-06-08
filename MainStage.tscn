@@ -44,20 +44,14 @@ func _process(delta):
 
 "
 
-[sub_resource type="DynamicFont" id=12]
+[sub_resource type="DynamicFont" id=2]
 font_data = ExtResource( 14 )
 
-[sub_resource type="DynamicFont" id=13]
+[sub_resource type="DynamicFont" id=3]
 font_data = ExtResource( 14 )
 
-[sub_resource type="PhysicsMaterial" id=2]
+[sub_resource type="PhysicsMaterial" id=4]
 bounce = 1.0
-
-[sub_resource type="ConvexPolygonShape2D" id=3]
-points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
-
-[sub_resource type="ConvexPolygonShape2D" id=4]
-points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 
 [sub_resource type="ConvexPolygonShape2D" id=5]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
@@ -75,9 +69,15 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 
 [sub_resource type="ConvexPolygonShape2D" id=10]
+points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
+
+[sub_resource type="ConvexPolygonShape2D" id=11]
+points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
+
+[sub_resource type="ConvexPolygonShape2D" id=12]
 points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 
-[sub_resource type="TileSet" id=11]
+[sub_resource type="TileSet" id=13]
 0/name = "platformPack_tilesheet.png 0"
 0/texture = ExtResource( 2 )
 0/tex_offset = Vector2( 0, 0 )
@@ -88,14 +88,14 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 0/navigation_offset = Vector2( 0, 0 )
 0/shape_offset = Vector2( 0, 0 )
 0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape = SubResource( 3 )
+0/shape = SubResource( 5 )
 0/shape_one_way = false
 0/shape_one_way_margin = 1.0
 0/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 3 ),
+"shape": SubResource( 5 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
@@ -109,14 +109,14 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 1/navigation_offset = Vector2( 0, 0 )
 1/shape_offset = Vector2( 0, 0 )
 1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape = SubResource( 4 )
+1/shape = SubResource( 6 )
 1/shape_one_way = false
 1/shape_one_way_margin = 1.0
 1/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 4 ),
+"shape": SubResource( 6 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 1/z_index = 0
@@ -130,14 +130,14 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 2/navigation_offset = Vector2( 0, 0 )
 2/shape_offset = Vector2( 0, 0 )
 2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape = SubResource( 5 )
+2/shape = SubResource( 7 )
 2/shape_one_way = false
 2/shape_one_way_margin = 1.0
 2/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 5 ),
+"shape": SubResource( 7 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 2/z_index = 0
@@ -151,14 +151,14 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 3/navigation_offset = Vector2( 0, 0 )
 3/shape_offset = Vector2( 0, 0 )
 3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-3/shape = SubResource( 6 )
+3/shape = SubResource( 8 )
 3/shape_one_way = false
 3/shape_one_way_margin = 1.0
 3/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 6 ),
+"shape": SubResource( 8 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 3/z_index = 0
@@ -172,14 +172,14 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 4/navigation_offset = Vector2( 0, 0 )
 4/shape_offset = Vector2( 0, 0 )
 4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-4/shape = SubResource( 7 )
+4/shape = SubResource( 9 )
 4/shape_one_way = false
 4/shape_one_way_margin = 1.0
 4/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 7 ),
+"shape": SubResource( 9 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 4/z_index = 0
@@ -193,14 +193,14 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 5/navigation_offset = Vector2( 0, 0 )
 5/shape_offset = Vector2( 0, 0 )
 5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-5/shape = SubResource( 8 )
+5/shape = SubResource( 10 )
 5/shape_one_way = false
 5/shape_one_way_margin = 1.0
 5/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 8 ),
+"shape": SubResource( 10 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 5/z_index = 0
@@ -214,14 +214,14 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 6/navigation_offset = Vector2( 0, 0 )
 6/shape_offset = Vector2( 0, 0 )
 6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-6/shape = SubResource( 9 )
+6/shape = SubResource( 11 )
 6/shape_one_way = false
 6/shape_one_way_margin = 1.0
 6/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 9 ),
+"shape": SubResource( 11 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 6/z_index = 0
@@ -235,14 +235,14 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 7/navigation_offset = Vector2( 0, 0 )
 7/shape_offset = Vector2( 0, 0 )
 7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-7/shape = SubResource( 10 )
+7/shape = SubResource( 12 )
 7/shape_one_way = false
 7/shape_one_way_margin = 1.0
 7/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 10 ),
+"shape": SubResource( 12 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 7/z_index = 0
@@ -261,8 +261,8 @@ limit_left = -350
 limit_right = 750
 limit_bottom = 300
 script = ExtResource( 12 )
-object1 = NodePath("../Player")
-object2 = NodePath("../Player2")
+object1 = NodePath("../Player4")
+object2 = NodePath("../Player0")
 object3 = NodePath("../Bola")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
@@ -280,7 +280,7 @@ margin_top = -6.525
 margin_right = 232.0
 margin_bottom = 30.475
 rect_scale = Vector2( 0.7, 0.7 )
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 2 )
 custom_constants/line_spacing = 0
 text = "0"
 script = ExtResource( 13 )
@@ -298,7 +298,7 @@ margin_top = -2.7
 margin_right = -136.0
 margin_bottom = 34.3
 rect_scale = Vector2( 0.7, 0.7 )
-custom_fonts/font = SubResource( 13 )
+custom_fonts/font = SubResource( 3 )
 text = "0"
 align = 2
 script = ExtResource( 5 )
@@ -311,12 +311,12 @@ position = Vector2( 200, 40 )
 collision_layer = 2
 collision_mask = 4
 mode = 1
-physics_material_override = SubResource( 2 )
+physics_material_override = SubResource( 4 )
 gravity_scale = 3.0
 contact_monitor = true
 sleeping = true
-player_path_0 = NodePath("../Player2")
-player_path_4 = NodePath("../Player")
+player_path_0 = NodePath("../Player0")
+player_path_4 = NodePath("../Player4")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -381,7 +381,7 @@ __meta__ = {
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( 0, 4 )
 scale = Vector2( 0.25, 0.25 )
-tile_set = SubResource( 11 )
+tile_set = SubResource( 13 )
 collision_layer = 4
 collision_mask = 3
 format = 1
@@ -456,11 +456,13 @@ collision_layer = 4
 position = Vector2( 216, 212.092 )
 collision_layer = 4
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
+[node name="Player4" parent="." instance=ExtResource( 1 )]
 position = Vector2( 63.8854, 221.404 )
 
-[node name="Player2" parent="." instance=ExtResource( 1 )]
+[node name="Player0" parent="." instance=ExtResource( 1 )]
 position = Vector2( 336.983, 220.917 )
 id = 0
 [connection signal="Punto0" from="Bola" to="Camera2D/CanvasLayer/Score0" method="_on_Bola_Punto0"]
 [connection signal="Punto4" from="Bola" to="Camera2D/CanvasLayer/Score4" method="_on_Bola_Punto4"]
+[connection signal="sd4" from="Player4" to="Camera2D/CanvasLayer/Score4" method="_on_Player4_sd4"]
+[connection signal="sd0" from="Player0" to="Camera2D/CanvasLayer/Score0" method="_on_Player0_sd0"]

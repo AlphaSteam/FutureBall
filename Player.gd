@@ -29,6 +29,9 @@ var flip_character_once = false # Used to flip the character when sliding throug
 
 onready var reset_position2 = position
 
+signal sd0
+signal sd4
+
 func _ready():
 	if Globals.Player1==0:
 		DEFSPEED=180
@@ -180,6 +183,7 @@ func _physics_process(delta):
 		
 	if position.y > 400:
 		position = reset_position2
+		emit_signal("sd%s" % id)
 	
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)
