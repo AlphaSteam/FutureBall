@@ -40,9 +40,6 @@ func _process(delta):
 #func _process(delta):
 #	pass
 
-
-func _on_Bola_Punto0():
-	pass # Replace with function body.
 "
 
 [sub_resource type="PhysicsMaterial" id=2]
