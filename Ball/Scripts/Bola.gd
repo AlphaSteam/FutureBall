@@ -5,10 +5,11 @@ const DEFPOWMULT = 4
 var power_multiplier = DEFPOWMULT
 var power = 0
 var rebote = 0
-export var player_path : NodePath
-onready var player = get_node(player_path)
+onready var player = get_tree().get_root().find_node("Player", true, false)
+onready var player1 = get_tree().get_root().find_node("Player1", true, false)
 #onready var arrow_head = player.get_node("ArrowHead")
 onready var arrow = player.get_node("Arrow")
+onready var arrow1 = player1.get_node("Arrow")
 
 var ball_dead = preload("res://Ball/ball_dead.png")
 var ball_live = preload("res://Ball/ball_live.png")
@@ -36,6 +37,7 @@ func _ready():
 	set_max_contacts_reported(3 > 0)
 	set_mode(0)
 	arrow.hide()
+	arrow1.hide()
 
 #func _physics_change(mode):
 #	if picked == true:
@@ -54,12 +56,15 @@ func _on_Bola_body_entered(body: Node):
 		$Sprite.texture = ball_dead	
 
 
-func pick():
+func pick(juega: String):
 	picked = true
 	set_mode(3)
 	var ball_position = global_position
 	get_parent().remove_child(self)
-	player.add_child(self)
+	if(juega=='Player'):
+		player.add_child(self)
+	else:
+		player1.add_child(self)
 	global_position = ball_position
 	$Tween.interpolate_property(self, "position", position, player.get_node("Ball").position, 1.0, Tween.TRANS_QUINT, Tween.EASE_OUT)
 	$Tween.start()
@@ -80,7 +85,7 @@ func _on_Area2D_body_entered(body):
 			picked = false
 			#print("golpeó y murió")
 		elif live_ball == false and not picked:
-			call_deferred("pick")
+			call_deferred("pick",body.get_name())
 			#print("agarra la bola")
 
 func _pickup(picked):
@@ -88,7 +93,7 @@ func _pickup(picked):
 		self.get_parent().remove_child(self) # error here  
 		#print(get_parent())
 		get_node("Player").add_child(self)
-		#print(get_parent())
+#		print(get_parent())
 		
 
 func _physics_process(delta):
