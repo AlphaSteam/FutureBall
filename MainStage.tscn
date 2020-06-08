@@ -1,9 +1,10 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tiles/platformPack_tilesheet.png" type="Texture" id=2]
 [ext_resource path="res://FallingPlatform.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Backgrounds/City Background/City Foreground.png" type="Texture" id=4]
+[ext_resource path="res://Score0.gd" type="Script" id=5]
 [ext_resource path="res://Backgrounds/City Background/City Background.png" type="Texture" id=6]
 [ext_resource path="res://Bola.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Backgrounds/parallax/skill-desc_0002_far-buildings.png" type="Texture" id=8]
@@ -11,6 +12,7 @@
 [ext_resource path="res://Backgrounds/parallax/skill-desc_0000_foreground.png" type="Texture" id=10]
 [ext_resource path="res://Backgrounds/nebula09.png" type="Texture" id=11]
 [ext_resource path="res://CamaraMultiplayer.gd" type="Script" id=12]
+[ext_resource path="res://Score4.gd" type="Script" id=13]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
@@ -37,6 +39,10 @@ func _process(delta):
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_Bola_Punto0():
+	pass # Replace with function body.
 "
 
 [sub_resource type="PhysicsMaterial" id=2]
@@ -56,6 +62,7 @@ const INITDASHES =2
 const WALLFALLSPEED = 8
 
 export var id = 4
+
 var gravity = DEFGRAVITY
 var velocity = Vector2(0,0)
 var on_ground = false
@@ -73,6 +80,9 @@ var on_wall = false
 var flip_character_once = false # Used to flip the character when sliding through a wall, so I don't do it more than once.
 
 onready var reset_position2 = position
+
+signal sd0
+signal sd4
 
 func _physics_process(delta):
 	var input_velocity = Vector2.ZERO
@@ -172,6 +182,7 @@ func _physics_process(delta):
 		
 	if position.y > 400:
 		position = reset_position2
+		emit_signal(\"sd%s\" % id)
 	
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)
@@ -433,6 +444,37 @@ object1 = NodePath("../Player4")
 object2 = NodePath("../Player0")
 object3 = NodePath("../Bola")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
+
+[node name="Score4" type="Label" parent="Camera2D/CanvasLayer"]
+anchor_top = 0.029
+anchor_bottom = 0.029
+margin_left = 9.93417
+margin_top = -0.090445
+margin_right = 81.9342
+margin_bottom = 36.9096
+text = "0"
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score0" type="Label" parent="Camera2D/CanvasLayer"]
+anchor_left = 1.0
+anchor_top = 0.012
+anchor_right = 1.0
+anchor_bottom = 0.012
+margin_left = -83.2158
+margin_top = -1.01543
+margin_right = -11.2158
+margin_bottom = 35.9846
+text = "0"
+align = 2
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Bola" parent="." instance=ExtResource( 7 )]
 position = Vector2( 200, 40 )
 collision_layer = 2
@@ -530,6 +572,9 @@ __meta__ = {
 position = Vector2( 224, 0 )
 scale = Vector2( 0.706255, 0.706255 )
 texture = ExtResource( 11 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="1" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
 visible = false
@@ -626,10 +671,14 @@ collision_layer = 4
 [node name="FallingPlatform5" parent="FallingPlatforms" instance=ExtResource( 3 )]
 position = Vector2( 216, 212.092 )
 collision_layer = 4
+[connection signal="Punto0" from="Bola" to="Camera2D/CanvasLayer/Score0" method="_on_Bola_Punto0"]
+[connection signal="Punto4" from="Bola" to="Camera2D/CanvasLayer/Score4" method="_on_Bola_Punto4"]
+[connection signal="sd4" from="Player4" to="Camera2D/CanvasLayer/Score4" method="_on_Player4_sd4"]
 [connection signal="timeout" from="Player4/Dash Time" to="Player4" method="_on_Dash_Time_timeout"]
 [connection signal="timeout" from="Player4/Dash Cooldown" to="Player4" method="_on_Dash_Cooldown_timeout"]
 [connection signal="timeout" from="Player4/Minimun jump duration" to="Player4" method="_on_Minimun_jump_duration_timeout"]
 [connection signal="timeout" from="Player4/New jump threshold" to="Player4" method="_on_New_jump_threshold_timeout"]
+[connection signal="sd0" from="Player0" to="Camera2D/CanvasLayer/Score0" method="_on_Player0_sd0"]
 [connection signal="timeout" from="Player0/Dash Time" to="Player0" method="_on_Dash_Time_timeout"]
 [connection signal="timeout" from="Player0/Dash Cooldown" to="Player0" method="_on_Dash_Cooldown_timeout"]
 [connection signal="timeout" from="Player0/Minimun jump duration" to="Player0" method="_on_Minimun_jump_duration_timeout"]

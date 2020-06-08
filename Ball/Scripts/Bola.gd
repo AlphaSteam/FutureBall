@@ -22,8 +22,13 @@ onready var player4 = get_node(player_path_4)
 onready var arrow0 = player0.get_node("Arrow")
 onready var arrow4 = player4.get_node("Arrow")
 
+#Sprites
 var ball_dead = preload("res://Ball/ball_dead.png")
 var ball_live = preload("res://Ball/ball_live.png")
+
+#Señales puntuación
+signal Punto0
+signal Punto4
 
 #Variables
 #Lanzamiento
@@ -112,6 +117,7 @@ func _on_Area2D_body_entered(body):
 				player0.position = player0.reset_position2
 				player4.position = player4.reset_position2
 #				position = reset_position
+				emit_signal("Punto%s" % pick_id)
 				linear_velocity = Vector2.ZERO
 				pick_id = 5
 			elif live_ball == false and not picked:
