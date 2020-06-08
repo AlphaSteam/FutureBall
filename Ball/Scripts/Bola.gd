@@ -8,10 +8,17 @@ var pick_id = 4
 var power_multiplier = DEFPOWMULT
 var power = 0
 var rebote = 0
-export var player_path : NodePath
-onready var player = get_node(player_path)
+export var player_path_0 : NodePath
+export var player_path_1 : NodePath
+export var player_path_2 : NodePath
+export var player_path_3 : NodePath
+export var player_path_4 : NodePath
+
+onready var player0 = get_node(player_path_0)
+onready var player4 = get_node(player_path_4)
 #onready var arrow_head = player.get_node("ArrowHead")
-onready var arrow = player.get_node("Arrow")
+onready var arrow0 = player0.get_node("Arrow")
+onready var arrow4 = player4.get_node("Arrow")
 
 var ball_dead = preload("res://Ball/ball_dead.png")
 var ball_live = preload("res://Ball/ball_live.png")
@@ -30,12 +37,13 @@ var picked = false
 var cancel = false
 var controller
 onready var reset_position = global_position
-onready var reset_arrow = arrow.rect_size 
-func _on_joy_connection_changed(device_id, connected):
-	if connected:
-		controller = true
-	else:
-		controller = false
+onready var reset_arrow0 = arrow0.rect_size 
+onready var reset_arrow4 = arrow4.rect_size 
+#func _on_joy_connection_changed(device_id, connected):
+#	if connected:
+#		controller = true
+#	else:
+#		controller = false
 
 
 
@@ -47,7 +55,8 @@ func _ready():
 	contact_monitor = true
 	set_max_contacts_reported(3 > 0)
 	set_mode(0)
-	arrow.hide()
+	arrow0.hide()
+	arrow4.hide()
 
 #func _physics_change(mode):
 #	if picked == true:
@@ -71,10 +80,16 @@ func pick():
 	set_mode(3)
 	var ball_position = global_position
 	get_parent().remove_child(self)
-	player.add_child(self)
-	global_position = ball_position
-	$Tween.interpolate_property(self, "position", position, player.get_node("Ball").position, 1.0, Tween.TRANS_QUINT, Tween.EASE_OUT)
-	$Tween.start()
+	if pick_id == 0:
+		player0.add_child(self)
+		global_position = ball_position
+		$Tween.interpolate_property(self, "position", position, player0.get_node("Ball").position, 1.0, Tween.TRANS_QUINT, Tween.EASE_OUT)
+		$Tween.start()
+	elif pick_id == 4:
+		player4.add_child(self)
+		global_position = ball_position
+		$Tween.interpolate_property(self, "position", position, player4.get_node("Ball").position, 1.0, Tween.TRANS_QUINT, Tween.EASE_OUT)
+		$Tween.start()
 
 func drop():
 	picked = false
@@ -96,11 +111,13 @@ func _on_Area2D_body_entered(body):
 			call_deferred("pick")
 			#print("agarra la bola")
 
+# warning-ignore:shadowed_variable
 func _pickup(picked):
 	if picked == true:
 		self.get_parent().remove_child(self) # error here  
 		#print(get_parent())
 		get_node("Player_%s" % pick_id).add_child(self)
+		#print(get_parent())
 		
 
 func _physics_process(delta):
@@ -109,7 +126,7 @@ func _physics_process(delta):
 	var mouse =  get_global_mouse_position()
 	#print(Input.get_joy_axis(0,JOY_AXIS_2)) #horizontal
 	#print(Input.get_joy_axis(0,JOY_AXIS_3)) #vertical
-	var analog = Vector2(Input.get_joy_axis(pick_id,JOY_AXIS_2),- Input.get_joy_axis(pick_id,JOY_AXIS_3))
+	var analog = Vector2(Input.get_joy_axis(pick_id,JOY_AXIS_2), Input.get_joy_axis(pick_id,JOY_AXIS_3))
 			#print("mouse: "+  str(mouse))
 	var vect
 	if pick_id == 4:
@@ -125,23 +142,37 @@ func _physics_process(delta):
 #	print(get_tree().get_root())
 	if picked == true:
 		if Input.is_action_just_pressed("attack_%s" % pick_id):
-			arrow.visible = true
-			cancel = false
+			if pick_id == 0:
+				arrow0.visible = true
+				cancel = false
+			elif pick_id == 4:
+				arrow4.visible = true
+				cancel = false
 		elif Input.is_action_pressed("attack_%s" % pick_id) && cancel == false:
 			if power<= MAXPOW:
 					power += 2
+			if pick_id == 0:
+				arrow0.show()
+				arrow0.rect_rotation = rad2deg(vect.angle())
+				arrow0.rect_size.x = power
+			elif pick_id == 4:
+				arrow4.show()
+				arrow4.rect_rotation = rad2deg(vect.angle())
+				arrow4.rect_size.x = power
 			
-			arrow.show()
 			
-			
-#			arrow_head.rotation = drag.angle()
-			arrow.rect_rotation = rad2deg(vect.angle())
-			arrow.rect_size.x = power
+##			arrow_head.rotation = drag.angle()
+#			arrow.rect_rotation = rad2deg(vect.angle())
+#			arrow.rect_size.x = power
 			#arrow_head.global_position = player.position + power * vect
 		if Input.is_action_just_pressed("Cancel_%s" % pick_id):
 			cancel = true
-			arrow.rect_size.x = reset_arrow.x
-			arrow.hide()
+			if pick_id == 0:
+				arrow0.rect_size.x = reset_arrow0.x
+				arrow0.hide()
+			elif pick_id == 4:
+				arrow4.rect_size.x = reset_arrow4.x
+				arrow4.hide()
 			power = 0
 		if Input.is_action_just_released("attack_%s" % pick_id) && cancel == false:
 #			yield(get_tree().create_timer(0.01), "timeout")
@@ -149,8 +180,12 @@ func _physics_process(delta):
 			drop()
 			apply_central_impulse(normalized * power * power_multiplier)
 			live_ball = true
-			arrow.rect_size.x = reset_arrow.x
-			arrow.hide()
+			if pick_id == 0:
+				arrow0.rect_size.x = reset_arrow0.x
+				arrow0.hide()
+			elif pick_id == 4:
+				arrow4.rect_size.x = reset_arrow4.x
+				arrow4.hide()
 			power = 0
 		
 			

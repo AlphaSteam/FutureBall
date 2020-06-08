@@ -431,7 +431,8 @@ physics_material_override = SubResource( 2 )
 gravity_scale = 3.0
 contact_monitor = true
 sleeping = true
-player_path = NodePath("../Player4")
+player_path_0 = NodePath("../Player0")
+player_path_4 = NodePath("../Player4")
 
 [node name="Player4" parent="." groups=[
 "Jugador",
