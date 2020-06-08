@@ -2,6 +2,9 @@ extends RigidBody2D
 
 const MAXPOW = 100
 const DEFPOWMULT = 4
+
+var id = 4
+
 var power_multiplier = DEFPOWMULT
 var power = 0
 var rebote = 0
@@ -25,8 +28,17 @@ var live_ball = false
 #Si la tiene agarrada un jugador o no
 var picked = false
 var cancel = false
+var controller
 onready var reset_position = global_position
 onready var reset_arrow = arrow.rect_size 
+func _on_joy_connection_changed(device_id, connected):
+	if connected:
+		controller = true
+	else:
+		controller = false
+
+
+
 #Detectar contactos
 func _ready():
 	#set_physics_process(false)
@@ -95,8 +107,16 @@ func _physics_process(delta):
 	var init = global_position
 			#print("position: "+str(init))
 	var mouse =  get_global_mouse_position()
+	#print(Input.get_joy_axis(0,JOY_AXIS_2)) #horizontal
+	#print(Input.get_joy_axis(0,JOY_AXIS_3)) #vertical
+	var analog = Vector2(Input.get_joy_axis(id,JOY_AXIS_2),- Input.get_joy_axis(0,JOY_AXIS_3))
 			#print("mouse: "+  str(mouse))
-	var vect =  mouse - init
+	var vect
+	if id == 4:
+		vect =  mouse - init
+	else:
+		vect = analog
+	#var vectpad = analog
 	var normalized
 	if sqrt(vect.x + vect.y) != 0:
 		normalized = vect / (sqrt(pow(vect.x,2) + pow(vect.y,2)))
@@ -104,10 +124,10 @@ func _physics_process(delta):
 		 normalized = vect
 #	print(get_tree().get_root())
 	if picked == true:
-		if Input.is_action_just_pressed("attack"):
+		if Input.is_action_just_pressed("attack_%s" % id):
 			arrow.visible = true
 			cancel = false
-		elif Input.is_action_pressed("attack") && cancel == false:
+		elif Input.is_action_pressed("attack_%s" % id) && cancel == false:
 			if power<= MAXPOW:
 					power += 2
 			
@@ -118,12 +138,12 @@ func _physics_process(delta):
 			arrow.rect_rotation = rad2deg(vect.angle())
 			arrow.rect_size.x = power
 			#arrow_head.global_position = player.position + power * vect
-		if Input.is_action_just_pressed("Cancel attack"):
+		if Input.is_action_just_pressed("Cancel_%s" % id):
 			cancel = true
 			arrow.rect_size.x = reset_arrow.x
 			arrow.hide()
 			power = 0
-		if Input.is_action_just_released("attack") && cancel == false:
+		if Input.is_action_just_released("attack_%s" % id) && cancel == false:
 #			yield(get_tree().create_timer(0.01), "timeout")
 			$Sprite.texture = ball_live
 			drop()
