@@ -26,9 +26,9 @@ var end_jump = false
 var end_jump_after = false
 var on_wall = false
 var flip_character_once = false # Used to flip the character when sliding through a wall, so I don't do it more than once.
-
+ 
 onready var reset_position2 = position
-
+export var id = 0;
 func _physics_process(delta):
 	var input_velocity = Vector2.ZERO
 	if Input.is_action_just_pressed("Right_%s" % id):

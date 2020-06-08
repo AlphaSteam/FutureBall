@@ -75,7 +75,7 @@ func _on_Bola_body_entered(body: Node):
 		$Sprite.texture = ball_dead	
 
 
-func pick():
+func pick(juega: String):
 	picked = true
 	set_mode(3)
 	var ball_position = global_position
@@ -108,7 +108,7 @@ func _on_Area2D_body_entered(body):
 			picked = false
 			#print("golpeó y murió")
 		elif live_ball == false and not picked:
-			call_deferred("pick")
+			call_deferred("pick",body.get_name())
 			#print("agarra la bola")
 
 # warning-ignore:shadowed_variable
