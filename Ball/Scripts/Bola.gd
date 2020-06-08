@@ -8,12 +8,14 @@ var pick_id = 4
 var power_multiplier = DEFPOWMULT
 var power = 0
 var rebote = 0
+#Variables para los distintos jugadores dependiendo de su control
 export var player_path_0 : NodePath
 export var player_path_1 : NodePath
 export var player_path_2 : NodePath
 export var player_path_3 : NodePath
 export var player_path_4 : NodePath
 
+#Path para los jugadores, de momento solo se utilizan dos
 onready var player0 = get_node(player_path_0)
 onready var player4 = get_node(player_path_4)
 #onready var arrow_head = player.get_node("ArrowHead")
@@ -112,12 +114,12 @@ func _on_Area2D_body_entered(body):
 			#print("agarra la bola")
 
 # warning-ignore:shadowed_variable
-func _pickup(picked):
-	if picked == true:
-		self.get_parent().remove_child(self) # error here  
-		#print(get_parent())
-		get_node("Player_%s" % pick_id).add_child(self)
-		#print(get_parent())
+#func _pickup(picked):
+#	if picked == true:
+#		self.get_parent().remove_child(self) # error here  
+#		#print(get_parent())
+#		get_node("Player_%s" % pick_id).add_child(self)
+#		#print(get_parent())
 		
 
 func _physics_process(delta):
