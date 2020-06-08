@@ -1,16 +1,15 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tiles/platformPack_tilesheet.png" type="Texture" id=2]
 [ext_resource path="res://FallingPlatform.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Backgrounds/City Background/City Foreground.png" type="Texture" id=4]
-[ext_resource path="res://WarmupEnemy.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Backgrounds/City Background/City Background.png" type="Texture" id=6]
 [ext_resource path="res://Bola.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Backgrounds/parallax/skill-desc_0002_far-buildings.png" type="Texture" id=8]
 [ext_resource path="res://Backgrounds/parallax/skill-desc_0001_buildings.png" type="Texture" id=9]
 [ext_resource path="res://Backgrounds/parallax/skill-desc_0000_foreground.png" type="Texture" id=10]
-[ext_resource path="res://Backgrounds/City Background/Sky.png" type="Texture" id=11]
+[ext_resource path="res://Backgrounds/nebula09.png" type="Texture" id=11]
 [ext_resource path="res://CamaraMultiplayer.gd" type="Script" id=12]
 
 [sub_resource type="GDScript" id=1]
@@ -528,13 +527,12 @@ __meta__ = {
 }
 
 [node name="0" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
-position = Vector2( 194.971, -178.363 )
+position = Vector2( 224, 0 )
+scale = Vector2( 0.706255, 0.706255 )
 texture = ExtResource( 11 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="1" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+visible = false
 position = Vector2( 216, 133 )
 scale = Vector2( 0.669, 0.669 )
 texture = ExtResource( 6 )
@@ -543,6 +541,7 @@ __meta__ = {
 }
 
 [node name="2" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+visible = false
 position = Vector2( 216, 141.092 )
 scale = Vector2( 0.669349, 0.669349 )
 texture = ExtResource( 4 )
@@ -557,7 +556,7 @@ tile_set = SubResource( 12 )
 collision_layer = 4
 collision_mask = 3
 format = 1
-tile_data = PoolIntArray( -917504, 6, 0, -917480, 6, 0, -851968, 6, 0, -851944, 6, 0, -786432, 6, 0, -786408, 6, 0, -720896, 6, 0, -720872, 6, 0, -655360, 6, 0, -655336, 6, 0, -589824, 6, 0, -589800, 6, 0, -524288, 6, 0, -524264, 6, 0, -458752, 6, 0, -458751, 7, 0, -458750, 7, 0, -458741, 5, 0, -458740, 5, 0, -458739, 5, 0, -458730, 7, 0, -458729, 7, 0, -458728, 6, 0, -393216, 6, 0, -393192, 6, 0, -327680, 6, 0, -327656, 6, 0, -262144, 6, 0, -262120, 6, 0, -196608, 6, 0, -196584, 6, 0, -131072, 6, 0, -131048, 6, 0, -65536, 6, 0, -65512, 6, 0, 0, 6, 0, 24, 6, 0, 65536, 6, 0, 65560, 6, 0, 131072, 6, 0, 131096, 6, 0, 196608, 6, 0, 196632, 6, 0, 262144, 6, 0, 262154, 5, 0, 262155, 5, 0, 262156, 5, 0, 262157, 5, 0, 262158, 5, 0, 262168, 6, 0, 327680, 6, 0, 327704, 6, 0, 393216, 6, 0, 393219, 7, 0, 393220, 7, 0, 393221, 7, 0, 393222, 7, 0, 393234, 7, 0, 393235, 7, 0, 393236, 7, 0, 393237, 7, 0, 393240, 6, 0, 458752, 6, 0, 458776, 6, 0, 524288, 6, 0, 524312, 6, 0, 589824, 6, 0, 589848, 6, 0, 655360, 6, 0, 655365, 7, 0, 655366, 7, 0, 655367, 7, 0, 655368, 7, 0, 655375, 7, 0, 655376, 7, 0, 655377, 7, 0, 655378, 7, 0, 655384, 6, 0, 720896, 6, 0, 720920, 6, 0, 786432, 6, 0, 786456, 6, 0, 851968, 6, 0, 851992, 6, 0, 917504, 6, 0, 917528, 6, 0, 983040, 6, 0, 983042, 7, 0, 983043, 7, 0, 983044, 7, 0, 983045, 7, 0, 983059, 7, 0, 983060, 7, 0, 983061, 7, 0, 983062, 7, 0, 983064, 6, 0, 1048576, 6, 0, 1048600, 6, 0, 1114112, 6, 0, 1114136, 6, 0, 1179648, 6, 0, 1179672, 6, 0, 1245184, 6, 0, 1245208, 6, 0, 1310720, 6, 0, 1310744, 6, 0, 1376256, 6, 0, 1376280, 6, 0, 1441792, 6, 0, 1441816, 6, 0, 1507328, 6, 0, 1507352, 6, 0 )
+tile_data = PoolIntArray( -393218, 7, 0, -393217, 7, 0, -458752, 7, 0, -458751, 7, 0, -458743, 5, 0, -458742, 5, 0, -458741, 5, 0, -458740, 5, 0, -458739, 5, 0, -458738, 5, 0, -458737, 5, 0, -458729, 7, 0, -458728, 7, 0, -458727, 7, 0, -458726, 7, 0, -196620, 5, 0, -196619, 5, 0, -196618, 5, 0, -196617, 5, 0, -262111, 5, 0, -262110, 5, 0, -262109, 5, 0, -262108, 5, 0, 196601, 7, 0, 196602, 7, 0, 196603, 7, 0, 196604, 7, 0, 196605, 7, 0, 131099, 7, 0, 131100, 7, 0, 131101, 7, 0, 131102, 7, 0, 131103, 7, 0, 262154, 5, 0, 262155, 5, 0, 262156, 5, 0, 262157, 5, 0, 262158, 5, 0, 393219, 7, 0, 393220, 7, 0, 393221, 7, 0, 393222, 7, 0, 393234, 7, 0, 393235, 7, 0, 393236, 7, 0, 393237, 7, 0, 983042, 7, 0, 983043, 7, 0, 983044, 7, 0, 983045, 7, 0, 983059, 7, 0, 983060, 7, 0, 983061, 7, 0, 983062, 7, 0 )
 __meta__ = {
 "_edit_lock_": true
 }
@@ -573,11 +572,23 @@ position = Vector2( 184, 212.092 )
 collision_layer = 4
 
 [node name="FallingPlatform4" parent="FallingPlatforms" instance=ExtResource( 3 )]
-position = Vector2( 24, 176 )
+position = Vector2( -8, 176 )
+collision_layer = 4
+
+[node name="FallingPlatform8" parent="FallingPlatforms" instance=ExtResource( 3 )]
+position = Vector2( -24, 176 )
+collision_layer = 4
+
+[node name="FallingPlatform10" parent="FallingPlatforms" instance=ExtResource( 3 )]
+position = Vector2( -40, 176 )
 collision_layer = 4
 
 [node name="FallingPlatform7" parent="FallingPlatforms" instance=ExtResource( 3 )]
 position = Vector2( 80, -16 )
+collision_layer = 4
+
+[node name="FallingPlatform15" parent="FallingPlatforms" instance=ExtResource( 3 )]
+position = Vector2( 64, -16 )
 collision_layer = 4
 
 [node name="FallingPlatform11" parent="FallingPlatforms" instance=ExtResource( 3 )]
@@ -588,12 +599,24 @@ collision_layer = 4
 position = Vector2( 328, -16 )
 collision_layer = 4
 
+[node name="FallingPlatform16" parent="FallingPlatforms" instance=ExtResource( 3 )]
+position = Vector2( 344, -16 )
+collision_layer = 4
+
 [node name="FallingPlatform9" parent="FallingPlatforms" instance=ExtResource( 3 )]
 position = Vector2( 96, -16 )
 collision_layer = 4
 
 [node name="FallingPlatform6" parent="FallingPlatforms" instance=ExtResource( 3 )]
-position = Vector2( 376, 176 )
+position = Vector2( 400, 176 )
+collision_layer = 4
+
+[node name="FallingPlatform13" parent="FallingPlatforms" instance=ExtResource( 3 )]
+position = Vector2( 416, 176 )
+collision_layer = 4
+
+[node name="FallingPlatform14" parent="FallingPlatforms" instance=ExtResource( 3 )]
+position = Vector2( 432, 176 )
 collision_layer = 4
 
 [node name="FallingPlatform3" parent="FallingPlatforms" instance=ExtResource( 3 )]
@@ -602,28 +625,6 @@ collision_layer = 4
 
 [node name="FallingPlatform5" parent="FallingPlatforms" instance=ExtResource( 3 )]
 position = Vector2( 216, 212.092 )
-collision_layer = 4
-
-[node name="FallingPlatform" parent="FallingPlatforms" instance=ExtResource( 3 )]
-position = Vector2( 168, 212.092 )
-collision_layer = 4
-
-[node name="Node" type="Node" parent="."]
-
-[node name="WarmupEnemie" parent="Node" instance=ExtResource( 5 )]
-position = Vector2( 336, 78.6231 )
-collision_layer = 4
-
-[node name="WarmupEnemie3" parent="Node" instance=ExtResource( 5 )]
-position = Vector2( 368, -130.62 )
-collision_layer = 4
-
-[node name="WarmupEnemie4" parent="Node" instance=ExtResource( 5 )]
-position = Vector2( 32, -130.62 )
-collision_layer = 4
-
-[node name="WarmupEnemie2" parent="Node" instance=ExtResource( 5 )]
-position = Vector2( 73.1962, 78.6231 )
 collision_layer = 4
 [connection signal="timeout" from="Player4/Dash Time" to="Player4" method="_on_Dash_Time_timeout"]
 [connection signal="timeout" from="Player4/Dash Cooldown" to="Player4" method="_on_Dash_Cooldown_timeout"]
