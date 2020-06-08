@@ -1,16 +1,16 @@
 extends KinematicBody2D
 
-const DEFSPEED=180
-const DEFFRICTION = 0.4
-const DEFACC = 0.8
-const DEFGRAVITY = 10
-const JUMP_POWER = -300
-const FLOOR = Vector2(0,-1)
-const INITJUMPS =3
-const INITDASHES =2
-const WALLFALLSPEED = 8
+var DEFSPEED=180
+var DEFFRICTION = 0.4
+var DEFACC = 0.8
+var DEFGRAVITY = 10
+var JUMP_POWER = -300
+var FLOOR = Vector2(0,-1)
+var INITJUMPS =3
+var INITDASHES =2
+var WALLFALLSPEED = 8
 
-var id = 4
+export var id = 4
 var gravity = DEFGRAVITY
 var velocity = Vector2(0,0)
 var on_ground = false
@@ -28,6 +28,59 @@ var on_wall = false
 var flip_character_once = false # Used to flip the character when sliding through a wall, so I don't do it more than once.
 
 onready var reset_position2 = position
+
+func _ready():
+	if Globals.Player1==0:
+		DEFSPEED=180
+		DEFFRICTION = 0.4
+		DEFACC = 0.8
+		DEFGRAVITY = 10
+		JUMP_POWER = -300
+		FLOOR = Vector2(0,-1)
+		INITJUMPS =3
+		INITDASHES =2
+		WALLFALLSPEED = 8
+	elif Globals.Player1==1:
+		DEFSPEED=100
+		DEFFRICTION = 0.4
+		DEFACC = 0.8
+		DEFGRAVITY = 10
+		JUMP_POWER = -300
+		FLOOR = Vector2(0,-1)
+		INITJUMPS =40
+		INITDASHES =2
+		WALLFALLSPEED = 8
+	elif Globals.Player1==2:
+		DEFSPEED=150
+		DEFFRICTION = 0.4
+		DEFACC = 0.8
+		DEFGRAVITY = 10
+		JUMP_POWER = -300
+		FLOOR = Vector2(0,-1)
+		INITJUMPS =2
+		INITDASHES =4
+		WALLFALLSPEED = 8
+	elif Globals.Player1==3:
+		DEFSPEED=200
+		DEFFRICTION = 0.2
+		DEFACC = 0.9
+		DEFGRAVITY = 10
+		JUMP_POWER = -300
+		FLOOR = Vector2(0,-1)
+		INITJUMPS =2
+		INITDASHES =1
+		WALLFALLSPEED = 8
+	elif Globals.Player1==4:
+		DEFSPEED=300
+		DEFFRICTION = 0.4
+		DEFACC = 0.8
+		DEFGRAVITY = 10
+		JUMP_POWER = -300
+		FLOOR = Vector2(0,-1)
+		INITJUMPS =2
+		INITDASHES =0
+		WALLFALLSPEED = 8
+	
 
 func _physics_process(delta):
 	var input_velocity = Vector2.ZERO

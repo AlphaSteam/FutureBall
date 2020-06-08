@@ -16,26 +16,28 @@ animations = [ {
 "name": "idle",
 "speed": 0.0
 }, {
-"frames": [ ExtResource( 9 ) ],
-"loop": false,
-"name": "jump",
-"speed": 0.0
+"frames": [ ExtResource( 8 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "run",
+"speed": 10.0
 }, {
 "frames": [ ExtResource( 7 ) ],
 "loop": false,
 "name": "fall",
 "speed": 0.0
 }, {
-"frames": [ ExtResource( 8 ), ExtResource( 5 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "run",
-"speed": 10.0
+"frames": [ ExtResource( 9 ) ],
+"loop": false,
+"name": "jump",
+"speed": 0.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 8.55065, 13.6003 )
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" groups=[
+"Jugador",
+]]
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
@@ -68,3 +70,23 @@ __meta__ = {
 
 [node name="Ball" type="Position2D" parent="."]
 position = Vector2( -7, 12 )
+
+[node name="Dash Cooldown" type="Timer" parent="."]
+wait_time = 0.657
+one_shot = true
+
+[node name="Dash Time" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="New jump threshold" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+
+[node name="Minimun jump duration" type="Timer" parent="."]
+wait_time = 0.15
+one_shot = true
+[connection signal="timeout" from="Dash Cooldown" to="." method="_on_Dash_Cooldown_timeout"]
+[connection signal="timeout" from="Dash Time" to="." method="_on_Dash_Time_timeout"]
+[connection signal="timeout" from="New jump threshold" to="." method="_on_New_jump_threshold_timeout"]
+[connection signal="timeout" from="Minimun jump duration" to="." method="_on_Minimun_jump_duration_timeout"]
