@@ -3,7 +3,7 @@ extends RigidBody2D
 const MAXPOW = 100
 const DEFPOWMULT = 4
 
-var pick_id = 4
+var pick_id = 5
 
 var power_multiplier = DEFPOWMULT
 var power = 0
@@ -105,13 +105,24 @@ func drop():
 
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Jugador"):
-		pick_id = body.id
-		if live_ball == true:
-			picked = false
-			#print("golpeó y murió")
-		elif live_ball == false and not picked:
-			call_deferred("pick")
-			#print("agarra la bola")
+		if pick_id != body.id:
+			if live_ball == true:
+				picked = false
+				print("golpeó y murió")
+				player0.position = player0.reset_position2
+				player4.position = player4.reset_position2
+#				position = reset_position
+				linear_velocity = Vector2.ZERO
+				pick_id = 5
+			elif live_ball == false and not picked:
+				pick_id = body.id
+				call_deferred("pick")
+		else:
+			if live_ball == false and not picked:
+				pick_id = body.id
+				call_deferred("pick")
+
+				#print("agarra la bola")
 
 # warning-ignore:shadowed_variable
 #func _pickup(picked):
@@ -124,10 +135,7 @@ func _on_Area2D_body_entered(body):
 
 func _physics_process(delta):
 	var init = global_position
-			#print("position: "+str(init))
 	var mouse =  get_global_mouse_position()
-	#print(Input.get_joy_axis(0,JOY_AXIS_2)) #horizontal
-	#print(Input.get_joy_axis(0,JOY_AXIS_3)) #vertical
 	var analog = Vector2(Input.get_joy_axis(pick_id,JOY_AXIS_2), Input.get_joy_axis(pick_id,JOY_AXIS_3))
 			#print("mouse: "+  str(mouse))
 	var vect
