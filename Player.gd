@@ -26,7 +26,7 @@ var end_jump = false
 var end_jump_after = false
 var on_wall = false
 var flip_character_once = false # Used to flip the character when sliding through a wall, so I don't do it more than once.
-
+onready var timer = get_parent().get_node("Camera2D/CanvasLayer/TimerLabel/Timer")
 onready var reset_position2 = position
 
 signal sd0
@@ -184,6 +184,9 @@ func _physics_process(delta):
 	if position.y > 400:
 		position = reset_position2
 		emit_signal("sd%s" % id)
+		timer.stop()
+		timer.set_wait_time(40)
+		timer.start()
 	
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)

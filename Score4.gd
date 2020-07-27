@@ -30,3 +30,6 @@ func _on_Player4_sd4():
 #		get_tree().change_scene("res://Winscreen.tscn")
 
 
+func _on_Bola_sd4():
+	text = str(int(text) - 1)
+	pass # Replace with function body.

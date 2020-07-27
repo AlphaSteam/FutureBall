@@ -10,6 +10,7 @@ func _ready():
 	pass
 	
 func _process(delta):
-	print(Player1)
+	pass
+#	print(Player1)
 
 

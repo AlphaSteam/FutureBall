@@ -491,7 +491,10 @@ position = Vector2( 63.8854, 221.404 )
 position = Vector2( 336.983, 220.917 )
 id = 0
 [connection signal="timeout" from="Camera2D/CanvasLayer/TimerLabel/Timer" to="Camera2D/CanvasLayer/TimerLabel" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Camera2D/CanvasLayer/TimerLabel/Timer" to="Bola" method="_on_Timer_timeout"]
 [connection signal="Punto0" from="Bola" to="Camera2D/CanvasLayer/Score0" method="_on_Bola_Punto0"]
 [connection signal="Punto4" from="Bola" to="Camera2D/CanvasLayer/Score4" method="_on_Bola_Punto4"]
+[connection signal="sd0" from="Bola" to="Camera2D/CanvasLayer/Score0" method="_on_Bola_sd0"]
+[connection signal="sd4" from="Bola" to="Camera2D/CanvasLayer/Score4" method="_on_Bola_sd4"]
 [connection signal="sd4" from="Player4" to="Camera2D/CanvasLayer/Score4" method="_on_Player4_sd4"]
 [connection signal="sd0" from="Player0" to="Camera2D/CanvasLayer/Score0" method="_on_Player0_sd0"]

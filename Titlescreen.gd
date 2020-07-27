@@ -17,10 +17,11 @@ func _physics_process(delta):
 		$MarginContainer/VBoxContainer/VBoxContainer/TextureButton.grab_focus()
 
 func _on_joy_connection_changed(device_id, connected):
-	if connected:
-		print(Input.get_joy_name(device_id))
-	else:
-		print("Keyboard")
+	pass
+#	if connected:
+#		print(Input.get_joy_name(device_id))
+#	else:
+#		print("Keyboard")
 
 
 func _on_TextureButton_pressed():

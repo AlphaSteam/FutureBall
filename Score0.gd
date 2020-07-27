@@ -29,3 +29,8 @@ func _on_Player0_sd0():
 #func _victory():
 #	if int(text) == 5 or int(text) == -3:
 #		get_tree().change_scene("res://Winscreen.tscn")
+
+
+func _on_Bola_sd0():
+	text = str(int(text) - 1)
+	pass # Replace with function body.

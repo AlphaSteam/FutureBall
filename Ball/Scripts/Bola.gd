@@ -5,6 +5,7 @@ const DEFPOWMULT = 4
 
 var pick_id = 5
 
+
 var power_multiplier = DEFPOWMULT
 var power = 0
 var rebote = 0
@@ -14,7 +15,8 @@ export var player_path_1 : NodePath
 export var player_path_2 : NodePath
 export var player_path_3 : NodePath
 export var player_path_4 : NodePath
-
+onready var area2 = get_node("Area2D")
+onready var timer = get_parent().get_node("Camera2D/CanvasLayer/TimerLabel/Timer")
 #Path para los jugadores, de momento solo se utilizan dos
 onready var player0 = get_node(player_path_0)
 onready var player4 = get_node(player_path_4)
@@ -30,6 +32,10 @@ var ball_live = preload("res://Ball/ball_live.png")
 signal Punto0
 signal Punto4
 
+signal sd0
+signal sd4
+
+
 #Variables
 #Lanzamiento
 #La bola se lanza arrastrando el mouse hacia el objetivo
@@ -42,6 +48,7 @@ var live_ball = false
 #Si la tiene agarrada un jugador o no
 var picked = false
 var cancel = false
+var attacking = false
 var controller
 onready var reset_position = global_position
 onready var reset_arrow0 = arrow0.rect_size 
@@ -114,11 +121,10 @@ func _on_Area2D_body_entered(body):
 			if live_ball == true:
 				picked = false
 				print("golpeó y murió")
+				attacking =true
 				player0.position = player0.reset_position2
 				player4.position = player4.reset_position2
-#				position = reset_position
 				emit_signal("Punto%s" % pick_id)
-				linear_velocity = Vector2.ZERO
 				pick_id = 5
 			elif live_ball == false and not picked:
 				pick_id = body.id
@@ -210,6 +216,29 @@ func _physics_process(delta):
 		position = reset_position
 		linear_velocity = Vector2.ZERO
 
+	if (area2.overlaps_body(player0) or area2.overlaps_body(player4)):
+		if !picked and attacking:
+			linear_velocity = Vector2.ZERO
+			position = reset_position
+			attacking = false
+			timer.stop()
+			timer.set_wait_time(40)
+			timer.start()
+
+
+func _on_Timer_timeout():
+	if pick_id==0:
+		emit_signal("sd%s" % 0)	
+	elif pick_id==4:
+		emit_signal("sd%s" % 4)		
+	drop()
+	linear_velocity = Vector2.ZERO
+	position = reset_position
+	player0.position = player0.reset_position2
+	player4.position = player4.reset_position2
+
+
+	
 
 
 #Mecanica de lanzamiento con mouse
@@ -238,6 +267,7 @@ func _physics_process(delta):
 ##			apply_impulse(Vector2(), dir * 5)
 #			live_ball = true
 #			picked = false
+
 
 
 
