@@ -1,6 +1,6 @@
 extends Label
 
-var round_time=40
+var round_time=10
 onready var timer = get_node("Timer")
 # Declare member variables here. Examples:
 # var a = 2

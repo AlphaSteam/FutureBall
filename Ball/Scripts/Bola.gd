@@ -49,6 +49,7 @@ var live_ball = false
 var picked = false
 var cancel = false
 var attacking = false
+var force_reset = false
 var controller
 onready var reset_position = global_position
 onready var reset_arrow0 = arrow0.rect_size 
@@ -119,11 +120,8 @@ func _on_Area2D_body_entered(body):
 	if body.is_in_group("Jugador"):
 		if pick_id != body.id:
 			if live_ball == true:
-				picked = false
-				print("golpeó y murió")
-				attacking =true
-				player0.position = player0.reset_position2
-				player4.position = player4.reset_position2
+				picked = false			
+				attacking = true			
 				emit_signal("Punto%s" % pick_id)
 				pick_id = 5
 			elif live_ball == false and not picked:
@@ -218,15 +216,30 @@ func _physics_process(delta):
 
 	if (area2.overlaps_body(player0) or area2.overlaps_body(player4)):
 		if !picked and attacking:
-			linear_velocity = Vector2.ZERO
-			position = reset_position
-			attacking = false
-			timer.stop()
-			timer.set_wait_time(40)
-			timer.start()
-
+			$Area2D/Particles2D.emitting = true
+			$Area2D/Particles2D/Particles2D.emitting = true
+			$Area2D/Particles2D/Particles2D2.emitting = true
+			$Area2D/Particles2D/Particles2D3.emitting = true
+				
+	var pulento = true
+	if($Area2D/Particles2D.is_emitting()):
+		pulento = false
+	
+	if(pulento and !picked and attacking):			
+		linear_velocity = Vector2.ZERO
+		position = reset_position
+		player0.position = player0.reset_position2
+		player4.position = player4.reset_position2	
+		attacking = false
+		timer.stop()
+		timer.set_wait_time(40)
+		timer.start()
 
 func _on_Timer_timeout():
+	$Area2D/Particles2D.emitting = true
+	$Area2D/Particles2D/Particles2D.emitting = true
+	$Area2D/Particles2D/Particles2D2.emitting = true
+	$Area2D/Particles2D/Particles2D3.emitting = true	
 	if pick_id==0:
 		emit_signal("sd%s" % 0)	
 	elif pick_id==4:
