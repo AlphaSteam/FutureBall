@@ -37,6 +37,8 @@ var end_jump = false
 var end_jump_after = false
 var on_wall = false
 var flip_character_once = false # Used to flip the character when sliding through a wall, so I don't do it more than once.
+
+
 onready var timer = get_parent().get_node(\"Camera2D/CanvasLayer/TimerLabel/Timer\")
 onready var reset_position2 = position
 
