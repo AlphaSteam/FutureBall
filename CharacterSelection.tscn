@@ -11,7 +11,7 @@ script/source = "extends Node2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = \"text\"
-
+var Nodes = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -21,6 +21,7 @@ func _ready():
 		var Character = preload(\"res://CharacterSelect.tscn\")
 		var node = Character.instance()
 		$Players.add_child(node)
+		Nodes.append(node)
 	
 	
 
@@ -31,17 +32,10 @@ func _process(delta):
 	#$Character.texture.set()
 
 
-func _on_Left_pressed():
-	if Globals.Player1 > 0:
-		Globals.Player1 -=1
-
-
-func _on_Right_pressed():
-	if Globals.Player1 < 4:
-		Globals.Player1 +=1
-
 
 func _on_Start_pressed():
+	for i in PlayerGlobals.Number_of_players:
+		PlayerGlobals.Players[i].Character = PlayerGlobals.Chars[Nodes[i].Selected_char].duplicate()
 	get_tree().change_scene(\"res://MainStage.tscn\")
 "
 

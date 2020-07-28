@@ -33,8 +33,7 @@ func spawnPlayers():
 		var random = randi()%a.size()-1
 		var spawn_p = spawn_points[random]
 		var character = Players[i].Character
-		var node = character.instance()
-		add_child(node)
+		add_child(character)
 		#Spawn player on point
 		a.remove(random)
 # Called every frame. 'delta' is the elapsed time since the previous frame.

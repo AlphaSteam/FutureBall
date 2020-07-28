@@ -134,9 +134,9 @@ func _physics_process(delta):
 	if position.y > 400:
 		position = reset_position2
 		emit_signal("sd%s" % id)
-		timer.stop()
-		timer.set_wait_time(40)
-		timer.start()
+		#timer.stop()
+		#timer.set_wait_time(40)
+		#timer.start()
 	
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)

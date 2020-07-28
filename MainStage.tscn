@@ -1,6 +1,5 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=30 format=2]
 
-[ext_resource path="res://Character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tiles/platformPack_tilesheet.png" type="Texture" id=2]
 [ext_resource path="res://FallingPlatform.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Backgrounds/City Background/City Foreground.png" type="Texture" id=4]
@@ -267,8 +266,6 @@ limit_left = -350
 limit_right = 750
 limit_bottom = 300
 script = ExtResource( 12 )
-object1 = NodePath("../Player4")
-object2 = NodePath("../Player0")
 object3 = NodePath("../Bola")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
@@ -344,8 +341,6 @@ physics_material_override = SubResource( 4 )
 gravity_scale = 3.0
 contact_monitor = true
 sleeping = true
-player_path_0 = NodePath("../Player0")
-player_path_4 = NodePath("../Player4")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -484,13 +479,6 @@ collision_layer = 4
 [node name="FallingPlatform5" parent="FallingPlatforms" instance=ExtResource( 3 )]
 position = Vector2( 216, 212.092 )
 collision_layer = 4
-
-[node name="Player4" parent="." instance=ExtResource( 1 )]
-position = Vector2( 63.8854, 221.404 )
-
-[node name="Player0" parent="." instance=ExtResource( 1 )]
-position = Vector2( 336.983, 220.917 )
-id = 0
 
 [node name="SpawnPoints" type="Node2D" parent="."]
 
