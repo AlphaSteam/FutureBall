@@ -195,13 +195,14 @@ func _physics_process(delta):
 	if position.y > 400:
 		position = reset_position
 		linear_velocity = Vector2.ZERO
-
-	if (area2.overlaps_body(player0) or area2.overlaps_body(player4)):
-		if !picked and attacking:
-			$Area2D/Particles2D.emitting = true
-			$Area2D/Particles2D/Particles2D.emitting = true
-			$Area2D/Particles2D/Particles2D2.emitting = true
-			$Area2D/Particles2D/Particles2D3.emitting = true
+	
+	for i in players:
+		if area2.overlaps_body(i):
+			if !picked and attacking:
+				$Area2D/Particles2D.emitting = true
+				$Area2D/Particles2D/Particles2D.emitting = true
+				$Area2D/Particles2D/Particles2D2.emitting = true
+				$Area2D/Particles2D/Particles2D3.emitting = true
 				
 	var pulento = true
 	if($Area2D/Particles2D.is_emitting()):
@@ -211,9 +212,7 @@ func _physics_process(delta):
 		linear_velocity = Vector2.ZERO
 		position = reset_position
 		for i in players:
-			i.position = reset_position2
-		player0.position = player0.reset_position2
-		player4.position = player4.reset_position2	
+			i.position = i.reset_position2
 		attacking = false
 		timer.stop()
 		timer.set_wait_time(40)
@@ -231,8 +230,8 @@ func _on_Timer_timeout():
 	drop()
 	linear_velocity = Vector2.ZERO
 	position = reset_position
-	player0.position = player0.reset_position2
-	player4.position = player4.reset_position2
+	for i in players:
+			i.position = i.reset_position2
 
 
 	
