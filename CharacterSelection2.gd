@@ -1,14 +1,18 @@
-extends Node
-class_name Player
+extends Node2D
+
 
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-var Character
-var Name = ""
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	PlayerGlobals.createCharArray()
+	for i in PlayerGlobals.Number_of_players:
+		var select = preload("res://CharacterSelect.tscn")
+		var node = select.instance()
+		$CenterContainer/Selections.add_child(node)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

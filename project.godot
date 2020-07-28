@@ -8,9 +8,20 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "Char1",
+"language": "GDScript",
+"path": "res://Character1.gd"
+}, {
+"base": "Node",
+"class": "Player",
+"language": "GDScript",
+"path": "res://Player.gd"
+} ]
 _global_script_class_icons={
-
+"Char1": "",
+"Player": ""
 }
 
 [application]
@@ -22,6 +33,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Globals="*res://Global_vars.gd"
+PlayerGlobals="*res://PlayerGlobals.gd"
 
 [display]
 

@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://CharacterSelection2.gd" type="Script" id=1]
+[ext_resource path="res://Backgrounds/space1.png" type="Texture" id=2]
+[ext_resource path="res://buttons/start game selected.png" type="Texture" id=5]
+[ext_resource path="res://buttons/start game.png" type="Texture" id=6]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="space1" type="Sprite" parent="."]
+position = Vector2( 218.241, 134.418 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Start" type="TextureButton" parent="."]
+margin_left = 153.0
+margin_top = 195.0
+margin_right = 256.0
+margin_bottom = 220.0
+texture_normal = ExtResource( 6 )
+texture_hover = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_left = 34.7222
+margin_top = 18.1737
+margin_right = 74.7222
+margin_bottom = 58.1737
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Selections" type="GridContainer" parent="CenterContainer"]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 20.0
+margin_bottom = 20.0
+custom_constants/vseparation = 72
+custom_constants/hseparation = 85
+columns = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]

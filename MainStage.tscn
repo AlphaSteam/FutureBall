@@ -1,6 +1,6 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
-[ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Character.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tiles/platformPack_tilesheet.png" type="Texture" id=2]
 [ext_resource path="res://FallingPlatform.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Backgrounds/City Background/City Foreground.png" type="Texture" id=4]
@@ -16,6 +16,7 @@
 [ext_resource path="res://Resources/Gameplay.ttf" type="DynamicFontData" id=14]
 [ext_resource path="res://Resources/Overlay.png" type="Texture" id=15]
 [ext_resource path="res://Timer.gd" type="Script" id=16]
+[ext_resource path="res://SpawnPoint.tscn" type="PackedScene" id=17]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
@@ -28,7 +29,7 @@ script/source = "extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	PlayerGlobals.spawnPlayers()
 func _process(delta):
 	if Input.is_action_just_pressed(\"Toggle full screen\"):
 		 OS.window_fullscreen = !OS.window_fullscreen
@@ -490,11 +491,43 @@ position = Vector2( 63.8854, 221.404 )
 [node name="Player0" parent="." instance=ExtResource( 1 )]
 position = Vector2( 336.983, 220.917 )
 id = 0
+
+[node name="SpawnPoints" type="Node2D" parent="."]
+
+[node name="Spawn 1" parent="SpawnPoints" groups=[
+"SpawnPoint",
+] instance=ExtResource( 17 )]
+margin_left = 45.4597
+margin_top = 204.288
+margin_right = 45.4597
+margin_bottom = 204.288
+
+[node name="Spawn 2" parent="SpawnPoints" groups=[
+"SpawnPoint",
+] instance=ExtResource( 17 )]
+margin_left = 317.096
+margin_top = 203.727
+margin_right = 317.096
+margin_bottom = 203.727
+
+[node name="Spawn 3" parent="SpawnPoints" groups=[
+"SpawnPoint",
+] instance=ExtResource( 17 )]
+margin_left = 299.136
+margin_top = 58.368
+margin_right = 299.136
+margin_bottom = 58.368
+
+[node name="Spawn 4" parent="SpawnPoints" groups=[
+"SpawnPoint",
+] instance=ExtResource( 17 )]
+margin_left = 59.9109
+margin_top = 60.0517
+margin_right = 59.9109
+margin_bottom = 60.0517
 [connection signal="timeout" from="Camera2D/CanvasLayer/TimerLabel/Timer" to="Bola" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Camera2D/CanvasLayer/TimerLabel/Timer" to="Camera2D/CanvasLayer/TimerLabel" method="_on_Timer_timeout"]
 [connection signal="Punto0" from="Bola" to="Camera2D/CanvasLayer/Score0" method="_on_Bola_Punto0"]
 [connection signal="Punto4" from="Bola" to="Camera2D/CanvasLayer/Score4" method="_on_Bola_Punto4"]
 [connection signal="sd0" from="Bola" to="Camera2D/CanvasLayer/Score0" method="_on_Bola_sd0"]
 [connection signal="sd4" from="Bola" to="Camera2D/CanvasLayer/Score4" method="_on_Bola_sd4"]
-[connection signal="sd4" from="Player4" to="Camera2D/CanvasLayer/Score4" method="_on_Player4_sd4"]
-[connection signal="sd0" from="Player0" to="Camera2D/CanvasLayer/Score0" method="_on_Player0_sd0"]
