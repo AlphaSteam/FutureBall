@@ -4,12 +4,12 @@ extends Node
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-var Number_of_players = 4
+var Number_of_players =6
 var Players = []
 var Chars = []
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	randomize()# Replace with function body.
 
 func createCharArray():
 	Chars.append(preload("res://Character1.tscn").instance())
@@ -30,12 +30,16 @@ func spawnPlayers():
 	for j in range(length):
 		a.append(j)  
 	for i in PlayerGlobals.Number_of_players:
-		var random = randi()%a.size()-1
-		var spawn_p = spawn_points[random]
+		var random = randi()%a.size()
+		print(random)
+		var spawn_p = spawn_points[a[random]].get_global_position()
 		var character = Players[i].Character
+		character.id = i
+		character.global_position = spawn_p
 		add_child(character)
-		#Spawn player on point
 		a.remove(random)
+		#Spawn player on point
+		
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass

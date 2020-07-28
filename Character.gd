@@ -10,7 +10,7 @@ var INITJUMPS =3
 var INITDASHES =2
 var WALLFALLSPEED = 8
 
-export var id = 4
+var id
 var gravity = DEFGRAVITY
 var velocity = Vector2(0,0)
 var on_ground = false
@@ -26,14 +26,11 @@ var end_jump = false
 var end_jump_after = false
 var on_wall = false
 var flip_character_once = false # Used to flip the character when sliding through a wall, so I don't do it more than once.
-onready var timer = get_parent().get_node("Camera2D/CanvasLayer/TimerLabel/Timer")
-onready var reset_position2 = position
-
-signal sd0
-signal sd4
-
+var timer
+var reset_position2
 func _ready():
-	pass
+	timer = get_tree().get_root().get_node("MainStage/Camera2D/CanvasLayer/TimerLabel/Timer")
+	reset_position2 = position
 
 func _physics_process(delta):
 	var input_velocity = Vector2.ZERO
@@ -134,9 +131,9 @@ func _physics_process(delta):
 	if position.y > 400:
 		position = reset_position2
 		emit_signal("sd%s" % id)
-		#timer.stop()
-		#timer.set_wait_time(40)
-		#timer.start()
+		timer.stop()
+		timer.set_wait_time(40)
+		timer.start()
 	
 	for i in get_slide_count():
 		var collision = get_slide_collision(i)

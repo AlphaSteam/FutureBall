@@ -1,19 +1,25 @@
 extends Camera2D
 
-export (NodePath) var object1
-export (NodePath) var object2
-export (NodePath) var object3
 
+
+export (NodePath) var Bola
+onready var players = []
 func _ready():
-	object1 = get_node(object1)
-	object2 = get_node(object2)
-	object3 = get_node(object3)
+	#Bola = get_node(Bola)
+	for i in PlayerGlobals.Number_of_players:
+		players.append(PlayerGlobals.Players[i].Character)
+	
 
 func _process(delta):
-	self.global_position = (object1.global_position + object2.global_position) * 0.5
+	
+	var sum = Vector2(0,0)
+	for i in players:
+		sum+=i.global_position
+	sum /= players.size()
+	self.global_position = sum
+	
+	#var zoom_factor1 = abs(object1.global_position.x-object2.global_position.x)/(200)
+	#var zoom_factor2 = abs(object1.global_position.y-object2.global_position.y-20)/(200)
+	#var zoom_factor = max(max(zoom_factor1, zoom_factor2), 1.2)
 
-	var zoom_factor1 = abs(object1.global_position.x-object2.global_position.x)/(200)
-	var zoom_factor2 = abs(object1.global_position.y-object2.global_position.y-20)/(200)
-	var zoom_factor = max(max(zoom_factor1, zoom_factor2), 1.2)
-
-	self.zoom = Vector2(zoom_factor*1, zoom_factor*1)
+	#self.zoom = Vector2(zoom_factor*1, zoom_factor*1)

@@ -223,10 +223,8 @@ func _on_Timer_timeout():
 	$Area2D/Particles2D/Particles2D.emitting = true
 	$Area2D/Particles2D/Particles2D2.emitting = true
 	$Area2D/Particles2D/Particles2D3.emitting = true	
-	if pick_id==0:
-		emit_signal("sd%s" % 0)	
-	elif pick_id==4:
-		emit_signal("sd%s" % 4)		
+		
+	emit_signal("sd%s" % pick_id)		
 	drop()
 	linear_velocity = Vector2.ZERO
 	position = reset_position

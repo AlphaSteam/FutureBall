@@ -10,9 +10,7 @@ func updateChar():
 	
 	var character = PlayerGlobals.Chars[Selected_char]
 	var sprite = character.get_node("AnimatedSprite").duplicate()
-	
-	
-	
+
 	if(node.get_child_count() != 0):
 		for n in node.get_children():
 			node.remove_child(n)
