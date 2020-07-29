@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Diossel-Sunflower-Liquid.ogg-07afada4beab47619248d4cccc4f57ec.oggstr"
+
+[deps]
+
+source_file="res://sounds/music/Diossel-Sunflower-Liquid.ogg"
+dest_files=[ "res://.import/Diossel-Sunflower-Liquid.ogg-07afada4beab47619248d4cccc4f57ec.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
