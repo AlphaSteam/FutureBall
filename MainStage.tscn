@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Camara.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tiles/platformPack_tilesheet.png" type="Texture" id=2]
@@ -10,7 +10,12 @@
 [ext_resource path="res://Backgrounds/parallax/skill-desc_0001_buildings.png" type="Texture" id=9]
 [ext_resource path="res://Backgrounds/parallax/skill-desc_0000_foreground.png" type="Texture" id=10]
 [ext_resource path="res://Backgrounds/nebula09.png" type="Texture" id=11]
-[ext_resource path="res://SpawnPoint.tscn" type="PackedScene" id=17]
+[ext_resource path="res://CamaraMultiplayer.gd" type="Script" id=12]
+[ext_resource path="res://Score4.gd" type="Script" id=13]
+[ext_resource path="res://Resources/Gameplay.ttf" type="DynamicFontData" id=14]
+[ext_resource path="res://Resources/Overlay.png" type="Texture" id=15]
+[ext_resource path="res://Timer.gd" type="Script" id=16]
+[ext_resource path="res://Pausa.tscn" type="PackedScene" id=17]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
@@ -238,12 +243,101 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 script = SubResource( 1 )
 __meta__ = {
 "_edit_horizontal_guides_": [ -24.0 ],
+"_edit_lock_": true,
 "_edit_vertical_guides_": [ 0.0, 160.0 ]
 }
 
-[node name="Bola" parent="." groups=[
-"Ball",
-] instance=ExtResource( 7 )]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 128
+
+[node name="Pausa" parent="CanvasLayer" instance=ExtResource( 17 )]
+pause_mode = 2
+visible = false
+
+[node name="BG" parent="CanvasLayer/Pausa" index="0"]
+margin_left = 150.0
+margin_top = 48.0
+margin_right = 250.0
+margin_bottom = 192.0
+
+[node name="MarginContainer3" parent="CanvasLayer/Pausa/BG/MarginContainer2" index="1"]
+margin_top = 208.0
+margin_bottom = 866.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 202.542, 188.41 )
+current = true
+limit_left = -350
+limit_right = 750
+limit_bottom = 300
+script = ExtResource( 12 )
+object1 = NodePath("../Player4")
+object2 = NodePath("../Player0")
+object3 = NodePath("../Bola")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
+
+[node name="Sprite" type="Sprite" parent="Camera2D/CanvasLayer"]
+position = Vector2( 200, 120 )
+scale = Vector2( 0.227819, 0.227819 )
+texture = ExtResource( 15 )
+
+[node name="Score4" type="Label" parent="Camera2D/CanvasLayer"]
+anchor_top = 0.029
+anchor_bottom = 0.029
+margin_left = 160.0
+margin_top = -6.525
+margin_right = 172.0
+margin_bottom = 12.475
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/line_spacing = 0
+text = "0"
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score0" type="Label" parent="Camera2D/CanvasLayer"]
+anchor_left = 1.0
+anchor_top = 0.012
+anchor_right = 1.0
+anchor_bottom = 0.012
+margin_left = -168.0
+margin_top = -2.7
+margin_right = -152.0
+margin_bottom = 16.3
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "0"
+align = 2
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimerLabel" type="Label" parent="Camera2D/CanvasLayer"]
+anchor_left = 1.0
+anchor_top = 0.012
+anchor_right = 1.0
+anchor_bottom = 0.012
+margin_left = -208.0
+margin_top = -2.7
+margin_right = -184.0
+margin_bottom = 16.3
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "40"
+align = 2
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="Camera2D/CanvasLayer/TimerLabel"]
 
 [node name="Camera2D" parent="." instance=ExtResource( 1 )]
 
