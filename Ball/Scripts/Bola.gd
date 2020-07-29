@@ -18,16 +18,13 @@ onready var timer = get_parent().get_node("Camera2D/CanvasLayer/TimerLabel/Timer
 onready var arrows = []
 onready var reset_arrows = []
 onready var players = []
+onready var signals = []
 #Sprites
 var ball_dead = preload("res://Ball/ball_dead.png")
 var ball_live = preload("res://Ball/ball_live.png")
 
 #Señales puntuación
-signal Punto0
-signal Punto4
 
-signal sd0
-signal sd4
 
 
 #Variables
@@ -57,13 +54,15 @@ onready var reset_position = global_position
 
 #Detectar contactos
 func _ready():
-	for i in PlayerGlobals.Players:
-		arrows.append(i.Character.get_node("Arrow"))
-
-	for i in arrows:
-		reset_arrows.append(i.rect_size)
 	for i in PlayerGlobals.Number_of_players:
+		arrows.append(PlayerGlobals.Players[i].Character.get_node("Arrow"))
 		players.append(PlayerGlobals.Players[i].Character)
+		reset_arrows.append(arrows[i].rect_size)
+
+	
+		
+		
+	
 	#set_physics_process(false)
 	#get_parent().remove_child(self)
 	#new_parent.add_child(node)
@@ -143,7 +142,7 @@ func _physics_process(delta):
 	var analog = Vector2(Input.get_joy_axis(pick_id,JOY_AXIS_2), Input.get_joy_axis(pick_id,JOY_AXIS_3))
 			#print("mouse: "+  str(mouse))
 	var vect
-	if pick_id == 4:
+	if pick_id == 1:
 		vect =  mouse - init
 	else:
 		vect = analog
@@ -215,7 +214,7 @@ func _physics_process(delta):
 			i.position = i.reset_position2
 		attacking = false
 		timer.stop()
-		timer.set_wait_time(40)
+		timer.set_wait_time(60)
 		timer.start()
 
 func _on_Timer_timeout():

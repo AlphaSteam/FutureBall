@@ -2,12 +2,11 @@ extends Camera2D
 
 
 
-export (NodePath) var Bola
+
 onready var players = []
 export var PaddingPercent = 10
 func _ready():
-	#self.custom_viewport = $Viewport
-	#Bola = get_node(Bola)
+
 	for i in PlayerGlobals.Number_of_players:
 		players.append(PlayerGlobals.Players[i].Character)
 func CalculateBox(InScreenSize):
@@ -26,7 +25,13 @@ func CalculateBox(InScreenSize):
 
 		MinY = min(MinY,pos.y) # the next pass it compares the old kept value with the new
 		MaxY = max(MaxY,pos.y) # keeping the most relavent number for that corner
+	var pos = Bola.position
 
+	MinX = min(MinX,pos.x) # if pos.x is less than infinty keep it
+	MaxX = max(MaxX,pos.x) # if pos.x is more than negative infinty keep it
+
+	MinY = min(MinY,pos.y) # the next pass it compares the old kept value with the new
+	MaxY = max(MaxY,pos.y) 
 	#Because Godot uses pixels we have to correct it
 	var CorrectPixel =(InScreenSize /100) * PaddingPercent
 	
@@ -51,12 +56,7 @@ func Rect2From4PointList(InList):
 
 
 func _process(delta):
-	#var viewport = self.get_viewport()
-	var sum = Vector2(0,0)
-	for i in players:
-		sum+=i.global_position
 
-	#self.global_position = sum / PlayerGlobals.Number_of_players
 
 	var most_left = players[0].global_position.x
 	var most_right = players[0].global_position.x
@@ -70,27 +70,14 @@ func _process(delta):
 			most_right = max (most_right, players[i].global_position.x)
 			most_up = min (most_up, players[i].global_position.y)
 			most_down = max (most_up, players[i].global_position.y)
-			#zoom_factor1 = abs(zoom_factor1 - players[i].global_position.x)
-			#zoom_factor2 = abs(zoom_factor2 - players[i].global_position.y)
-	#zoom_factor1 /= 100
-	#zoom_factor2 = abs(zoom_factor2-20)/(100)
-	
-#	print("most_left",most_left)
-#	print("most_right",most_right)
-#	print("most_up",most_up)
-#	print("most_down",most_down)
-#	print("zoom",self.zoom)
+
 	var ScreenSize = self.get_viewport_rect().size
 	var CustomRect2 = CalculateBox(ScreenSize)
-	#print("center: ",CustomRect2.position,"size: ",CustomRect2.size)
+
 	var ZoomRatio = max(CustomRect2.size.x/ get_viewport_rect().size.x ,\
 	 CustomRect2.size.y/ get_viewport_rect().size.y)
 	print(ZoomRatio)
 	self.global_position = CustomRect2.position
 	#ZoomRatio is a scalar so we need to turn it into a vector
-	self.zoom = Vector2(1*ZoomRatio,1*ZoomRatio)
+	self.zoom = Vector2(1,1)* max(ZoomRatio,1.2)
 	
-	
-	var most_y = max(abs(self.get_camera_screen_center().y-most_up),abs(self.get_camera_screen_center().y-most_down))
-	#self.zoom = Vector2(1+(most_y/900),1+(most_y/900))
-	#print(1/most_y)

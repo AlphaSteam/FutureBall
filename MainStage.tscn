@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Tiles/platformPack_tilesheet.png" type="Texture" id=2]
 [ext_resource path="res://FallingPlatform.tscn" type="PackedScene" id=3]
@@ -54,9 +54,6 @@ font_data = ExtResource( 14 )
 outline_size = 1
 outline_color = Color( 0.415686, 0, 0, 1 )
 font_data = ExtResource( 14 )
-
-[sub_resource type="PhysicsMaterial" id=4]
-bounce = 1.0
 
 [sub_resource type="ConvexPolygonShape2D" id=5]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
@@ -259,6 +256,8 @@ __meta__ = {
 "_edit_vertical_guides_": [ 0.0, 160.0 ]
 }
 
+[node name="Bola" parent="." instance=ExtResource( 7 )]
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 0, -100 )
 current = true
@@ -337,16 +336,6 @@ __meta__ = {
 
 [node name="Timer" type="Timer" parent="Camera2D/CanvasLayer/TimerLabel"]
 wait_time = 1201.52
-
-[node name="Bola" parent="." instance=ExtResource( 7 )]
-position = Vector2( 200, 40 )
-collision_layer = 2
-collision_mask = 4
-mode = 1
-physics_material_override = SubResource( 4 )
-gravity_scale = 3.0
-contact_monitor = true
-sleeping = true
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -500,18 +489,18 @@ margin_bottom = 209.417
 [node name="Spawn 5" parent="SpawnPoints" groups=[
 "SpawnPoint",
 ] instance=ExtResource( 17 )]
-margin_left = 193.409
-margin_top = -136.04
-margin_right = 193.409
-margin_bottom = -136.04
+margin_left = 232.466
+margin_top = 282.254
+margin_right = 232.466
+margin_bottom = 282.254
 
 [node name="Spawn 2" parent="SpawnPoints" groups=[
 "SpawnPoint",
 ] instance=ExtResource( 17 )]
-margin_left = -180.648
-margin_top = -90.9202
-margin_right = -180.648
-margin_bottom = -90.9202
+margin_left = 303.162
+margin_top = 70.9796
+margin_right = 303.162
+margin_bottom = 70.9796
 
 [node name="Spawn 3" parent="SpawnPoints" groups=[
 "SpawnPoint",
@@ -524,21 +513,16 @@ margin_bottom = 209.697
 [node name="Spawn 4" parent="SpawnPoints" groups=[
 "SpawnPoint",
 ] instance=ExtResource( 17 )]
-margin_left = -84.3348
-margin_top = 3.59158
-margin_right = -84.3348
-margin_bottom = 3.59158
+margin_left = 59.2962
+margin_top = 69.7374
+margin_right = 59.2962
+margin_bottom = 69.7374
 
 [node name="Spawn 6" parent="SpawnPoints" groups=[
 "SpawnPoint",
 ] instance=ExtResource( 17 )]
-margin_left = 458.322
-margin_top = -0.267899
-margin_right = 458.322
-margin_bottom = -0.267899
-[connection signal="timeout" from="Camera2D/CanvasLayer/TimerLabel/Timer" to="Bola" method="_on_Timer_timeout"]
+margin_left = 117.513
+margin_top = 277.545
+margin_right = 117.513
+margin_bottom = 277.545
 [connection signal="timeout" from="Camera2D/CanvasLayer/TimerLabel/Timer" to="Camera2D/CanvasLayer/TimerLabel" method="_on_Timer_timeout"]
-[connection signal="Punto0" from="Bola" to="Camera2D/CanvasLayer/Score0" method="_on_Bola_Punto0"]
-[connection signal="Punto4" from="Bola" to="Camera2D/CanvasLayer/Score4" method="_on_Bola_Punto4"]
-[connection signal="sd0" from="Bola" to="Camera2D/CanvasLayer/Score0" method="_on_Bola_sd0"]
-[connection signal="sd4" from="Bola" to="Camera2D/CanvasLayer/Score4" method="_on_Bola_sd4"]

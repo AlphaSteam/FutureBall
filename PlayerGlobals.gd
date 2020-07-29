@@ -4,7 +4,7 @@ extends Node
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-var Number_of_players =6
+var Number_of_players =2
 var Players = []
 var Chars = []
 # Called when the node enters the scene tree for the first time.
