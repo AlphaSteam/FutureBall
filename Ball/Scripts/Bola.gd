@@ -224,12 +224,11 @@ func _on_Timer_timeout():
 	$Area2D/Particles2D/Particles2D2.emitting = true
 	$Area2D/Particles2D/Particles2D3.emitting = true	
 		
-	emit_signal("sd%s" % pick_id)		
-	drop()
-	linear_velocity = Vector2.ZERO
-	position = reset_position
-	for i in players:
-			i.position = i.reset_position2
+	#emit_signal("sd%s" % pick_id)		
+	#drop()
+	#linear_velocity = Vector2.ZERO
+	##for i in players:
+			#i.position = i.reset_position2
 
 
 	
