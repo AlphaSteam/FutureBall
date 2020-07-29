@@ -223,8 +223,9 @@ func _physics_process(delta):
 				
 	var pulento = true
 	if($Area2D/Particles2D.is_emitting()):
+		$Area2D/Particles2D/AudioStreamPlayer2D.play()
 		pulento = false
-	
+		
 	if(pulento and !picked and attacking):			
 		linear_velocity = Vector2.ZERO
 		position = reset_position
