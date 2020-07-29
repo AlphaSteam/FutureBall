@@ -25,13 +25,13 @@ func CalculateBox(InScreenSize):
 
 		MinY = min(MinY,pos.y) # the next pass it compares the old kept value with the new
 		MaxY = max(MaxY,pos.y) # keeping the most relavent number for that corner
-	var pos = Bola.position
-
-	MinX = min(MinX,pos.x) # if pos.x is less than infinty keep it
-	MaxX = max(MaxX,pos.x) # if pos.x is more than negative infinty keep it
-
-	MinY = min(MinY,pos.y) # the next pass it compares the old kept value with the new
-	MaxY = max(MaxY,pos.y) 
+#	var pos = Bola.position
+#
+#	MinX = min(MinX,pos.x) # if pos.x is less than infinty keep it
+#	MaxX = max(MaxX,pos.x) # if pos.x is more than negative infinty keep it
+#
+#	MinY = min(MinY,pos.y) # the next pass it compares the old kept value with the new
+#	MaxY = max(MaxY,pos.y) 
 	#Because Godot uses pixels we have to correct it
 	var CorrectPixel =(InScreenSize /100) * PaddingPercent
 	

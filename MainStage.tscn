@@ -45,12 +45,12 @@ func _process(delta):
 
 "
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 outline_size = 1
 outline_color = Color( 0.415686, 0, 0, 1 )
 font_data = ExtResource( 14 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=4]
 outline_size = 1
 outline_color = Color( 0.415686, 0, 0, 1 )
 font_data = ExtResource( 14 )
@@ -256,8 +256,6 @@ __meta__ = {
 "_edit_vertical_guides_": [ 0.0, 160.0 ]
 }
 
-[node name="Bola" parent="." instance=ExtResource( 7 )]
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 0, -100 )
 current = true
@@ -287,7 +285,7 @@ margin_top = -6.525
 margin_right = 172.0
 margin_bottom = 12.475
 rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/line_spacing = 0
 text = "0"
@@ -306,7 +304,7 @@ margin_top = -2.7
 margin_right = -152.0
 margin_bottom = 16.3
 rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "0"
 align = 2
@@ -325,7 +323,7 @@ margin_top = -2.7
 margin_right = -184.0
 margin_bottom = 16.3
 rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "40"
 align = 2
@@ -525,4 +523,6 @@ margin_left = 117.513
 margin_top = 277.545
 margin_right = 117.513
 margin_bottom = 277.545
+
+[node name="Bola" parent="." instance=ExtResource( 7 )]
 [connection signal="timeout" from="Camera2D/CanvasLayer/TimerLabel/Timer" to="Camera2D/CanvasLayer/TimerLabel" method="_on_Timer_timeout"]
