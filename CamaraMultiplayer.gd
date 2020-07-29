@@ -4,11 +4,23 @@ extends Camera2D
 
 
 onready var players = []
+onready var Chars = []
 export var PaddingPercent = 10
-func _ready():
+var Bola
 
+func createPointsGUI():
+	var pointGui = preload("res://Points.tscn")
 	for i in PlayerGlobals.Number_of_players:
-		players.append(PlayerGlobals.Players[i].Character)
+		var node = pointGui.instance()
+		node.Player_c = PlayerGlobals.Players[i]
+		$CanvasLayer/HBoxContainer.add_child(node)
+func _ready():
+	createPointsGUI()
+	Bola = get_tree().get_nodes_in_group("Ball")[0]
+	for i in PlayerGlobals.Number_of_players:
+		players.append(PlayerGlobals.Players[i])
+		Chars.append(PlayerGlobals.Players[i].Character)
+
 func CalculateBox(InScreenSize):
 	#infinity for the min max formulas to work
 	var MinX = INF
@@ -16,7 +28,7 @@ func CalculateBox(InScreenSize):
 	var MinY = INF
 	var MaxY = -INF
 	#The way this works is it keeps the data from the nodes with the lowest -x,-y and highest x,y
-	for player in players:
+	for player in Chars:
 		#Will only work with 2D, 3D needs transform.origin
 		var pos = player.position
 
@@ -25,6 +37,7 @@ func CalculateBox(InScreenSize):
 
 		MinY = min(MinY,pos.y) # the next pass it compares the old kept value with the new
 		MaxY = max(MaxY,pos.y) # keeping the most relavent number for that corner
+#  This makes the ball be on camera at all times too. The problem is that the ball baunces too much and the camera makes you dizzy.
 #	var pos = Bola.position
 #
 #	MinX = min(MinX,pos.x) # if pos.x is less than infinty keep it
@@ -58,25 +71,25 @@ func Rect2From4PointList(InList):
 func _process(delta):
 
 
-	var most_left = players[0].global_position.x
-	var most_right = players[0].global_position.x
-	var most_up = players[0].global_position.y
-	var most_down = players[0].global_position.y
-	var zoom_factor1 = abs(players[0].global_position.x) 
-	var zoom_factor2 = abs(players[0].global_position.y)
+	var most_left = Chars[0].global_position.x
+	var most_right = Chars[0].global_position.x
+	var most_up = Chars[0].global_position.y
+	var most_down = Chars[0].global_position.y
+	var zoom_factor1 = abs(Chars[0].global_position.x) 
+	var zoom_factor2 = abs(Chars[0].global_position.y)
 	
-	for i in range(players.size()):
-			most_left = min (most_left, players[i].global_position.x)
-			most_right = max (most_right, players[i].global_position.x)
-			most_up = min (most_up, players[i].global_position.y)
-			most_down = max (most_up, players[i].global_position.y)
+	for i in range(Chars.size()):
+			most_left = min (most_left, Chars[i].global_position.x)
+			most_right = max (most_right, Chars[i].global_position.x)
+			most_up = min (most_up, Chars[i].global_position.y)
+			most_down = max (most_up, Chars[i].global_position.y)
 
 	var ScreenSize = self.get_viewport_rect().size
 	var CustomRect2 = CalculateBox(ScreenSize)
 
 	var ZoomRatio = max(CustomRect2.size.x/ get_viewport_rect().size.x ,\
 	 CustomRect2.size.y/ get_viewport_rect().size.y)
-	print(ZoomRatio)
+	#print(ZoomRatio)
 	self.global_position = CustomRect2.position
 	#ZoomRatio is a scalar so we need to turn it into a vector
 	self.zoom = Vector2(1,1)* max(ZoomRatio,1.2)

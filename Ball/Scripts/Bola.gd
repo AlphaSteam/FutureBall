@@ -67,7 +67,7 @@ func _ready():
 	#get_parent().remove_child(self)
 	#new_parent.add_child(node)
 	contact_monitor = true
-	set_max_contacts_reported(3 > 0)
+	set_max_contacts_reported(3)
 	set_mode(0)
 	for i in arrows:
 		i.hide()
@@ -83,8 +83,8 @@ func _ready():
 #Señal de que la bola tocó algo
 func _on_Bola_body_entered(body: Node):
 	if live_ball == true: #Si la bola esta viva
-		if 'WarmupEnemie' in body.name:
-			body.dead()
+		if(body.is_in_group("Jugador")):
+			print("dead")
 		live_ball = false
 		$Sprite.texture = ball_dead	
 
