@@ -4,41 +4,41 @@
 [ext_resource path="res://Ball/Scripts/Bola.gd" type="Script" id=2]
 [ext_resource path="res://Ball/ball_dead.png" type="Texture" id=3]
 
-[sub_resource type="PhysicsMaterial" id=2]
+[sub_resource type="PhysicsMaterial" id=1]
 bounce = 1.0
 
-[sub_resource type="CircleShape2D" id=3]
+[sub_resource type="CircleShape2D" id=2]
 radius = 4.14329
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 5.33553, 5.15297 )
 
-[sub_resource type="CanvasItemMaterial" id=5]
+[sub_resource type="CanvasItemMaterial" id=4]
 blend_mode = 1
 
-[sub_resource type="Gradient" id=6]
+[sub_resource type="Gradient" id=5]
 offsets = PoolRealArray( 0, 0.151899, 1 )
 colors = PoolColorArray( 1, 0.984314, 0.65098, 1, 1, 1, 0, 1, 1, 0, 0, 1 )
 
-[sub_resource type="GradientTexture" id=7]
-gradient = SubResource( 6 )
+[sub_resource type="GradientTexture" id=6]
+gradient = SubResource( 5 )
 
-[sub_resource type="Curve" id=8]
+[sub_resource type="Curve" id=7]
 min_value = -400.0
 max_value = 400.0
 _data = [ Vector2( 0, 400 ), 0.0, 0.0, 0, 0, Vector2( 0.202586, -62.7273 ), -1059.45, -1059.45, 0, 0, Vector2( 1, -400 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=9]
-curve = SubResource( 8 )
+[sub_resource type="CurveTexture" id=8]
+curve = SubResource( 7 )
 
-[sub_resource type="Curve" id=10]
+[sub_resource type="Curve" id=9]
 max_value = 2.5
 _data = [ Vector2( 0, 2.5 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.869318 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=11]
-curve = SubResource( 10 )
+[sub_resource type="CurveTexture" id=10]
+curve = SubResource( 9 )
 
-[sub_resource type="ParticlesMaterial" id=12]
+[sub_resource type="ParticlesMaterial" id=11]
 emission_shape = 1
 emission_sphere_radius = 2.0
 flag_disable_z = true
@@ -50,30 +50,30 @@ orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 linear_accel = 100.0
 linear_accel_random = 0.2
-linear_accel_curve = SubResource( 9 )
+linear_accel_curve = SubResource( 8 )
 scale = 2.0
 scale_random = 1.0
-scale_curve = SubResource( 11 )
-color_ramp = SubResource( 7 )
+scale_curve = SubResource( 10 )
+color_ramp = SubResource( 6 )
 
-[sub_resource type="CanvasItemMaterial" id=13]
+[sub_resource type="CanvasItemMaterial" id=12]
 blend_mode = 1
 
-[sub_resource type="Curve" id=14]
+[sub_resource type="Curve" id=13]
 max_value = 300.0
 _data = [ Vector2( 0, 300 ), 0.0, 0.0, 0, 0, Vector2( 0.107759, 18.75 ), 0.0, 0.0, 0, 0, Vector2( 1, 10.5682 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=15]
-curve = SubResource( 14 )
+[sub_resource type="CurveTexture" id=14]
+curve = SubResource( 13 )
 
-[sub_resource type="Curve" id=16]
+[sub_resource type="Curve" id=15]
 max_value = 2.5
 _data = [ Vector2( 0, 2.5 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=17]
-curve = SubResource( 16 )
+[sub_resource type="CurveTexture" id=16]
+curve = SubResource( 15 )
 
-[sub_resource type="ParticlesMaterial" id=18]
+[sub_resource type="ParticlesMaterial" id=17]
 emission_shape = 1
 emission_sphere_radius = 1.0
 flag_disable_z = true
@@ -83,38 +83,38 @@ initial_velocity = 100.0
 initial_velocity_random = 0.3
 angular_velocity = 100.0
 angular_velocity_random = 0.4
-angular_velocity_curve = SubResource( 15 )
+angular_velocity_curve = SubResource( 14 )
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 scale = 2.5
 scale_random = 1.0
-scale_curve = SubResource( 17 )
-color_ramp = SubResource( 7 )
+scale_curve = SubResource( 16 )
+color_ramp = SubResource( 6 )
 
-[sub_resource type="Gradient" id=19]
+[sub_resource type="Gradient" id=18]
 offsets = PoolRealArray( 0.130802, 1 )
 colors = PoolColorArray( 0.666667, 0.666667, 0.666667, 0.862745, 0.266667, 0.266667, 0.266667, 0.176471 )
 
-[sub_resource type="GradientTexture" id=20]
-gradient = SubResource( 19 )
+[sub_resource type="GradientTexture" id=19]
+gradient = SubResource( 18 )
 
-[sub_resource type="Curve" id=21]
+[sub_resource type="Curve" id=20]
 min_value = -200.0
 max_value = 200.0
 _data = [ Vector2( 0, 200 ), 0.0, 0.0, 0, 0, Vector2( 0.125, -115 ), 0.0, 0.0, 0, 0, Vector2( 1, -162.273 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=22]
-curve = SubResource( 21 )
+[sub_resource type="CurveTexture" id=21]
+curve = SubResource( 20 )
 
-[sub_resource type="Curve" id=23]
+[sub_resource type="Curve" id=22]
 min_value = 1.0
 max_value = 5.0
 _data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 5 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=24]
-curve = SubResource( 23 )
+[sub_resource type="CurveTexture" id=23]
+curve = SubResource( 22 )
 
-[sub_resource type="ParticlesMaterial" id=25]
+[sub_resource type="ParticlesMaterial" id=24]
 emission_shape = 1
 emission_sphere_radius = 2.0
 flag_disable_z = true
@@ -126,18 +126,18 @@ orbit_velocity = 0.15
 orbit_velocity_random = 1.0
 linear_accel = 100.0
 linear_accel_random = 0.5
-linear_accel_curve = SubResource( 22 )
+linear_accel_curve = SubResource( 21 )
 scale = 2.0
 scale_random = 1.0
-scale_curve = SubResource( 24 )
-color_ramp = SubResource( 20 )
+scale_curve = SubResource( 23 )
+color_ramp = SubResource( 19 )
 
 [node name="Bola" type="RigidBody2D"]
 position = Vector2( 200, 40 )
 collision_layer = 2
 collision_mask = 4
 mode = 1
-physics_material_override = SubResource( 2 )
+physics_material_override = SubResource( 1 )
 gravity_scale = 3.0
 contact_monitor = true
 sleeping = true
@@ -147,7 +147,7 @@ __meta__ = {
 }
 
 [node name="Physics Box" type="CollisionShape2D" parent="."]
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 0.113, 0.113 )
@@ -159,27 +159,27 @@ collision_layer = 2
 collision_mask = 7
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="Particles2D" type="Particles2D" parent="Area2D"]
-material = SubResource( 5 )
+material = SubResource( 4 )
 emitting = false
 amount = 200
 lifetime = 0.5
 one_shot = true
 speed_scale = 2.0
 explosiveness = 0.01
-process_material = SubResource( 12 )
+process_material = SubResource( 11 )
 
 [node name="Particles2D" type="Particles2D" parent="Area2D/Particles2D"]
-material = SubResource( 13 )
+material = SubResource( 12 )
 emitting = false
 amount = 10
 lifetime = 0.5
 one_shot = true
 speed_scale = 2.0
 explosiveness = 0.01
-process_material = SubResource( 18 )
+process_material = SubResource( 17 )
 
 [node name="Particles2D2" type="Particles2D" parent="Area2D/Particles2D"]
 show_behind_parent = true
@@ -189,7 +189,7 @@ lifetime = 0.8
 one_shot = true
 speed_scale = 3.0
 explosiveness = 0.01
-process_material = SubResource( 25 )
+process_material = SubResource( 24 )
 
 [node name="Particles2D3" type="Particles2D" parent="Area2D/Particles2D"]
 self_modulate = Color( 1, 1, 1, 0.0588235 )
@@ -201,7 +201,7 @@ lifetime = 0.8
 one_shot = true
 speed_scale = 3.0
 explosiveness = 0.01
-process_material = SubResource( 25 )
+process_material = SubResource( 24 )
 
 [node name="Tween" type="Tween" parent="."]
 [connection signal="body_entered" from="." to="." method="_on_Bola_body_entered"]

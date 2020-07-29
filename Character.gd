@@ -130,7 +130,7 @@ func _physics_process(delta):
 		
 	if position.y > 400:
 		position = reset_position2
-		emit_signal("sd%s" % id)
+		#emit_signal("sd%s" % id)
 		#timer.stop()
 		#timer.set_wait_time(40)
 		#timer.start()

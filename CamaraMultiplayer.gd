@@ -92,5 +92,5 @@ func _process(delta):
 	#print(ZoomRatio)
 	self.global_position = CustomRect2.position
 	#ZoomRatio is a scalar so we need to turn it into a vector
-	self.zoom = Vector2(1,1)* max(ZoomRatio,1.2)
+	self.zoom = Vector2(1,1)* max(ZoomRatio,1)
 	

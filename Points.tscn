@@ -24,7 +24,7 @@ __meta__ = {
 [node name="T" type="VBoxContainer" parent="."]
 margin_right = 51.0
 margin_bottom = 55.0
-custom_constants/separation = -11
+custom_constants/separation = -4
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -47,9 +47,9 @@ __meta__ = {
 }
 
 [node name="Name" type="RichTextLabel" parent="T"]
-margin_top = 7.0
+margin_top = 14.0
 margin_right = 51.0
-margin_bottom = 57.0
+margin_bottom = 64.0
 rect_min_size = Vector2( 50, 50 )
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )

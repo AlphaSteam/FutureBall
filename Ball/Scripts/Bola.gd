@@ -115,7 +115,7 @@ func _on_Area2D_body_entered(body):
 			if live_ball == true:
 				picked = false			
 				attacking = true			
-				emit_signal("Punto%s" % pick_id)
+				PlayerGlobals.Players[pick_id].changePoints(1)
 				pick_id = -1
 			elif live_ball == false and not picked:
 				pick_id = body.id
@@ -127,13 +127,6 @@ func _on_Area2D_body_entered(body):
 
 				#print("agarra la bola")
 
-# warning-ignore:shadowed_variable
-#func _pickup(picked):
-#	if picked == true:
-#		self.get_parent().remove_child(self) # error here  
-#		#print(get_parent())
-#		get_node("Player_%s" % pick_id).add_child(self)
-#		#print(get_parent())
 		
 
 func _physics_process(delta):
@@ -213,9 +206,9 @@ func _physics_process(delta):
 		for i in players:
 			i.position = i.reset_position2
 		attacking = false
-		timer.stop()
-		timer.set_wait_time(60)
-		timer.start()
+#		timer.stop()
+#		timer.set_wait_time(60)
+#		timer.start()
 
 func _on_Timer_timeout():
 	$Area2D/Particles2D.emitting = true

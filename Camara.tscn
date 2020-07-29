@@ -1,26 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Score0.gd" type="Script" id=2]
-[ext_resource path="res://Timer.gd" type="Script" id=3]
-[ext_resource path="res://Resources/Gameplay.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://Score4.gd" type="Script" id=5]
 [ext_resource path="res://CamaraMultiplayer.gd" type="Script" id=6]
-
-[sub_resource type="DynamicFont" id=1]
-outline_size = 1
-outline_color = Color( 0.415686, 0, 0, 1 )
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=2]
-outline_size = 1
-outline_color = Color( 0.415686, 0, 0, 1 )
-font_data = ExtResource( 4 )
 
 [node name="Camera2D" type="Camera2D"]
 position = Vector2( 0, -100 )
 current = true
 zoom = Vector2( 1.098, 1 )
-limit_bottom = 327
+limit_bottom = 1000000000
+limit_smoothed = true
 smoothing_speed = 1.0
 drag_margin_left = 0.0
 drag_margin_top = 0.0
@@ -33,64 +20,6 @@ PaddingPercent = 16
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Score4" type="Label" parent="CanvasLayer"]
-anchor_top = 0.029
-anchor_bottom = 0.029
-margin_left = 160.0
-margin_top = -6.525
-margin_right = 172.0
-margin_bottom = 12.475
-rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-custom_constants/line_spacing = 0
-text = "0"
-script = ExtResource( 5 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Score0" type="Label" parent="CanvasLayer"]
-anchor_left = 1.0
-anchor_top = 0.012
-anchor_right = 1.0
-anchor_bottom = 0.012
-margin_left = -168.0
-margin_top = -2.7
-margin_right = -152.0
-margin_bottom = 16.3
-rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 2 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "0"
-align = 2
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TimerLabel" type="Label" parent="CanvasLayer"]
-anchor_left = 1.0
-anchor_top = 0.012
-anchor_right = 1.0
-anchor_bottom = 0.012
-margin_left = -208.0
-margin_top = -2.7
-margin_right = -184.0
-margin_bottom = 16.3
-rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/font = SubResource( 2 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-text = "40"
-align = 2
-script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Timer" type="Timer" parent="CanvasLayer/TimerLabel"]
-wait_time = 1201.52
-
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
 margin_left = 17.0
 margin_top = 199.271
@@ -101,4 +30,3 @@ alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="timeout" from="CanvasLayer/TimerLabel/Timer" to="CanvasLayer/TimerLabel" method="_on_Timer_timeout"]
