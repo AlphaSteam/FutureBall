@@ -16,7 +16,6 @@ drag_margin_bottom = 0.0
 editor_draw_limits = true
 editor_draw_drag_margin = true
 script = ExtResource( 6 )
-PaddingPercent = 16
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

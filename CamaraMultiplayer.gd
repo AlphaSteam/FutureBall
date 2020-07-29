@@ -16,7 +16,7 @@ func createPointsGUI():
 		$CanvasLayer/HBoxContainer.add_child(node)
 func _ready():
 	createPointsGUI()
-	Bola = get_tree().get_nodes_in_group("Ball")[0]
+	#Bola = get_tree().get_nodes_in_group("Ball")[0]
 	for i in PlayerGlobals.Number_of_players:
 		players.append(PlayerGlobals.Players[i])
 		Chars.append(PlayerGlobals.Players[i].Character)

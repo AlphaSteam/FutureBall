@@ -243,9 +243,7 @@ __meta__ = {
 "_edit_vertical_guides_": [ 0.0, 160.0 ]
 }
 
-[node name="Bola" parent="." groups=[
-"Ball",
-] instance=ExtResource( 7 )]
+[node name="Bola" parent="." instance=ExtResource( 7 )]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 128
