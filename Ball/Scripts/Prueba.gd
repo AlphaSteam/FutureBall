@@ -6,7 +6,7 @@ func set_touched():
 
 func _on_GenericBall_body_entered(body):
 	if touched==false:
-		#print(str(self)+" hits "+str(body))
+		print(str(self)+" hits "+str(body))
 		get_stream_playback()
 
 	var other_node=body.get_owner().get_node(body.get_name())

@@ -8,13 +8,26 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	PlayerGlobals.createCharArray()
-	for i in PlayerGlobals.Number_of_players:
-		var select = preload("res://CharacterSelect.tscn")
-		var node = select.instance()
-		$CenterContainer/Selections.add_child(node)
+	pass
+	
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	pass
+	#$Character.texture.set()
+
+
+func _on_Left_pressed():
+	if Globals.Player1 > 0:
+		Globals.Player1 -=1
+
+
+func _on_Right_pressed():
+	if Globals.Player1 < 4:
+		Globals.Player1 +=1
+
+
+func _on_Start_pressed():
+	get_tree().change_scene("res://MainStage.tscn")
