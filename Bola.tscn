@@ -1,8 +1,9 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Ball/Scripts/ball_dead.gd" type="Script" id=1]
 [ext_resource path="res://Ball/Scripts/Bola.gd" type="Script" id=2]
 [ext_resource path="res://Ball/ball_dead.png" type="Texture" id=3]
+[ext_resource path="res://sounds/boom4.wav" type="AudioStream" id=4]
 
 [sub_resource type="PhysicsMaterial" id=1]
 bounce = 1.0
@@ -204,5 +205,12 @@ explosiveness = 0.01
 process_material = SubResource( 24 )
 
 [node name="Tween" type="Tween" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = 0.015
+__meta__ = {
+"_editor_description_": ""
+}
 [connection signal="body_entered" from="." to="." method="_on_Bola_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
