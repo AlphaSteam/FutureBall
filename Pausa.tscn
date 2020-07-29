@@ -1,0 +1,139 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://buttons/help.png" type="Texture" id=2]
+[ext_resource path="res://buttons/charselectred.png" type="Texture" id=3]
+[ext_resource path="res://buttons/help selected.png" type="Texture" id=4]
+[ext_resource path="res://buttons/exit.png" type="Texture" id=5]
+[ext_resource path="res://buttons/options selected.png" type="Texture" id=6]
+[ext_resource path="res://buttons/options.png" type="Texture" id=7]
+[ext_resource path="res://buttons/charselectgreen.png" type="Texture" id=8]
+[ext_resource path="res://buttons/exit selected.png" type="Texture" id=9]
+[ext_resource path="res://Pausa.gd" type="Script" id=10]
+[ext_resource path="res://Opciones.tscn" type="PackedScene" id=11]
+[ext_resource path="res://buttons/MainMenuRed.png" type="Texture" id=12]
+[ext_resource path="res://buttons/MainMenuGreen.png" type="Texture" id=13]
+
+[node name="Pausa" type="Control"]
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BG" type="ColorRect" parent="."]
+margin_right = 100.0
+margin_bottom = 107.0
+color = Color( 0, 0, 0, 0.572549 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer2" type="MarginContainer" parent="BG"]
+anchor_top = 0.5
+anchor_right = 0.55
+anchor_bottom = 0.606
+margin_left = 3.0
+margin_top = -48.5
+margin_right = 901.0
+margin_bottom = 932.158
+rect_scale = Vector2( 0.1, 0.1 )
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BG/MarginContainer2"]
+margin_left = 76.0
+margin_right = 876.0
+margin_bottom = 992.0
+size_flags_horizontal = 4
+custom_constants/separation = 40
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BG/MarginContainer2/VBoxContainer"]
+margin_right = 800.0
+margin_bottom = 865.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_constants/separation = 54
+
+[node name="CharSelect" type="CenterContainer" parent="BG/MarginContainer2/VBoxContainer/VBoxContainer"]
+margin_right = 800.0
+margin_bottom = 130.0
+
+[node name="TextureButton" type="TextureButton" parent="BG/MarginContainer2/VBoxContainer/VBoxContainer/CharSelect"]
+margin_right = 800.0
+margin_bottom = 130.0
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Options" type="CenterContainer" parent="BG/MarginContainer2/VBoxContainer/VBoxContainer"]
+margin_top = 184.0
+margin_right = 800.0
+margin_bottom = 306.0
+
+[node name="TextureButton2" type="TextureButton" parent="BG/MarginContainer2/VBoxContainer/VBoxContainer/Options"]
+margin_left = 34.0
+margin_right = 765.0
+margin_bottom = 122.0
+texture_normal = ExtResource( 7 )
+texture_hover = ExtResource( 6 )
+
+[node name="Opciones" parent="BG/MarginContainer2/VBoxContainer/VBoxContainer/Options/TextureButton2" instance=ExtResource( 11 )]
+visible = false
+margin_left = 922.0
+margin_top = -27.0
+margin_right = 988.0
+margin_bottom = 611.0
+
+[node name="Help" type="CenterContainer" parent="BG/MarginContainer2/VBoxContainer/VBoxContainer"]
+margin_top = 360.0
+margin_right = 800.0
+margin_bottom = 482.0
+
+[node name="TextureButton3" type="TextureButton" parent="BG/MarginContainer2/VBoxContainer/VBoxContainer/Help"]
+margin_left = 34.0
+margin_right = 765.0
+margin_bottom = 122.0
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 4 )
+
+[node name="MainMenu" type="CenterContainer" parent="BG/MarginContainer2/VBoxContainer/VBoxContainer"]
+margin_top = 536.0
+margin_right = 800.0
+margin_bottom = 689.0
+
+[node name="TextureButton5" type="TextureButton" parent="BG/MarginContainer2/VBoxContainer/VBoxContainer/MainMenu"]
+margin_left = 68.0
+margin_right = 732.0
+margin_bottom = 153.0
+texture_normal = ExtResource( 12 )
+texture_hover = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="CenterContainer" parent="BG/MarginContainer2/VBoxContainer/VBoxContainer"]
+margin_top = 743.0
+margin_right = 800.0
+margin_bottom = 865.0
+
+[node name="TextureButton4" type="TextureButton" parent="BG/MarginContainer2/VBoxContainer/VBoxContainer/Exit"]
+margin_left = 34.0
+margin_right = 765.0
+margin_bottom = 122.0
+texture_normal = ExtResource( 5 )
+texture_hover = ExtResource( 9 )
+[connection signal="pressed" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/CharSelect/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/Options/TextureButton2" to="BG/MarginContainer2/VBoxContainer/VBoxContainer/Options/TextureButton2/Opciones" method="_on_TextureButton2_pressed"]
+[connection signal="pressed" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/MainMenu/TextureButton5" to="." method="_on_TextureButton5_pressed"]
+[connection signal="pressed" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/Exit/TextureButton4" to="." method="_on_TextureButton4_pressed"]

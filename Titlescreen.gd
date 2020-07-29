@@ -26,3 +26,14 @@ func _on_joy_connection_changed(device_id, connected):
 
 func _on_TextureButton_pressed():
 	get_tree().change_scene("res://CharacterSelection.tscn")
+
+
+func _on_TextureButton3_pressed():
+
+	get_tree().change_scene("res://GodotCredits.tscn")
+
+
+func _on_TextureButton4_pressed():
+	get_tree().quit()
+	
+

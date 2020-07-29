@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tiles/platformPack_tilesheet.png" type="Texture" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://Resources/Gameplay.ttf" type="DynamicFontData" id=14]
 [ext_resource path="res://Resources/Overlay.png" type="Texture" id=15]
 [ext_resource path="res://Timer.gd" type="Script" id=16]
+[ext_resource path="res://Pausa.tscn" type="PackedScene" id=17]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
@@ -256,8 +257,26 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 script = SubResource( 1 )
 __meta__ = {
 "_edit_horizontal_guides_": [ -24.0 ],
+"_edit_lock_": true,
 "_edit_vertical_guides_": [ 0.0, 160.0 ]
 }
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 128
+
+[node name="Pausa" parent="CanvasLayer" instance=ExtResource( 17 )]
+pause_mode = 2
+visible = false
+
+[node name="BG" parent="CanvasLayer/Pausa" index="0"]
+margin_left = 150.0
+margin_top = 48.0
+margin_right = 250.0
+margin_bottom = 192.0
+
+[node name="MarginContainer3" parent="CanvasLayer/Pausa/BG/MarginContainer2" index="1"]
+margin_top = 208.0
+margin_bottom = 866.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 202.542, 188.41 )
@@ -498,3 +517,5 @@ id = 0
 [connection signal="sd4" from="Bola" to="Camera2D/CanvasLayer/Score4" method="_on_Bola_sd4"]
 [connection signal="sd4" from="Player4" to="Camera2D/CanvasLayer/Score4" method="_on_Player4_sd4"]
 [connection signal="sd0" from="Player0" to="Camera2D/CanvasLayer/Score0" method="_on_Player0_sd0"]
+
+[editable path="CanvasLayer/Pausa"]
