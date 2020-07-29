@@ -1,20 +1,24 @@
-extends Node
-class_name Player
+extends "res://Character.gd"
+class_name Char1
 
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-var Character
-var Name = ""
-var shortName = ""
-var Points = 0
+
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-func changePoints(var value):
-	Points +=value
-	if Points == 1 or Points == -3:
-		Globals.WinScreen(self)
+	DEFSPEED=100
+	DEFFRICTION = 0.4
+	DEFACC = 0.8
+	DEFGRAVITY = 10
+	JUMP_POWER = -300
+	FLOOR = Vector2(0,-1)
+	INITJUMPS =40
+	INITDASHES =2
+	WALLFALLSPEED = 8 # Replace with function body.
+	
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

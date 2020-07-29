@@ -4,13 +4,15 @@ const SPEED = 60
 const GRAVITY = 10
 const JUMP_POWER = -250
 const FLOOR = Vector2(0,-1)
-var Player1 = 0
+var Winner
+
 
 func _ready():
 	pass
 	
 func _process(delta):
 	pass
-#	print(Player1)
-
+func WinScreen(var player):
+	Winner = player
+	get_tree().change_scene("res://Winscreen.tscn")
 
