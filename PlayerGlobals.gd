@@ -12,27 +12,34 @@ func _ready():
 	randomize()# Replace with function body.
 
 func createCharArray():
+	Chars =[]
 	Chars.append(preload("res://Character1.tscn").instance())
 	Chars.append(preload("res://Character.tscn").instance())
 	
 
 func createPlayers():
+	print("antes: ",Players)
+	for i in Players:
+		i.queue_free()
+	Players = []
 	for i in Number_of_players:
 		var player = Player.new()
 		player.Name = "ṔPlayer	 " + str(i)
 		player.shortName = "ṔP" + str(i)
-		PlayerGlobals.Players.append(player)
-	
+		Players.append(player)
+	print("despúes: ",Players)
 
 func spawnPlayers():
-	var spawn_points = get_tree().get_nodes_in_group("SpawnPoint")
+	for i in get_tree().get_nodes_in_group("Jugador"):
+		i.queue_free()
+	var spawn_points = get_tree().get_nodes_in_group("Player spawn")
 	var length = spawn_points.size()
 	var a = []
 	for j in range(length):
 		a.append(j)  
 	for i in PlayerGlobals.Number_of_players:
 		var random = randi()%a.size()
-		print(random)
+		#print(random)
 		var spawn_p = spawn_points[a[random]].get_global_position()
 		var character = Players[i].Character
 		character.id = i
@@ -41,6 +48,7 @@ func spawnPlayers():
 		a.remove(random)
 		#Spawn player on point
 		
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass

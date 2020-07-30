@@ -4,42 +4,15 @@
 [ext_resource path="res://Tiles/platformPack_tilesheet.png" type="Texture" id=2]
 [ext_resource path="res://FallingPlatform.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Backgrounds/City Background/City Foreground.png" type="Texture" id=4]
+[ext_resource path="res://Ball spawn.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Backgrounds/City Background/City Background.png" type="Texture" id=6]
-[ext_resource path="res://Bola.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Stage.gd" type="Script" id=7]
 [ext_resource path="res://Backgrounds/parallax/skill-desc_0002_far-buildings.png" type="Texture" id=8]
 [ext_resource path="res://Backgrounds/parallax/skill-desc_0001_buildings.png" type="Texture" id=9]
 [ext_resource path="res://Backgrounds/parallax/skill-desc_0000_foreground.png" type="Texture" id=10]
 [ext_resource path="res://Backgrounds/nebula09.png" type="Texture" id=11]
 [ext_resource path="res://Pausa.tscn" type="PackedScene" id=17]
-[ext_resource path="res://SpawnPoint.tscn" type="PackedScene" id=18]
-
-[sub_resource type="GDScript" id=1]
-script/source = "extends Node2D
-
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = \"text\"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	PlayerGlobals.spawnPlayers()
-func _process(delta):
-	if Input.is_action_just_pressed(\"Toggle full screen\"):
-		 OS.window_fullscreen = !OS.window_fullscreen
-		
-	if Input.is_action_pressed(\"ui_cancel\"):
-		get_tree().change_scene(\"res://Titlescreen.tscn\")
-			
-
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-"
+[ext_resource path="res://Player spawn.tscn" type="PackedScene" id=18]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
@@ -236,14 +209,12 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 7/z_index = 0
 
 [node name="MainStage" type="Node2D"]
-script = SubResource( 1 )
+script = ExtResource( 7 )
 __meta__ = {
 "_edit_horizontal_guides_": [ -24.0 ],
 "_edit_lock_": true,
 "_edit_vertical_guides_": [ 0.0, 160.0 ]
 }
-
-[node name="Bola" parent="." instance=ExtResource( 7 )]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 128
@@ -399,71 +370,67 @@ collision_layer = 4
 position = Vector2( 216, 212.092 )
 collision_layer = 4
 
-[node name="SpawnPoints" type="Node2D" parent="."]
+[node name="Player Spawns" type="Node2D" parent="."]
 position = Vector2( -4.76221, -12.6992 )
 
-[node name="Spawn 1" parent="SpawnPoints" groups=[
-"SpawnPoint",
-] instance=ExtResource( 18 )]
-margin_left = 40.8794
-margin_top = 209.417
-margin_right = 40.8794
-margin_bottom = 209.417
+[node name="Spawn 1" parent="Player Spawns" instance=ExtResource( 18 )]
+margin_left = 141.493
+margin_top = 279.648
+margin_right = 141.493
+margin_bottom = 279.648
 
-[node name="Spawn 2" parent="SpawnPoints" groups=[
-"SpawnPoint",
-] instance=ExtResource( 18 )]
-margin_left = 303.162
-margin_top = 70.9796
-margin_right = 303.162
-margin_bottom = 70.9796
+[node name="Spawn 2" parent="Player Spawns" instance=ExtResource( 18 )]
+margin_left = 234.931
+margin_top = 277.646
+margin_right = 234.931
+margin_bottom = 277.646
 
-[node name="Spawn 3" parent="SpawnPoints" groups=[
-"SpawnPoint",
-] instance=ExtResource( 18 )]
-margin_left = 322.767
-margin_top = 209.697
-margin_right = 322.767
-margin_bottom = 209.697
+[node name="Spawn 3" parent="Player Spawns" instance=ExtResource( 18 )]
+margin_left = -91.4364
+margin_top = 6.00676
+margin_right = -91.4364
+margin_bottom = 6.00676
 
-[node name="Spawn 4" parent="SpawnPoints" groups=[
-"SpawnPoint",
-] instance=ExtResource( 18 )]
-margin_left = 59.2962
-margin_top = 69.7374
-margin_right = 59.2962
-margin_bottom = 69.7374
+[node name="Spawn 4" parent="Player Spawns" instance=ExtResource( 18 )]
+margin_left = 455.18
+margin_top = 9.34386
+margin_right = 455.18
+margin_bottom = 9.34386
 
-[node name="Spawn 5" parent="SpawnPoints" groups=[
-"SpawnPoint",
-] instance=ExtResource( 18 )]
-margin_left = 254.762
-margin_top = 277.545
-margin_right = 254.762
-margin_bottom = 277.545
+[node name="Spawn 5" parent="Player Spawns" instance=ExtResource( 18 )]
+margin_left = 307.68
+margin_top = 71.4138
+margin_right = 307.68
+margin_bottom = 71.4138
 
-[node name="Spawn 6" parent="SpawnPoints" groups=[
-"SpawnPoint",
-] instance=ExtResource( 18 )]
-margin_left = 117.513
-margin_top = 277.545
-margin_right = 117.513
-margin_bottom = 277.545
+[node name="Spawn 6" parent="Player Spawns" instance=ExtResource( 18 )]
+margin_left = 325.7
+margin_top = 216.244
+margin_right = 325.7
+margin_bottom = 216.244
 
-[node name="Spawn 7" parent="SpawnPoints" groups=[
-"SpawnPoint",
-] instance=ExtResource( 18 )]
-margin_left = 446.255
-margin_top = 4.93002
-margin_right = 446.255
-margin_bottom = 4.93002
+[node name="Spawn 7" parent="Player Spawns" instance=ExtResource( 18 )]
+margin_left = 46.0519
+margin_top = 214.241
+margin_right = 46.0519
+margin_bottom = 214.241
 
-[node name="Spawn 8" parent="SpawnPoints" groups=[
-"SpawnPoint",
-] instance=ExtResource( 18 )]
-margin_left = -89.1756
-margin_top = 6.71182
-margin_right = -89.1756
-margin_bottom = 6.71182
+[node name="Spawn 8" parent="Player Spawns" instance=ExtResource( 18 )]
+margin_left = 66.0745
+margin_top = 73.4161
+margin_right = 66.0745
+margin_bottom = 73.4161
+
+[node name="Ball Spawn" parent="." instance=ExtResource( 5 )]
+margin_left = 177.533
+margin_top = 28.0316
+margin_right = 177.533
+margin_bottom = 28.0316
+
+[node name="Ball Spawn2" parent="." instance=ExtResource( 5 )]
+margin_left = 182.028
+margin_top = 267.012
+margin_right = 182.028
+margin_bottom = 267.012
 
 [editable path="CanvasLayer/Pausa"]
