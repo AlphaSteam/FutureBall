@@ -3,6 +3,7 @@ extends Node
 var Levels = []
 var Thumbnails = []
 var selectedLevel = 0
+var selectedLevel_packed
 func createLevelsArray():
 	Levels =[]
 	Thumbnails = []

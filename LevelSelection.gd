@@ -1,11 +1,16 @@
 extends Node2D
 
 onready var length
-
+var selectedLevelInstance
 func updateLevel():
 	var Thumbnail = LevelGlobals.Thumbnails[LevelGlobals.selectedLevel]
 	$"HBoxContainer/Level thumbnails/CenterContainer/Level".texture = Thumbnail
-
+	LevelGlobals.selectedLevel_packed = LevelGlobals.Levels[LevelGlobals.selectedLevel]
+	selectedLevelInstance = LevelGlobals.selectedLevel_packed.instance()
+	print(selectedLevelInstance.maxPlayers)
+	print(selectedLevelInstance.maxPlayers)
+func updateNPlayers():
+	$"HBoxContainer/Settings/N players/CenterContainer/Number of players".text = str(PlayerGlobals.Number_of_players)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
@@ -13,9 +18,8 @@ func _ready():
 	PlayerGlobals.createPlayers()
 	LevelGlobals.createLevelsArray()
 	length = LevelGlobals.Levels.size()-1
-	print(length)
 	updateLevel()
-
+	updateNPlayers()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
@@ -30,7 +34,6 @@ func _on_Right_button_pressed():
 		LevelGlobals.selectedLevel+=1
 	else:
 		LevelGlobals.selectedLevel = 0
-	print(LevelGlobals.selectedLevel)
 	updateLevel()
 
 
@@ -40,5 +43,18 @@ func _on_Left_button_pressed():
 		LevelGlobals.selectedLevel-=1
 	else:
 		LevelGlobals.selectedLevel = length
-	print("after ", LevelGlobals.selectedLevel)
 	updateLevel()
+
+
+func _on_Right_button_players_pressed():
+	if PlayerGlobals.Number_of_players < selectedLevelInstance.maxPlayers:
+		PlayerGlobals.Number_of_players+=1
+	else:
+		PlayerGlobals.Number_of_players = 2
+	updateNPlayers()
+func _on_Left_button_players_pressed():
+	if PlayerGlobals.Number_of_players > 2:
+		PlayerGlobals.Number_of_players-=1
+	else:
+		PlayerGlobals.Number_of_players = selectedLevelInstance.maxPlayers
+	updateNPlayers()

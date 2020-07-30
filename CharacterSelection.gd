@@ -25,4 +25,4 @@ func _ready():
 func _on_Start_pressed():
 	for i in PlayerGlobals.Number_of_players:
 		PlayerGlobals.Players[i].Character = PlayerGlobals.Chars[Nodes[i].Selected_char].duplicate()
-	get_tree().change_scene_to(LevelGlobals.Levels[LevelGlobals.selectedLevel])
+	get_tree().change_scene_to(LevelGlobals.selectedLevel_packed)

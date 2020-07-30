@@ -1,7 +1,7 @@
 extends Node
 
 
-var Number_of_players =2
+var Number_of_players = 2
 var Players = []
 var Chars = []
 # Called when the node enters the scene tree for the first time.
