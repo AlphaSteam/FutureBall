@@ -1,5 +1,6 @@
 extends Node
 
+
 var Number_of_players =2
 var Players = []
 var Chars = []

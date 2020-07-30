@@ -21,7 +21,7 @@ func _on_joy_connection_changed(device_id, connected):
 
 
 func _on_TextureButton_pressed():
-	get_tree().change_scene("res://CharacterSelection.tscn")
+	get_tree().change_scene("res://LevelSelection.tscn")
 
 
 func _on_TextureButton3_pressed():
