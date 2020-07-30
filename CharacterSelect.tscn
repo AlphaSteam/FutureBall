@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://arrowLeft.png" type="Texture" id=1]
 [ext_resource path="res://arrowRight.png" type="Texture" id=2]
 [ext_resource path="res://CharacterSelect.gd" type="Script" id=3]
+[ext_resource path="res://sounds/music/614018_Appear.ogg" type="AudioStream" id=4]
 
 [node name="Control" type="Control"]
 anchor_right = 0.301
@@ -60,5 +61,11 @@ margin_bottom = 568.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 texture_normal = ExtResource( 2 )
+
+[node name="CharSelectMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -10.0
+autoplay = true
+bus = "Music"
 [connection signal="button_down" from="HSeparator/GridContainer2/Left" to="." method="_on_Left_button_down"]
 [connection signal="button_down" from="HSeparator/GridContainer2/Right" to="." method="_on_Right_button_down"]

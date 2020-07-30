@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/952498_Riot-Ribs.ogg-ab4c148d5b18b6e4649a02e1ba3a91e8.oggstr"
+
+[deps]
+
+source_file="res://sounds/music/952498_Riot-Ribs.ogg"
+dest_files=[ "res://.import/952498_Riot-Ribs.ogg-ab4c148d5b18b6e4649a02e1ba3a91e8.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
