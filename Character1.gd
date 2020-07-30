@@ -17,7 +17,9 @@ func _ready():
 	INITJUMPS =40
 	INITDASHES =2
 	WALLFALLSPEED = 8 # Replace with function body.
-	
+	POWER = 5
+	MAXPOWER = 50
+	POWERSPEED = 10
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

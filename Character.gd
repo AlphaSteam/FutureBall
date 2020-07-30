@@ -9,6 +9,9 @@ var FLOOR = Vector2(0,-1)
 var INITJUMPS =3
 var INITDASHES =2
 var WALLFALLSPEED = 8
+var POWER = 4
+var MAXPOWER = 100
+var POWERSPEED = 2
 
 var id
 var gravity = DEFGRAVITY
