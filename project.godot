@@ -34,6 +34,7 @@ config/icon="res://icon.png"
 
 Globals="*res://Global_vars.gd"
 PlayerGlobals="*res://PlayerGlobals.gd"
+LevelGlobals="*res://LevelGlobals.gd"
 
 [display]
 
@@ -141,4 +142,5 @@ Pause={
 [rendering]
 
 quality/2d/use_pixel_snap=true
+quality/filters/use_nearest_mipmap_filter=true
 environment/default_environment="res://default_env.tres"
