@@ -129,7 +129,7 @@ func _physics_process(delta):
 	var analog = Vector2(Input.get_joy_axis(pick_id,JOY_AXIS_2), Input.get_joy_axis(pick_id,JOY_AXIS_3))
 			#print("mouse: "+  str(mouse))
 	var vect
-	if pick_id == 1:
+	if pick_id == 0:
 		vect =  mouse - init
 	else:
 		vect = analog
