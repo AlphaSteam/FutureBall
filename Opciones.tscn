@@ -129,6 +129,11 @@ script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="SFXHover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+bus = "SFX"
+[connection signal="mouse_entered" from="ColorRect/MarginContainer3/VBoxContainer/VBoxContainer/TextureButton4" to="." method="_on_TextureButton4_mouse_entered"]
 [connection signal="pressed" from="ColorRect/MarginContainer3/VBoxContainer/VBoxContainer/TextureButton4" to="." method="_on_TextureButton4_pressed"]
 [connection signal="pressed" from="Music/CheckBoxMusic" to="." method="_on_CheckBox_pressed"]
 [connection signal="toggled" from="Music/CheckBoxMusic" to="Music/CheckBoxMusic" method="_on_CheckBox_toggled"]

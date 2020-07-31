@@ -16,18 +16,23 @@
 [ext_resource path="res://buttons/StageSelectRed.png" type="Texture" id=14]
 
 [node name="Pausa" type="Control"]
+visible = false
 script = ExtResource( 10 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="BG" type="ColorRect" parent="."]
-margin_right = 100.0
-margin_bottom = 107.0
+margin_right = 104.0
+margin_bottom = 136.0
 color = Color( 0, 0, 0, 0.572549 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="SFXHover" type="AudioStreamPlayer" parent="BG"]
+stream = ExtResource( 15 )
+bus = "SFX"
 
 [node name="MarginContainer2" type="MarginContainer" parent="BG"]
 anchor_top = 0.5
@@ -49,8 +54,8 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="BG/MarginContainer2"]
-margin_left = 39.0
-margin_right = 914.0
+margin_left = 40.0
+margin_right = 915.0
 margin_bottom = 1050.0
 size_flags_horizontal = 4
 custom_constants/separation = 40
