@@ -216,7 +216,21 @@ __meta__ = {
 "_edit_vertical_guides_": [ 0.0, 160.0 ]
 }
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="Pausa" parent="CanvasLayer" instance=ExtResource( 17 )]
+pause_mode = 2
+visible = false
+
+[node name="BG" parent="CanvasLayer/Pausa" index="0"]
+margin_left = 150.0
+margin_top = 48.0
+margin_right = 250.0
+margin_bottom = 192.0
+
 [node name="Camera2D" parent="." instance=ExtResource( 1 )]
+visible = false
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -424,3 +438,8 @@ pause_mode = 2
 stream = ExtResource( 12 )
 volume_db = -1.5
 autoplay = true
+bus = "Music"
+
+[editable path="CanvasLayer/Pausa"]
+
+[editable path="Camera2D"]
