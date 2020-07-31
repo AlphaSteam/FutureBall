@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/run_3.png-3416a32383af90d786c3b130518caddd.stex"
+path="res://.import/run_3.png-3a50070d90e781d64b9e8e118537d4d5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Highlander_Female/run_3.png"
-dest_files=[ "res://.import/run_3.png-3416a32383af90d786c3b130518caddd.stex" ]
+source_file="res://characters/Highlander_Female/run_3.png"
+dest_files=[ "res://.import/run_3.png-3a50070d90e781d64b9e8e118537d4d5.stex" ]
 
 [params]
 

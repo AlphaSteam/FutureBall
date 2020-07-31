@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dash_weapon_2.png-13bdf22f9ee479a417b3a087fcba45d9.stex"
+path="res://.import/dash_weapon_2.png-f668014a11b87133d9a66587e9fe4d92.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Ninja_Male/dash_weapon_2.png"
-dest_files=[ "res://.import/dash_weapon_2.png-13bdf22f9ee479a417b3a087fcba45d9.stex" ]
+source_file="res://characters/Ninja_Male/dash_weapon_2.png"
+dest_files=[ "res://.import/dash_weapon_2.png-f668014a11b87133d9a66587e9fe4d92.stex" ]
 
 [params]
 

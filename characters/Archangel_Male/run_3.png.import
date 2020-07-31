@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/run_3.png-2d4406a5b3d64fbc941386ba2849462f.stex"
+path="res://.import/run_3.png-41ebde028b1f8c47a2ee3e9fb88f6730.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Archangel_Male/run_3.png"
-dest_files=[ "res://.import/run_3.png-2d4406a5b3d64fbc941386ba2849462f.stex" ]
+source_file="res://characters/Archangel_Male/run_3.png"
+dest_files=[ "res://.import/run_3.png-41ebde028b1f8c47a2ee3e9fb88f6730.stex" ]
 
 [params]
 

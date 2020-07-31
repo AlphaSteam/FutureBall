@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/idle_2.png-a48951ba976f26c08700cc04ff60bcf8.stex"
+path="res://.import/idle_2.png-46d8abeb9eedfadcdc64bdb301cc41a7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Samurai_Male/idle_2.png"
-dest_files=[ "res://.import/idle_2.png-a48951ba976f26c08700cc04ff60bcf8.stex" ]
+source_file="res://characters/Samurai_Male/idle_2.png"
+dest_files=[ "res://.import/idle_2.png-46d8abeb9eedfadcdc64bdb301cc41a7.stex" ]
 
 [params]
 

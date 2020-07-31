@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/idle_2.png-a9e109dd00204a8f99b35ea795f01e24.stex"
+path="res://.import/idle_2.png-1333461aa3d1ef63b8b0ea9c7516a31d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Royal_Guard_Female/idle_2.png"
-dest_files=[ "res://.import/idle_2.png-a9e109dd00204a8f99b35ea795f01e24.stex" ]
+source_file="res://characters/Royal_Guard_Female/idle_2.png"
+dest_files=[ "res://.import/idle_2.png-1333461aa3d1ef63b8b0ea9c7516a31d.stex" ]
 
 [params]
 

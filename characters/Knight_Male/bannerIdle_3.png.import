@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bannerIdle_3.png-c5c0f640bd2228b2593e45b1f4081a72.stex"
+path="res://.import/bannerIdle_3.png-35135b88ace49e08e6e010bc8f041fff.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Knight_Male/bannerIdle_3.png"
-dest_files=[ "res://.import/bannerIdle_3.png-c5c0f640bd2228b2593e45b1f4081a72.stex" ]
+source_file="res://characters/Knight_Male/bannerIdle_3.png"
+dest_files=[ "res://.import/bannerIdle_3.png-35135b88ace49e08e6e010bc8f041fff.stex" ]
 
 [params]
 

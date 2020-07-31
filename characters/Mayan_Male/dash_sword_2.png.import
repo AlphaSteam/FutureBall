@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dash_sword_2.png-6e24b23568bf9da16e93b0446f014c00.stex"
+path="res://.import/dash_sword_2.png-adf3445dac867f65bb63df7234119e3c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Mayan_Male/dash_sword_2.png"
-dest_files=[ "res://.import/dash_sword_2.png-6e24b23568bf9da16e93b0446f014c00.stex" ]
+source_file="res://characters/Mayan_Male/dash_sword_2.png"
+dest_files=[ "res://.import/dash_sword_2.png-adf3445dac867f65bb63df7234119e3c.stex" ]
 
 [params]
 

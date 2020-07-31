@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/attackUnarmed_3.png-163634753958b5dc1c26b549400c7459.stex"
+path="res://.import/attackUnarmed_3.png-224d582e96475c25977c16e2050a3ead.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Mayan_Male/attackUnarmed_3.png"
-dest_files=[ "res://.import/attackUnarmed_3.png-163634753958b5dc1c26b549400c7459.stex" ]
+source_file="res://characters/Mayan_Male/attackUnarmed_3.png"
+dest_files=[ "res://.import/attackUnarmed_3.png-224d582e96475c25977c16e2050a3ead.stex" ]
 
 [params]
 

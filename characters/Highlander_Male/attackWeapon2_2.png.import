@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/attackWeapon2_2.png-91bd76d9559cf7f1e3535a71a400c96d.stex"
+path="res://.import/attackWeapon2_2.png-3d16b1b540eda2aefa946f9ff7f6a8a8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Highlander_Male/attackWeapon2_2.png"
-dest_files=[ "res://.import/attackWeapon2_2.png-91bd76d9559cf7f1e3535a71a400c96d.stex" ]
+source_file="res://characters/Highlander_Male/attackWeapon2_2.png"
+dest_files=[ "res://.import/attackWeapon2_2.png-3d16b1b540eda2aefa946f9ff7f6a8a8.stex" ]
 
 [params]
 

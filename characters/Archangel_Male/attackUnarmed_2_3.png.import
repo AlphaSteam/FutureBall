@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/attackUnarmed_2_3.png-f6865af2d0e64a4d2db70a840f7a56ad.stex"
+path="res://.import/attackUnarmed_2_3.png-a378f3c115c82ce27ffeb9863f79d573.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Archangel_Male/attackUnarmed_2_3.png"
-dest_files=[ "res://.import/attackUnarmed_2_3.png-f6865af2d0e64a4d2db70a840f7a56ad.stex" ]
+source_file="res://characters/Archangel_Male/attackUnarmed_2_3.png"
+dest_files=[ "res://.import/attackUnarmed_2_3.png-a378f3c115c82ce27ffeb9863f79d573.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/run_3.png-22ec4ea0e33e0b8e16bfd2e1ca8f604d.stex"
+path="res://.import/run_3.png-486eca6077168b12f8a711faf7fe7c0c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Assassin_Female/run_3.png"
-dest_files=[ "res://.import/run_3.png-22ec4ea0e33e0b8e16bfd2e1ca8f604d.stex" ]
+source_file="res://characters/Assassin_Female/run_3.png"
+dest_files=[ "res://.import/run_3.png-486eca6077168b12f8a711faf7fe7c0c.stex" ]
 
 [params]
 

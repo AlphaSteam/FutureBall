@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/attackWeapon2_3.png-e96e221be89e714030fceae7227a9750.stex"
+path="res://.import/attackWeapon2_3.png-586052ccfdba0254129a83d05b8d806e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Electric_Knight_Male/attackWeapon2_3.png"
-dest_files=[ "res://.import/attackWeapon2_3.png-e96e221be89e714030fceae7227a9750.stex" ]
+source_file="res://characters/Electric_Knight_Male/attackWeapon2_3.png"
+dest_files=[ "res://.import/attackWeapon2_3.png-586052ccfdba0254129a83d05b8d806e.stex" ]
 
 [params]
 

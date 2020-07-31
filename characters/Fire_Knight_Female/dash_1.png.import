@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dash_1.png-13ff30600478a360deeeadcf6ddb4129.stex"
+path="res://.import/dash_1.png-16b6f918f5ad2c2dd2b8e280514b6778.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Fire_Knight_Female/dash_1.png"
-dest_files=[ "res://.import/dash_1.png-13ff30600478a360deeeadcf6ddb4129.stex" ]
+source_file="res://characters/Fire_Knight_Female/dash_1.png"
+dest_files=[ "res://.import/dash_1.png-16b6f918f5ad2c2dd2b8e280514b6778.stex" ]
 
 [params]
 

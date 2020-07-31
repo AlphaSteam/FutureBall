@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/attackWeapon1_FX_6.png-1700923737d94e0d2c7a940ef92d5fc9.stex"
+path="res://.import/attackWeapon1_FX_6.png-90b8ce709968955c5e5a5ec19e77b989.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Viking_Male/attackWeapon1_FX_6.png"
-dest_files=[ "res://.import/attackWeapon1_FX_6.png-1700923737d94e0d2c7a940ef92d5fc9.stex" ]
+source_file="res://characters/Viking_Male/attackWeapon1_FX_6.png"
+dest_files=[ "res://.import/attackWeapon1_FX_6.png-90b8ce709968955c5e5a5ec19e77b989.stex" ]
 
 [params]
 

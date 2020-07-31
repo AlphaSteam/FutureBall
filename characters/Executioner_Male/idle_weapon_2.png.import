@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/idle_weapon_2.png-0e6e06fb0218f92352c12c2026f487a7.stex"
+path="res://.import/idle_weapon_2.png-4740d7ad6555692dd3c21b9ae729b636.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Executioner_Male/idle_weapon_2.png"
-dest_files=[ "res://.import/idle_weapon_2.png-0e6e06fb0218f92352c12c2026f487a7.stex" ]
+source_file="res://characters/Executioner_Male/idle_weapon_2.png"
+dest_files=[ "res://.import/idle_weapon_2.png-4740d7ad6555692dd3c21b9ae729b636.stex" ]
 
 [params]
 

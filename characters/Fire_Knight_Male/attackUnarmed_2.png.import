@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/attackUnarmed_2.png-4def432c8beaece899f702309179b817.stex"
+path="res://.import/attackUnarmed_2.png-44a2fad85eb8c8ba073f2e7482e4e699.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Fire_Knight_Male/attackUnarmed_2.png"
-dest_files=[ "res://.import/attackUnarmed_2.png-4def432c8beaece899f702309179b817.stex" ]
+source_file="res://characters/Fire_Knight_Male/attackUnarmed_2.png"
+dest_files=[ "res://.import/attackUnarmed_2.png-44a2fad85eb8c8ba073f2e7482e4e699.stex" ]
 
 [params]
 

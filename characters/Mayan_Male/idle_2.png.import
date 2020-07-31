@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/idle_2.png-e565b7205188beb68a9cdaefd95a7959.stex"
+path="res://.import/idle_2.png-fbe902cec5a5af21591c008738296fbe.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Mayan_Male/idle_2.png"
-dest_files=[ "res://.import/idle_2.png-e565b7205188beb68a9cdaefd95a7959.stex" ]
+source_file="res://characters/Mayan_Male/idle_2.png"
+dest_files=[ "res://.import/idle_2.png-fbe902cec5a5af21591c008738296fbe.stex" ]
 
 [params]
 

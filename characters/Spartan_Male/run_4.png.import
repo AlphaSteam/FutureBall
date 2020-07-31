@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/run_4.png-e489a1c5efbb271044a719dcddfb185c.stex"
+path="res://.import/run_4.png-7b6c03dce43a58ff4a067f8bd775dee1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Spartan_Male/run_4.png"
-dest_files=[ "res://.import/run_4.png-e489a1c5efbb271044a719dcddfb185c.stex" ]
+source_file="res://characters/Spartan_Male/run_4.png"
+dest_files=[ "res://.import/run_4.png-7b6c03dce43a58ff4a067f8bd775dee1.stex" ]
 
 [params]
 

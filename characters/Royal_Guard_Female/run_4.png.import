@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/run_4.png-ee9e490aec1f7e0a335f510606525425.stex"
+path="res://.import/run_4.png-466f76007da2057b65a42e1ab88404dd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Royal_Guard_Female/run_4.png"
-dest_files=[ "res://.import/run_4.png-ee9e490aec1f7e0a335f510606525425.stex" ]
+source_file="res://characters/Royal_Guard_Female/run_4.png"
+dest_files=[ "res://.import/run_4.png-466f76007da2057b65a42e1ab88404dd.stex" ]
 
 [params]
 

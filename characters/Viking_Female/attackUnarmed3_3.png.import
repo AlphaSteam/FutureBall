@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/attackUnarmed3_3.png-ef055054f063dfe59c584d9bfef010b0.stex"
+path="res://.import/attackUnarmed3_3.png-935d149b1dfb32282503ec8f9898f733.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Viking_Female/attackUnarmed3_3.png"
-dest_files=[ "res://.import/attackUnarmed3_3.png-ef055054f063dfe59c584d9bfef010b0.stex" ]
+source_file="res://characters/Viking_Female/attackUnarmed3_3.png"
+dest_files=[ "res://.import/attackUnarmed3_3.png-935d149b1dfb32282503ec8f9898f733.stex" ]
 
 [params]
 

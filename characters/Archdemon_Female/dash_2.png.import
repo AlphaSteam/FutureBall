@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dash_2.png-e3acefee4be351a669f77b88620ed640.stex"
+path="res://.import/dash_2.png-1605cd019a23ecdded26c7455d7d5422.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Archdemon_Female/dash_2.png"
-dest_files=[ "res://.import/dash_2.png-e3acefee4be351a669f77b88620ed640.stex" ]
+source_file="res://characters/Archdemon_Female/dash_2.png"
+dest_files=[ "res://.import/dash_2.png-1605cd019a23ecdded26c7455d7d5422.stex" ]
 
 [params]
 

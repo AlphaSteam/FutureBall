@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dead_2.png-d358d26b6b74a02626a4936e4baa1575.stex"
+path="res://.import/dead_2.png-bb45320e11827ebce3d17ce792106f5e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Highlander_Female/dead_2.png"
-dest_files=[ "res://.import/dead_2.png-d358d26b6b74a02626a4936e4baa1575.stex" ]
+source_file="res://characters/Highlander_Female/dead_2.png"
+dest_files=[ "res://.import/dead_2.png-bb45320e11827ebce3d17ce792106f5e.stex" ]
 
 [params]
 

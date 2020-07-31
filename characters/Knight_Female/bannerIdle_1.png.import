@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bannerIdle_1.png-69bb64fb7298a8d6ad0d97dc23ce9b97.stex"
+path="res://.import/bannerIdle_1.png-38d8ecece72bcdebf8373c17fa580aaf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Knight_Female/bannerIdle_1.png"
-dest_files=[ "res://.import/bannerIdle_1.png-69bb64fb7298a8d6ad0d97dc23ce9b97.stex" ]
+source_file="res://characters/Knight_Female/bannerIdle_1.png"
+dest_files=[ "res://.import/bannerIdle_1.png-38d8ecece72bcdebf8373c17fa580aaf.stex" ]
 
 [params]
 

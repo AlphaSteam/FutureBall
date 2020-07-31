@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/run_1.png-ed8b9ea5df2d2fd8a82c7e881d14bc7b.stex"
+path="res://.import/run_1.png-87f4a796967e24c6624bde5f35b54cda.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Pirate_Male/run_1.png"
-dest_files=[ "res://.import/run_1.png-ed8b9ea5df2d2fd8a82c7e881d14bc7b.stex" ]
+source_file="res://characters/Pirate_Male/run_1.png"
+dest_files=[ "res://.import/run_1.png-87f4a796967e24c6624bde5f35b54cda.stex" ]
 
 [params]
 

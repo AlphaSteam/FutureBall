@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dash_weapon_1.png-1014a8eae7b3223dda1f6905b21e2059.stex"
+path="res://.import/dash_weapon_1.png-e1e2ca81511d9bcb78030da8b4101eb3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Executioner_Male/dash_weapon_1.png"
-dest_files=[ "res://.import/dash_weapon_1.png-1014a8eae7b3223dda1f6905b21e2059.stex" ]
+source_file="res://characters/Executioner_Male/dash_weapon_1.png"
+dest_files=[ "res://.import/dash_weapon_1.png-e1e2ca81511d9bcb78030da8b4101eb3.stex" ]
 
 [params]
 

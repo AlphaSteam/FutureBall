@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/graveBurst_1.png-924fb9b094c16fda077b608c588835ef.stex"
+path="res://.import/graveBurst_1.png-0847e6be849181c81acfbf06406b2fa9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Samurai_Male/graveBurst_1.png"
-dest_files=[ "res://.import/graveBurst_1.png-924fb9b094c16fda077b608c588835ef.stex" ]
+source_file="res://characters/Samurai_Male/graveBurst_1.png"
+dest_files=[ "res://.import/graveBurst_1.png-0847e6be849181c81acfbf06406b2fa9.stex" ]
 
 [params]
 

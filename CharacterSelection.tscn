@@ -38,5 +38,4 @@ columns = 4
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="mouse_entered" from="Start" to="." method="_on_Start_mouse_entered"]
 [connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]

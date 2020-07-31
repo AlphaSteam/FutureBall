@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/idle_2.png-c4abccb4aa657d11da52bc143cc90d9e.stex"
+path="res://.import/idle_2.png-3926f6a9fac5682211a10fb94802d9cd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Fire_Knight_Male/idle_2.png"
-dest_files=[ "res://.import/idle_2.png-c4abccb4aa657d11da52bc143cc90d9e.stex" ]
+source_file="res://characters/Fire_Knight_Male/idle_2.png"
+dest_files=[ "res://.import/idle_2.png-3926f6a9fac5682211a10fb94802d9cd.stex" ]
 
 [params]
 

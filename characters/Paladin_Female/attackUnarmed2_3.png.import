@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/attackUnarmed2_3.png-93494262c968cd331f8f5c42a52d6ba6.stex"
+path="res://.import/attackUnarmed2_3.png-9d7f19e4eb10327b0ee8545481fb0dc2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Paladin_Female/attackUnarmed2_3.png"
-dest_files=[ "res://.import/attackUnarmed2_3.png-93494262c968cd331f8f5c42a52d6ba6.stex" ]
+source_file="res://characters/Paladin_Female/attackUnarmed2_3.png"
+dest_files=[ "res://.import/attackUnarmed2_3.png-9d7f19e4eb10327b0ee8545481fb0dc2.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/run_3.png-bbbadff9b5945786a9a34fd121e0395d.stex"
+path="res://.import/run_3.png-b631e5241330f0bd35418bd721614411.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Pirate_Female/run_3.png"
-dest_files=[ "res://.import/run_3.png-bbbadff9b5945786a9a34fd121e0395d.stex" ]
+source_file="res://characters/Pirate_Female/run_3.png"
+dest_files=[ "res://.import/run_3.png-b631e5241330f0bd35418bd721614411.stex" ]
 
 [params]
 

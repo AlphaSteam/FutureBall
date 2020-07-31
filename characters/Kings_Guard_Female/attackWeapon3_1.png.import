@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/attackWeapon3_1.png-09e9a8989997777801c8ffbac9016d18.stex"
+path="res://.import/attackWeapon3_1.png-a556737cf080cec59b77591c9ec8e745.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Kings_Guard_Female/attackWeapon3_1.png"
-dest_files=[ "res://.import/attackWeapon3_1.png-09e9a8989997777801c8ffbac9016d18.stex" ]
+source_file="res://characters/Kings_Guard_Female/attackWeapon3_1.png"
+dest_files=[ "res://.import/attackWeapon3_1.png-a556737cf080cec59b77591c9ec8e745.stex" ]
 
 [params]
 

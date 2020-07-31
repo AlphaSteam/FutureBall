@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/attackWeapon3_FX_6.png-364c7a868d752252941a6628fa4d9565.stex"
+path="res://.import/attackWeapon3_FX_6.png-1b074413d0f07c6e0068657aa66ef236.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Highlander_Female/attackWeapon3_FX_6.png"
-dest_files=[ "res://.import/attackWeapon3_FX_6.png-364c7a868d752252941a6628fa4d9565.stex" ]
+source_file="res://characters/Highlander_Female/attackWeapon3_FX_6.png"
+dest_files=[ "res://.import/attackWeapon3_FX_6.png-1b074413d0f07c6e0068657aa66ef236.stex" ]
 
 [params]
 

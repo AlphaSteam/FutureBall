@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bannerIdle_1.png-affc60a824b7884c15b1cb6688a50132.stex"
+path="res://.import/bannerIdle_1.png-adb53c8bb648a1ea0a2d44b09801ab9c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Ninja_Female/bannerIdle_1.png"
-dest_files=[ "res://.import/bannerIdle_1.png-affc60a824b7884c15b1cb6688a50132.stex" ]
+source_file="res://characters/Ninja_Female/bannerIdle_1.png"
+dest_files=[ "res://.import/bannerIdle_1.png-adb53c8bb648a1ea0a2d44b09801ab9c.stex" ]
 
 [params]
 

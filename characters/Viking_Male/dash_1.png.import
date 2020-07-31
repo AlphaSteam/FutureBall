@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dash_1.png-55343da3c1662c033206934cf5d25849.stex"
+path="res://.import/dash_1.png-d7089ea9d3b6a6083cb741cde8da922f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Viking_Male/dash_1.png"
-dest_files=[ "res://.import/dash_1.png-55343da3c1662c033206934cf5d25849.stex" ]
+source_file="res://characters/Viking_Male/dash_1.png"
+dest_files=[ "res://.import/dash_1.png-d7089ea9d3b6a6083cb741cde8da922f.stex" ]
 
 [params]
 

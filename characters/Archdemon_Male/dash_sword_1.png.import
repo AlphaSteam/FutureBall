@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dash_sword_1.png-a41e3accb8a4fdb452a061cca8a5482c.stex"
+path="res://.import/dash_sword_1.png-66f9c7108703312fb900b8518c2c252e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Archdemon_Male/dash_sword_1.png"
-dest_files=[ "res://.import/dash_sword_1.png-a41e3accb8a4fdb452a061cca8a5482c.stex" ]
+source_file="res://characters/Archdemon_Male/dash_sword_1.png"
+dest_files=[ "res://.import/dash_sword_1.png-66f9c7108703312fb900b8518c2c252e.stex" ]
 
 [params]
 
