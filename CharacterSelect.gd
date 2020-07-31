@@ -2,7 +2,7 @@ extends Control
 
 var Selected_char = 0
 var max_char = PlayerGlobals.Chars.size()-1
-onready var node = $HSeparator/MarginContainer/CharacterPos
+onready var node = $HSeparator/MarginContainer/Control/VBoxContainer
 
 func updateChar():
 	
@@ -13,8 +13,11 @@ func updateChar():
 		for n in node.get_children():
 			node.remove_child(n)
 			n.queue_free()
-	sprite.global_scale = Vector2(2,2)
 	
+	sprite.global_scale = Vector2(10,10)
+	node.margin_left = 759
+	node.hide()
+	node.show()
 	node.add_child(sprite)
 	
 	

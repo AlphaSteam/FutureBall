@@ -5,6 +5,9 @@ var Nodes = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	for i in get_tree().get_nodes_in_group("Ball"):
+			remove_child(i)
+			i.queue_free()
 	PlayerGlobals.createCharArray()
 	PlayerGlobals.createPlayers()
 	for i in PlayerGlobals.Number_of_players:
@@ -25,3 +28,7 @@ func _on_Start_pressed():
 	for i in PlayerGlobals.Number_of_players:
 		PlayerGlobals.Players[i].Character = PlayerGlobals.Chars[Nodes[i].Selected_char].duplicate()
 	get_tree().change_scene_to(LevelGlobals.selectedLevel_packed)
+
+
+func _on_Start_mouse_entered():
+	SfxHover.play()
