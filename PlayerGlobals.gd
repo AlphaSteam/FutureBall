@@ -11,7 +11,7 @@ var timer = Timer.new()
 var timer2 = Timer.new()
 var round_over = false
 var bomb_exploded = false
-var points_to_win = 0
+var points_to_win = 1
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	timer.set_one_shot(false)

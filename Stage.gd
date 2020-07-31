@@ -2,10 +2,10 @@ extends Node2D
 
 
 var maxPlayers = 6
-var camera_limit_top = -1000000000
-var camera_limit_left = -1000000000
-var  camera_limit_botom = 326
-var camera_limit_right = 100000000000
+var camera_limit_top = -200
+var camera_limit_left = -400
+var  camera_limit_botom = 400
+var camera_limit_right = 800
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
