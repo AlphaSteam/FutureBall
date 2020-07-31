@@ -9,7 +9,7 @@ func _ready():
 		$VBoxContainer/Ganador.text = 'Empate entre: '
 		for i in Globals.empate:
 			$VBoxContainer/Ganador.text += i.Name
-			$VBoxContainer/Puntaje.text = 'Puntaje: ' +	str(i.Points)
+			$VBoxContainer/Puntaje.text = 'Puntaje: ' + "  " +	str(i.Points)
 	else:
 		$VBoxContainer/Ganador.text += Globals.Winner.Name
 		$VBoxContainer/Puntaje.text += str(Globals.Winner.Points)
