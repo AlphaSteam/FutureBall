@@ -1,8 +1,33 @@
 [gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://arrow_body.png" type="Texture" id=1]
-[ext_resource path="res://Character2.gd" type="Script" id=2]
 [ext_resource path="res://characters/JBOT-all animations-Sheet 01.png" type="Texture" id=3]
+
+[sub_resource type="GDScript" id=3]
+script/source = "extends \"res://Character.gd\"
+class_name Char2
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	orientation_der = false
+	DEFSPEED=100
+	DEFFRICTION = 0.4
+	DEFACC = 0.8
+	DEFGRAVITY = 10
+	JUMP_POWER = -300
+	FLOOR = Vector2(0,-1)
+	INITJUMPS =40
+	INITDASHES =2
+	WALLFALLSPEED = 8 # Replace with function body.
+	POWER = 5
+	MAXPOWER = 50
+	POWERSPEED = 10
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+"
 
 [sub_resource type="AtlasTexture" id=10]
 flags = 4
@@ -122,7 +147,7 @@ animations = [ {
 "speed": 10.0
 }, {
 "frames": [ SubResource( 17 ), SubResource( 18 ), SubResource( 19 ) ],
-"loop": false,
+"loop": true,
 "name": "fall",
 "speed": 10.0
 }, {
@@ -132,7 +157,7 @@ animations = [ {
 "speed": 10.0
 }, {
 "frames": [ SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ) ],
-"loop": false,
+"loop": true,
 "name": "jump",
 "speed": 10.0
 } ]
@@ -143,7 +168,7 @@ extents = Vector2( 8.62758, 10.7938 )
 [node name="Player" type="KinematicBody2D" groups=[
 "Jugador",
 ]]
-script = ExtResource( 2 )
+script = SubResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -1.67667, 6.95389 )

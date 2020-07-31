@@ -16,6 +16,12 @@ func _ready():
 	MAXPOWER = 50
 	POWERSPEED = 10
 
+func _physics_process(delta):
+	if Input.is_action_just_pressed("Right_%s" % id):
+		$AnimatedSprite.flip_h = true
+
+	if Input.is_action_just_pressed("Left_%s" % id):
+		$AnimatedSprite.flip_h = false	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

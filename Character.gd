@@ -30,15 +30,24 @@ var end_jump_after = false
 var on_wall = false
 var flip_character_once = false # Used to flip the character when sliding through a wall, so I don't do it more than once.
 var timer
+var flip
 var reset_position2
+var orientation_der = true
 func _ready():
 	timer = get_tree().get_root().get_node("MainStage/Camera2D/CanvasLayer/TimerLabel/Timer")
 	reset_position2 = position
 
 func _physics_process(delta):
 	var input_velocity = Vector2.ZERO
+	if orientation_der:
+		flip = true
+	else:
+		flip = false
 	if Input.is_action_just_pressed("Right_%s" % id):
-		$AnimatedSprite.flip_h = false
+		if !flip:
+			$AnimatedSprite.flip_h = false
+		else:
+			$AnimatedSprite.flip_h = true
 	if Input.is_action_pressed("Right_%s" % id):
 		$AnimatedSprite.play("run")
 		
@@ -47,7 +56,10 @@ func _physics_process(delta):
 			
 			_dash()
 	if Input.is_action_just_pressed("Left_%s" % id):
-		$AnimatedSprite.flip_h = true	
+		if !flip:
+			$AnimatedSprite.flip_h = true
+		else:
+			$AnimatedSprite.flip_h = false
 	if Input.is_action_pressed("Left_%s" % id):
 		$AnimatedSprite.play("run")
 		input_velocity.x -= 1
