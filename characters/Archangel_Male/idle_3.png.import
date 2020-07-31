@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/idle_3.png-aa6e1c16d1cfb2c07ca87f93725429c9.stex"
+path="res://.import/idle_3.png-a950e35d8395ff94e82202c94756cf6f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Archangel_Male/idle_3.png"
-dest_files=[ "res://.import/idle_3.png-aa6e1c16d1cfb2c07ca87f93725429c9.stex" ]
+source_file="res://characters/Archangel_Male/idle_3.png"
+dest_files=[ "res://.import/idle_3.png-a950e35d8395ff94e82202c94756cf6f.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/idle_weapon_3.png-b4ef3d6256ba0463475525c7d0a7586a.stex"
+path="res://.import/idle_weapon_3.png-43c3555f16cb63bab0f8542705304c76.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Knight_Female/idle_weapon_3.png"
-dest_files=[ "res://.import/idle_weapon_3.png-b4ef3d6256ba0463475525c7d0a7586a.stex" ]
+source_file="res://characters/Knight_Female/idle_weapon_3.png"
+dest_files=[ "res://.import/idle_weapon_3.png-43c3555f16cb63bab0f8542705304c76.stex" ]
 
 [params]
 

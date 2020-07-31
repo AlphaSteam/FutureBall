@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/run_4.png-05cf84dafd2fd3b58cbb2e6275f22567.stex"
+path="res://.import/run_4.png-acf2f71a20d7ceb5cee45f7063e435a1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Ninja_Male/run_4.png"
-dest_files=[ "res://.import/run_4.png-05cf84dafd2fd3b58cbb2e6275f22567.stex" ]
+source_file="res://characters/Ninja_Male/run_4.png"
+dest_files=[ "res://.import/run_4.png-acf2f71a20d7ceb5cee45f7063e435a1.stex" ]
 
 [params]
 

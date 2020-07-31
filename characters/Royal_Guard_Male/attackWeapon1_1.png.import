@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/attackWeapon1_1.png-9fe4c349e66017a6e2c03e269ac62904.stex"
+path="res://.import/attackWeapon1_1.png-0c78d93bbeb5a69cac79130f671ebc7e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Royal_Guard_Male/attackWeapon1_1.png"
-dest_files=[ "res://.import/attackWeapon1_1.png-9fe4c349e66017a6e2c03e269ac62904.stex" ]
+source_file="res://characters/Royal_Guard_Male/attackWeapon1_1.png"
+dest_files=[ "res://.import/attackWeapon1_1.png-0c78d93bbeb5a69cac79130f671ebc7e.stex" ]
 
 [params]
 

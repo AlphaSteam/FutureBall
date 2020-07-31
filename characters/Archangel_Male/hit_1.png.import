@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hit_1.png-c207fe7bbfab6080164827b65511bcbc.stex"
+path="res://.import/hit_1.png-f3615cb05c1fd2fc6eb2c699c4719bf4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Archangel_Male/hit_1.png"
-dest_files=[ "res://.import/hit_1.png-c207fe7bbfab6080164827b65511bcbc.stex" ]
+source_file="res://characters/Archangel_Male/hit_1.png"
+dest_files=[ "res://.import/hit_1.png-f3615cb05c1fd2fc6eb2c699c4719bf4.stex" ]
 
 [params]
 

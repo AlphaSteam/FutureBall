@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dead_4.png-772099083781c577285ab648088587f9.stex"
+path="res://.import/dead_4.png-1ed5120e528713427aaf9f40797ce4c5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Viking_Male/dead_4.png"
-dest_files=[ "res://.import/dead_4.png-772099083781c577285ab648088587f9.stex" ]
+source_file="res://characters/Viking_Male/dead_4.png"
+dest_files=[ "res://.import/dead_4.png-1ed5120e528713427aaf9f40797ce4c5.stex" ]
 
 [params]
 

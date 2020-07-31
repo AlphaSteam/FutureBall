@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bannerIdle_1.png-a11d047c803ca0008d3eadf1434996d2.stex"
+path="res://.import/bannerIdle_1.png-33a8785d1f587e21f10577223c1476e0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Samurai_Female/bannerIdle_1.png"
-dest_files=[ "res://.import/bannerIdle_1.png-a11d047c803ca0008d3eadf1434996d2.stex" ]
+source_file="res://characters/Samurai_Female/bannerIdle_1.png"
+dest_files=[ "res://.import/bannerIdle_1.png-33a8785d1f587e21f10577223c1476e0.stex" ]
 
 [params]
 

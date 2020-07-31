@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dash_weapon_2.png-82297fab4e94eb6c77a5c2588b8622df.stex"
+path="res://.import/dash_weapon_2.png-d95c27cbe05e4a4995692b6cb69478e8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Electric_Knight_Male/dash_weapon_2.png"
-dest_files=[ "res://.import/dash_weapon_2.png-82297fab4e94eb6c77a5c2588b8622df.stex" ]
+source_file="res://characters/Electric_Knight_Male/dash_weapon_2.png"
+dest_files=[ "res://.import/dash_weapon_2.png-d95c27cbe05e4a4995692b6cb69478e8.stex" ]
 
 [params]
 

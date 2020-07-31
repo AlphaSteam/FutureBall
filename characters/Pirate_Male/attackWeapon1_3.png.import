@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/attackWeapon1_3.png-a0d2c666474478578f691191a656db34.stex"
+path="res://.import/attackWeapon1_3.png-621ecfeaaefb3c5652a38800a71f7758.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Pirate_Male/attackWeapon1_3.png"
-dest_files=[ "res://.import/attackWeapon1_3.png-a0d2c666474478578f691191a656db34.stex" ]
+source_file="res://characters/Pirate_Male/attackWeapon1_3.png"
+dest_files=[ "res://.import/attackWeapon1_3.png-621ecfeaaefb3c5652a38800a71f7758.stex" ]
 
 [params]
 

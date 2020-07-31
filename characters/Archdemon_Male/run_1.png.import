@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/run_1.png-c60697565af0b5fdfba9c5bec44426c2.stex"
+path="res://.import/run_1.png-007642228f793cef5beecd2ff55bd5d2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Archdemon_Male/run_1.png"
-dest_files=[ "res://.import/run_1.png-c60697565af0b5fdfba9c5bec44426c2.stex" ]
+source_file="res://characters/Archdemon_Male/run_1.png"
+dest_files=[ "res://.import/run_1.png-007642228f793cef5beecd2ff55bd5d2.stex" ]
 
 [params]
 

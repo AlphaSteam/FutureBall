@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://arrowLeft.png" type="Texture" id=1]
 [ext_resource path="res://Fonts/Points.tres" type="DynamicFont" id=2]
@@ -9,7 +9,6 @@
 [ext_resource path="res://LevelSelection.gd" type="Script" id=7]
 [ext_resource path="res://Backgrounds/bgm.jpg" type="Texture" id=8]
 [ext_resource path="res://Fonts/Zero hour/zero hour.ttf" type="DynamicFontData" id=9]
-[ext_resource path="res://sounds/music/902299_Bloodmoon.ogg" type="AudioStream" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 10
@@ -111,7 +110,7 @@ expand = true
 [node name="Settings" type="VBoxContainer" parent="HBoxContainer"]
 margin_left = 243.0
 margin_right = 393.0
-margin_bottom = 168.0
+margin_bottom = 1108.0
 rect_min_size = Vector2( 150, 0 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -119,14 +118,14 @@ __meta__ = {
 
 [node name="CenterContainer" type="HBoxContainer" parent="HBoxContainer/Settings"]
 margin_right = 150.0
-margin_bottom = 60.0
+margin_bottom = 1054.0
 rect_min_size = Vector2( 150, 0 )
 alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/Settings/CenterContainer"]
 margin_left = 30.0
 margin_right = 120.035
-margin_bottom = 60.0
+margin_bottom = 1054.0
 rect_min_size = Vector2( 90.035, 0 )
 custom_fonts/normal_font = ExtResource( 2 )
 text = "     Number     of players"
@@ -134,9 +133,9 @@ fit_content_height = true
 scroll_active = false
 
 [node name="N players" type="HBoxContainer" parent="HBoxContainer/Settings"]
-margin_top = 64.0
+margin_top = 1058.0
 margin_right = 150.0
-margin_bottom = 114.0
+margin_bottom = 1108.0
 rect_min_size = Vector2( 100, 50 )
 size_flags_vertical = 0
 custom_constants/separation = 21
@@ -186,12 +185,6 @@ margin_bottom = 35.0
 rect_min_size = Vector2( 20, 20 )
 texture_normal = ExtResource( 3 )
 expand = true
-
-[node name="MusicStageSelect" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 10 )
-autoplay = true
-bus = "Music"
-[connection signal="mouse_entered" from="Start" to="." method="_on_Start_mouse_entered"]
 [connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="HBoxContainer/Level thumbnails/CenterContainer2/Left button" to="." method="_on_Left_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/Level thumbnails/CenterContainer3/Right button" to="." method="_on_Right_button_pressed"]

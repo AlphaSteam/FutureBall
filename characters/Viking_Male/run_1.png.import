@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/run_1.png-565f37bf3e8d2017c0f083f60bcc0a4f.stex"
+path="res://.import/run_1.png-d55a826a00d16c10d764ce32bfb21b29.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Viking_Male/run_1.png"
-dest_files=[ "res://.import/run_1.png-565f37bf3e8d2017c0f083f60bcc0a4f.stex" ]
+source_file="res://characters/Viking_Male/run_1.png"
+dest_files=[ "res://.import/run_1.png-d55a826a00d16c10d764ce32bfb21b29.stex" ]
 
 [params]
 

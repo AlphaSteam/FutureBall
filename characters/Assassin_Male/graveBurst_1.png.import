@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/graveBurst_1.png-2fac36ac5f4c3de95f443a15c461f924.stex"
+path="res://.import/graveBurst_1.png-9b12b9a44fb43e155d970b3ca29bc3fa.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Assassin_Male/graveBurst_1.png"
-dest_files=[ "res://.import/graveBurst_1.png-2fac36ac5f4c3de95f443a15c461f924.stex" ]
+source_file="res://characters/Assassin_Male/graveBurst_1.png"
+dest_files=[ "res://.import/graveBurst_1.png-9b12b9a44fb43e155d970b3ca29bc3fa.stex" ]
 
 [params]
 

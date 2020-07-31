@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/idle_weapon_1.png-cb8c2d2beaf7084f5a1fce1346814f15.stex"
+path="res://.import/idle_weapon_1.png-f73e6674c1141cf322dbf3883ae80c65.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Royal_Guard_Female/idle_weapon_1.png"
-dest_files=[ "res://.import/idle_weapon_1.png-cb8c2d2beaf7084f5a1fce1346814f15.stex" ]
+source_file="res://characters/Royal_Guard_Female/idle_weapon_1.png"
+dest_files=[ "res://.import/idle_weapon_1.png-f73e6674c1141cf322dbf3883ae80c65.stex" ]
 
 [params]
 

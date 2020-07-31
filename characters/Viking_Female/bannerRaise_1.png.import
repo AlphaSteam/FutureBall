@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bannerRaise_1.png-a51f243268d473409e8af5c376ecc35b.stex"
+path="res://.import/bannerRaise_1.png-4a8e58e6709101a2cc37e0da093ba06c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Viking_Female/bannerRaise_1.png"
-dest_files=[ "res://.import/bannerRaise_1.png-a51f243268d473409e8af5c376ecc35b.stex" ]
+source_file="res://characters/Viking_Female/bannerRaise_1.png"
+dest_files=[ "res://.import/bannerRaise_1.png-4a8e58e6709101a2cc37e0da093ba06c.stex" ]
 
 [params]
 

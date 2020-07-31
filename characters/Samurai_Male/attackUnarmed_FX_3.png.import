@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/attackUnarmed_FX_3.png-37406ce0038ad88393b5bf79fdc4d8a2.stex"
+path="res://.import/attackUnarmed_FX_3.png-5e6d79f1e7d84d94e38fa6d01fdde3bf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Samurai_Male/attackUnarmed_FX_3.png"
-dest_files=[ "res://.import/attackUnarmed_FX_3.png-37406ce0038ad88393b5bf79fdc4d8a2.stex" ]
+source_file="res://characters/Samurai_Male/attackUnarmed_FX_3.png"
+dest_files=[ "res://.import/attackUnarmed_FX_3.png-5e6d79f1e7d84d94e38fa6d01fdde3bf.stex" ]
 
 [params]
 

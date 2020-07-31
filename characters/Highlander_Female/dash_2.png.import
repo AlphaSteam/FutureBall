@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dash_2.png-8fd5bd81918af4012d20c84b1c44a5ad.stex"
+path="res://.import/dash_2.png-10145ab22beabf0dbe608fc84a23920c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Highlander_Female/dash_2.png"
-dest_files=[ "res://.import/dash_2.png-8fd5bd81918af4012d20c84b1c44a5ad.stex" ]
+source_file="res://characters/Highlander_Female/dash_2.png"
+dest_files=[ "res://.import/dash_2.png-10145ab22beabf0dbe608fc84a23920c.stex" ]
 
 [params]
 

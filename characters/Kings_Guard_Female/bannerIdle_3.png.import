@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bannerIdle_3.png-703d60eedc6e895889ddcc20766846d7.stex"
+path="res://.import/bannerIdle_3.png-09593357058ee8e8b5d38f01248bc332.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Kings_Guard_Female/bannerIdle_3.png"
-dest_files=[ "res://.import/bannerIdle_3.png-703d60eedc6e895889ddcc20766846d7.stex" ]
+source_file="res://characters/Kings_Guard_Female/bannerIdle_3.png"
+dest_files=[ "res://.import/bannerIdle_3.png-09593357058ee8e8b5d38f01248bc332.stex" ]
 
 [params]
 

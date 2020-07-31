@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dash_weapon_1.png-7934c20b0de7441997a4cda385ae6b6f.stex"
+path="res://.import/dash_weapon_1.png-4e733a68b454527256cf0ec78b636e6f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Fire_Knight_Female/dash_weapon_1.png"
-dest_files=[ "res://.import/dash_weapon_1.png-7934c20b0de7441997a4cda385ae6b6f.stex" ]
+source_file="res://characters/Fire_Knight_Female/dash_weapon_1.png"
+dest_files=[ "res://.import/dash_weapon_1.png-4e733a68b454527256cf0ec78b636e6f.stex" ]
 
 [params]
 

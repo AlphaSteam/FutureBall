@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bannerRaise_1.png-079678d88c66013521ea7774e231fd33.stex"
+path="res://.import/bannerRaise_1.png-35fdff5439619d2ef0b6972e35049556.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Archangel_Male/bannerRaise_1.png"
-dest_files=[ "res://.import/bannerRaise_1.png-079678d88c66013521ea7774e231fd33.stex" ]
+source_file="res://characters/Archangel_Male/bannerRaise_1.png"
+dest_files=[ "res://.import/bannerRaise_1.png-35fdff5439619d2ef0b6972e35049556.stex" ]
 
 [params]
 

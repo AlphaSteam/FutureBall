@@ -127,7 +127,7 @@ If the ball bounces with any other object, it will deactivate and turn blue, all
 
 The game ends when a player gets 7 points, winning the game. If a player gets to -3 points, the victory is given to the other player.
 "
-text = "In Future Ball, players compete by throwing an energy ball to eachother, which will explode if it makes direct contact with an opponent, giving the attacking player a point. Not throwing the ball before a set time takes away a point. 
+text = "In Future Ball, players compete by throwing an energy ball to eachother, which will explode if it makes direct contact with an opponent, giving the attacking player a point. Not throwing the ball before a set time or falling from the stage takes away a point. 
 
 If the ball bounces with any other object, it will deactivate and turn blue, allowing for any player to catch it. The states of the ball are shown as red when it will explode on contact, and blue when it's catchable.
 
@@ -143,24 +143,25 @@ bus = "SFX"
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 margin_left = 1067.0
-margin_top = 81.0
+margin_top = 3.0
 margin_right = 1791.0
-margin_bottom = 935.0
+margin_bottom = 959.0
 color = Color( 1, 0, 0, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="help1" type="Sprite" parent="ColorRect2"]
-position = Vector2( 364.27, 228.14 )
+[node name="help1" type="Sprite" parent="."]
+position = Vector2( 1431.27, 231.14 )
 scale = Vector2( 1.68268, 1.68268 )
 texture = ExtResource( 9 )
 
-[node name="help2" type="Sprite" parent="ColorRect2/help1"]
+[node name="help2" type="Sprite" parent="help1"]
 position = Vector2( -0.283997, 194.838 )
+scale = Vector2( 1, 1 )
 texture = ExtResource( 8 )
 
-[node name="help3" type="Sprite" parent="ColorRect2/help1/help2"]
+[node name="help3" type="Sprite" parent="help1/help2"]
 position = Vector2( -0.322449, 178.715 )
 scale = Vector2( 1.00165, 1.00165 )
 texture = ExtResource( 10 )

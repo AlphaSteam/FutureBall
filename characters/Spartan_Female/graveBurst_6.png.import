@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/graveBurst_6.png-2ff813a3870c5be10baeb53313757965.stex"
+path="res://.import/graveBurst_6.png-058a79657bfa591cf12c37e566e2014c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Spartan_Female/graveBurst_6.png"
-dest_files=[ "res://.import/graveBurst_6.png-2ff813a3870c5be10baeb53313757965.stex" ]
+source_file="res://characters/Spartan_Female/graveBurst_6.png"
+dest_files=[ "res://.import/graveBurst_6.png-058a79657bfa591cf12c37e566e2014c.stex" ]
 
 [params]
 

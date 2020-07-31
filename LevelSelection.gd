@@ -55,7 +55,3 @@ func _on_Left_button_players_pressed():
 	else:
 		PlayerGlobals.Number_of_players = selectedLevelInstance.maxPlayers
 	updateNPlayers()
-
-
-func _on_Start_mouse_entered():
-	SfxHover.play()

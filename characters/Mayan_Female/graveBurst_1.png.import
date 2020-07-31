@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/graveBurst_1.png-0c0992672d9122c3d9d927043375e336.stex"
+path="res://.import/graveBurst_1.png-8171e59abae7f1c1492c03b19558c227.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Mayan_Female/graveBurst_1.png"
-dest_files=[ "res://.import/graveBurst_1.png-0c0992672d9122c3d9d927043375e336.stex" ]
+source_file="res://characters/Mayan_Female/graveBurst_1.png"
+dest_files=[ "res://.import/graveBurst_1.png-8171e59abae7f1c1492c03b19558c227.stex" ]
 
 [params]
 

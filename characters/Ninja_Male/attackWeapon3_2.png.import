@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/attackWeapon3_2.png-8204bbd5707cfd0d7b66b32aaede5c57.stex"
+path="res://.import/attackWeapon3_2.png-633dd01afb75fd2101c2fdce8dc262ab.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Ninja_Male/attackWeapon3_2.png"
-dest_files=[ "res://.import/attackWeapon3_2.png-8204bbd5707cfd0d7b66b32aaede5c57.stex" ]
+source_file="res://characters/Ninja_Male/attackWeapon3_2.png"
+dest_files=[ "res://.import/attackWeapon3_2.png-633dd01afb75fd2101c2fdce8dc262ab.stex" ]
 
 [params]
 

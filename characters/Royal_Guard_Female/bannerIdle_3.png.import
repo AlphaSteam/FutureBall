@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bannerIdle_3.png-241de28bfda01aa3af8298cf951c84e6.stex"
+path="res://.import/bannerIdle_3.png-eda53b30524d595a6b2fd72ea66b223a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Royal_Guard_Female/bannerIdle_3.png"
-dest_files=[ "res://.import/bannerIdle_3.png-241de28bfda01aa3af8298cf951c84e6.stex" ]
+source_file="res://characters/Royal_Guard_Female/bannerIdle_3.png"
+dest_files=[ "res://.import/bannerIdle_3.png-eda53b30524d595a6b2fd72ea66b223a.stex" ]
 
 [params]
 

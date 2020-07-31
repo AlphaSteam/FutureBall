@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bannerRaise_1.png-a5f1b068ceefa46e9a863d6aefd9567d.stex"
+path="res://.import/bannerRaise_1.png-5498f08a8d2206fd7d952ba514641697.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Electric_Knight_Female/bannerRaise_1.png"
-dest_files=[ "res://.import/bannerRaise_1.png-a5f1b068ceefa46e9a863d6aefd9567d.stex" ]
+source_file="res://characters/Electric_Knight_Female/bannerRaise_1.png"
+dest_files=[ "res://.import/bannerRaise_1.png-5498f08a8d2206fd7d952ba514641697.stex" ]
 
 [params]
 
