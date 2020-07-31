@@ -40,6 +40,12 @@ var block = false
 var can_block = true
 var block_timer
 var block_wait_timer
+
+#
+var orientation = false
+var flip
+#
+
 func _ready():
 	block_timer = Timer.new()
 	block_timer.set_one_shot(true)
@@ -64,8 +70,15 @@ func _physics_process(delta):
 	block_timer.set_wait_time(BLOCKWINDOW)
 	block_wait_timer.set_wait_time(BLOCKCOOLDOWN)
 	var input_velocity = Vector2.ZERO
+	if orientation:
+		flip = true
+	else:
+		flip = false		
 	if Input.is_action_just_pressed("Right_%s" % id):
-		$AnimatedSprite.flip_h = false
+		if !flip:
+			$AnimatedSprite.flip_h = false
+		else: 
+			$AnimatedSprite.flip_h = true			
 	if Input.is_action_pressed("Right_%s" % id):
 		#$SFXStep.play()
 		$AnimatedSprite.play("run")
@@ -76,7 +89,10 @@ func _physics_process(delta):
 			
 			_dash()
 	if Input.is_action_just_pressed("Left_%s" % id):
-		$AnimatedSprite.flip_h = true	
+		if !flip:
+			$AnimatedSprite.flip_h = true
+		else: 
+			$AnimatedSprite.flip_h = false
 	if Input.is_action_pressed("Left_%s" % id):
 		#$SFXStep.play()
 		$AnimatedSprite.play("run")
