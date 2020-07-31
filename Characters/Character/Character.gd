@@ -12,6 +12,11 @@ var WALLFALLSPEED = 8
 var POWER = 4
 var MAXPOWER = 100
 var POWERSPEED = 2
+var DASHCOOLDOWN = 0.657
+var DASHTIME = 0.15
+var BLOCKWINDOW = 0.2
+var BLOCKCOOLDOWN = 0.5
+
 
 var id
 var gravity = DEFGRAVITY
@@ -31,11 +36,33 @@ var on_wall = false
 var flip_character_once = false # Used to flip the character when sliding through a wall, so I don't do it more than once.
 var timer
 var reset_position2
+var block = false
+var can_block = true
+var block_timer
+var block_wait_timer
 func _ready():
+	block_timer = Timer.new()
+	block_timer.set_one_shot(true)
+	block_timer.set_timer_process_mode(0)
+	block_timer.set_wait_time(BLOCKWINDOW)
+	block_timer.connect("timeout", self, "_on_Block_timeout")
+	add_child(block_timer) 
+	
+	block_wait_timer = Timer.new()
+	block_wait_timer.set_one_shot(true)
+	block_wait_timer.set_timer_process_mode(0)
+	block_wait_timer.set_wait_time(BLOCKCOOLDOWN)
+	block_wait_timer.connect("timeout", self, "_on_Block_wait_timeout")
+	add_child(block_wait_timer) 
 	timer = get_tree().get_root().get_node("MainStage/Camera2D/CanvasLayer/TimerLabel/Timer")
 	reset_position2 = position
 
+
 func _physics_process(delta):
+	$"Dash Cooldown".set_wait_time(DASHCOOLDOWN)
+	$"Dash Time".set_wait_time(DASHTIME)
+	block_timer.set_wait_time(BLOCKWINDOW)
+	block_wait_timer.set_wait_time(BLOCKCOOLDOWN)
 	var input_velocity = Vector2.ZERO
 	if Input.is_action_just_pressed("Right_%s" % id):
 		$AnimatedSprite.flip_h = false
@@ -82,7 +109,10 @@ func _physics_process(delta):
 		end_jump_after = true
 	
 	
-		
+	if Input.is_action_just_pressed("attack_%s" % id):
+			if can_block:
+				block = true
+				block_timer.start()
 		
 	input_velocity = input_velocity.normalized() * speed
 	if input_velocity.length() > 0:
@@ -184,3 +214,12 @@ func _on_Minimun_jump_duration_timeout():
 
 func _on_New_jump_threshold_timeout():
 	jumps_available = 0
+
+
+func _on_Block_timeout():
+	block = false
+	block_wait_timer.start()
+
+
+func _on_Block_wait_timeout():
+	can_block = true

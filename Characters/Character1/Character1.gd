@@ -1,4 +1,4 @@
-extends "res://Character.gd"
+extends "res://Characters/Character/Character.gd"
 class_name Char1
 
 # Called when the node enters the scene tree for the first time.
@@ -15,8 +15,10 @@ func _ready():
 	POWER = 5
 	MAXPOWER = 50
 	POWERSPEED = 10
-
-
+	DASHCOOLDOWN =0.1
+	DASHTIME = 0.05
+	BLOCKWINDOW = 0.2
+	BLOCKCOOLDOWN = 0.5
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass

@@ -1,42 +1,42 @@
 [gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://arrow_body.png" type="Texture" id=1]
-[ext_resource path="res://Character1.gd" type="Script" id=2]
-[ext_resource path="res://Resources/kenney_tooncharacters1/Female person/Tilesheet/character_femalePerson_sheetHD.png" type="Texture" id=3]
+[ext_resource path="res://Resources/kenney_tooncharacters1/Female person/Tilesheet/character_femalePerson_sheetHD.png" type="Texture" id=2]
+[ext_resource path="res://Characters/Character1/Character1.gd" type="Script" id=3]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
-atlas = ExtResource( 3 )
+atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 192, 256 )
 
 [sub_resource type="AtlasTexture" id=2]
 flags = 4
-atlas = ExtResource( 3 )
+atlas = ExtResource( 2 )
 region = Rect2( 384, 0, 192, 256 )
 
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
-atlas = ExtResource( 3 )
+atlas = ExtResource( 2 )
 region = Rect2( 1344, 512, 192, 256 )
 
 [sub_resource type="AtlasTexture" id=4]
 flags = 4
-atlas = ExtResource( 3 )
+atlas = ExtResource( 2 )
 region = Rect2( 1536, 512, 192, 256 )
 
 [sub_resource type="AtlasTexture" id=5]
 flags = 4
-atlas = ExtResource( 3 )
+atlas = ExtResource( 2 )
 region = Rect2( 0, 768, 192, 256 )
 
 [sub_resource type="AtlasTexture" id=6]
 flags = 4
-atlas = ExtResource( 3 )
+atlas = ExtResource( 2 )
 region = Rect2( 1152, 512, 192, 256 )
 
 [sub_resource type="AtlasTexture" id=7]
 flags = 4
-atlas = ExtResource( 3 )
+atlas = ExtResource( 2 )
 region = Rect2( 192, 0, 192, 256 )
 
 [sub_resource type="SpriteFrames" id=8]
@@ -68,7 +68,7 @@ extents = Vector2( 8.55065, 13.6003 )
 [node name="Player" type="KinematicBody2D" groups=[
 "Jugador",
 ]]
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -0.415487, 9.58038 )

@@ -5,10 +5,11 @@ const DEFPOWMULT = 4
 
 var pick_id = -1
 
-
+var on_body = false
 var power_multiplier = DEFPOWMULT
 var power = 0
 var rebote = 0
+var steal = false
 #Variables para los distintos jugadores dependiendo de su control
 onready var area2 = get_node("Area2D")
 onready var timer = get_parent().get_node("Camera2D/CanvasLayer/TimerLabel/Timer")
@@ -54,6 +55,7 @@ onready var reset_position = global_position
 
 #Detectar contactos
 func _ready():
+	picked = false
 	for i in PlayerGlobals.Number_of_players:
 		arrows.append(PlayerGlobals.Players[i].Character.get_node("Arrow"))
 		players.append(PlayerGlobals.Players[i].Character)
@@ -79,13 +81,14 @@ func _ready():
 #		mode = MODE_RIGID
 	
 
-
-#Señal de que la bola tocó algo
-func _on_Bola_body_entered(body: Node):
-	#print("Bola entered")
+func killBall():
 	if live_ball == true: #Si la bola esta viva
 		live_ball = false
 		$Sprite.texture = ball_dead	
+#Señal de que la bola tocó algo
+func _on_Bola_body_entered(body: Node):
+	killBall()
+	
 
 
 func pick():
@@ -111,28 +114,35 @@ func drop():
 
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Jugador"):
+		on_body = true
 		#print("Jugador area")
 		if pick_id != body.id:
 			if live_ball == true:
-				picked = false			
-				attacking = true			
-				PlayerGlobals.Players[pick_id].changePoints(1)
-				pick_id = -1
+				if PlayerGlobals.Players[body.id].Character.block == true:
+					pick_id = body.id
+					killBall()
+					call_deferred("pick")
+				else:
+					picked = false			
+					attacking = true			
+					PlayerGlobals.Players[pick_id].changePoints(1)
+					pick_id = -1
 			elif live_ball == false and not picked:
 				pick_id = body.id
 				#call_deferred("pick")
-				pick()
+				call_deferred("pick")
 		else:
 			if live_ball == false and not picked:
 				pick_id = body.id
 				#call_deferred("pick")
-				pick()
+				call_deferred("pick")
 
-				#print("agarra la bola")
-
-		
+func _on_Area2D_body_exited(body):
+	on_body=false
 
 func _physics_process(delta):
+	#print(picked)
+	print(on_body)
 	var init = global_position
 	var mouse =  get_global_mouse_position()
 	var analog = Vector2(Input.get_joy_axis(pick_id,JOY_AXIS_2), Input.get_joy_axis(pick_id,JOY_AXIS_3))
@@ -184,7 +194,8 @@ func _physics_process(delta):
 			arrows[pick_id].rect_size.x = reset_arrows[pick_id].x
 			arrows[pick_id].hide()
 			power = 0
-		
+	else:
+		pass
 			
 			
 	if position.y > 400:
@@ -255,6 +266,9 @@ func _on_Timer_timeout():
 ##			apply_impulse(Vector2(), dir * 5)
 #			live_ball = true
 #			picked = false
+
+
+
 
 
 
