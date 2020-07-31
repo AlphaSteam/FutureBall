@@ -33,7 +33,12 @@ var credits = [
 		"Diego Sandoval L."
 	],[
 		"Art",
-		"Artist Name"
+		"Diego Sandoval L.",
+		"Robot w/ gun by alisdaiross",
+		"Medieval Fantasy Characters Pack by CleanCutGames",
+		"",
+		"Neonglow by Josef Bartoñ",
+		"https://www.artstation.com/artwork/rR0XYJ"
 	],[
 		"Music",
 		"AeronMusic - Infinite",
@@ -59,7 +64,10 @@ var credits = [
 		"https://godotengine.org/license",
 		"",
 		"Art created with paint.net",
-		"www.getpaint.net"
+		"www.getpaint.net",
+		"",
+		"Art and designs created with Adobe Photoshop",
+		"https://www.adobe.com/products/photoshop.html"
 	],[
 		"Special thanks",
 		"My parents",
@@ -129,7 +137,7 @@ func add_line():
 
 
 func _unhandled_input(event):
-	if event.is_action_pressed("ui_cancel"):
+	if event.is_action_pressed("ui_cancel") or event.is_action("Pause"):
 		finish()
 	if event.is_action_pressed("ui_down") and !event.is_echo():
 		speed_up = true

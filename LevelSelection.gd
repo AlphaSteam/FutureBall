@@ -28,6 +28,7 @@ func _on_Start_pressed():
 
 
 func _on_Right_button_pressed():
+	SfxHover.play()
 	if LevelGlobals.selectedLevel < length:
 		LevelGlobals.selectedLevel+=1
 	else:
@@ -36,6 +37,7 @@ func _on_Right_button_pressed():
 
 
 func _on_Left_button_pressed():
+	SfxHover.play()
 	if LevelGlobals.selectedLevel > 0:
 		LevelGlobals.selectedLevel-=1
 	else:
@@ -44,12 +46,14 @@ func _on_Left_button_pressed():
 
 
 func _on_Right_button_players_pressed():
+	SfxHover.play()
 	if PlayerGlobals.Number_of_players < selectedLevelInstance.maxPlayers:
 		PlayerGlobals.Number_of_players+=1
 	else:
 		PlayerGlobals.Number_of_players = 2
 	updateNPlayers()
 func _on_Left_button_players_pressed():
+	SfxHover.play()
 	if PlayerGlobals.Number_of_players > 2:
 		PlayerGlobals.Number_of_players-=1
 	else:

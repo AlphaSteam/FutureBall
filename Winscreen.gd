@@ -19,3 +19,7 @@ func _physics_process(delta):
 
 func _on_TextureButton_mouse_entered():
 	SfxHover.play()
+
+
+func _on_Timer_timeout():
+	$SFXWin.play()
