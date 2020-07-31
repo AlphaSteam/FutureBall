@@ -1,11 +1,21 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Backgrounds/bg.jpeg" type="Texture" id=1]
+[ext_resource path="res://Backgrounds/gg.jpg" type="Texture" id=1]
 [ext_resource path="res://buttons/MainMenuGreen.png" type="Texture" id=2]
 [ext_resource path="res://buttons/MainMenuRed.png" type="Texture" id=3]
-[ext_resource path="res://Fonts/Points.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Resources/Gameplay.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Winscreen.gd" type="Script" id=5]
 [ext_resource path="res://sfx/win sound 1-2.wav" type="AudioStream" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
 
 [node name="WinScreen" type="Node"]
 script = ExtResource( 5 )
@@ -14,9 +24,6 @@ script = ExtResource( 5 )
 position = Vector2( 199.3, 117.121 )
 scale = Vector2( 0.207271, 0.212739 )
 texture = ExtResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_left = 17.0
@@ -29,21 +36,28 @@ __meta__ = {
 
 [node name="Ganador" type="RichTextLabel" parent="VBoxContainer"]
 margin_right = 368.0
-margin_bottom = 20.0
-rect_min_size = Vector2( 50, 20 )
-custom_fonts/normal_font = ExtResource( 4 )
-text = "Ganador: "
+margin_bottom = 16.0
+rect_min_size = Vector2( 368, 16 )
+rect_scale = Vector2( 0.8, 0.8 )
+rect_clip_content = false
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 1, 0, 0, 1 )
+custom_colors/font_color_selected = Color( 1, 1, 1, 1 )
+text = "Winner:"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Puntaje" type="RichTextLabel" parent="VBoxContainer"]
-margin_top = 24.0
+margin_top = 26.0
 margin_right = 368.0
-margin_bottom = 124.0
+margin_bottom = 120.0
 rect_min_size = Vector2( 100, 100 )
-custom_fonts/normal_font = ExtResource( 4 )
-text = "Puntaje: "
+rect_scale = Vector2( 0.8, 0.8 )
+rect_clip_content = false
+custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 1, 0, 0, 1 )
+text = "Point:"
 __meta__ = {
 "_edit_use_anchors_": false
 }
