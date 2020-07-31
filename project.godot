@@ -12,7 +12,17 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "Char1",
 "language": "GDScript",
-"path": "res://Character1.gd"
+"path": "res://Characters/Character1/Character1.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Char2",
+"language": "GDScript",
+"path": "res://Characters/Character2/Character2.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Char3",
+"language": "GDScript",
+"path": "res://Characters/Character3/Character3.gd"
 }, {
 "base": "Node",
 "class": "Player",
@@ -21,6 +31,8 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "Char1": "",
+"Char2": "",
+"Char3": "",
 "Player": ""
 }
 
