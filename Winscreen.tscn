@@ -5,7 +5,7 @@
 [ext_resource path="res://buttons/MainMenuRed.png" type="Texture" id=3]
 [ext_resource path="res://Resources/Gameplay.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Winscreen.gd" type="Script" id=5]
-[ext_resource path="res://sfx/win sound 1-2.wav" type="AudioStream" id=6]
+[ext_resource path="res://sounds/music/938610_Rise-Up-Now.ogg" type="AudioStream" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 outline_size = 1

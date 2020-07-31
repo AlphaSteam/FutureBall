@@ -125,15 +125,13 @@ bbcode_text = "In Future Ball, players compete by throwing an energy ball to eac
 
 If the ball bounces with any other object, it will deactivate and turn blue, allowing for any player to catch it. The states of the ball are shown as red when it will explode on contact, and blue when it's catchable.
 
-The game ends when a player gets 7 points, winning the game. If a player gets to -3 points, the victory is given to the other player.
+The game ends when a player gets a set amount of points,, winning the game. 
 "
 text = "In Future Ball, players compete by throwing an energy ball to eachother, which will explode if it makes direct contact with an opponent, giving the attacking player a point. Not throwing the ball before a set time or falling from the stage takes away a point. 
 
 If the ball bounces with any other object, it will deactivate and turn blue, allowing for any player to catch it. The states of the ball are shown as red when it will explode on contact, and blue when it's catchable.
 
-You can catch a ball thrown to you if you press the attack button in an exact moment before the ball hits you. Be careful that if you fail, you won't be able to try catching again immediately.
-
-The game ends when a player gets the required amount of points or the match timer runs out, in which case, the player or players with the most amount of points win the game.
+The game ends when a player gets a set amount of points,, winning the game. 
 "
 __meta__ = {
 "_edit_use_anchors_": false

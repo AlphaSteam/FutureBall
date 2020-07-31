@@ -2,10 +2,10 @@
 
 [ext_resource path="res://Levels/Tilesets/Tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://Resources/Sideview Sci-Fi - Patreon Collection/Environments/alien-environment/PNG/layers/back-structures.png" type="Texture" id=2]
+[ext_resource path="res://sounds/music/656875_Vigor (1).ogg" type="AudioStream" id=3]
 [ext_resource path="res://Player spawn.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Camara.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Ball spawn.tscn" type="PackedScene" id=6]
-[ext_resource path="res://sounds/music/585193_Infinite.ogg" type="AudioStream" id=7]
 [ext_resource path="res://Resources/Sideview Sci-Fi - Patreon Collection/Environments/alien-environment/PNG/layers/background.png" type="Texture" id=8]
 [ext_resource path="res://Levels/Alien/Alien.gd" type="Script" id=9]
 
@@ -95,7 +95,7 @@ margin_top = -75.0484
 margin_right = 11.9079
 margin_bottom = -75.0484
 
-[node name="MusicFactory" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 7 )
+[node name="MusicAlien" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
 autoplay = true
 bus = "Music"

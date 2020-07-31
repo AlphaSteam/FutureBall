@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/JBOT-all animations-Sheet 01.png-bc155e7e8412a582792ff8605ff2d033.stex"
+path="res://.import/JBOT-all animations-Sheet 01.png-ee3261af79b5ae33d3d7e4a3d4f3855b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/JBOT-all animations-Sheet 01.png"
-dest_files=[ "res://.import/JBOT-all animations-Sheet 01.png-bc155e7e8412a582792ff8605ff2d033.stex" ]
+source_file="res://Characters/JBOT-all animations-Sheet 01.png"
+dest_files=[ "res://.import/JBOT-all animations-Sheet 01.png-ee3261af79b5ae33d3d7e4a3d4f3855b.stex" ]
 
 [params]
 
