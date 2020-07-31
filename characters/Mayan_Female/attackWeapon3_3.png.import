@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/attackWeapon3_3.png-f2540f483757479a99fffacc2aa66416.stex"
+path="res://.import/attackWeapon3_3.png-d1157119443049f0b6c0f231e3b5a8c6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Mayan_Female/attackWeapon3_3.png"
-dest_files=[ "res://.import/attackWeapon3_3.png-f2540f483757479a99fffacc2aa66416.stex" ]
+source_file="res://Characters/Mayan_Female/attackWeapon3_3.png"
+dest_files=[ "res://.import/attackWeapon3_3.png-d1157119443049f0b6c0f231e3b5a8c6.stex" ]
 
 [params]
 

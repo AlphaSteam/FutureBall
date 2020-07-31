@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dead_1.png-ce1d71708d68866bcf8aa5ebfe0144ab.stex"
+path="res://.import/dead_1.png-1655cdf713af9515e11aa1ad10d0cb7a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Pirate_Female/dead_1.png"
-dest_files=[ "res://.import/dead_1.png-ce1d71708d68866bcf8aa5ebfe0144ab.stex" ]
+source_file="res://Characters/Pirate_Female/dead_1.png"
+dest_files=[ "res://.import/dead_1.png-1655cdf713af9515e11aa1ad10d0cb7a.stex" ]
 
 [params]
 

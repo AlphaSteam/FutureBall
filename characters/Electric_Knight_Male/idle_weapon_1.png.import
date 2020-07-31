@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/idle_weapon_1.png-e9f4b5e9da040343ee7ef39565cba8a2.stex"
+path="res://.import/idle_weapon_1.png-c7d2fa0a09c936f70a55d4be1297aa98.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Electric_Knight_Male/idle_weapon_1.png"
-dest_files=[ "res://.import/idle_weapon_1.png-e9f4b5e9da040343ee7ef39565cba8a2.stex" ]
+source_file="res://Characters/Electric_Knight_Male/idle_weapon_1.png"
+dest_files=[ "res://.import/idle_weapon_1.png-c7d2fa0a09c936f70a55d4be1297aa98.stex" ]
 
 [params]
 

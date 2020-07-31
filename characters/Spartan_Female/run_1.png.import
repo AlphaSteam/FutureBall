@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/run_1.png-e5381e2e7b82eb101761ca1ea6a75e3f.stex"
+path="res://.import/run_1.png-ae5825f5eece7361c739cb262f3d2ca6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Spartan_Female/run_1.png"
-dest_files=[ "res://.import/run_1.png-e5381e2e7b82eb101761ca1ea6a75e3f.stex" ]
+source_file="res://Characters/Spartan_Female/run_1.png"
+dest_files=[ "res://.import/run_1.png-ae5825f5eece7361c739cb262f3d2ca6.stex" ]
 
 [params]
 

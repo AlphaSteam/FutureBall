@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/idle_sword_3.png-3d9c2f82d7d84d9c963f56be657b1475.stex"
+path="res://.import/idle_sword_3.png-a2a107c72a6e2a203d6e8e00fa90efa1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Highlander_Male/idle_sword_3.png"
-dest_files=[ "res://.import/idle_sword_3.png-3d9c2f82d7d84d9c963f56be657b1475.stex" ]
+source_file="res://Characters/Highlander_Male/idle_sword_3.png"
+dest_files=[ "res://.import/idle_sword_3.png-a2a107c72a6e2a203d6e8e00fa90efa1.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/attackWeapon1_2.png-ca7c48362aa16b5a676e0021f55598d5.stex"
+path="res://.import/attackWeapon1_2.png-881798e401a9557187d4af7ca9c70168.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Ninja_Female/attackWeapon1_2.png"
-dest_files=[ "res://.import/attackWeapon1_2.png-ca7c48362aa16b5a676e0021f55598d5.stex" ]
+source_file="res://Characters/Ninja_Female/attackWeapon1_2.png"
+dest_files=[ "res://.import/attackWeapon1_2.png-881798e401a9557187d4af7ca9c70168.stex" ]
 
 [params]
 

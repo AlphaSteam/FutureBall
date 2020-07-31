@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dead_5.png-cbd5e1151be455f9332f0ff4fb697cb6.stex"
+path="res://.import/dead_5.png-0682f2a81e916fd979238935434dffa9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Highlander_Male/dead_5.png"
-dest_files=[ "res://.import/dead_5.png-cbd5e1151be455f9332f0ff4fb697cb6.stex" ]
+source_file="res://Characters/Highlander_Male/dead_5.png"
+dest_files=[ "res://.import/dead_5.png-0682f2a81e916fd979238935434dffa9.stex" ]
 
 [params]
 

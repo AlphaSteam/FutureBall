@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/idle_3.png-afddbb333c6f785a69e2cb55394011d0.stex"
+path="res://.import/idle_3.png-39fe5192337169eb614ad888c765e592.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Knight_Female/idle_3.png"
-dest_files=[ "res://.import/idle_3.png-afddbb333c6f785a69e2cb55394011d0.stex" ]
+source_file="res://Characters/Knight_Female/idle_3.png"
+dest_files=[ "res://.import/idle_3.png-39fe5192337169eb614ad888c765e592.stex" ]
 
 [params]
 

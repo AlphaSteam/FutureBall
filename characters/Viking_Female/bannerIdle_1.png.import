@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bannerIdle_1.png-d5bdcaa814de9e712e7dc5e894fc1705.stex"
+path="res://.import/bannerIdle_1.png-811b9b9dce90311e054a65ec79723545.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Viking_Female/bannerIdle_1.png"
-dest_files=[ "res://.import/bannerIdle_1.png-d5bdcaa814de9e712e7dc5e894fc1705.stex" ]
+source_file="res://Characters/Viking_Female/bannerIdle_1.png"
+dest_files=[ "res://.import/bannerIdle_1.png-811b9b9dce90311e054a65ec79723545.stex" ]
 
 [params]
 

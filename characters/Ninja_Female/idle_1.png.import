@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/idle_1.png-3769d9fe462b1d5983ac14033629f3b3.stex"
+path="res://.import/idle_1.png-2ffe1100cda7c8f72a953acedae4c013.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Ninja_Female/idle_1.png"
-dest_files=[ "res://.import/idle_1.png-3769d9fe462b1d5983ac14033629f3b3.stex" ]
+source_file="res://Characters/Ninja_Female/idle_1.png"
+dest_files=[ "res://.import/idle_1.png-2ffe1100cda7c8f72a953acedae4c013.stex" ]
 
 [params]
 

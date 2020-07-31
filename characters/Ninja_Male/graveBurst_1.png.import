@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/graveBurst_1.png-9f766ab94fdb55a861f2dd4e5bae8312.stex"
+path="res://.import/graveBurst_1.png-0dc87780d3b8c9fca570eb84fb748afa.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Ninja_Male/graveBurst_1.png"
-dest_files=[ "res://.import/graveBurst_1.png-9f766ab94fdb55a861f2dd4e5bae8312.stex" ]
+source_file="res://Characters/Ninja_Male/graveBurst_1.png"
+dest_files=[ "res://.import/graveBurst_1.png-0dc87780d3b8c9fca570eb84fb748afa.stex" ]
 
 [params]
 

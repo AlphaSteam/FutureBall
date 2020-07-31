@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/run_2.png-2c08c76d7ef054a5d77a12ec9f903a43.stex"
+path="res://.import/run_2.png-426ffe423543e2952de21900d8bd5cf4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Ninja_Female/run_2.png"
-dest_files=[ "res://.import/run_2.png-2c08c76d7ef054a5d77a12ec9f903a43.stex" ]
+source_file="res://Characters/Ninja_Female/run_2.png"
+dest_files=[ "res://.import/run_2.png-426ffe423543e2952de21900d8bd5cf4.stex" ]
 
 [params]
 

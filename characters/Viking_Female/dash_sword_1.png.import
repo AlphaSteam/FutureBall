@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dash_sword_1.png-c7c65af6c82e50aa75e4a7206dd7209d.stex"
+path="res://.import/dash_sword_1.png-99912e98f2ce0205737c4b995d403d41.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Viking_Female/dash_sword_1.png"
-dest_files=[ "res://.import/dash_sword_1.png-c7c65af6c82e50aa75e4a7206dd7209d.stex" ]
+source_file="res://Characters/Viking_Female/dash_sword_1.png"
+dest_files=[ "res://.import/dash_sword_1.png-99912e98f2ce0205737c4b995d403d41.stex" ]
 
 [params]
 
