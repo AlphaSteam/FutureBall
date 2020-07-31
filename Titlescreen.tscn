@@ -117,5 +117,5 @@ rect_scale = Vector2( 1.4, 1.4 )
 [connection signal="mouse_entered" from="MarginContainer/VBoxContainer/VBoxContainer/TextureButton3" to="." method="_on_TextureButton3_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/TextureButton3" to="MarginContainer/VBoxContainer/VBoxContainer/TextureButton4/Extra" method="_on_TextureButton3_pressed"]
 [connection signal="mouse_entered" from="MarginContainer/VBoxContainer/VBoxContainer/TextureButton4" to="." method="_on_TextureButton4_mouse_entered"]
-[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/TextureButton4" to="MarginContainer/VBoxContainer/VBoxContainer/TextureButton4/Extra" method="_on_TextureButton4_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/TextureButton4" to="." method="_on_TextureButton4_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/TextureButton4" to="MarginContainer/VBoxContainer/VBoxContainer/TextureButton4/Extra" method="_on_TextureButton4_pressed"]
