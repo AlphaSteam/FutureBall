@@ -47,9 +47,11 @@ var credits = [
 		"AeronMusic - Infinite",
 		"AeronMusic - Appear",
 		"AeronMusic - Bloodmoon",
+		"AeronMusic - Vigor",
 		"yunkbeatsaek - OST",
 		"Diossel - Sunflower",
-		"B0nn0t - Riot Ribs"
+		"B0nn0t - Riot Ribs",
+		"B0nn0t - Rise Up Now"
 	],[
 		"Sound Effects",
 		"opengameart.org",
