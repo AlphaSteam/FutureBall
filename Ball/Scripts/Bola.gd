@@ -5,7 +5,6 @@ const DEFPOWMULT = 4
 
 var pick_id = -1
 
-var on_body = false
 var power_multiplier = DEFPOWMULT
 var power = 0
 var rebote = 0
@@ -100,7 +99,6 @@ func drop():
 
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Jugador"):
-		on_body = true
 		#print("Jugador area")
 		if pick_id != body.id:
 			if live_ball == true:
@@ -123,12 +121,9 @@ func _on_Area2D_body_entered(body):
 				#call_deferred("pick")
 				call_deferred("pick")
 
-func _on_Area2D_body_exited(body):
-	on_body=false
-
 func _physics_process(delta):
 	#print(picked)
-	print(on_body)
+
 	var init = global_position
 	var mouse =  get_global_mouse_position()
 	var analog = Vector2(Input.get_joy_axis(pick_id,JOY_AXIS_2), Input.get_joy_axis(pick_id,JOY_AXIS_3))
