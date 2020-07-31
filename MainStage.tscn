@@ -218,7 +218,7 @@ __meta__ = {
 }
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = 128
+layer = -1
 
 [node name="Pausa" parent="CanvasLayer" instance=ExtResource( 17 )]
 pause_mode = 2
@@ -231,6 +231,7 @@ margin_right = 250.0
 margin_bottom = 192.0
 
 [node name="Camera2D" parent="." instance=ExtResource( 1 )]
+visible = false
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -441,3 +442,5 @@ autoplay = true
 bus = "Music"
 
 [editable path="CanvasLayer/Pausa"]
+
+[editable path="Camera2D"]
