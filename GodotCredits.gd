@@ -37,6 +37,7 @@ var credits = [
 		"Robot w/ gun by alisdaiross",
 		"Medieval Fantasy Characters Pack by CleanCutGames",
 		"Warped City by ansimuz",
+		"Cyberpunk City Art - Jonas Roscinas",
 		"",
 		"Neonglow by Josef Bartoñ",
 		"Permitted to use by the author",
@@ -145,3 +146,7 @@ func _unhandled_input(event):
 		
 func _physics_process(delta):
 	$ParallaxBackground/ParallaxLayer.motion_offset.y += 0.0015*scroll_speed
+
+
+func _on_TextureButton_pressed():
+	get_tree().change_scene("res://Titlescreen.tscn")

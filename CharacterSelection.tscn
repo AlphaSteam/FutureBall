@@ -51,6 +51,9 @@ custom_fonts/normal_font = SubResource( 1 )
 bbcode_enabled = true
 bbcode_text = "SELECT YOUR CHARACTER"
 text = "SELECT YOUR CHARACTER"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Players" type="GridContainer" parent="."]
 margin_left = 18.0
