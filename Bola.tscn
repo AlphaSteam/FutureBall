@@ -208,10 +208,9 @@ process_material = SubResource( 24 )
 
 [node name="Tween" type="Tween" parent="."]
 
-[node name="SFXBoom" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 volume_db = 0.015
-bus = "SFX"
 __meta__ = {
 "_editor_description_": ""
 }

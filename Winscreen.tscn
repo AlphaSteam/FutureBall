@@ -13,6 +13,9 @@ script = ExtResource( 5 )
 position = Vector2( 199.3, 117.121 )
 scale = Vector2( 0.207271, 0.212739 )
 texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchor_top = 0.5
@@ -61,9 +64,9 @@ __meta__ = {
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_left = 17.0
-margin_top = 105.0
+margin_top = 104.546
 margin_right = 385.0
-margin_bottom = 229.0
+margin_bottom = 228.546
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -79,14 +82,12 @@ __meta__ = {
 }
 
 [node name="Puntaje" type="RichTextLabel" parent="VBoxContainer"]
-light_mask = 0
 margin_top = 24.0
 margin_right = 368.0
 margin_bottom = 124.0
 rect_min_size = Vector2( 100, 100 )
 custom_fonts/normal_font = ExtResource( 4 )
 text = "Puntaje: "
-fit_content_height = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

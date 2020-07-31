@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://buttons/StageSelectGreen.png" type="Texture" id=1]
 [ext_resource path="res://buttons/help.png" type="Texture" id=2]
@@ -14,7 +14,6 @@
 [ext_resource path="res://buttons/MainMenuRed.png" type="Texture" id=12]
 [ext_resource path="res://buttons/MainMenuGreen.png" type="Texture" id=13]
 [ext_resource path="res://buttons/StageSelectRed.png" type="Texture" id=14]
-[ext_resource path="res://sfx/hover.tres" type="AudioStream" id=15]
 
 [node name="Pausa" type="Control"]
 script = ExtResource( 10 )
@@ -29,9 +28,6 @@ color = Color( 0, 0, 0, 0.572549 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="SFXHover" type="AudioStreamPlayer" parent="BG"]
-stream = ExtResource( 15 )
 
 [node name="MarginContainer2" type="MarginContainer" parent="BG"]
 anchor_top = 0.5
@@ -154,13 +150,7 @@ margin_right = 803.0
 margin_bottom = 122.0
 texture_normal = ExtResource( 5 )
 texture_hover = ExtResource( 9 )
-[connection signal="mouse_entered" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/CharSelect/TextureButton" to="." method="_on_TextureButton_mouse_entered"]
 [connection signal="pressed" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/CharSelect/TextureButton" to="." method="_on_TextureButton_pressed"]
-[connection signal="mouse_entered" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/CharSelect2/StageSelectButton" to="." method="_on_StageSelectButton_mouse_entered"]
-[connection signal="mouse_entered" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/Options/TextureButton2" to="." method="_on_TextureButton2_mouse_entered"]
 [connection signal="pressed" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/Options/TextureButton2" to="BG/MarginContainer2/VBoxContainer/VBoxContainer/Options/TextureButton2/Opciones" method="_on_TextureButton2_pressed"]
-[connection signal="mouse_entered" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/Help/TextureButton3" to="." method="_on_TextureButton3_mouse_entered"]
-[connection signal="mouse_entered" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/MainMenu/TextureButton5" to="." method="_on_TextureButton5_mouse_entered"]
 [connection signal="pressed" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/MainMenu/TextureButton5" to="." method="_on_TextureButton5_pressed"]
-[connection signal="mouse_entered" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/Exit/TextureButton4" to="." method="_on_TextureButton4_mouse_entered"]
 [connection signal="pressed" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/Exit/TextureButton4" to="." method="_on_TextureButton4_pressed"]
