@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bannerRaise_1.png-a008dfabeb4c75637c9cd6121307826f.stex"
+path="res://.import/bannerRaise_1.png-a61e6ad47c3ee6fb68dda7a35fa5207b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Ninja_Male/bannerRaise_1.png"
-dest_files=[ "res://.import/bannerRaise_1.png-a008dfabeb4c75637c9cd6121307826f.stex" ]
+source_file="res://Characters/Ninja_Male/bannerRaise_1.png"
+dest_files=[ "res://.import/bannerRaise_1.png-a61e6ad47c3ee6fb68dda7a35fa5207b.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/idle_sword_1.png-d97990036cfa5f790085e3df3f74c2da.stex"
+path="res://.import/idle_sword_1.png-ddf62909341ea96f2f53167ca59cdc9f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Samurai_Female/idle_sword_1.png"
-dest_files=[ "res://.import/idle_sword_1.png-d97990036cfa5f790085e3df3f74c2da.stex" ]
+source_file="res://Characters/Samurai_Female/idle_sword_1.png"
+dest_files=[ "res://.import/idle_sword_1.png-ddf62909341ea96f2f53167ca59cdc9f.stex" ]
 
 [params]
 

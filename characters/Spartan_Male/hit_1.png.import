@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hit_1.png-94a40700cc2591c74254faf9cd9f5e8a.stex"
+path="res://.import/hit_1.png-e020817e701c496fc829731c465db1e9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Spartan_Male/hit_1.png"
-dest_files=[ "res://.import/hit_1.png-94a40700cc2591c74254faf9cd9f5e8a.stex" ]
+source_file="res://Characters/Spartan_Male/hit_1.png"
+dest_files=[ "res://.import/hit_1.png-e020817e701c496fc829731c465db1e9.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bannerRaise_1.png-05ed48f39a6d15e5dd5d8e26a17a5388.stex"
+path="res://.import/bannerRaise_1.png-5fa5372cad62870f8bd7920fa7f92df9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Royal_Guard_Male/bannerRaise_1.png"
-dest_files=[ "res://.import/bannerRaise_1.png-05ed48f39a6d15e5dd5d8e26a17a5388.stex" ]
+source_file="res://Characters/Royal_Guard_Male/bannerRaise_1.png"
+dest_files=[ "res://.import/bannerRaise_1.png-5fa5372cad62870f8bd7920fa7f92df9.stex" ]
 
 [params]
 

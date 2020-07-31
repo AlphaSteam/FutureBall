@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bannerRaise_1.png-74bca06854d72533ac1cfe3bd639139c.stex"
+path="res://.import/bannerRaise_1.png-5a863f62c9aef0fcc618fa504382fe49.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Highlander_Male/bannerRaise_1.png"
-dest_files=[ "res://.import/bannerRaise_1.png-74bca06854d72533ac1cfe3bd639139c.stex" ]
+source_file="res://Characters/Highlander_Male/bannerRaise_1.png"
+dest_files=[ "res://.import/bannerRaise_1.png-5a863f62c9aef0fcc618fa504382fe49.stex" ]
 
 [params]
 

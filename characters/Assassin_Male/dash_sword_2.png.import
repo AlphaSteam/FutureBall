@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dash_sword_2.png-5b838ffba5dbab7e0491aeafe604338a.stex"
+path="res://.import/dash_sword_2.png-e2c0f81f1815371de5da8221bad3e310.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Assassin_Male/dash_sword_2.png"
-dest_files=[ "res://.import/dash_sword_2.png-5b838ffba5dbab7e0491aeafe604338a.stex" ]
+source_file="res://Characters/Assassin_Male/dash_sword_2.png"
+dest_files=[ "res://.import/dash_sword_2.png-e2c0f81f1815371de5da8221bad3e310.stex" ]
 
 [params]
 

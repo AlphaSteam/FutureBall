@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/graveBurst_1.png-eaaaf59f7c69f76314aa11feeb92e041.stex"
+path="res://.import/graveBurst_1.png-77be4ae1ada7b243a2b25a240bd2027f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Pirate_Male/graveBurst_1.png"
-dest_files=[ "res://.import/graveBurst_1.png-eaaaf59f7c69f76314aa11feeb92e041.stex" ]
+source_file="res://Characters/Pirate_Male/graveBurst_1.png"
+dest_files=[ "res://.import/graveBurst_1.png-77be4ae1ada7b243a2b25a240bd2027f.stex" ]
 
 [params]
 

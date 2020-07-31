@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/idle_3.png-cd3c41fb4fd54d2c0d3f8feed0fc6dab.stex"
+path="res://.import/idle_3.png-154e4579f6155a5be847e633ef1b60cd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Kings_Guard_Male/idle_3.png"
-dest_files=[ "res://.import/idle_3.png-cd3c41fb4fd54d2c0d3f8feed0fc6dab.stex" ]
+source_file="res://Characters/Kings_Guard_Male/idle_3.png"
+dest_files=[ "res://.import/idle_3.png-154e4579f6155a5be847e633ef1b60cd.stex" ]
 
 [params]
 

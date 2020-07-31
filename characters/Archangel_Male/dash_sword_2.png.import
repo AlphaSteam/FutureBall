@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dash_sword_2.png-c4f7be8af07965a96d69927a1c8fdbb1.stex"
+path="res://.import/dash_sword_2.png-cb2c3aee105d1c61f218efad880eba3e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Archangel_Male/dash_sword_2.png"
-dest_files=[ "res://.import/dash_sword_2.png-c4f7be8af07965a96d69927a1c8fdbb1.stex" ]
+source_file="res://Characters/Archangel_Male/dash_sword_2.png"
+dest_files=[ "res://.import/dash_sword_2.png-cb2c3aee105d1c61f218efad880eba3e.stex" ]
 
 [params]
 
