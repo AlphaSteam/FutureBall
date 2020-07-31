@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/attackUnarmed2_FX_5.png-adfe4c0a460fb36ae8253cb64d1e6c90.stex"
+path="res://.import/attackUnarmed2_FX_5.png-cb20415e2aecc08542162b1e05fb2161.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Viking_Male/attackUnarmed2_FX_5.png"
-dest_files=[ "res://.import/attackUnarmed2_FX_5.png-adfe4c0a460fb36ae8253cb64d1e6c90.stex" ]
+source_file="res://Characters/Viking_Male/attackUnarmed2_FX_5.png"
+dest_files=[ "res://.import/attackUnarmed2_FX_5.png-cb20415e2aecc08542162b1e05fb2161.stex" ]
 
 [params]
 

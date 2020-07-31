@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/idle_sword_2.png-206e337220f3ec1531b5d2dfaf51d5c9.stex"
+path="res://.import/idle_sword_2.png-92dd742661a670aef65b74182c7d2f3c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Mayan_Female/idle_sword_2.png"
-dest_files=[ "res://.import/idle_sword_2.png-206e337220f3ec1531b5d2dfaf51d5c9.stex" ]
+source_file="res://Characters/Mayan_Female/idle_sword_2.png"
+dest_files=[ "res://.import/idle_sword_2.png-92dd742661a670aef65b74182c7d2f3c.stex" ]
 
 [params]
 

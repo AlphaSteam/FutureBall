@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dead_1.png-ef0e9a0882e86e37b86e1866425625cf.stex"
+path="res://.import/dead_1.png-8bd0e617f5424127f4244e78535faedf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Ninja_Female/dead_1.png"
-dest_files=[ "res://.import/dead_1.png-ef0e9a0882e86e37b86e1866425625cf.stex" ]
+source_file="res://Characters/Ninja_Female/dead_1.png"
+dest_files=[ "res://.import/dead_1.png-8bd0e617f5424127f4244e78535faedf.stex" ]
 
 [params]
 

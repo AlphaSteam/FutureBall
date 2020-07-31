@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dash_sword_1.png-b4aff8a63ca640abf89328e0d7d0a0d2.stex"
+path="res://.import/dash_sword_1.png-c7322232c27ee3ec464dd723443df846.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Samurai_Female/dash_sword_1.png"
-dest_files=[ "res://.import/dash_sword_1.png-b4aff8a63ca640abf89328e0d7d0a0d2.stex" ]
+source_file="res://Characters/Samurai_Female/dash_sword_1.png"
+dest_files=[ "res://.import/dash_sword_1.png-c7322232c27ee3ec464dd723443df846.stex" ]
 
 [params]
 

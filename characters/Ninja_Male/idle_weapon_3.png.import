@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/idle_weapon_3.png-89364f18e619cdcc73c4a7dd65df2424.stex"
+path="res://.import/idle_weapon_3.png-985808c85323d76c0ce7da2121e3688f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Ninja_Male/idle_weapon_3.png"
-dest_files=[ "res://.import/idle_weapon_3.png-89364f18e619cdcc73c4a7dd65df2424.stex" ]
+source_file="res://Characters/Ninja_Male/idle_weapon_3.png"
+dest_files=[ "res://.import/idle_weapon_3.png-985808c85323d76c0ce7da2121e3688f.stex" ]
 
 [params]
 

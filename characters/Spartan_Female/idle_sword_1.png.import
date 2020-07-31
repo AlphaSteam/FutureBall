@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/idle_sword_1.png-5a795058ccae37a88fb4be67f8da38ec.stex"
+path="res://.import/idle_sword_1.png-96287df660e8cae3d72a1f1dd97e1d06.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Spartan_Female/idle_sword_1.png"
-dest_files=[ "res://.import/idle_sword_1.png-5a795058ccae37a88fb4be67f8da38ec.stex" ]
+source_file="res://Characters/Spartan_Female/idle_sword_1.png"
+dest_files=[ "res://.import/idle_sword_1.png-96287df660e8cae3d72a1f1dd97e1d06.stex" ]
 
 [params]
 

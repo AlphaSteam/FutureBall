@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dash_sword_2.png-f95d72ff6ce3dc19ce99d48e6a7d392b.stex"
+path="res://.import/dash_sword_2.png-df333721f412d4abcc6554a628e6b08f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Highlander_Female/dash_sword_2.png"
-dest_files=[ "res://.import/dash_sword_2.png-f95d72ff6ce3dc19ce99d48e6a7d392b.stex" ]
+source_file="res://Characters/Highlander_Female/dash_sword_2.png"
+dest_files=[ "res://.import/dash_sword_2.png-df333721f412d4abcc6554a628e6b08f.stex" ]
 
 [params]
 

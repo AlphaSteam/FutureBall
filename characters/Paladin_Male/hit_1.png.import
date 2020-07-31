@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hit_1.png-378175d78c4cd5064acbbc4ceb9690ec.stex"
+path="res://.import/hit_1.png-b09410c6d7c28a06e0ab32ae43dfb74b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Paladin_Male/hit_1.png"
-dest_files=[ "res://.import/hit_1.png-378175d78c4cd5064acbbc4ceb9690ec.stex" ]
+source_file="res://Characters/Paladin_Male/hit_1.png"
+dest_files=[ "res://.import/hit_1.png-b09410c6d7c28a06e0ab32ae43dfb74b.stex" ]
 
 [params]
 

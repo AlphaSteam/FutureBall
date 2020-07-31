@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dead_5.png-43880c5dede2c90ab22e4ac42f93f0cb.stex"
+path="res://.import/dead_5.png-17e25226a7c91d6963e741d6173a1c54.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Archdemon_Female/dead_5.png"
-dest_files=[ "res://.import/dead_5.png-43880c5dede2c90ab22e4ac42f93f0cb.stex" ]
+source_file="res://Characters/Archdemon_Female/dead_5.png"
+dest_files=[ "res://.import/dead_5.png-17e25226a7c91d6963e741d6173a1c54.stex" ]
 
 [params]
 

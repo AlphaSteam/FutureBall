@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/attackUnarmed2_1.png-30570646ade8a45f925b35d3b10b7cdf.stex"
+path="res://.import/attackUnarmed2_1.png-329fbdab9ed9058cd4edf36cdd0672f5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Electric_Knight_Female/attackUnarmed2_1.png"
-dest_files=[ "res://.import/attackUnarmed2_1.png-30570646ade8a45f925b35d3b10b7cdf.stex" ]
+source_file="res://Characters/Electric_Knight_Female/attackUnarmed2_1.png"
+dest_files=[ "res://.import/attackUnarmed2_1.png-329fbdab9ed9058cd4edf36cdd0672f5.stex" ]
 
 [params]
 

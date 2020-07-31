@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hit_1.png-16968bdb27fa99d866e06bd62ca0785e.stex"
+path="res://.import/hit_1.png-041a0c15ff62b91908079b424b382172.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Pirate_Male/hit_1.png"
-dest_files=[ "res://.import/hit_1.png-16968bdb27fa99d866e06bd62ca0785e.stex" ]
+source_file="res://Characters/Pirate_Male/hit_1.png"
+dest_files=[ "res://.import/hit_1.png-041a0c15ff62b91908079b424b382172.stex" ]
 
 [params]
 

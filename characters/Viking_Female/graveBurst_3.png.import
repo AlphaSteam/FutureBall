@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/graveBurst_3.png-c9b3da79b7e3712bda50b2e8660606b8.stex"
+path="res://.import/graveBurst_3.png-c7bceb514285875eb9f4e3774c1afdf3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Viking_Female/graveBurst_3.png"
-dest_files=[ "res://.import/graveBurst_3.png-c9b3da79b7e3712bda50b2e8660606b8.stex" ]
+source_file="res://Characters/Viking_Female/graveBurst_3.png"
+dest_files=[ "res://.import/graveBurst_3.png-c7bceb514285875eb9f4e3774c1afdf3.stex" ]
 
 [params]
 
