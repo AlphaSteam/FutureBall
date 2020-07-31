@@ -126,7 +126,7 @@ func _physics_process(delta):
 	#print(picked)
 	var init = global_position
 	var mouse =  get_global_mouse_position()
-	var analog = Vector2(Input.get_joy_axis(pick_id,JOY_AXIS_2), Input.get_joy_axis(pick_id,JOY_AXIS_3))
+	var analog = Vector2(Input.get_joy_axis(pick_id-1,JOY_AXIS_2), Input.get_joy_axis(pick_id-1,JOY_AXIS_3))
 			#print("mouse: "+  str(mouse))
 	var vect
 	if pick_id == 0:
