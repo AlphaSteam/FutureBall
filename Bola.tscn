@@ -16,8 +16,7 @@ radius = 4.14329
 extents = Vector2( 5.33553, 5.15297 )
 
 [sub_resource type="Gradient" id=4]
-offsets = PoolRealArray( 0.00740741, 1 )
-colors = PoolColorArray( 1, 0.956863, 0.0470588, 0.0392157, 0.266667, 0.266667, 0.266667, 0.176471 )
+colors = PoolColorArray( 0.968627, 0.929412, 0.929412, 1, 0.0901961, 0.741176, 0.960784, 1 )
 
 [sub_resource type="GradientTexture" id=5]
 gradient = SubResource( 4 )
@@ -41,7 +40,7 @@ curve = SubResource( 8 )
 [sub_resource type="ParticlesMaterial" id=10]
 lifetime_randomness = 0.36
 emission_shape = 1
-emission_sphere_radius = 60.0
+emission_sphere_radius = 48.28
 flag_disable_z = true
 spread = 180.0
 gravity = Vector3( 0, 0, 0 )
@@ -169,7 +168,7 @@ shape = SubResource( 3 )
 
 [node name="here" type="Particles2D" parent="Area2D"]
 show_behind_parent = true
-amount = 1000
+amount = 500
 lifetime = 0.1
 speed_scale = 0.2
 process_material = SubResource( 10 )
