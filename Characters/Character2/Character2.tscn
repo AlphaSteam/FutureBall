@@ -144,7 +144,6 @@ extents = Vector2( 8.62758, 12.2217 )
 "Jugador",
 "Remove",
 ]]
-visible = false
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]

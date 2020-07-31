@@ -13,7 +13,6 @@ outline_size = 1
 font_data = ExtResource( 3 )
 
 [node name="Camera2D" type="Camera2D"]
-visible = false
 position = Vector2( 0, -100 )
 current = true
 zoom = Vector2( 1.098, 1 )
@@ -35,13 +34,11 @@ PaddingPercent = 15
 script = ExtResource( 7 )
 
 [node name="Sprite" type="Sprite" parent="CanvasLayer/muerte"]
-visible = false
 position = Vector2( 204.393, 31.8907 )
 scale = Vector2( 0.0198789, 0.0198789 )
 texture = ExtResource( 5 )
 
 [node name="Label" type="Label" parent="CanvasLayer/muerte"]
-visible = false
 anchor_left = 1.0
 anchor_top = 0.012
 anchor_right = 1.0
@@ -75,13 +72,11 @@ margin_right = 146.233
 margin_bottom = 56.7985
 
 [node name="Sprite" type="Sprite" parent="CanvasLayer"]
-visible = false
 position = Vector2( 199.676, 119.21 )
 scale = Vector2( 0.222369, 0.222369 )
 texture = ExtResource( 2 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
-visible = false
 margin_left = -52.0
 margin_top = -1.0
 margin_right = 770.0
@@ -96,7 +91,6 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="CanvasLayer"]
-visible = false
 anchor_left = 1.0
 anchor_top = 0.012
 anchor_right = 1.0

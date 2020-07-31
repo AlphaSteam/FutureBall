@@ -62,7 +62,6 @@ __meta__ = {
 }
 
 [node name="Player Spawns" type="Node2D" parent="."]
-visible = false
 position = Vector2( -4.76221, -12.6992 )
 
 [node name="Spawn 1" parent="Player Spawns" instance=ExtResource( 4 )]
