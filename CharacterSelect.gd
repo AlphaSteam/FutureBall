@@ -3,9 +3,7 @@ extends Control
 var Selected_char = 0
 var max_char = PlayerGlobals.Chars.size()-1
 onready var node = $HSeparator/MarginContainer/CharacterPos
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+
 func updateChar():
 	
 	var character = PlayerGlobals.Chars[Selected_char]

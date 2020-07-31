@@ -78,9 +78,8 @@ func _ready():
 
 #Señal de que la bola tocó algo
 func _on_Bola_body_entered(body: Node):
+	#print("Bola entered")
 	if live_ball == true: #Si la bola esta viva
-		if(body.is_in_group("Jugador")):
-			print("dead")
 		live_ball = false
 		$Sprite.texture = ball_dead	
 
@@ -90,6 +89,7 @@ func pick():
 	set_mode(3)
 	var ball_position = global_position
 	get_parent().remove_child(self)
+	players[pick_id].add_child(self)
 	players[pick_id].add_child(self)
 	global_position = ball_position
 	$Tween.interpolate_property(self, "position", position, players[pick_id].get_node("Ball").position, 1.0, Tween.TRANS_QUINT, Tween.EASE_OUT)
@@ -107,6 +107,7 @@ func drop():
 
 func _on_Area2D_body_entered(body):
 	if body.is_in_group("Jugador"):
+		#print("Jugador area")
 		if pick_id != body.id:
 			if live_ball == true:
 				picked = false			
@@ -115,11 +116,13 @@ func _on_Area2D_body_entered(body):
 				pick_id = -1
 			elif live_ball == false and not picked:
 				pick_id = body.id
-				call_deferred("pick")
+				#call_deferred("pick")
+				pick()
 		else:
 			if live_ball == false and not picked:
 				pick_id = body.id
-				call_deferred("pick")
+				#call_deferred("pick")
+				pick()
 
 				#print("agarra la bola")
 
@@ -149,8 +152,8 @@ func _physics_process(delta):
 			cancel = false
 			
 		elif Input.is_action_pressed("attack_%s" % pick_id) && cancel == false:
-			if power<= MAXPOW:
-					power += 2
+			if power<= PlayerGlobals.Players[pick_id].Character.MAXPOWER:
+					power += PlayerGlobals.Players[pick_id].Character.POWERSPEED
 			
 			arrows[pick_id].show()
 			arrows[pick_id].rect_rotation = rad2deg(vect.angle())
@@ -172,7 +175,7 @@ func _physics_process(delta):
 #			yield(get_tree().create_timer(0.01), "timeout")
 			$Sprite.texture = ball_live
 			drop()
-			apply_central_impulse(normalized * power * power_multiplier)
+			apply_central_impulse(normalized * power * PlayerGlobals.Players[pick_id].Character.POWER)
 			live_ball = true
 			arrows[pick_id].rect_size.x = reset_arrows[pick_id].x
 			arrows[pick_id].hide()

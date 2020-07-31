@@ -1,11 +1,6 @@
 extends "res://Character.gd"
 class_name Char1
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	DEFSPEED=100
@@ -17,7 +12,9 @@ func _ready():
 	INITJUMPS =40
 	INITDASHES =2
 	WALLFALLSPEED = 8 # Replace with function body.
-	
+	POWER = 5
+	MAXPOWER = 50
+	POWERSPEED = 10
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

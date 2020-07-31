@@ -1,0 +1,192 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://arrowLeft.png" type="Texture" id=1]
+[ext_resource path="res://Fonts/Points.tres" type="DynamicFont" id=2]
+[ext_resource path="res://arrowRight.png" type="Texture" id=3]
+[ext_resource path="res://Levels/Factory/Factory 1v1.png" type="Texture" id=4]
+[ext_resource path="res://buttons/start game selected.png" type="Texture" id=5]
+[ext_resource path="res://buttons/start game.png" type="Texture" id=6]
+[ext_resource path="res://LevelSelection.gd" type="Script" id=7]
+[ext_resource path="res://Backgrounds/bgm.jpg" type="Texture" id=8]
+[ext_resource path="res://Fonts/Zero hour/zero hour.ttf" type="DynamicFontData" id=9]
+
+[sub_resource type="DynamicFont" id=2]
+size = 10
+outline_size = 1
+outline_color = Color( 0.027451, 0.462745, 0.619608, 1 )
+use_mipmaps = true
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 18
+outline_size = 1
+outline_color = Color( 0.027451, 0.462745, 0.619608, 1 )
+use_mipmaps = true
+font_data = ExtResource( 9 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 7 )
+
+[node name="space1" type="Sprite" parent="."]
+position = Vector2( 196.636, 118.552 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 8 )
+
+[node name="Start" type="TextureButton" parent="."]
+margin_left = 153.0
+margin_top = 195.0
+margin_right = 256.0
+margin_bottom = 220.0
+texture_normal = ExtResource( 6 )
+texture_hover = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 15.0
+margin_top = 18.6766
+margin_right = 408.0
+margin_bottom = 186.677
+custom_constants/separation = 15
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level thumbnails" type="HBoxContainer" parent="HBoxContainer"]
+margin_right = 228.0
+margin_bottom = 165.0
+rect_min_size = Vector2( 100, 150 )
+size_flags_vertical = 0
+
+[node name="CenterContainer2" type="CenterContainer" parent="HBoxContainer/Level thumbnails"]
+margin_right = 30.0
+margin_bottom = 165.0
+
+[node name="Left button" type="TextureButton" parent="HBoxContainer/Level thumbnails/CenterContainer2"]
+margin_top = 67.0
+margin_right = 30.0
+margin_bottom = 97.0
+rect_min_size = Vector2( 30, 30 )
+texture_normal = ExtResource( 1 )
+expand = true
+
+[node name="CenterContainer" type="VBoxContainer" parent="HBoxContainer/Level thumbnails"]
+margin_left = 34.0
+margin_right = 194.0
+margin_bottom = 165.0
+rect_min_size = Vector2( 160, 100 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/Level thumbnails/CenterContainer"]
+margin_right = 160.0
+margin_bottom = 11.0
+rect_min_size = Vector2( 0, 11 )
+custom_fonts/normal_font = SubResource( 2 )
+text = "Level selection"
+scroll_active = false
+
+[node name="Level" type="TextureRect" parent="HBoxContainer/Level thumbnails/CenterContainer"]
+margin_top = 15.0
+margin_right = 160.0
+margin_bottom = 165.0
+rect_min_size = Vector2( 150, 150 )
+texture = ExtResource( 4 )
+expand = true
+
+[node name="CenterContainer3" type="CenterContainer" parent="HBoxContainer/Level thumbnails"]
+margin_left = 198.0
+margin_right = 228.0
+margin_bottom = 165.0
+
+[node name="Right button" type="TextureButton" parent="HBoxContainer/Level thumbnails/CenterContainer3"]
+margin_top = 67.0
+margin_right = 30.0
+margin_bottom = 97.0
+rect_min_size = Vector2( 30, 30 )
+texture_normal = ExtResource( 3 )
+expand = true
+
+[node name="Settings" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 243.0
+margin_right = 393.0
+margin_bottom = 168.0
+rect_min_size = Vector2( 150, 0 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="HBoxContainer" parent="HBoxContainer/Settings"]
+margin_right = 150.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 150, 0 )
+alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/Settings/CenterContainer"]
+margin_left = 30.0
+margin_right = 120.035
+margin_bottom = 56.0
+rect_min_size = Vector2( 90.035, 0 )
+custom_fonts/normal_font = ExtResource( 2 )
+text = "     Number     of players"
+fit_content_height = true
+scroll_active = false
+
+[node name="N players" type="HBoxContainer" parent="HBoxContainer/Settings"]
+margin_top = 60.0
+margin_right = 150.0
+margin_bottom = 110.0
+rect_min_size = Vector2( 100, 50 )
+size_flags_vertical = 0
+custom_constants/separation = 21
+alignment = 1
+
+[node name="CenterContainer2" type="CenterContainer" parent="HBoxContainer/Settings/N players"]
+margin_left = 25.0
+margin_right = 45.0
+margin_bottom = 50.0
+
+[node name="Left button players" type="TextureButton" parent="HBoxContainer/Settings/N players/CenterContainer2"]
+margin_top = 15.0
+margin_right = 20.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 20, 20 )
+texture_normal = ExtResource( 1 )
+expand = true
+
+[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer/Settings/N players"]
+margin_left = 66.0
+margin_right = 84.085
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 0.148 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Number of players" type="RichTextLabel" parent="HBoxContainer/Settings/N players/CenterContainer"]
+margin_right = 18.085
+margin_bottom = 20.0
+rect_min_size = Vector2( 18.085, 20 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_fonts/normal_font = SubResource( 1 )
+meta_underlined = false
+text = "1"
+scroll_active = false
+
+[node name="CenterContainer3" type="CenterContainer" parent="HBoxContainer/Settings/N players"]
+margin_left = 105.0
+margin_right = 125.0
+margin_bottom = 50.0
+
+[node name="Right button players" type="TextureButton" parent="HBoxContainer/Settings/N players/CenterContainer3"]
+margin_top = 15.0
+margin_right = 20.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 20, 20 )
+texture_normal = ExtResource( 3 )
+expand = true
+[connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="HBoxContainer/Level thumbnails/CenterContainer2/Left button" to="." method="_on_Left_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/Level thumbnails/CenterContainer3/Right button" to="." method="_on_Right_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/Settings/N players/CenterContainer2/Left button players" to="." method="_on_Left_button_players_pressed"]
+[connection signal="pressed" from="HBoxContainer/Settings/N players/CenterContainer3/Right button players" to="." method="_on_Right_button_players_pressed"]

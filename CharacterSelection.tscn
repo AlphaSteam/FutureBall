@@ -1,47 +1,12 @@
 [gd_scene load_steps=5 format=2]
 
+[ext_resource path="res://CharacterSelection.gd" type="Script" id=1]
 [ext_resource path="res://Backgrounds/space1.png" type="Texture" id=2]
 [ext_resource path="res://buttons/start game selected.png" type="Texture" id=5]
 [ext_resource path="res://buttons/start game.png" type="Texture" id=6]
 
-[sub_resource type="GDScript" id=1]
-script/source = "extends Node2D
-
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = \"text\"
-var Nodes = []
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	print(\"selection\")
-	PlayerGlobals.createCharArray()
-	PlayerGlobals.createPlayers()
-	for i in PlayerGlobals.Number_of_players:
-		var Character = preload(\"res://CharacterSelect.tscn\")
-		var node = Character.instance()
-		$Players.add_child(node)
-		Nodes.append(node)
-	
-	
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
-	#$Character.texture.set()
-
-
-
-func _on_Start_pressed():
-	for i in PlayerGlobals.Number_of_players:
-		PlayerGlobals.Players[i].Character = PlayerGlobals.Chars[Nodes[i].Selected_char].duplicate()
-	get_tree().change_scene(\"res://MainStage.tscn\")
-"
-
 [node name="Node2D" type="Node2D"]
-script = SubResource( 1 )
+script = ExtResource( 1 )
 
 [node name="space1" type="Sprite" parent="."]
 position = Vector2( 218.241, 134.418 )

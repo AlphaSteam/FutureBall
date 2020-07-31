@@ -34,6 +34,7 @@ config/icon="res://icon.png"
 
 Globals="*res://Global_vars.gd"
 PlayerGlobals="*res://PlayerGlobals.gd"
+LevelGlobals="*res://LevelGlobals.gd"
 
 [display]
 
@@ -120,7 +121,6 @@ Cancel_0={
 attack_0={
 "deadzone": 0.5,
 "events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":5,"pressure":0.0,"pressed":false,"script":null)
-, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
  ]
 }
 Pause={
@@ -141,4 +141,5 @@ Pause={
 [rendering]
 
 quality/2d/use_pixel_snap=true
+quality/filters/use_nearest_mipmap_filter=true
 environment/default_environment="res://default_env.tres"
