@@ -13,7 +13,7 @@ func _ready():
 	pass # Replace with function body.
 func changePoints(var value):
 	Points +=value
-	if Points == 1 or Points == -3:
+	if Points == 4 or Points == -3:
 		Globals.WinScreen(self)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

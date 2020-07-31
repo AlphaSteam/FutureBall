@@ -2,7 +2,7 @@ extends RigidBody2D
 
 const MAXPOW = 100
 const DEFPOWMULT = 4
-
+const ROUND_TIME = 10
 var pick_id = -1
 
 
@@ -11,7 +11,7 @@ var power = 0
 var rebote = 0
 #Variables para los distintos jugadores dependiendo de su control
 onready var area2 = get_node("Area2D")
-onready var timer = get_parent().get_node("Camera2D/CanvasLayer/TimerLabel/Timer")
+onready var timer = get_parent().get_node("Camera2D/CanvasLayer/Label/Timer")
 #Path para los jugadores, de momento solo se utilizan dos
 
 #onready var arrow_head = player.get_node("ArrowHead")
@@ -59,10 +59,6 @@ func _ready():
 		players.append(PlayerGlobals.Players[i].Character)
 		reset_arrows.append(arrows[i].rect_size)
 
-	
-		
-		
-	
 	#set_physics_process(false)
 	#get_parent().remove_child(self)
 	#new_parent.add_child(node)

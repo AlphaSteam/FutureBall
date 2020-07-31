@@ -26,7 +26,7 @@ __meta__ = {
 [node name="T" type="HBoxContainer" parent="."]
 margin_right = 54.0
 margin_bottom = 24.0
-custom_constants/separation = 0
+custom_constants/separation = 3
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -35,10 +35,11 @@ __meta__ = {
 margin_right = 40.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 40, 20 )
+rect_clip_content = false
 size_flags_horizontal = 0
 size_flags_vertical = 0
 custom_fonts/normal_font = SubResource( 1 )
-custom_colors/default_color = Color( 1, 1, 1, 1 )
+custom_colors/default_color = Color( 0.929412, 0.929412, 0.929412, 1 )
 text = "P1"
 scroll_active = false
 __meta__ = {
@@ -46,13 +47,15 @@ __meta__ = {
 }
 
 [node name="Points" type="RichTextLabel" parent="T"]
-margin_left = 40.0
-margin_right = 70.0
+margin_left = 43.0
+margin_right = 73.0
 margin_bottom = 18.192
 rect_min_size = Vector2( 30, 18.192 )
+rect_clip_content = false
 size_flags_horizontal = 0
 size_flags_vertical = 0
 custom_fonts/normal_font = SubResource( 2 )
+custom_colors/default_color = Color( 0.686275, 0, 0, 1 )
 tab_size = 1
 text = "0"
 scroll_active = false
