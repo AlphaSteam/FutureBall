@@ -189,6 +189,7 @@ material = SubResource( 19 )
 emitting = false
 amount = 10
 lifetime = 0.5
+one_shot = true
 speed_scale = 2.0
 explosiveness = 0.01
 process_material = SubResource( 24 )
