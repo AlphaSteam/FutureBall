@@ -7,19 +7,14 @@
 [ext_resource path="res://characters/Archangel_Female/idle_1.png" type="Texture" id=5]
 [ext_resource path="res://characters/Archangel_Female/idle_2.png" type="Texture" id=6]
 [ext_resource path="res://characters/Archangel_Female/run_3.png" type="Texture" id=7]
-[ext_resource path="res://Characters/Character4/Character4.gd" type="Script" id=8]
 [ext_resource path="res://characters/Archangel_Female/run_4.png" type="Texture" id=9]
+[ext_resource path="res://Characters/Character4/Character4.gd" type="Script" id=12]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "idle",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 7 ) ],
-"loop": true,
-"name": "jump",
 "speed": 10.0
 }, {
 "frames": [ ExtResource( 9 ) ],
@@ -31,6 +26,11 @@ animations = [ {
 "loop": true,
 "name": "run",
 "speed": 10.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "jump",
+"speed": 10.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -38,9 +38,8 @@ extents = Vector2( 9.88733, 13.0745 )
 
 [node name="Player" type="KinematicBody2D" groups=[
 "Jugador",
-"Remove",
 ]]
-script = ExtResource( 8 )
+script = ExtResource( 12 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -1.67667, 6.95389 )
