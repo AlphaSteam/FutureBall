@@ -67,9 +67,9 @@ var credits = [
 		"https://www.adobe.com/products/photoshop.html"
 	],[
 		"Special thanks",
-		"My parents",
-		"My friends",
-		"My pet rabbit"
+		"Our friends",
+		"CC5408",
+		"Elias Zelada for guiding and help"
 	],[
 		"And you",
 	]
