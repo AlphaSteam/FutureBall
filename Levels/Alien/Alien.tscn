@@ -1,0 +1,86 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Levels/Tilesets/Tileset.tres" type="TileSet" id=1]
+[ext_resource path="res://Resources/Sideview Sci-Fi - Patreon Collection/Environments/alien-environment/PNG/layers/back-structures.png" type="Texture" id=2]
+[ext_resource path="res://Levels/Factory/Factory 1v1.gd" type="Script" id=3]
+[ext_resource path="res://Player spawn.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Camara.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Ball spawn.tscn" type="PackedScene" id=6]
+[ext_resource path="res://sounds/music/585193_Infinite.ogg" type="AudioStream" id=7]
+[ext_resource path="res://Resources/Sideview Sci-Fi - Patreon Collection/Environments/alien-environment/PNG/layers/background.png" type="Texture" id=8]
+
+[node name="Factory 1 v 1" type="Node2D"]
+pause_mode = 1
+position = Vector2( -0.707123, -2.12132 )
+script = ExtResource( 3 )
+
+[node name="Camera2D" parent="." instance=ExtResource( 5 )]
+position = Vector2( 106.38, 128.117 )
+editor_draw_drag_margin = false
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+follow_viewport_enable = true
+follow_viewport_scale = 1.032
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground"]
+margin_left = -513.0
+margin_top = -358.947
+margin_right = 738.0
+margin_bottom = 589.053
+texture = ExtResource( 8 )
+stretch_mode = 2
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect2" type="TextureRect" parent="ParallaxBackground"]
+margin_left = -330.898
+margin_top = -162.833
+margin_right = 352.102
+margin_bottom = 325.167
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+scale = Vector2( 0.5, 0.5 )
+z_as_relative = false
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 10
+collision_layer = 4
+collision_mask = 3
+format = 1
+tile_data = PoolIntArray( 18, 4, 0, 327676, 18, 0, 327678, 18, 0, 262144, 18, 0, 262146, 17, 0, 262149, 18, 0, 393212, 20, 0, 327680, 20, 0, 327687, 20, 0, 458748, 20, 0, 393216, 20, 0, 393223, 20, 0, 524284, 20, 0, 458752, 21, 0, 458759, 20, 0, 589820, 21, 0, 524288, 20, 0, 524295, 20, 0, 655356, 20, 0, 589824, 20, 0, 589831, 21, 0, 720881, 22, 0, 720882, 14, 0, 720883, 14, 0, 720884, 14, 0, 720885, 14, 0, 720886, 22, 0, 720887, 14, 0, 720888, 14, 0, 720892, 20, 0, 655360, 20, 0, 655367, 20, 0, 655371, 19, 0, 655372, 23, 0, 655373, 19, 0, 655374, 23, 0, 655375, 19, 0, 655376, 23, 0, 786417, 20, 0, 786422, 20, 0, 786428, 21, 0, 720896, 21, 0, 720903, 21, 0, 720907, 20, 0, 720909, 20, 0, 720911, 20, 0, 851953, 20, 0, 851958, 20, 0, 851964, 20, 0, 786432, 20, 0, 786439, 20, 0, 786443, 20, 0, 786445, 20, 0, 786447, 20, 0, 917489, 20, 0, 917494, 20, 0, 917500, 21, 0, 851968, 20, 0, 851975, 20, 0, 851979, 20, 0, 851981, 20, 0, 851983, 20, 0, 983025, 20, 0, 983030, 21, 0, 983036, 20, 0, 917504, 20, 0, 917511, 20, 0, 917515, 20, 0, 917517, 20, 0, 917519, 20, 0, 1048561, 20, 0, 1048566, 20, 0, 1048572, 20, 0, 983040, 21, 0, 983047, 21, 0, 983051, 20, 0, 983053, 20, 0, 983055, 20, 0, 1114097, 20, 0, 1114102, 20, 0, 1114108, 20, 0, 1048576, 20, 0, 1048583, 20, 0, 1048587, 20, 0, 1048589, 20, 0, 1048591, 20, 0, 1179633, 20, 0, 1179638, 20, 0, 1179644, 20, 0, 1114112, 20, 0, 1114119, 20, 0, 1114123, 20, 0, 1114125, 20, 0, 1114127, 20, 0, 1245169, 20, 0, 1245174, 20, 0, 1245180, 20, 0, 1179648, 20, 0, 1179655, 20, 0, 1179659, 20, 0, 1179661, 20, 0, 1179663, 20, 0, 1310705, 20, 0, 1310710, 20, 0, 1310716, 20, 0, 1245184, 20, 0, 1245191, 20, 0, 1245195, 20, 0, 1245197, 20, 0, 1245199, 20, 0, 1376241, 20, 0, 1376246, 20, 0, 1376252, 20, 0, 1310720, 20, 0, 1310727, 20, 0, 1310731, 20, 0, 1310733, 20, 0, 1310735, 20, 0, 1441788, 20, 0, 1376271, 20, 0, 1507324, 20, 0 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Player Spawns" type="Node2D" parent="."]
+position = Vector2( -4.76221, -12.6992 )
+
+[node name="Spawn 1" parent="Player Spawns" instance=ExtResource( 4 )]
+margin_left = -164.234
+margin_top = 131.217
+margin_right = -164.234
+margin_bottom = 131.217
+
+[node name="Spawn 2" parent="Player Spawns" instance=ExtResource( 4 )]
+margin_left = 195.992
+margin_top = 125.213
+margin_right = 195.992
+margin_bottom = 125.213
+
+[node name="Ball Spawn" parent="." instance=ExtResource( 6 )]
+margin_left = 8.37244
+margin_top = 10.8
+margin_right = 8.37244
+margin_bottom = 10.8
+
+[node name="MusicFactory" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+autoplay = true
+bus = "Music"
