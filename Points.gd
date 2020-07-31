@@ -15,5 +15,5 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if is_instance_valid( Player_c ):
-		$T/C/Points.text = str(Player_c.Points)
+		$T/Points.text = str(Player_c.Points)
 	

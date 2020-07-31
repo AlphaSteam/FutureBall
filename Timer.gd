@@ -1,12 +1,11 @@
 extends Label
 
-var round_time=10
-onready var timer = get_node("Timer")
+var round_time=30
+onready var timer = PlayerGlobals.timer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	timer.set_wait_time(round_time)
-	timer.start()
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

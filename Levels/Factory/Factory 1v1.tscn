@@ -7,22 +7,22 @@
 [ext_resource path="res://Camara.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Ball spawn.tscn" type="PackedScene" id=6]
 
-[sub_resource type="ConvexPolygonShape2D" id=6]
+[sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 33, 33, 0, 33, 0, 0, 33, 0 )
 
-[sub_resource type="ConvexPolygonShape2D" id=7]
+[sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 66, 33, 0, 33, 0, 0, 66, 0 )
 
-[sub_resource type="ConvexPolygonShape2D" id=10]
+[sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 33, 16, 0, 16, 0, 0, 33, 0 )
+
+[sub_resource type="ConvexPolygonShape2D" id=4]
+points = PoolVector2Array( 33, 33, 0, 33, 0, 0, 33, 0 )
 
 [sub_resource type="ConvexPolygonShape2D" id=5]
 points = PoolVector2Array( 33, 33, 0, 33, 0, 0, 33, 0 )
 
-[sub_resource type="ConvexPolygonShape2D" id=9]
-points = PoolVector2Array( 33, 33, 0, 33, 0, 0, 33, 0 )
-
-[sub_resource type="TileSet" id=1]
+[sub_resource type="TileSet" id=6]
 4/name = "tile-set-sci-fi-interior-platform.png 4"
 4/texture = ExtResource( 1 )
 4/tex_offset = Vector2( 0, 0 )
@@ -33,20 +33,20 @@ points = PoolVector2Array( 33, 33, 0, 33, 0, 0, 33, 0 )
 4/navigation_offset = Vector2( 0, 0 )
 4/shape_offset = Vector2( 0, 1000 )
 4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 1000 )
-4/shape = SubResource( 5 )
+4/shape = SubResource( 4 )
 4/shape_one_way = false
 4/shape_one_way_margin = 1.0
 4/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 5 ),
+"shape": SubResource( 4 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 1000 )
 }, {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 9 ),
+"shape": SubResource( 5 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 4/z_index = 0
@@ -74,14 +74,14 @@ points = PoolVector2Array( 33, 33, 0, 33, 0, 0, 33, 0 )
 10/navigation_offset = Vector2( 0, 0 )
 10/shape_offset = Vector2( 0, 0 )
 10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-10/shape = SubResource( 6 )
+10/shape = SubResource( 1 )
 10/shape_one_way = false
 10/shape_one_way_margin = 1.0
 10/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 6 ),
+"shape": SubResource( 1 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 10/z_index = 0
@@ -95,14 +95,14 @@ points = PoolVector2Array( 33, 33, 0, 33, 0, 0, 33, 0 )
 11/navigation_offset = Vector2( 0, 0 )
 11/shape_offset = Vector2( 0, 0 )
 11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-11/shape = SubResource( 7 )
+11/shape = SubResource( 2 )
 11/shape_one_way = false
 11/shape_one_way_margin = 1.0
 11/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 7 ),
+"shape": SubResource( 2 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 11/z_index = 0
@@ -116,14 +116,14 @@ points = PoolVector2Array( 33, 33, 0, 33, 0, 0, 33, 0 )
 12/navigation_offset = Vector2( 0, 0 )
 12/shape_offset = Vector2( 0, 0 )
 12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-12/shape = SubResource( 10 )
+12/shape = SubResource( 3 )
 12/shape_one_way = false
 12/shape_one_way_margin = 1.0
 12/shapes = [ {
 "autotile_coord": Vector2( 0, 0 ),
 "one_way": false,
 "one_way_margin": 1.0,
-"shape": SubResource( 10 ),
+"shape": SubResource( 3 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 12/z_index = 0
@@ -181,7 +181,7 @@ region_rect = Rect2( 0, 0, 600, 1280 )
 [node name="TileMap" type="TileMap" parent="."]
 scale = Vector2( 0.5, 0.5 )
 z_as_relative = false
-tile_set = SubResource( 1 )
+tile_set = SubResource( 6 )
 cell_size = Vector2( 32, 32 )
 cell_quadrant_size = 10
 collision_layer = 4
