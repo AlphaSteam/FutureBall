@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/graveBurst_1.png-c6772567ec8ae1d25495d493e1f58c4b.stex"
+path="res://.import/graveBurst_1.png-75a8ea15ead2432f4919ca7d76886399.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Paladin_Male/graveBurst_1.png"
-dest_files=[ "res://.import/graveBurst_1.png-c6772567ec8ae1d25495d493e1f58c4b.stex" ]
+source_file="res://characters/Paladin_Male/graveBurst_1.png"
+dest_files=[ "res://.import/graveBurst_1.png-75a8ea15ead2432f4919ca7d76886399.stex" ]
 
 [params]
 

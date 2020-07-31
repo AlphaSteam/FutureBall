@@ -8,6 +8,9 @@ var Winner
 var ball
 var empate = []
 var timer_out = false
+var camara = Rect2(0,0,0,0)
+var zoom = Vector2(1,1)
+
 func _ready():
 	pass
 	

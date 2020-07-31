@@ -75,8 +75,6 @@ func Rect2From4PointList(InList):
 
 
 func _process(delta):
-
-
 	var most_left = Chars[0].global_position.x
 	var most_right = Chars[0].global_position.x
 	var most_up = Chars[0].global_position.y
@@ -92,11 +90,11 @@ func _process(delta):
 
 	var ScreenSize = self.get_viewport_rect().size
 	var CustomRect2 = CalculateBox(ScreenSize)
-
+	Globals.camara = CustomRect2 
 	var ZoomRatio = max(CustomRect2.size.x/ get_viewport_rect().size.x ,\
 	 CustomRect2.size.y/ get_viewport_rect().size.y)
 	#print(ZoomRatio)
 	self.global_position = CustomRect2.position
 	#ZoomRatio is a scalar so we need to turn it into a vector
 	self.zoom = Vector2(1,1)* max(ZoomRatio,1)
-	
+	Globals.zoom = self.zoom 

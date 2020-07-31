@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dash_2.png-b83d7b2024dc8bbaa6dc48a32609a05b.stex"
+path="res://.import/dash_2.png-688302ac2bb6ef25738717c9249ed379.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Paladin_Male/dash_2.png"
-dest_files=[ "res://.import/dash_2.png-b83d7b2024dc8bbaa6dc48a32609a05b.stex" ]
+source_file="res://characters/Paladin_Male/dash_2.png"
+dest_files=[ "res://.import/dash_2.png-688302ac2bb6ef25738717c9249ed379.stex" ]
 
 [params]
 
