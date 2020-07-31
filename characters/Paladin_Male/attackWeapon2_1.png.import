@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/attackWeapon2_1.png-67177972ddd35cff74269d59e583b570.stex"
+path="res://.import/attackWeapon2_1.png-2e0156eaba130c538baa5d107d43d23d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Paladin_Male/attackWeapon2_1.png"
-dest_files=[ "res://.import/attackWeapon2_1.png-67177972ddd35cff74269d59e583b570.stex" ]
+source_file="res://characters/Paladin_Male/attackWeapon2_1.png"
+dest_files=[ "res://.import/attackWeapon2_1.png-2e0156eaba130c538baa5d107d43d23d.stex" ]
 
 [params]
 

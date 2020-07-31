@@ -15,6 +15,11 @@ func createPointsGUI():
 		node.Player_c = PlayerGlobals.Players[i]
 		$CanvasLayer/HBoxContainer.add_child(node)
 func _ready():
+	self.limit_bottom = get_parent().camera_limit_botom
+	self.limit_top= get_parent().camera_limit_top
+	self.limit_left = get_parent().camera_limit_left
+	self.limit_right= get_parent().camera_limit_right
+	
 	createPointsGUI()
 	#Bola = get_tree().get_nodes_in_group("Ball")[0]
 	var number_of_players = PlayerGlobals.Number_of_players

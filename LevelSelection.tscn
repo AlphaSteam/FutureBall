@@ -11,11 +11,12 @@
 [ext_resource path="res://Fonts/Zero hour/zero hourchar.tres" type="DynamicFontData" id=9]
 [ext_resource path="res://sounds/music/902299_Bloodmoon.ogg" type="AudioStream" id=10]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=5]
 size = 10
 outline_size = 1
 outline_color = Color( 0.027451, 0.462745, 0.619608, 1 )
 use_mipmaps = true
+extra_spacing_space = 4
 font_data = ExtResource( 9 )
 
 [sub_resource type="DynamicFont" id=2]
@@ -48,17 +49,17 @@ scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 8 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-margin_left = 15.0
-margin_top = 19.0
+margin_left = 3.0
+margin_top = 13.0
 margin_right = 408.0
 margin_bottom = 234.0
-custom_constants/separation = 15
+custom_constants/separation = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Level thumbnails" type="HBoxContainer" parent="HBoxContainer"]
-margin_right = 228.0
+margin_right = 251.0
 margin_bottom = 165.0
 rect_min_size = Vector2( 100, 150 )
 size_flags_vertical = 0
@@ -77,29 +78,30 @@ expand = true
 
 [node name="CenterContainer" type="VBoxContainer" parent="HBoxContainer/Level thumbnails"]
 margin_left = 34.0
-margin_right = 194.0
+margin_right = 217.0
 margin_bottom = 165.0
 rect_min_size = Vector2( 160, 100 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/Level thumbnails/CenterContainer"]
-margin_right = 160.0
+margin_right = 183.0
 margin_bottom = 11.0
 rect_min_size = Vector2( 0, 11 )
-custom_fonts/normal_font = SubResource( 1 )
+custom_fonts/normal_font = SubResource( 5 )
 text = "Level selection"
 scroll_active = false
 
 [node name="Level" type="TextureRect" parent="HBoxContainer/Level thumbnails/CenterContainer"]
 margin_top = 15.0
-margin_right = 160.0
+margin_right = 183.08
 margin_bottom = 165.0
-rect_min_size = Vector2( 150, 150 )
+rect_min_size = Vector2( 183.08, 150 )
 texture = ExtResource( 4 )
 expand = true
+stretch_mode = 6
 
 [node name="CenterContainer3" type="CenterContainer" parent="HBoxContainer/Level thumbnails"]
-margin_left = 198.0
-margin_right = 228.0
+margin_left = 221.0
+margin_right = 251.0
 margin_bottom = 165.0
 
 [node name="Right button" type="TextureButton" parent="HBoxContainer/Level thumbnails/CenterContainer3"]
@@ -111,9 +113,9 @@ texture_normal = ExtResource( 3 )
 expand = true
 
 [node name="Settings" type="VBoxContainer" parent="HBoxContainer"]
-margin_left = 243.0
-margin_right = 393.0
-margin_bottom = 215.0
+margin_left = 253.0
+margin_right = 403.0
+margin_bottom = 221.0
 rect_min_size = Vector2( 150, 0 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -130,12 +132,12 @@ rect_min_size = Vector2( 150, 0 )
 alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="HBoxContainer/Settings/Number of players/CenterContainer"]
-margin_left = 30.0
-margin_right = 120.035
-margin_bottom = 20.0
-rect_min_size = Vector2( 90.035, 20 )
+margin_left = 25.0
+margin_right = 125.0
+margin_bottom = 20.077
+rect_min_size = Vector2( 100, 20.077 )
 custom_fonts/normal_font = ExtResource( 2 )
-text = "     Number     of players"
+text = "Number of players"
 scroll_active = false
 
 [node name="N players" type="HBoxContainer" parent="HBoxContainer/Settings/Number of players"]

@@ -9,7 +9,7 @@ func _ready():
 	DEFGRAVITY = 10
 	JUMP_POWER = -300
 	FLOOR = Vector2(0,-1)
-	INITJUMPS =40
+	INITJUMPS =2
 	INITDASHES =2
 	WALLFALLSPEED = 8 # Replace with function body.
 	POWER = 5

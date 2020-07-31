@@ -9,8 +9,10 @@ func createLevelsArray():
 	Thumbnails = []
 	Levels.append(preload("res://Levels/Factory/Factory 1v1.tscn"))
 	Levels.append(preload("res://Levels/MStage/MainStage.tscn"))
+	Levels.append(preload("res://Levels/Alien/Alien.tscn"))
 	Thumbnails.append(preload("res://Levels/Factory/Factory 1v1.png"))
 	Thumbnails.append(preload("res://Levels/MStage/MainStage ffa.png"))
+	Thumbnails.append(preload("res://Levels/Alien/Alien.png"))
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.

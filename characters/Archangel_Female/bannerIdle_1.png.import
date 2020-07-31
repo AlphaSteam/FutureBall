@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bannerIdle_1.png-d592cf5419bfea8ac3435be651a5d38a.stex"
+path="res://.import/bannerIdle_1.png-a08ab94ce28a00e70d432884ee7c6998.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Archangel_Female/bannerIdle_1.png"
-dest_files=[ "res://.import/bannerIdle_1.png-d592cf5419bfea8ac3435be651a5d38a.stex" ]
+source_file="res://characters/Archangel_Female/bannerIdle_1.png"
+dest_files=[ "res://.import/bannerIdle_1.png-a08ab94ce28a00e70d432884ee7c6998.stex" ]
 
 [params]
 
