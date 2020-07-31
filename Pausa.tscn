@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://buttons/StageSelectGreen.png" type="Texture" id=1]
 [ext_resource path="res://buttons/help.png" type="Texture" id=2]
@@ -15,6 +15,18 @@
 [ext_resource path="res://buttons/MainMenuGreen.png" type="Texture" id=13]
 [ext_resource path="res://buttons/StageSelectRed.png" type="Texture" id=14]
 [ext_resource path="res://sfx/hover.tres" type="AudioStream" id=15]
+[ext_resource path="res://Fonts/Futured/Futured.TTF" type="DynamicFontData" id=16]
+[ext_resource path="res://buttons/Closegreen.png" type="Texture" id=17]
+[ext_resource path="res://buttons/CloseRed.png" type="Texture" id=18]
+[ext_resource path="res://Extra.gd" type="Script" id=19]
+[ext_resource path="res://help/help2.png" type="Texture" id=20]
+[ext_resource path="res://help/help3.png" type="Texture" id=21]
+[ext_resource path="res://help/help1.png" type="Texture" id=22]
+
+[sub_resource type="DynamicFont" id=1]
+size = 70
+outline_color = Color( 1, 0, 0, 1 )
+font_data = ExtResource( 16 )
 
 [node name="Pausa" type="Control"]
 script = ExtResource( 10 )
@@ -152,6 +164,121 @@ margin_bottom = 122.0
 texture_normal = ExtResource( 5 )
 texture_hover = ExtResource( 9 )
 
+[node name="Extra" type="Control" parent="BG/MarginContainer2/VBoxContainer/VBoxContainer/Exit/TextureButton4"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -932.54
+margin_top = -1364.1
+margin_right = -519.54
+margin_bottom = -828.104
+rect_scale = Vector2( 1.4, 1.4 )
+script = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="BG/MarginContainer2/VBoxContainer/VBoxContainer/Exit/TextureButton4/Extra"]
+light_mask = 0
+margin_left = -34.7297
+margin_top = -36.4602
+margin_right = 1884.27
+margin_bottom = 1252.54
+color = Color( 0, 0, 0, 0.972549 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer3" type="MarginContainer" parent="BG/MarginContainer2/VBoxContainer/VBoxContainer/Exit/TextureButton4/Extra/ColorRect"]
+margin_left = 1252.0
+margin_top = 1142.0
+margin_right = 1661.0
+margin_bottom = 1275.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BG/MarginContainer2/VBoxContainer/VBoxContainer/Exit/TextureButton4/Extra/ColorRect/MarginContainer3"]
+margin_left = 9.0
+margin_right = 400.0
+margin_bottom = 133.0
+size_flags_horizontal = 4
+custom_constants/separation = 40
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BG/MarginContainer2/VBoxContainer/VBoxContainer/Exit/TextureButton4/Extra/ColorRect/MarginContainer3/VBoxContainer"]
+margin_right = 391.0
+margin_bottom = 120.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_constants/separation = 54
+
+[node name="Close" type="TextureButton" parent="BG/MarginContainer2/VBoxContainer/VBoxContainer/Exit/TextureButton4/Extra/ColorRect/MarginContainer3/VBoxContainer/VBoxContainer"]
+margin_right = 391.0
+margin_bottom = 120.0
+texture_normal = ExtResource( 18 )
+texture_hover = ExtResource( 17 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="BG/MarginContainer2/VBoxContainer/VBoxContainer/Exit/TextureButton4/Extra"]
+margin_left = 10.0
+margin_top = 49.0
+margin_right = 938.0
+margin_bottom = 967.0
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode_enabled = true
+bbcode_text = "In Future Ball, players compete by throwing an energy ball to eachother, which will explode if it makes direct contact with an opponent, giving the attacking player a point. Not throwing the ball before a set time or falling from the stage takes away a point. 
+
+If the ball bounces with any other object, it will deactivate and turn blue, allowing for any player to catch it. The states of the ball are shown as red when it will explode on contact, and blue when it's catchable.
+
+The game ends when a player gets 7 points, winning the game. If a player gets to -3 points, the victory is given to the other player.
+"
+text = "In Future Ball, players compete by throwing an energy ball to eachother, which will explode if it makes direct contact with an opponent, giving the attacking player a point. Not throwing the ball before a set time or falling from the stage takes away a point. 
+
+If the ball bounces with any other object, it will deactivate and turn blue, allowing for any player to catch it. The states of the ball are shown as red when it will explode on contact, and blue when it's catchable.
+
+The game ends when a player gets 7 points, winning the game. If a player gets to -3 points, the victory is given to the other player.
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SFXHover" type="AudioStreamPlayer" parent="BG/MarginContainer2/VBoxContainer/VBoxContainer/Exit/TextureButton4/Extra"]
+stream = ExtResource( 15 )
+bus = "SFX"
+
+[node name="ColorRect2" type="ColorRect" parent="BG/MarginContainer2/VBoxContainer/VBoxContainer/Exit/TextureButton4/Extra"]
+margin_left = 1067.0
+margin_top = 3.0
+margin_right = 1791.0
+margin_bottom = 959.0
+color = Color( 1, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="help1" type="Sprite" parent="BG/MarginContainer2/VBoxContainer/VBoxContainer/Exit/TextureButton4/Extra"]
+position = Vector2( 1431.27, 231.14 )
+scale = Vector2( 1.68268, 1.68268 )
+texture = ExtResource( 22 )
+
+[node name="help2" type="Sprite" parent="BG/MarginContainer2/VBoxContainer/VBoxContainer/Exit/TextureButton4/Extra/help1"]
+position = Vector2( -0.283997, 194.838 )
+texture = ExtResource( 20 )
+
+[node name="help3" type="Sprite" parent="BG/MarginContainer2/VBoxContainer/VBoxContainer/Exit/TextureButton4/Extra/help1/help2"]
+position = Vector2( -0.322449, 178.715 )
+scale = Vector2( 1.00165, 1.00165 )
+texture = ExtResource( 21 )
+
 [node name="SFXHover" type="AudioStreamPlayer" parent="BG"]
 stream = ExtResource( 15 )
 bus = "SFX"
@@ -162,6 +289,8 @@ bus = "SFX"
 [connection signal="mouse_entered" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/Options/TextureButton2" to="." method="_on_TextureButton2_mouse_entered"]
 [connection signal="pressed" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/Options/TextureButton2" to="BG/MarginContainer2/VBoxContainer/VBoxContainer/Options/TextureButton2/Opciones" method="_on_TextureButton2_pressed"]
 [connection signal="mouse_entered" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/Help/TextureButton3" to="." method="_on_TextureButton3_mouse_entered"]
+[connection signal="pressed" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/Help/TextureButton3" to="BG/MarginContainer2/VBoxContainer/VBoxContainer/Exit/TextureButton4/Extra" method="_on_TextureButton3_pressed"]
 [connection signal="mouse_entered" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/MainMenu/TextureButton5" to="." method="_on_TextureButton5_mouse_entered"]
 [connection signal="pressed" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/MainMenu/TextureButton5" to="." method="_on_TextureButton5_pressed"]
 [connection signal="pressed" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/Exit/TextureButton4" to="." method="_on_TextureButton4_pressed"]
+[connection signal="pressed" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/Exit/TextureButton4/Extra/ColorRect/MarginContainer3/VBoxContainer/VBoxContainer/Close" to="BG/MarginContainer2/VBoxContainer/VBoxContainer/Exit/TextureButton4/Extra" method="_on_Close_pressed"]
