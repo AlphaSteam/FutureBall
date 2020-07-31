@@ -33,14 +33,21 @@ var credits = [
 		"Diego Sandoval L."
 	],[
 		"Art",
-		"Artist Name"
+		"Diego Sandoval L.",
+		"Robot w/ gun by alisdaiross",
+		"Medieval Fantasy Characters Pack by CleanCutGames",
+		"Warped City by ansimuz",
+		"",
+		"Neonglow by Josef Bartoñ",
+		"Permitted to use by the author",
+		"from https://www.artstation.com/artwork/rR0XYJ"
 	],[
 		"Music",
 		"AeronMusic - Infinite",
 		"AeronMusic - Appear",
 		"AeronMusic - Bloodmoon",
-		"OST - yunkbeatsaek",
-		"Diossel Sunflower",
+		"yunkbeatsaek - OST",
+		"Diossel - Sunflower",
 		"B0nn0t - Riot Ribs"
 	],[
 		"Sound Effects",
@@ -49,28 +56,27 @@ var credits = [
 		"remaxim",
 		"Michel"
 	],[
-		"Testers",
-		"Name 1",
-		"Name 2",
-		"Name 3"
-	],[
 		"Tools used",
 		"Developed with Godot Engine",
 		"https://godotengine.org/license",
 		"",
 		"Art created with paint.net",
-		"www.getpaint.net"
+		"www.getpaint.net",
+		"",
+		"Art and designs created with Adobe Photoshop",
+		"https://www.adobe.com/products/photoshop.html"
 	],[
 		"Special thanks",
-		"My parents",
-		"My friends",
-		"My pet rabbit"
+		"Our friends",
+		"CC5408",
+		"Elias Zelada for guiding and help"
 	],[
 		"And you",
 	]
 ]
 
-
+func _ready():
+	Globals.KillProps()
 func _process(delta):
 	var scroll_speed = base_speed * delta
 	
@@ -129,7 +135,7 @@ func add_line():
 
 
 func _unhandled_input(event):
-	if event.is_action_pressed("ui_cancel"):
+	if event.is_action_pressed("ui_cancel") or event.is_action("Pause"):
 		finish()
 	if event.is_action_pressed("ui_down") and !event.is_echo():
 		speed_up = true

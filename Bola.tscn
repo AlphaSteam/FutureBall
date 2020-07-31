@@ -136,6 +136,7 @@ color_ramp = SubResource( 19 )
 
 [node name="Bola" type="RigidBody2D" groups=[
 "Ball",
+"Remove",
 ]]
 position = Vector2( 200, 40 )
 collision_layer = 2

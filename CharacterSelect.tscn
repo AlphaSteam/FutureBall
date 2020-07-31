@@ -76,4 +76,6 @@ volume_db = -10.0
 autoplay = true
 bus = "Music"
 [connection signal="button_down" from="HSeparator/GridContainer2/Left" to="." method="_on_Left_button_down"]
+[connection signal="pressed" from="HSeparator/GridContainer2/Left" to="." method="_on_Left_pressed"]
 [connection signal="button_down" from="HSeparator/GridContainer2/Right" to="." method="_on_Right_button_down"]
+[connection signal="pressed" from="HSeparator/GridContainer2/Right" to="." method="_on_Right_pressed"]

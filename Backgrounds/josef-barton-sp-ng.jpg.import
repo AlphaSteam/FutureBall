@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CloseGreen.png-e1bf53e49227fd4aa18d02395fb04b52.stex"
+path="res://.import/josef-barton-sp-ng.jpg-7f0bf8eaac471576f1ee9e3118ce66a4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://buttons/CloseGreen.png"
-dest_files=[ "res://.import/CloseGreen.png-e1bf53e49227fd4aa18d02395fb04b52.stex" ]
+source_file="res://Backgrounds/josef-barton-sp-ng.jpg"
+dest_files=[ "res://.import/josef-barton-sp-ng.jpg-7f0bf8eaac471576f1ee9e3118ce66a4.stex" ]
 
 [params]
 

@@ -52,3 +52,7 @@ func _on_StageSelectButton_mouse_entered():
 
 
 
+
+
+func _on_TextureButton4_mouse_entered():
+	get_node("BG/SFXHover").play()

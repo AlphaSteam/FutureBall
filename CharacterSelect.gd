@@ -45,3 +45,11 @@ func _on_Right_button_down():
 	else:
 		Selected_char=0
 	updateChar()
+
+
+func _on_Right_pressed():
+	SfxHover.play()
+
+
+func _on_Left_pressed():
+	SfxHover.play()

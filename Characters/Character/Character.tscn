@@ -21,22 +21,23 @@ animations = [ {
 "name": "fall",
 "speed": 0.0
 }, {
-"frames": [ ExtResource( 7 ) ],
-"loop": false,
-"name": "jump",
-"speed": 0.0
-}, {
 "frames": [ ExtResource( 6 ), ExtResource( 4 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "run",
 "speed": 10.0
-}]
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": false,
+"name": "jump",
+"speed": 0.0
+} ]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 8.55065, 13.6003 )
 
 [node name="Player" type="KinematicBody2D" groups=[
 "Jugador",
+"Remove",
 ]]
 script = ExtResource( 8 )
 

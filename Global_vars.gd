@@ -38,4 +38,8 @@ func spawnBall():
 	
 	ball.global_position = spawn_p
 	add_child(ball)
+func KillProps():
+	for i in get_tree().get_nodes_in_group("Remove"):
+		remove_child(i)
+		i.queue_free()
 
