@@ -8,10 +8,10 @@
 [node name="Control" type="Control"]
 anchor_right = 0.301
 anchor_bottom = 0.402
-margin_left = 0.25
-margin_top = 0.5
-margin_right = -0.150009
-margin_bottom = 0.0499954
+margin_left = 5.0
+margin_top = 17.0
+margin_right = 5.6
+margin_bottom = 15.55
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -28,9 +28,9 @@ __meta__ = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="ColorRect2"]
-margin_left = -3.0
+margin_left = -2.74965
 margin_top = -3.0
-margin_right = 81.0
+margin_right = 81.2504
 margin_bottom = 77.0
 color = Color( 0, 0, 0, 1 )
 __meta__ = {
@@ -38,7 +38,8 @@ __meta__ = {
 }
 
 [node name="ColorRect2" type="ColorRect" parent="ColorRect2"]
-margin_right = 78.0
+margin_left = -0.250351
+margin_right = 77.7496
 margin_bottom = 74.0
 color = Color( 0.0313726, 0.227451, 0.360784, 0.47451 )
 __meta__ = {

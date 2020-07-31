@@ -124,7 +124,6 @@ func _on_Area2D_body_entered(body):
 
 func _physics_process(delta):
 	#print(picked)
-
 	var init = global_position
 	var mouse =  get_global_mouse_position()
 	var analog = Vector2(Input.get_joy_axis(pick_id,JOY_AXIS_2), Input.get_joy_axis(pick_id,JOY_AXIS_3))
@@ -142,6 +141,7 @@ func _physics_process(delta):
 		 normalized = vect
 #	print(get_tree().get_root())
 	if picked == true:		
+		$Area2D/here.emitting = false
 		if Input.is_action_just_pressed("attack_%s" % pick_id):
 			
 			arrows[pick_id].visible = true
@@ -200,6 +200,9 @@ func _physics_process(delta):
 		for i in players:
 			i.position = i.reset_position2
 
+	var estoy = position*Globals.zoom
+	if Globals.camara.has_point(estoy) == false and picked == false:
+		$Area2D/here.emitting = true
 		
 	if PlayerGlobals.round_over:
 		$Area2D/Particles2D.emitting = true
@@ -240,6 +243,7 @@ func _physics_process(delta):
 		attacking = false
 		timer.stop()
 		timer.start()
+
 
 
 	
