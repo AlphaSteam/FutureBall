@@ -131,7 +131,7 @@ text = "In Future Ball, players compete by throwing an energy ball to eachother,
 
 If the ball bounces with any other object, it will deactivate and turn blue, allowing for any player to catch it. The states of the ball are shown as red when it will explode on contact, and blue when it's catchable.
 
-The game ends when a player gets 7 points, winning the game. If a player gets to -3 points, the victory is given to the other player.
+The game ends when a player gets a set amount of points (default = 7), winning the game.
 "
 __meta__ = {
 "_edit_use_anchors_": false

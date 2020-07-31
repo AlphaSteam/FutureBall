@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/idle_weapon_1.png-0d6ece9e75c98865e144a3de02bd5230.stex"
+path="res://.import/idle_weapon_1.png-12c5a53f4f892918081c23f6369b3628.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Paladin_Male/idle_weapon_1.png"
-dest_files=[ "res://.import/idle_weapon_1.png-0d6ece9e75c98865e144a3de02bd5230.stex" ]
+source_file="res://Characters/Paladin_Male/idle_weapon_1.png"
+dest_files=[ "res://.import/idle_weapon_1.png-12c5a53f4f892918081c23f6369b3628.stex" ]
 
 [params]
 

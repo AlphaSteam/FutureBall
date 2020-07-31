@@ -2,7 +2,7 @@ extends Control
 
 
 func _input(event):
-	if event.is_action_pressed("Pause"):
+	if event.is_action_pressed("Pause") or event.is_action_pressed("ui_cancel"):
 		var estado_nuevo = not get_tree().paused
 		get_tree().paused = estado_nuevo
 		visible = estado_nuevo
