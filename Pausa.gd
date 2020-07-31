@@ -9,9 +9,6 @@ func _input(event):
 		
 		
 
-
-
-
 func _on_TextureButton4_pressed():
 	get_tree().quit()
 
