@@ -33,10 +33,10 @@ __meta__ = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_left = -32.5
-margin_top = 73.3568
-margin_right = 433.5
-margin_bottom = 107.357
+margin_left = -26.8304
+margin_top = 80.2864
+margin_right = 439.17
+margin_bottom = 114.287
 color = Color( 0, 0, 0, 0.780392 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -56,10 +56,10 @@ __meta__ = {
 }
 
 [node name="Players" type="GridContainer" parent="."]
-margin_left = 18.0
-margin_top = 10.0
-margin_right = 368.0
-margin_bottom = 155.0
+margin_left = 13.338
+margin_top = 16.958
+margin_right = 363.338
+margin_bottom = 161.958
 custom_constants/vseparation = 112
 custom_constants/hseparation = 99
 columns = 4
