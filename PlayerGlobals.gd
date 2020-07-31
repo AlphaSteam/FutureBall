@@ -39,6 +39,7 @@ func createPlayers():
 		var player = Player.new()
 		player.Name = "ṔPlayer	 " + str(i)
 		player.shortName = "ṔP" + str(i)
+		player.help_id = i
 		Players.append(player)
 	
 

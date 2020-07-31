@@ -178,19 +178,28 @@ func _physics_process(delta):
 			arrows[pick_id].hide()
 			power = 0
 	else:
-		pass
+		PlayerGlobals.timer2.stop()	
 			
 			
 	if position.y > 400:
 		position = reset_position
 		linear_velocity = Vector2.ZERO
 	
-	if PlayerGlobals.bomb_exploded:	
+	if picked and PlayerGlobals.bomb_exploded:	
+		drop()
+		PlayerGlobals.timer2.stop()
 		PlayerGlobals.Players[pick_id].changePoints(-1)
 		PlayerGlobals.bomb_exploded = false
-		PlayerGlobals.round_over = true
+		$SFXBoom.play()
+		$Area2D/Particles2D.emitting = true
+		$Area2D/Particles2D/Particles2D.emitting = true
+		$Area2D/Particles2D/Particles2D2.emitting = true
+		$Area2D/Particles2D/Particles2D3.emitting = true
 		linear_velocity = Vector2.ZERO
 		position = reset_position
+		for i in players:
+			i.position = i.reset_position2
+
 		
 	if PlayerGlobals.round_over:
 		$Area2D/Particles2D.emitting = true

@@ -6,7 +6,6 @@ const JUMP_POWER = -250
 const FLOOR = Vector2(0,-1)
 var Winner
 var ball
-var players = []
 var empate = []
 var timer_out = false
 func _ready():
@@ -22,7 +21,7 @@ func WinScreen(var player):
 				Winner = i
 				empate.append(i)
 			elif mejor == i.Points:
-				empate.append(i)	
+				empate.append(i)					
 	Winner = player				
 	get_tree().change_scene("res://Winscreen.tscn")
 func spawnBall():
