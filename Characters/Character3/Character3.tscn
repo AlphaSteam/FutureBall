@@ -24,14 +24,14 @@ animations = [ {
 "name": "jump",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 8 ) ],
-"loop": false,
-"name": "fall",
-"speed": 10.0
-}, {
 "frames": [ ExtResource( 10 ), ExtResource( 3 ), ExtResource( 9 ), ExtResource( 4 ) ],
 "loop": true,
 "name": "run",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": false,
+"name": "fall",
 "speed": 10.0
 } ]
 
