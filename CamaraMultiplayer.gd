@@ -17,7 +17,13 @@ func createPointsGUI():
 func _ready():
 	createPointsGUI()
 	#Bola = get_tree().get_nodes_in_group("Ball")[0]
-	for i in PlayerGlobals.Number_of_players:
+	var number_of_players = PlayerGlobals.Number_of_players
+	if((number_of_players % 2) == 0):
+		$CanvasLayer/HBoxContainer.margin_left = -13
+	else:
+		$CanvasLayer/HBoxContainer.margin_left = -52
+		
+	for i in number_of_players:
 		players.append(PlayerGlobals.Players[i])
 		Chars.append(PlayerGlobals.Players[i].Character)
 

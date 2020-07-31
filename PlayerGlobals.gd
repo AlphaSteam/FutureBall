@@ -18,9 +18,9 @@ func _ready():
 
 func createCharArray():
 	Chars =[]
-	Chars.append(preload("res://Character1.tscn").instance())
-	Chars.append(preload("res://Character.tscn").instance())
-	Chars.append(preload("res://Character2.tscn").instance())
+	Chars.append(preload("res://Characters/Character1/Character1.tscn").instance())
+	Chars.append(preload("res://Characters/Character/Character.tscn").instance())
+	Chars.append(preload("res://Characters/Character2/Character2.tscn").instance())
 	
 
 func createPlayers():

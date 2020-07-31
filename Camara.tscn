@@ -42,13 +42,15 @@ scale = Vector2( 0.222369, 0.222369 )
 texture = ExtResource( 2 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
-margin_left = 149.233
-margin_right = 341.233
-margin_bottom = 24.0
+margin_left = -52.0
+margin_top = -1.0
+margin_right = 770.0
+margin_bottom = 31.0
 rect_scale = Vector2( 0.5, 0.5 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-custom_constants/separation = 130
+custom_constants/separation = 115
+alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
