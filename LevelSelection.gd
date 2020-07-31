@@ -8,7 +8,7 @@ func updateLevel():
 	LevelGlobals.selectedLevel_packed = LevelGlobals.Levels[LevelGlobals.selectedLevel]
 	selectedLevelInstance = LevelGlobals.selectedLevel_packed.instance()
 func updateNPlayers():
-	$"HBoxContainer/Settings/N players/CenterContainer/Number of players".text = str(PlayerGlobals.Number_of_players)
+	$"HBoxContainer/Settings/Number of players/N players/CenterContainer/Number of players".text = str(PlayerGlobals.Number_of_players)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	
