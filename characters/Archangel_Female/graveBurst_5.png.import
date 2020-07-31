@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/graveBurst_5.png-9f9a2639b918fe921aaa846376e55e23.stex"
+path="res://.import/graveBurst_5.png-ef44ccb0a6a5fe29a63a946a7681ce04.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Archangel_Female/graveBurst_5.png"
-dest_files=[ "res://.import/graveBurst_5.png-9f9a2639b918fe921aaa846376e55e23.stex" ]
+source_file="res://characters/Archangel_Female/graveBurst_5.png"
+dest_files=[ "res://.import/graveBurst_5.png-ef44ccb0a6a5fe29a63a946a7681ce04.stex" ]
 
 [params]
 
