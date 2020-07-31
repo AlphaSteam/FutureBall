@@ -9,32 +9,20 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "KinematicBody2D",
-"class": "Char1",
-"language": "GDScript",
-"path": "res://Characters/Character1/Character1.gd"
-}, {
-"base": "KinematicBody2D",
-"class": "Char3",
-"language": "GDScript",
-"path": "res://Characters/Character3/Character3.gd"
-}, {
 "base": "Node",
 "class": "Player",
 "language": "GDScript",
 "path": "res://Player.gd"
 } ]
 _global_script_class_icons={
-"Char1": "",
-"Char3": "",
 "Player": ""
 }
 
 [application]
 
-config/name="platformer"
+config/name="FutureBall - Devinap"
 run/main_scene="res://Titlescreen.tscn"
-config/icon="res://icon.png"
+config/icon="res://Resources/icon.png"
 
 [autoload]
 
