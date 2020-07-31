@@ -40,7 +40,7 @@ curve = SubResource( 8 )
 [sub_resource type="ParticlesMaterial" id=10]
 lifetime_randomness = 0.36
 emission_shape = 1
-emission_sphere_radius = 48.28
+emission_sphere_radius = 35.67
 flag_disable_z = true
 spread = 180.0
 gravity = Vector3( 0, 0, 0 )
@@ -168,7 +168,7 @@ shape = SubResource( 3 )
 
 [node name="here" type="Particles2D" parent="Area2D"]
 show_behind_parent = true
-amount = 500
+amount = 100
 lifetime = 0.1
 speed_scale = 0.2
 process_material = SubResource( 10 )
