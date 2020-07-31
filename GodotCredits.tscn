@@ -60,7 +60,7 @@ texture = ExtResource( 2 )
 normal_map = SubResource( 1 )
 centered = false
 
-[node name="MusicCredits" type="AudioStreamPlayer" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 autoplay = true
 bus = "Music"

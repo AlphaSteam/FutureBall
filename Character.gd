@@ -148,7 +148,6 @@ func _end_jump():
 
 func _dash():
 	if(cooldown == false && dashes_available > 0):
-		$SFXDash.play()
 		acceleration = 0.5
 		speed = speed + (DEFSPEED * 3 - speed) * 0.8
 		velocity.y = 0

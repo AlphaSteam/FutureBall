@@ -34,7 +34,6 @@ config/icon="res://icon.png"
 
 Globals="*res://Global_vars.gd"
 PlayerGlobals="*res://PlayerGlobals.gd"
-Pausa="*res://Pausa.tscn"
 
 [display]
 

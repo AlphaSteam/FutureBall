@@ -30,27 +30,3 @@ func _on_TextureButton5_pressed():
 	visible = estado_nuevo
 	get_tree().change_scene("res://Titlescreen.tscn")
 
-
-
-func _on_TextureButton_mouse_entered():
-	get_node("BG/SFXHover").play()
-
-
-func _on_StageSelectButton_mouse_entered():
-	get_node("BG/SFXHover").play()
-
-
-func _on_TextureButton2_mouse_entered():
-	get_node("BG/SFXHover").play()
-
-
-func _on_TextureButton3_mouse_entered():
-	get_node("BG/SFXHover").play()
-
-
-func _on_TextureButton5_mouse_entered():
-	get_node("BG/SFXHover").play()
-
-
-func _on_TextureButton4_mouse_entered():
-	get_node("BG/SFXHover").play()
