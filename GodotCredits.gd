@@ -75,7 +75,8 @@ var credits = [
 	]
 ]
 
-
+func _ready():
+	Globals.KillProps()
 func _process(delta):
 	var scroll_speed = base_speed * delta
 	
