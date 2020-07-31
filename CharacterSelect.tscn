@@ -45,6 +45,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ColorRect" type="ColorRect" parent="ColorRect2/ColorRect2"]
+margin_left = 27.0
+margin_top = 4.0
+margin_right = 50.0
+margin_bottom = 34.0
+color = Color( 0.0627451, 0.458824, 0.631373, 1 )
+
+[node name="ColorRect3" type="ColorRect" parent="ColorRect2"]
+margin_left = 28.0
+margin_top = 5.0
+margin_right = 49.0
+margin_bottom = 33.0
+color = Color( 0, 0, 0, 0.619608 )
+
 [node name="HSeparator" type="VBoxContainer" parent="."]
 anchor_right = 0.626
 anchor_bottom = 0.751
