@@ -36,16 +36,18 @@ var credits = [
 		"Diego Sandoval L.",
 		"Robot w/ gun by alisdaiross",
 		"Medieval Fantasy Characters Pack by CleanCutGames",
+		"Warped City by ansimuz",
 		"",
 		"Neonglow by Josef Bartoñ",
-		"https://www.artstation.com/artwork/rR0XYJ"
+		"Permitted to use by the author",
+		"from https://www.artstation.com/artwork/rR0XYJ"
 	],[
 		"Music",
 		"AeronMusic - Infinite",
 		"AeronMusic - Appear",
 		"AeronMusic - Bloodmoon",
-		"OST - yunkbeatsaek",
-		"Diossel Sunflower",
+		"yunkbeatsaek - OST",
+		"Diossel - Sunflower",
 		"B0nn0t - Riot Ribs"
 	],[
 		"Sound Effects",
@@ -53,11 +55,6 @@ var credits = [
 		"dklon",
 		"remaxim",
 		"Michel"
-	],[
-		"Testers",
-		"Name 1",
-		"Name 2",
-		"Name 3"
 	],[
 		"Tools used",
 		"Developed with Godot Engine",
