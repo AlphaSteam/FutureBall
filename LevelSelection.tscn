@@ -11,7 +11,7 @@
 [ext_resource path="res://Fonts/Zero hour/zero hour.ttf" type="DynamicFontData" id=9]
 [ext_resource path="res://sounds/music/902299_Bloodmoon.ogg" type="AudioStream" id=10]
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=1]
 size = 10
 outline_size = 1
 outline_color = Color( 0.027451, 0.462745, 0.619608, 1 )
@@ -86,7 +86,7 @@ rect_min_size = Vector2( 160, 100 )
 margin_right = 183.0
 margin_bottom = 11.0
 rect_min_size = Vector2( 0, 11 )
-custom_fonts/normal_font = SubResource( 5 )
+custom_fonts/normal_font = SubResource( 1 )
 text = "Level selection"
 scroll_active = false
 

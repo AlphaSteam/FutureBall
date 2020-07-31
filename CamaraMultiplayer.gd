@@ -6,7 +6,7 @@ extends Camera2D
 onready var players = []
 onready var Chars = []
 export var PaddingPercent = 10
-#var Bola
+var Bola
 
 func createPointsGUI():
 	var pointGui = preload("res://Points.tscn")
@@ -21,7 +21,7 @@ func _ready():
 	self.limit_right= get_parent().camera_limit_right
 	
 	createPointsGUI()
-	#Bola = get_tree().get_nodes_in_group("Ball")[0]
+	
 	var number_of_players = PlayerGlobals.Number_of_players
 	if((number_of_players % 2) == 0):
 		$CanvasLayer/HBoxContainer.margin_left = -13
@@ -80,20 +80,34 @@ func Rect2From4PointList(InList):
 
 
 func _process(delta):
+	var ScreenSize = self.get_viewport_rect().size
 	var most_left = Chars[0].global_position.x
 	var most_right = Chars[0].global_position.x
 	var most_up = Chars[0].global_position.y
 	var most_down = Chars[0].global_position.y
 	var zoom_factor1 = abs(Chars[0].global_position.x) 
 	var zoom_factor2 = abs(Chars[0].global_position.y)
-	
+	$Sprite.global_position= Globals.ball.global_position
+	print(Globals.ball.global_position)
+	print (Globals.ball.global_position.y - get_camera_screen_center().y )
+	if  get_camera_screen_center().x-$Sprite.global_position.x > ScreenSize.x/2:
+		$Sprite.global_position.x = get_camera_screen_center().x - ScreenSize.x/2
+
+	if  get_camera_screen_center().x-$Sprite.global_position.x< -ScreenSize.x/2:
+		$Sprite.global_position.y = get_camera_screen_center().x + ScreenSize.x/2
+
+	if  get_camera_screen_center().y-$Sprite.global_position.y > ScreenSize.y/2:
+		$Sprite.global_position.y = get_camera_screen_center().y - ScreenSize.y/2
+
+	if  get_camera_screen_center().y-$Sprite.global_position.y< -ScreenSize.y/2:
+		$Sprite.global_position.y = get_camera_screen_center().y + ScreenSize.y/2
 	for i in range(Chars.size()):
 			most_left = min (most_left, Chars[i].global_position.x)
 			most_right = max (most_right, Chars[i].global_position.x)
 			most_up = min (most_up, Chars[i].global_position.y)
 			most_down = max (most_up, Chars[i].global_position.y)
 
-	var ScreenSize = self.get_viewport_rect().size
+	
 	var CustomRect2 = CalculateBox(ScreenSize)
 	Globals.camara = CustomRect2 
 	var ZoomRatio = max(CustomRect2.size.x/ get_viewport_rect().size.x ,\
