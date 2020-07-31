@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Closegreen.png-276d077e5b3d5806384c434b715721ee.stex"
+path="res://.import/CloseGreen.png-e1bf53e49227fd4aa18d02395fb04b52.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://buttons/Closegreen.png"
-dest_files=[ "res://.import/Closegreen.png-276d077e5b3d5806384c434b715721ee.stex" ]
+source_file="res://buttons/CloseGreen.png"
+dest_files=[ "res://.import/CloseGreen.png-e1bf53e49227fd4aa18d02395fb04b52.stex" ]
 
 [params]
 
