@@ -9,6 +9,7 @@ var Chars = []
 var timer = Timer.new()
 var timer2 = Timer.new()
 var round_over = false
+var bomb_exploded = false
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	timer.set_one_shot(false)
@@ -18,9 +19,9 @@ func _ready():
 	add_child(timer)	
 	timer2.set_one_shot(false)
 	timer2.set_timer_process_mode(0)
-	timer2.set_wait_time(ROUND_TIME)
+	timer2.set_wait_time(DIE_TIME)
 	timer2.connect("timeout", self, "check_death")
-	add_child(timer)		
+	add_child(timer2)		
 	randomize()# Replace with function body.
 
 func createCharArray():
@@ -66,7 +67,7 @@ func check_round():
 	round_over = true
 	
 func check_death():
-	round_over = true	
+	bomb_exploded = true	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass

@@ -78,6 +78,7 @@ func _on_Bola_body_entered(body: Node):
 
 func pick():
 	picked = true
+	PlayerGlobals.timer2.start()
 	set_mode(3)
 	var ball_position = global_position
 	get_parent().remove_child(self)
@@ -141,6 +142,13 @@ func _physics_process(delta):
 		 normalized = vect
 #	print(get_tree().get_root())
 	if picked == true:
+		if PlayerGlobals.bomb_exploded:	
+			PlayerGlobals.Players[pick_id].changePoints(-1)
+			PlayerGlobals.bomb_exploded = false
+			drop()
+			PlayerGlobals.round_over = true
+			pick_id = -1
+		
 		if Input.is_action_just_pressed("attack_%s" % pick_id):
 			
 			arrows[pick_id].visible = true
