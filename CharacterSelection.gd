@@ -5,9 +5,7 @@ var Nodes = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	for i in get_tree().get_nodes_in_group("Ball"):
-			remove_child(i)
-			i.queue_free()
+	Globals.KillProps()
 	PlayerGlobals.createCharArray()
 	PlayerGlobals.createPlayers()
 	for i in PlayerGlobals.Number_of_players:

@@ -8,7 +8,7 @@
 [ext_resource path="res://characters/Archangel_Female/idle_2.png" type="Texture" id=6]
 [ext_resource path="res://characters/Archangel_Female/run_3.png" type="Texture" id=7]
 [ext_resource path="res://characters/Archangel_Female/run_4.png" type="Texture" id=9]
-[ext_resource path="res://characters/Character4/Character4.gd" type="Script" id=12]
+[ext_resource path="res://Characters/Character4/Character4.gd" type="Script" id=12]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -17,12 +17,7 @@ animations = [ {
 "name": "idle",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 7 ) ],
-"loop": true,
-"name": "jump",
-"speed": 10.0
-}, {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 9 ) ],
+"frames": [ ExtResource( 9 ) ],
 "loop": true,
 "name": "run",
 "speed": 10.0
@@ -30,6 +25,11 @@ animations = [ {
 "frames": [ ExtResource( 9 ) ],
 "loop": true,
 "name": "fall",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "jump",
 "speed": 10.0
 } ]
 
