@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bannerIdle_2.png-4beeef3b1efac50e1e21ad2acc7f7886.stex"
+path="res://.import/bannerIdle_2.png-e41d0dc71a2063c7ba0a6300933c97ea.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Mayan_Female/bannerIdle_2.png"
-dest_files=[ "res://.import/bannerIdle_2.png-4beeef3b1efac50e1e21ad2acc7f7886.stex" ]
+source_file="res://Characters/Mayan_Female/bannerIdle_2.png"
+dest_files=[ "res://.import/bannerIdle_2.png-e41d0dc71a2063c7ba0a6300933c97ea.stex" ]
 
 [params]
 

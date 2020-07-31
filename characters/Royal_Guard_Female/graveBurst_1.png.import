@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/graveBurst_1.png-fd72d07669e66e60c684f02891b5ebb8.stex"
+path="res://.import/graveBurst_1.png-bdb6fc98fc9a701d9a164ff777e3322f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Royal_Guard_Female/graveBurst_1.png"
-dest_files=[ "res://.import/graveBurst_1.png-fd72d07669e66e60c684f02891b5ebb8.stex" ]
+source_file="res://Characters/Royal_Guard_Female/graveBurst_1.png"
+dest_files=[ "res://.import/graveBurst_1.png-bdb6fc98fc9a701d9a164ff777e3322f.stex" ]
 
 [params]
 

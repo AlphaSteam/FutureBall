@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bannerIdle_2.png-48c1b3e8e7417d47f0ca815f44c5c7ca.stex"
+path="res://.import/bannerIdle_2.png-527d9697a5c340285a32a5ac60eb6bb6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Viking_Male/bannerIdle_2.png"
-dest_files=[ "res://.import/bannerIdle_2.png-48c1b3e8e7417d47f0ca815f44c5c7ca.stex" ]
+source_file="res://Characters/Viking_Male/bannerIdle_2.png"
+dest_files=[ "res://.import/bannerIdle_2.png-527d9697a5c340285a32a5ac60eb6bb6.stex" ]
 
 [params]
 

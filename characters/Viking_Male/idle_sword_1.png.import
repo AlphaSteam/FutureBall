@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/idle_sword_1.png-a607578dc7123cb62591b5bbc791c69a.stex"
+path="res://.import/idle_sword_1.png-b01c05d6b620327338c148968089f8ce.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Viking_Male/idle_sword_1.png"
-dest_files=[ "res://.import/idle_sword_1.png-a607578dc7123cb62591b5bbc791c69a.stex" ]
+source_file="res://Characters/Viking_Male/idle_sword_1.png"
+dest_files=[ "res://.import/idle_sword_1.png-b01c05d6b620327338c148968089f8ce.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/attackWeapon3_3.png-8ff7cbc1b382bb7df840272e8cdc0bff.stex"
+path="res://.import/attackWeapon3_3.png-03f1159aec6c34d85bfd967790c0ea0d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Spartan_Female/attackWeapon3_3.png"
-dest_files=[ "res://.import/attackWeapon3_3.png-8ff7cbc1b382bb7df840272e8cdc0bff.stex" ]
+source_file="res://Characters/Spartan_Female/attackWeapon3_3.png"
+dest_files=[ "res://.import/attackWeapon3_3.png-03f1159aec6c34d85bfd967790c0ea0d.stex" ]
 
 [params]
 

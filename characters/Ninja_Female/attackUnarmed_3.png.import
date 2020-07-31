@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/attackUnarmed_3.png-495e6c4f8e59de365641238c9476b26d.stex"
+path="res://.import/attackUnarmed_3.png-c3003840c070442214995e95025fbda2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Ninja_Female/attackUnarmed_3.png"
-dest_files=[ "res://.import/attackUnarmed_3.png-495e6c4f8e59de365641238c9476b26d.stex" ]
+source_file="res://Characters/Ninja_Female/attackUnarmed_3.png"
+dest_files=[ "res://.import/attackUnarmed_3.png-c3003840c070442214995e95025fbda2.stex" ]
 
 [params]
 

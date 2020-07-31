@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/attackWeapon2_FX_1.png-78a85d44799a50c40a7c70177941baf3.stex"
+path="res://.import/attackWeapon2_FX_1.png-3f10bf20d99b2bdb0913ae782ce24255.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Archdemon_Female/attackWeapon2_FX_1.png"
-dest_files=[ "res://.import/attackWeapon2_FX_1.png-78a85d44799a50c40a7c70177941baf3.stex" ]
+source_file="res://Characters/Archdemon_Female/attackWeapon2_FX_1.png"
+dest_files=[ "res://.import/attackWeapon2_FX_1.png-3f10bf20d99b2bdb0913ae782ce24255.stex" ]
 
 [params]
 

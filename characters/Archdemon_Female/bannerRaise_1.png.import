@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bannerRaise_1.png-2116374dfb094c714479f817120bd589.stex"
+path="res://.import/bannerRaise_1.png-6cc68ab642c57c8e9b518290a09ea02a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Archdemon_Female/bannerRaise_1.png"
-dest_files=[ "res://.import/bannerRaise_1.png-2116374dfb094c714479f817120bd589.stex" ]
+source_file="res://Characters/Archdemon_Female/bannerRaise_1.png"
+dest_files=[ "res://.import/bannerRaise_1.png-6cc68ab642c57c8e9b518290a09ea02a.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/idle_1.png-dd68700adf1de982de159b6bc763e416.stex"
+path="res://.import/idle_1.png-cb8bb108745b14b7fc61fc2a59927ac6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Highlander_Male/idle_1.png"
-dest_files=[ "res://.import/idle_1.png-dd68700adf1de982de159b6bc763e416.stex" ]
+source_file="res://Characters/Highlander_Male/idle_1.png"
+dest_files=[ "res://.import/idle_1.png-cb8bb108745b14b7fc61fc2a59927ac6.stex" ]
 
 [params]
 

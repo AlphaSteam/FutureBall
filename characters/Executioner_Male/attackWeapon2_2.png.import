@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/attackWeapon2_2.png-60f5e29c500d9e5c528912b3d853272c.stex"
+path="res://.import/attackWeapon2_2.png-5a442b018b6bb78333878afe4388870a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Executioner_Male/attackWeapon2_2.png"
-dest_files=[ "res://.import/attackWeapon2_2.png-60f5e29c500d9e5c528912b3d853272c.stex" ]
+source_file="res://Characters/Executioner_Male/attackWeapon2_2.png"
+dest_files=[ "res://.import/attackWeapon2_2.png-5a442b018b6bb78333878afe4388870a.stex" ]
 
 [params]
 

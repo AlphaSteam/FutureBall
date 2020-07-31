@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/attackUnarmed3_FX_6.png-41835399ec414bb4f5aa611be8e8a853.stex"
+path="res://.import/attackUnarmed3_FX_6.png-f6fbaf1742050676bead5f5f0ac39b1c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Highlander_Female/attackUnarmed3_FX_6.png"
-dest_files=[ "res://.import/attackUnarmed3_FX_6.png-41835399ec414bb4f5aa611be8e8a853.stex" ]
+source_file="res://Characters/Highlander_Female/attackUnarmed3_FX_6.png"
+dest_files=[ "res://.import/attackUnarmed3_FX_6.png-f6fbaf1742050676bead5f5f0ac39b1c.stex" ]
 
 [params]
 
