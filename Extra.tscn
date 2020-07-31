@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Extra.gd" type="Script" id=1]
 [ext_resource path="res://buttons/CloseRed.png" type="Texture" id=2]
@@ -7,6 +7,9 @@
 [ext_resource path="res://sfx/hover.tres" type="AudioStream" id=5]
 [ext_resource path="res://buttons/CreditsGreen.png" type="Texture" id=6]
 [ext_resource path="res://Fonts/Futured/Futured.TTF" type="DynamicFontData" id=7]
+[ext_resource path="res://help/help2.png" type="Texture" id=8]
+[ext_resource path="res://help/help1.png" type="Texture" id=9]
+[ext_resource path="res://help/help3.png" type="Texture" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 70
@@ -118,12 +121,18 @@ margin_bottom = 967.0
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 1, 1, 1, 1 )
 bbcode_enabled = true
-bbcode_text = "In Futureball, players compete by throwing an energy ball to eachother, which will explode if it makes direct contact with an opponent, giving the attacking player a point. The players have a set time to throw the ball, or else it will explode as they hold it, taking away a point.
+bbcode_text = "In Futureball, players compete by throwing an energy ball to eachother, which will explode if it makes direct contact with an opponent, giving the attacking player a point. Not throwing the ball before a set time or falling from the stage takes away a point. 
 
-If the ball bounces with any other object, it will deactivate and turn blue, allowing for any player to catch it. The states of the ball are shown as red when it will explode on contact, and blue when it's catchable."
-text = "In Futureball, players compete by throwing an energy ball to eachother, which will explode if it makes direct contact with an opponent, giving the attacking player a point. The players have a set time to throw the ball, or else it will explode as they hold it, taking away a point.
+If the ball bounces with any other object, it will deactivate and turn blue, allowing for any player to catch it. The states of the ball are shown as red when it will explode on contact, and blue when it's catchable.
 
-If the ball bounces with any other object, it will deactivate and turn blue, allowing for any player to catch it. The states of the ball are shown as red when it will explode on contact, and blue when it's catchable."
+The game ends when a player gets 7 points, winning the game. If a player gets to -3 points, the victory is given to the other player.
+"
+text = "In Futureball, players compete by throwing an energy ball to eachother, which will explode if it makes direct contact with an opponent, giving the attacking player a point. Not throwing the ball before a set time or falling from the stage takes away a point. 
+
+If the ball bounces with any other object, it will deactivate and turn blue, allowing for any player to catch it. The states of the ball are shown as red when it will explode on contact, and blue when it's catchable.
+
+The game ends when a player gets 7 points, winning the game. If a player gets to -3 points, the victory is given to the other player.
+"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -131,6 +140,31 @@ __meta__ = {
 [node name="SFXHover" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
 bus = "SFX"
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = 1067.0
+margin_top = 3.0
+margin_right = 1791.0
+margin_bottom = 959.0
+color = Color( 1, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="help1" type="Sprite" parent="."]
+position = Vector2( 1431.27, 231.14 )
+scale = Vector2( 1.68268, 1.68268 )
+texture = ExtResource( 9 )
+
+[node name="help2" type="Sprite" parent="help1"]
+position = Vector2( -0.283997, 194.838 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 8 )
+
+[node name="help3" type="Sprite" parent="help1/help2"]
+position = Vector2( -0.322449, 178.715 )
+scale = Vector2( 1.00165, 1.00165 )
+texture = ExtResource( 10 )
 [connection signal="pressed" from="ColorRect/MarginContainer3/VBoxContainer/VBoxContainer/Close" to="." method="_on_Close_pressed"]
 [connection signal="mouse_entered" from="ColorRect/Credits/VBoxContainer/VBoxContainer/Credits" to="." method="_on_Credits_mouse_entered"]
 [connection signal="pressed" from="ColorRect/Credits/VBoxContainer/VBoxContainer/Credits" to="." method="_on_Credits_pressed"]
