@@ -11,7 +11,7 @@ func updateNPlayers():
 	$"HBoxContainer/Settings/N players/CenterContainer/Number of players".text = str(PlayerGlobals.Number_of_players)
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	
+	Globals.KillProps()
 	PlayerGlobals.createCharArray()
 	PlayerGlobals.createPlayers()
 	LevelGlobals.createLevelsArray()

@@ -19,11 +19,6 @@ animations = [ {
 "name": "idle",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 11 ) ],
-"loop": false,
-"name": "jump",
-"speed": 10.0
-}, {
 "frames": [ ExtResource( 8 ) ],
 "loop": false,
 "name": "fall",
@@ -33,6 +28,11 @@ animations = [ {
 "loop": true,
 "name": "run",
 "speed": 10.0
+}, {
+"frames": [ ExtResource( 11 ) ],
+"loop": false,
+"name": "jump",
+"speed": 10.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -40,6 +40,7 @@ extents = Vector2( 9.88733, 13.0745 )
 
 [node name="Player" type="KinematicBody2D" groups=[
 "Jugador",
+"Remove",
 ]]
 script = ExtResource( 2 )
 

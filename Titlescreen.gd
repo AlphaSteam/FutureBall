@@ -4,6 +4,7 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Globals.KillProps()
 	$MarginContainer/VBoxContainer/VBoxContainer/TextureButton.grab_focus()
 	Input.connect("joy_connection_changed", self, "_on_joy_connection_changed")
 	
