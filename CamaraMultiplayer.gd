@@ -88,8 +88,8 @@ func _process(delta):
 	var zoom_factor1 = abs(Chars[0].global_position.x) 
 	var zoom_factor2 = abs(Chars[0].global_position.y)
 	$Sprite.global_position= Globals.ball.global_position
-	print(Globals.ball.global_position)
-	print (Globals.ball.global_position.y - get_camera_screen_center().y )
+	print(Globals.ball.get_viewport_transform().origin)
+	#print (Globals.ball.global_position.y - get_camera_screen_center().y )
 	if  get_camera_screen_center().x-$Sprite.global_position.x > ScreenSize.x/2:
 		$Sprite.global_position.x = get_camera_screen_center().x - ScreenSize.x/2
 
