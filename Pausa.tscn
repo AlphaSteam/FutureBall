@@ -292,5 +292,6 @@ bus = "SFX"
 [connection signal="pressed" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/Help/TextureButton3" to="BG/MarginContainer2/VBoxContainer/VBoxContainer/Exit/TextureButton4/Extra" method="_on_TextureButton3_pressed"]
 [connection signal="mouse_entered" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/MainMenu/TextureButton5" to="." method="_on_TextureButton5_mouse_entered"]
 [connection signal="pressed" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/MainMenu/TextureButton5" to="." method="_on_TextureButton5_pressed"]
+[connection signal="mouse_entered" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/Exit/TextureButton4" to="." method="_on_TextureButton4_mouse_entered"]
 [connection signal="pressed" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/Exit/TextureButton4" to="." method="_on_TextureButton4_pressed"]
 [connection signal="pressed" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/Exit/TextureButton4/Extra/ColorRect/MarginContainer3/VBoxContainer/VBoxContainer/Close" to="BG/MarginContainer2/VBoxContainer/VBoxContainer/Exit/TextureButton4/Extra" method="_on_Close_pressed"]
