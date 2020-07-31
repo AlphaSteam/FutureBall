@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Camara.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Tiles/platformPack_tilesheet.png" type="Texture" id=2]
@@ -12,7 +12,6 @@
 [ext_resource path="res://Backgrounds/parallax/skill-desc_0000_foreground.png" type="Texture" id=10]
 [ext_resource path="res://Backgrounds/nebula09.png" type="Texture" id=11]
 [ext_resource path="res://sounds/music/ost (1).ogg" type="AudioStream" id=12]
-[ext_resource path="res://Pausa.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Player spawn.tscn" type="PackedScene" id=18]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
@@ -216,22 +215,6 @@ __meta__ = {
 "_edit_lock_": true,
 "_edit_vertical_guides_": [ 0.0, 160.0 ]
 }
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = 128
-
-[node name="Pausa" parent="CanvasLayer" instance=ExtResource( 17 )]
-pause_mode = 2
-visible = false
-
-[node name="BG" parent="CanvasLayer/Pausa" index="0"]
-margin_left = 150.0
-margin_top = 48.0
-margin_right = 250.0
-margin_bottom = 192.0
-
-[node name="VBoxContainer" parent="CanvasLayer/Pausa/BG/MarginContainer2" index="0"]
-margin_bottom = 995.0
 
 [node name="Camera2D" parent="." instance=ExtResource( 1 )]
 
@@ -441,6 +424,3 @@ pause_mode = 2
 stream = ExtResource( 12 )
 volume_db = -1.5
 autoplay = true
-bus = "Music"
-
-[editable path="CanvasLayer/Pausa"]

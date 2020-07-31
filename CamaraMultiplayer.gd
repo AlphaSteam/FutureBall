@@ -6,7 +6,7 @@ extends Camera2D
 onready var players = []
 onready var Chars = []
 export var PaddingPercent = 10
-var Bola
+#var Bola
 
 func createPointsGUI():
 	var pointGui = preload("res://Points.tscn")

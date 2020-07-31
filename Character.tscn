@@ -33,7 +33,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 8.55065, 13.6003 )
+extents = Vector2( 8.55065, 11.8168 )
 
 [node name="Player" type="KinematicBody2D" groups=[
 "Jugador",
@@ -48,7 +48,7 @@ animation = "run"
 frame = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 4.09237 )
+position = Vector2( -0.198652, 3.29777 )
 shape = SubResource( 2 )
 one_way_collision_margin = 0.0
 

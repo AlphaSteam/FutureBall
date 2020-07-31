@@ -1,10 +1,7 @@
 extends Node
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-var Number_of_players =2
+var Number_of_players = 2
 var Players = []
 var Chars = []
 # Called when the node enters the scene tree for the first time.
@@ -18,7 +15,7 @@ func createCharArray():
 	
 
 func createPlayers():
-	print("antes: ",Players)
+	
 	for i in Players:
 		i.queue_free()
 	Players = []
@@ -27,7 +24,7 @@ func createPlayers():
 		player.Name = "ṔPlayer	 " + str(i)
 		player.shortName = "ṔP" + str(i)
 		Players.append(player)
-	print("despúes: ",Players)
+	
 
 func spawnPlayers():
 	for i in get_tree().get_nodes_in_group("Jugador"):

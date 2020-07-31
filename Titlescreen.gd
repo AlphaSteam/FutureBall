@@ -1,10 +1,6 @@
 extends Node
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -25,7 +21,7 @@ func _on_joy_connection_changed(device_id, connected):
 
 
 func _on_TextureButton_pressed():
-	get_tree().change_scene("res://CharacterSelection.tscn")
+	get_tree().change_scene("res://LevelSelection.tscn")
 
 
 func _on_TextureButton3_pressed():
