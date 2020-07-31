@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bannerIdle_1.png-041d3876086ee780f21d47366e8dc775.stex"
+path="res://.import/bannerIdle_1.png-c2bd5f71c77cd93a55afab9e48a81348.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Assassin_Female/bannerIdle_1.png"
-dest_files=[ "res://.import/bannerIdle_1.png-041d3876086ee780f21d47366e8dc775.stex" ]
+source_file="res://Characters/Assassin_Female/bannerIdle_1.png"
+dest_files=[ "res://.import/bannerIdle_1.png-c2bd5f71c77cd93a55afab9e48a81348.stex" ]
 
 [params]
 

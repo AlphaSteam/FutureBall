@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/graveBurst_1.png-e95098106ce5526061cce372d2a9f6de.stex"
+path="res://.import/graveBurst_1.png-05b4c7da8f7e1b1b20b514570725ae43.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Highlander_Male/graveBurst_1.png"
-dest_files=[ "res://.import/graveBurst_1.png-e95098106ce5526061cce372d2a9f6de.stex" ]
+source_file="res://Characters/Highlander_Male/graveBurst_1.png"
+dest_files=[ "res://.import/graveBurst_1.png-05b4c7da8f7e1b1b20b514570725ae43.stex" ]
 
 [params]
 

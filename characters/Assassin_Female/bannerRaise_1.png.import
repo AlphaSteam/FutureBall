@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bannerRaise_1.png-1ec0a5c8f6dc3e951d0a702b0246a8cc.stex"
+path="res://.import/bannerRaise_1.png-a98588faf3181c67af79c0207a7b71ec.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Assassin_Female/bannerRaise_1.png"
-dest_files=[ "res://.import/bannerRaise_1.png-1ec0a5c8f6dc3e951d0a702b0246a8cc.stex" ]
+source_file="res://Characters/Assassin_Female/bannerRaise_1.png"
+dest_files=[ "res://.import/bannerRaise_1.png-a98588faf3181c67af79c0207a7b71ec.stex" ]
 
 [params]
 

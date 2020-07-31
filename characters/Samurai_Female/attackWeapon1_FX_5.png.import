@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/attackWeapon1_FX_5.png-55dbacf7651378d1788a63b6ee39be5d.stex"
+path="res://.import/attackWeapon1_FX_5.png-c90ca76d8af7ac51738564119aae224d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Samurai_Female/attackWeapon1_FX_5.png"
-dest_files=[ "res://.import/attackWeapon1_FX_5.png-55dbacf7651378d1788a63b6ee39be5d.stex" ]
+source_file="res://Characters/Samurai_Female/attackWeapon1_FX_5.png"
+dest_files=[ "res://.import/attackWeapon1_FX_5.png-c90ca76d8af7ac51738564119aae224d.stex" ]
 
 [params]
 

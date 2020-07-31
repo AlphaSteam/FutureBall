@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dash_sword_2.png-1b4ce31fa75d8fca90c2333dccddd025.stex"
+path="res://.import/dash_sword_2.png-b4dfcbe9fac03fa7ccb786c70d288fb5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Pirate_Male/dash_sword_2.png"
-dest_files=[ "res://.import/dash_sword_2.png-1b4ce31fa75d8fca90c2333dccddd025.stex" ]
+source_file="res://Characters/Pirate_Male/dash_sword_2.png"
+dest_files=[ "res://.import/dash_sword_2.png-b4dfcbe9fac03fa7ccb786c70d288fb5.stex" ]
 
 [params]
 

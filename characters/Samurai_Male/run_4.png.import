@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/run_4.png-e8fd2997785aa5fc3028f0dd8f37970a.stex"
+path="res://.import/run_4.png-b809978b60713ec31e2fbbec8127b958.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Samurai_Male/run_4.png"
-dest_files=[ "res://.import/run_4.png-e8fd2997785aa5fc3028f0dd8f37970a.stex" ]
+source_file="res://Characters/Samurai_Male/run_4.png"
+dest_files=[ "res://.import/run_4.png-b809978b60713ec31e2fbbec8127b958.stex" ]
 
 [params]
 

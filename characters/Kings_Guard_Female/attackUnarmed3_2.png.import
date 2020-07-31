@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/attackUnarmed3_2.png-b607d5448ee398dad271068a1ffa04be.stex"
+path="res://.import/attackUnarmed3_2.png-d193266c34cdfc4140236ed7d6ad59be.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Kings_Guard_Female/attackUnarmed3_2.png"
-dest_files=[ "res://.import/attackUnarmed3_2.png-b607d5448ee398dad271068a1ffa04be.stex" ]
+source_file="res://Characters/Kings_Guard_Female/attackUnarmed3_2.png"
+dest_files=[ "res://.import/attackUnarmed3_2.png-d193266c34cdfc4140236ed7d6ad59be.stex" ]
 
 [params]
 

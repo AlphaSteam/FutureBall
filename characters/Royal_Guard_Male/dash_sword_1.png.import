@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dash_sword_1.png-6cbb29c4fa0610dda21c293a8ce0ebe7.stex"
+path="res://.import/dash_sword_1.png-c06615f4b5bbcf26ad35b043b54d6261.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Royal_Guard_Male/dash_sword_1.png"
-dest_files=[ "res://.import/dash_sword_1.png-6cbb29c4fa0610dda21c293a8ce0ebe7.stex" ]
+source_file="res://Characters/Royal_Guard_Male/dash_sword_1.png"
+dest_files=[ "res://.import/dash_sword_1.png-c06615f4b5bbcf26ad35b043b54d6261.stex" ]
 
 [params]
 

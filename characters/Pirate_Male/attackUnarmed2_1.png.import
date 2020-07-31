@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/attackUnarmed2_1.png-77269e020570baf3f22dc3f5bf2a59d5.stex"
+path="res://.import/attackUnarmed2_1.png-175b179f8357117deacef4aa978698c7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Pirate_Male/attackUnarmed2_1.png"
-dest_files=[ "res://.import/attackUnarmed2_1.png-77269e020570baf3f22dc3f5bf2a59d5.stex" ]
+source_file="res://Characters/Pirate_Male/attackUnarmed2_1.png"
+dest_files=[ "res://.import/attackUnarmed2_1.png-175b179f8357117deacef4aa978698c7.stex" ]
 
 [params]
 
