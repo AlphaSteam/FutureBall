@@ -24,21 +24,30 @@ var credits = [
 	[
 		"A game by Devinap",
 		"Sebastian Alfaro H.",
-		"Ariel Núñez Lobos",
+		"Ariel Nunez Lobos",
 		"Diego Sandoval L."
 	],[
 		"Programming",
-		"Programmer Name",
-		"Programmer Name 2"
+		"Sebastian Alfaro H.",
+		"Ariel Nunez Lobos",
+		"Diego Sandoval L."
 	],[
 		"Art",
 		"Artist Name"
 	],[
 		"Music",
-		"Musician Name"
+		"AeronMusic - Infinite",
+		"AeronMusic - Appear",
+		"AeronMusic - Bloodmoon",
+		"OST - yunkbeatsaek",
+		"Diossel Sunflower",
+		"B0nn0t - Riot Ribs"
 	],[
 		"Sound Effects",
-		"SFX Name"
+		"opengameart.org",
+		"dklon",
+		"remaxim",
+		"Michel"
 	],[
 		"Testers",
 		"Name 1",
@@ -49,8 +58,8 @@ var credits = [
 		"Developed with Godot Engine",
 		"https://godotengine.org/license",
 		"",
-		"Art created with My Favourite Art Program",
-		"https://myfavouriteartprogram.com"
+		"Art created with paint.net",
+		"www.getpaint.net"
 	],[
 		"Special thanks",
 		"My parents",
