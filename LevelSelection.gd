@@ -7,8 +7,6 @@ func updateLevel():
 	$"HBoxContainer/Level thumbnails/CenterContainer/Level".texture = Thumbnail
 	LevelGlobals.selectedLevel_packed = LevelGlobals.Levels[LevelGlobals.selectedLevel]
 	selectedLevelInstance = LevelGlobals.selectedLevel_packed.instance()
-	print(selectedLevelInstance.maxPlayers)
-	print(selectedLevelInstance.maxPlayers)
 func updateNPlayers():
 	$"HBoxContainer/Settings/N players/CenterContainer/Number of players".text = str(PlayerGlobals.Number_of_players)
 # Called when the node enters the scene tree for the first time.
@@ -38,7 +36,6 @@ func _on_Right_button_pressed():
 
 
 func _on_Left_button_pressed():
-	print("before ", LevelGlobals.selectedLevel)
 	if LevelGlobals.selectedLevel > 0:
 		LevelGlobals.selectedLevel-=1
 	else:

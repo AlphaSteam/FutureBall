@@ -9,7 +9,6 @@ var camera_limit_right = 100000000000
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print("ready")
 	PlayerGlobals.spawnPlayers()
 	Globals.spawnBall()
 func _process(delta):

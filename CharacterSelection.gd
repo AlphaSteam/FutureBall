@@ -5,7 +5,6 @@ var Nodes = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print("selection")
 	PlayerGlobals.createCharArray()
 	PlayerGlobals.createPlayers()
 	for i in PlayerGlobals.Number_of_players:
