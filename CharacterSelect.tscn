@@ -17,31 +17,39 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HSeparator" type="VSplitContainer" parent="."]
-anchor_left = 0.004
+[node name="HSeparator" type="VBoxContainer" parent="."]
 anchor_right = 0.626
 anchor_bottom = 0.751
-margin_left = -0.48
+margin_top = 1.90735e-06
 margin_right = 1438.88
-margin_bottom = 1300.41
+margin_bottom = 1284.41
 rect_scale = Vector2( 0.05, 0.05 )
-split_offset = 661
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MarginContainer" type="MarginContainer" parent="HSeparator"]
+[node name="MarginContainer" type="HBoxContainer" parent="HSeparator"]
 margin_right = 1514.0
-margin_bottom = 661.0
+margin_bottom = 500.473
+rect_min_size = Vector2( 500, 500.473 )
+size_flags_vertical = 0
+alignment = 1
 
-[node name="CharacterPos" type="Control" parent="HSeparator/MarginContainer"]
-margin_right = 1514.0
-margin_bottom = 661.0
+[node name="Control" type="VBoxContainer" parent="HSeparator/MarginContainer"]
+margin_left = 757.0
+margin_right = 757.0
+margin_bottom = 500.0
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HSeparator/MarginContainer/Control"]
+margin_top = 250.0
+margin_bottom = 250.0
+alignment = 1
 
 [node name="GridContainer2" type="GridContainer" parent="HSeparator"]
-margin_top = 673.0
+margin_top = 504.0
 margin_right = 1493.0
-margin_bottom = 1241.0
+margin_bottom = 1072.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
 columns = 2

@@ -18,8 +18,6 @@ func _ready():
 
 func createCharArray():
 	Chars =[]
-	Chars.append(preload("res://Characters/Character1/Character1.tscn").instance())
-	Chars.append(preload("res://Characters/Character/Character.tscn").instance())
 	Chars.append(preload("res://Characters/Character2/Character2.tscn").instance())
 	Chars.append(preload("res://Characters/Character3/Character3.tscn").instance())
 
