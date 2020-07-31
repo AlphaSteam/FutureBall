@@ -8,7 +8,7 @@
 [ext_resource path="res://buttons/charselectred.png" type="Texture" id=6]
 [ext_resource path="res://LevelSelection.gd" type="Script" id=7]
 [ext_resource path="res://Backgrounds/bgm.jpg" type="Texture" id=8]
-[ext_resource path="res://Fonts/Zero hour/zero hour.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://Fonts/Zero hour/zero hourchar.tres" type="DynamicFontData" id=9]
 [ext_resource path="res://sounds/music/902299_Bloodmoon.ogg" type="AudioStream" id=10]
 
 [sub_resource type="DynamicFont" id=1]
