@@ -38,19 +38,22 @@ func _on_TextureButton5_pressed():
 
 
 func _on_TextureButton_mouse_entered():
-	get_node("BG/SFXHover").play()
+	get_node("SFXHover").play()
 	
 func _on_TextureButton2_mouse_entered():
-	get_node("BG/SFXHover").play()
+	get_node("SFXHover").play()
 
 func _on_TextureButton3_mouse_entered():
-	get_node("BG/SFXHover").play()
+	get_node("SFXHover").play()
 	
 func _on_TextureButton5_mouse_entered():
-	get_node("BG/SFXHover").play()
+	get_node("SFXHover").play()
+
+func _on_TextureButton4_mouse_entered():
+	get_node("SFXHover").play()
 	
 func _on_StageSelectButton_mouse_entered():
-	get_node("BG/SFXHover").play()
+	get_node("SFXHover").play()
 
 
 

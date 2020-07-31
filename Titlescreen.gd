@@ -35,13 +35,17 @@ func _on_TextureButton4_pressed():
 
 
 func _on_TextureButton_mouse_entered():
-	$SFXHover.play()
+	SfxHover.play()
 	
 func _on_TextureButton2_mouse_entered():
-	$SFXHover.play()
+	SfxHover.play()
 
 func _on_TextureButton3_mouse_entered():
-	$SFXHover.play()
+	SfxHover.play()
 	
 func _on_TextureButton4_mouse_entered():
-	$SFXHover.play()
+	SfxHover.play()
+
+
+func _on_TextureButton_focus_entered():
+	pass # Replace with function body.
