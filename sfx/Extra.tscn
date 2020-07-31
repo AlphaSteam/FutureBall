@@ -1,0 +1,112 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Opciones.gd" type="Script" id=1]
+[ext_resource path="res://buttons/CreditsRed.png" type="Texture" id=2]
+[ext_resource path="res://buttons/CreditsGreen.png" type="Texture" id=3]
+[ext_resource path="res://buttons/CloseRed.png" type="Texture" id=6]
+[ext_resource path="res://buttons/Closegreen.png" type="Texture" id=7]
+[ext_resource path="res://sfx/hover.tres" type="AudioStream" id=8]
+
+[node name="Extra" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 413.0
+margin_bottom = 536.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -831.0
+margin_top = -359.0
+margin_right = 1088.0
+margin_bottom = 930.0
+color = Color( 0, 0, 0, 0.764706 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer3" type="MarginContainer" parent="ColorRect"]
+margin_left = 1252.0
+margin_top = 1142.0
+margin_right = 1661.0
+margin_bottom = 1275.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer3"]
+margin_left = 9.0
+margin_right = 400.0
+margin_bottom = 133.0
+size_flags_horizontal = 4
+custom_constants/separation = 40
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer3/VBoxContainer"]
+margin_right = 391.0
+margin_bottom = 120.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_constants/separation = 54
+
+[node name="TextureButton4" type="TextureButton" parent="ColorRect/MarginContainer3/VBoxContainer/VBoxContainer"]
+margin_right = 391.0
+margin_bottom = 120.0
+texture_normal = ExtResource( 6 )
+texture_hover = ExtResource( 7 )
+
+[node name="Credits" type="MarginContainer" parent="ColorRect"]
+margin_left = 5.0
+margin_top = 1129.0
+margin_right = 902.0
+margin_bottom = 1284.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_constants/margin_right = 0
+custom_constants/margin_top = 0
+custom_constants/margin_left = 0
+custom_constants/margin_bottom = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/Credits"]
+margin_left = 197.0
+margin_right = 699.0
+margin_bottom = 155.0
+size_flags_horizontal = 4
+custom_constants/separation = 40
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/Credits/VBoxContainer"]
+margin_right = 502.0
+margin_bottom = 144.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_constants/separation = 54
+
+[node name="Credits" type="TextureButton" parent="ColorRect/Credits/VBoxContainer/VBoxContainer"]
+margin_right = 502.0
+margin_bottom = 144.0
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
+
+[node name="SFXHover" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+bus = "SFX"
+[connection signal="mouse_entered" from="ColorRect/MarginContainer3/VBoxContainer/VBoxContainer/TextureButton4" to="." method="_on_TextureButton4_mouse_entered"]
+[connection signal="pressed" from="ColorRect/MarginContainer3/VBoxContainer/VBoxContainer/TextureButton4" to="." method="_on_TextureButton4_pressed"]
+[connection signal="mouse_entered" from="ColorRect/Credits/VBoxContainer/VBoxContainer/Credits" to="." method="_on_TextureButton4_mouse_entered"]
+[connection signal="pressed" from="ColorRect/Credits/VBoxContainer/VBoxContainer/Credits" to="." method="_on_Credits_pressed"]
