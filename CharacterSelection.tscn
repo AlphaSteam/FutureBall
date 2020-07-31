@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://CharacterSelection.gd" type="Script" id=1]
 [ext_resource path="res://Backgrounds/space1.png" type="Texture" id=2]
+[ext_resource path="res://Fonts/Zero hour/zero hourchar.tres" type="DynamicFontData" id=3]
 [ext_resource path="res://buttons/start game selected.png" type="Texture" id=5]
 [ext_resource path="res://buttons/start game.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 19
+font_data = ExtResource( 3 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -23,6 +28,29 @@ margin_bottom = 220.0
 texture_normal = ExtResource( 6 )
 texture_hover = ExtResource( 5 )
 expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -32.5
+margin_top = 73.3568
+margin_right = 433.5
+margin_bottom = 107.357
+color = Color( 0, 0, 0, 0.780392 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect"]
+margin_left = 55.0
+margin_top = 5.0
+margin_right = 433.0
+margin_bottom = 32.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "SELECT YOUR CHARACTER"
+text = "SELECT YOUR CHARACTER"
 __meta__ = {
 "_edit_use_anchors_": false
 }

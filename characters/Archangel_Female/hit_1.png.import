@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hit_1.png-0e92f48088d187ee27e1cd208132be48.stex"
+path="res://.import/hit_1.png-a3aa4001d9e423c98997daa58d42ea83.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Archangel_Female/hit_1.png"
-dest_files=[ "res://.import/hit_1.png-0e92f48088d187ee27e1cd208132be48.stex" ]
+source_file="res://Characters/Archangel_Female/hit_1.png"
+dest_files=[ "res://.import/hit_1.png-a3aa4001d9e423c98997daa58d42ea83.stex" ]
 
 [params]
 

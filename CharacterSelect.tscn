@@ -17,12 +17,55 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = -2.0
+margin_top = -13.0
+margin_right = 76.0
+margin_bottom = 62.0
+color = Color( 0.0901961, 0.439216, 0.556863, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect2"]
+margin_left = -3.0
+margin_top = -3.0
+margin_right = 81.0
+margin_bottom = 77.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect2" type="ColorRect" parent="ColorRect2"]
+margin_right = 78.0
+margin_bottom = 74.0
+color = Color( 0.0313726, 0.227451, 0.360784, 0.47451 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect2/ColorRect2"]
+margin_left = 27.0
+margin_top = 4.0
+margin_right = 50.0
+margin_bottom = 34.0
+color = Color( 0.0627451, 0.458824, 0.631373, 1 )
+
+[node name="ColorRect3" type="ColorRect" parent="ColorRect2"]
+margin_left = 28.0
+margin_top = 5.0
+margin_right = 49.0
+margin_bottom = 33.0
+color = Color( 0, 0, 0, 0.619608 )
+
 [node name="HSeparator" type="VBoxContainer" parent="."]
 anchor_right = 0.626
 anchor_bottom = 0.751
-margin_top = 1.90735e-06
-margin_right = 1438.88
-margin_bottom = 1284.41
+margin_left = -0.667419
+margin_top = -7.0079
+margin_right = 1438.21
+margin_bottom = 1277.4
 rect_scale = Vector2( 0.05, 0.05 )
 __meta__ = {
 "_edit_use_anchors_": false
