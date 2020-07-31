@@ -191,6 +191,7 @@ func _physics_process(delta):
 	for i in players:
 		if area2.overlaps_body(i):
 			if !picked and attacking:
+				$SFXBoom.play()
 				$Area2D/Particles2D.emitting = true
 				$Area2D/Particles2D/Particles2D.emitting = true
 				$Area2D/Particles2D/Particles2D2.emitting = true
