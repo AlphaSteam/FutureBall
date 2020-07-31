@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/wood03.ogg-93e75f35d48e37377110a65ce9b17a3b.oggstr"
+
+[deps]
+
+source_file="res://sfx/wood03.ogg"
+dest_files=[ "res://.import/wood03.ogg-93e75f35d48e37377110a65ce9b17a3b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
