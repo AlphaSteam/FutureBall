@@ -2,7 +2,7 @@ extends Node
 
 
 var Number_of_players = 2
-const ROUND_TIME = 30
+const ROUND_TIME = 120
 const DIE_TIME = 10
 var Players = []
 var Chars = []
@@ -39,6 +39,7 @@ func createPlayers():
 		var player = Player.new()
 		player.Name = "ṔPlayer	 " + str(i)
 		player.shortName = "ṔP" + str(i)
+		player.help_id = i
 		Players.append(player)
 	
 

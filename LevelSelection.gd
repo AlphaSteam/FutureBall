@@ -13,7 +13,7 @@ func updateLevel():
 		PlayerGlobals.Number_of_players = 2
 	updateNPlayers()
 func updateNPlayers():
-	$"HBoxContainer/Settings/N players/CenterContainer/Number of players".text = str(PlayerGlobals.Number_of_players)
+	$"HBoxContainer/Settings/Number of players/N players/CenterContainer/Number of players".text = str(PlayerGlobals.Number_of_players)
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	Globals.KillProps()

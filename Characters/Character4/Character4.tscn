@@ -22,14 +22,20 @@ animations = [ {
 "name": "run",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 9 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 9 ) ],
 "loop": true,
-"name": "fall",
+"name": "run",
 "speed": 10.0
 }, {
+<<<<<<< HEAD:Characters/Character4/Character4.tscn
 "frames": [ ExtResource( 7 ) ],
 "loop": true,
 "name": "jump",
+=======
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "fall",
+>>>>>>> 0.23-diego-merge:characters/Character4/Character4.tscn
 "speed": 10.0
 } ]
 
