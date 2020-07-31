@@ -2,7 +2,8 @@ extends Node
 
 
 var Number_of_players = 2
-const ROUND_TIME = 30
+var ROUND_TIME = 120
+const ROUND_TIME_MAX = 600
 const DIE_TIME = 10
 var Players = []
 var Chars = []
@@ -10,6 +11,7 @@ var timer = Timer.new()
 var timer2 = Timer.new()
 var round_over = false
 var bomb_exploded = false
+var points_to_win = 0
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	timer.set_one_shot(false)
@@ -39,6 +41,7 @@ func createPlayers():
 		var player = Player.new()
 		player.Name = "ṔPlayer	 " + str(i)
 		player.shortName = "ṔP" + str(i)
+		player.help_id = i
 		Players.append(player)
 	
 

@@ -10,3 +10,4 @@ data_*/
 
 # macOS
 .DS_Store
+*.import

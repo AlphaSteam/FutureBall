@@ -141,14 +141,7 @@ func _physics_process(delta):
 	else:
 		 normalized = vect
 #	print(get_tree().get_root())
-	if picked == true:
-		if PlayerGlobals.bomb_exploded:	
-			PlayerGlobals.Players[pick_id].changePoints(-1)
-			PlayerGlobals.bomb_exploded = false
-			drop()
-			PlayerGlobals.round_over = true
-			pick_id = -1
-		
+	if picked == true:		
 		if Input.is_action_just_pressed("attack_%s" % pick_id):
 			
 			arrows[pick_id].visible = true
@@ -185,13 +178,29 @@ func _physics_process(delta):
 			arrows[pick_id].hide()
 			power = 0
 	else:
-		pass
+		PlayerGlobals.timer2.stop()	
 			
 			
 	if position.y > 400:
 		position = reset_position
 		linear_velocity = Vector2.ZERO
 	
+	if picked and PlayerGlobals.bomb_exploded:	
+		drop()
+		PlayerGlobals.timer2.stop()
+		PlayerGlobals.Players[pick_id].changePoints(-1)
+		PlayerGlobals.bomb_exploded = false
+		$SFXBoom.play()
+		$Area2D/Particles2D.emitting = true
+		$Area2D/Particles2D/Particles2D.emitting = true
+		$Area2D/Particles2D/Particles2D2.emitting = true
+		$Area2D/Particles2D/Particles2D3.emitting = true
+		linear_velocity = Vector2.ZERO
+		position = reset_position
+		for i in players:
+			i.position = i.reset_position2
+
+		
 	if PlayerGlobals.round_over:
 		$Area2D/Particles2D.emitting = true
 		$Area2D/Particles2D/Particles2D.emitting = true
@@ -202,7 +211,11 @@ func _physics_process(delta):
 		for i in players:
 			i.position = i.reset_position2
 		PlayerGlobals.round_over = false
-		PlayerGlobals.timer.start()	
+		PlayerGlobals.timer2.stop()	
+		Globals.timer_out = true
+		PlayerGlobals.timer.stop()
+		Globals.WinScreen(players[0])
+		
 			
 	for i in players:
 		if area2.overlaps_body(i):
@@ -212,6 +225,8 @@ func _physics_process(delta):
 				$Area2D/Particles2D/Particles2D.emitting = true
 				$Area2D/Particles2D/Particles2D2.emitting = true
 				$Area2D/Particles2D/Particles2D3.emitting = true
+
+							
 				
 	var pulento = true
 	if($Area2D/Particles2D.is_emitting()):

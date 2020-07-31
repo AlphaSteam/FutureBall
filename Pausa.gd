@@ -9,9 +9,6 @@ func _input(event):
 		
 		
 
-
-
-
 func _on_TextureButton4_pressed():
 	get_tree().quit()
 
@@ -55,3 +52,7 @@ func _on_StageSelectButton_mouse_entered():
 
 
 
+
+
+func _on_TextureButton4_mouse_entered():
+	get_node("BG/SFXHover").play()
