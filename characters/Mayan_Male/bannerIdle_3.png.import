@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bannerIdle_3.png-b55329a6bf4f6d02a3c2886ca0673f87.stex"
+path="res://.import/bannerIdle_3.png-cbf9ef19810e91881695f91bcc4fd3ff.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Mayan_Male/bannerIdle_3.png"
-dest_files=[ "res://.import/bannerIdle_3.png-b55329a6bf4f6d02a3c2886ca0673f87.stex" ]
+source_file="res://Characters/Mayan_Male/bannerIdle_3.png"
+dest_files=[ "res://.import/bannerIdle_3.png-cbf9ef19810e91881695f91bcc4fd3ff.stex" ]
 
 [params]
 

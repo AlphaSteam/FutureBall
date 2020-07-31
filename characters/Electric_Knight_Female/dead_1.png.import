@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dead_1.png-80505988cb7897e8a3801056398d6254.stex"
+path="res://.import/dead_1.png-d3f6fa147b84db558f97652a2d7f9ad4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Electric_Knight_Female/dead_1.png"
-dest_files=[ "res://.import/dead_1.png-80505988cb7897e8a3801056398d6254.stex" ]
+source_file="res://Characters/Electric_Knight_Female/dead_1.png"
+dest_files=[ "res://.import/dead_1.png-d3f6fa147b84db558f97652a2d7f9ad4.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dead_1.png-d15519ec1eb384ae33cd62d338027e20.stex"
+path="res://.import/dead_1.png-f80db6f4a774b16960b7184a90393c5a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Kings_Guard_Male/dead_1.png"
-dest_files=[ "res://.import/dead_1.png-d15519ec1eb384ae33cd62d338027e20.stex" ]
+source_file="res://Characters/Kings_Guard_Male/dead_1.png"
+dest_files=[ "res://.import/dead_1.png-f80db6f4a774b16960b7184a90393c5a.stex" ]
 
 [params]
 

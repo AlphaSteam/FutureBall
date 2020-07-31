@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/run_1.png-6abb876680ce3f0b8e4d25136b1b094d.stex"
+path="res://.import/run_1.png-014412bc43019d09ba6f0f0dbbb39300.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Electric_Knight_Female/run_1.png"
-dest_files=[ "res://.import/run_1.png-6abb876680ce3f0b8e4d25136b1b094d.stex" ]
+source_file="res://Characters/Electric_Knight_Female/run_1.png"
+dest_files=[ "res://.import/run_1.png-014412bc43019d09ba6f0f0dbbb39300.stex" ]
 
 [params]
 

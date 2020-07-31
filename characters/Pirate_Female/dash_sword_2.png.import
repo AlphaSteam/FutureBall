@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dash_sword_2.png-954a9c796a568eca6912de9f23849e62.stex"
+path="res://.import/dash_sword_2.png-fddb3d6a0a8958f660433603eb363477.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Pirate_Female/dash_sword_2.png"
-dest_files=[ "res://.import/dash_sword_2.png-954a9c796a568eca6912de9f23849e62.stex" ]
+source_file="res://Characters/Pirate_Female/dash_sword_2.png"
+dest_files=[ "res://.import/dash_sword_2.png-fddb3d6a0a8958f660433603eb363477.stex" ]
 
 [params]
 

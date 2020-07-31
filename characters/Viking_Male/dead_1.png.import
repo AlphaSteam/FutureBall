@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dead_1.png-91a43616d81253a9b5e6d5014b3678e7.stex"
+path="res://.import/dead_1.png-05be5ecdfc9b1865e60c1b427e0fdfb0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Viking_Male/dead_1.png"
-dest_files=[ "res://.import/dead_1.png-91a43616d81253a9b5e6d5014b3678e7.stex" ]
+source_file="res://Characters/Viking_Male/dead_1.png"
+dest_files=[ "res://.import/dead_1.png-05be5ecdfc9b1865e60c1b427e0fdfb0.stex" ]
 
 [params]
 

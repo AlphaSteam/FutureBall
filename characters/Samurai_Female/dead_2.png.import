@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dead_2.png-f28f6e27592c442875a4e1c7d1b878dd.stex"
+path="res://.import/dead_2.png-1d0ad84de746879623040706be3a0e12.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Samurai_Female/dead_2.png"
-dest_files=[ "res://.import/dead_2.png-f28f6e27592c442875a4e1c7d1b878dd.stex" ]
+source_file="res://Characters/Samurai_Female/dead_2.png"
+dest_files=[ "res://.import/dead_2.png-1d0ad84de746879623040706be3a0e12.stex" ]
 
 [params]
 

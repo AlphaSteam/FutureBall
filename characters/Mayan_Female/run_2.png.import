@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/run_2.png-b4409d4a59007952f4d4e4aec6143943.stex"
+path="res://.import/run_2.png-2aaa5429148d9c99c35fd8ae23072167.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Mayan_Female/run_2.png"
-dest_files=[ "res://.import/run_2.png-b4409d4a59007952f4d4e4aec6143943.stex" ]
+source_file="res://Characters/Mayan_Female/run_2.png"
+dest_files=[ "res://.import/run_2.png-2aaa5429148d9c99c35fd8ae23072167.stex" ]
 
 [params]
 

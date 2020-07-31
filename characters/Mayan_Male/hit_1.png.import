@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/hit_1.png-29123d6f456678294f5577daa81c09da.stex"
+path="res://.import/hit_1.png-0250a81b8266ba14cf140fa843fe47a5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Mayan_Male/hit_1.png"
-dest_files=[ "res://.import/hit_1.png-29123d6f456678294f5577daa81c09da.stex" ]
+source_file="res://Characters/Mayan_Male/hit_1.png"
+dest_files=[ "res://.import/hit_1.png-0250a81b8266ba14cf140fa843fe47a5.stex" ]
 
 [params]
 

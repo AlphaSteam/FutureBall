@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/spr_StrikerIdle_strip.png-7cb3f8b62d79e27a9e057beca0ad6703.stex"
+path="res://.import/spr_StrikerIdle_strip.png-100e324cc8f6ccfeb53835eaf8cecb79.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Striker/Striker/spr_StrikerIdle_strip.png"
-dest_files=[ "res://.import/spr_StrikerIdle_strip.png-7cb3f8b62d79e27a9e057beca0ad6703.stex" ]
+source_file="res://Characters/Striker/Striker/spr_StrikerIdle_strip.png"
+dest_files=[ "res://.import/spr_StrikerIdle_strip.png-100e324cc8f6ccfeb53835eaf8cecb79.stex" ]
 
 [params]
 

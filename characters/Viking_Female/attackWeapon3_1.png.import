@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/attackWeapon3_1.png-69f0bfc414ce254e1bb8a0b9216b79a8.stex"
+path="res://.import/attackWeapon3_1.png-4d41b3fa96863097a73bfa04f2a284bd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Viking_Female/attackWeapon3_1.png"
-dest_files=[ "res://.import/attackWeapon3_1.png-69f0bfc414ce254e1bb8a0b9216b79a8.stex" ]
+source_file="res://Characters/Viking_Female/attackWeapon3_1.png"
+dest_files=[ "res://.import/attackWeapon3_1.png-4d41b3fa96863097a73bfa04f2a284bd.stex" ]
 
 [params]
 

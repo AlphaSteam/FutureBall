@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bannerRaise_1.png-aa51e8e891dcd71082d19fad016a77bf.stex"
+path="res://.import/bannerRaise_1.png-c08cf5a16c4d601d29135e372d64736f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Kings_Guard_Male/bannerRaise_1.png"
-dest_files=[ "res://.import/bannerRaise_1.png-aa51e8e891dcd71082d19fad016a77bf.stex" ]
+source_file="res://Characters/Kings_Guard_Male/bannerRaise_1.png"
+dest_files=[ "res://.import/bannerRaise_1.png-c08cf5a16c4d601d29135e372d64736f.stex" ]
 
 [params]
 

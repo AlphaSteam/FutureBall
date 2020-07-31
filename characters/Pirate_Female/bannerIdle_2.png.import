@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bannerIdle_2.png-76e1e771813becaf7bf738ea94a7e9f4.stex"
+path="res://.import/bannerIdle_2.png-d00ee33f4ebe7f898350ee625812ec0f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Pirate_Female/bannerIdle_2.png"
-dest_files=[ "res://.import/bannerIdle_2.png-76e1e771813becaf7bf738ea94a7e9f4.stex" ]
+source_file="res://Characters/Pirate_Female/bannerIdle_2.png"
+dest_files=[ "res://.import/bannerIdle_2.png-d00ee33f4ebe7f898350ee625812ec0f.stex" ]
 
 [params]
 

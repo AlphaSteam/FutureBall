@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/graveBurst_1.png-17d59120ae87502b7a1d3d15c52165d0.stex"
+path="res://.import/graveBurst_1.png-f22d51ed7d3a30ab337785a6465304cc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Knight_Female/graveBurst_1.png"
-dest_files=[ "res://.import/graveBurst_1.png-17d59120ae87502b7a1d3d15c52165d0.stex" ]
+source_file="res://Characters/Knight_Female/graveBurst_1.png"
+dest_files=[ "res://.import/graveBurst_1.png-f22d51ed7d3a30ab337785a6465304cc.stex" ]
 
 [params]
 

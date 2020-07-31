@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/attackUnarmed3_2.png-007909227ba0b387fb70cd39dcaee8c0.stex"
+path="res://.import/attackUnarmed3_2.png-ce0dd1f97546145771595105bc14a3d9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Spartan_Male/attackUnarmed3_2.png"
-dest_files=[ "res://.import/attackUnarmed3_2.png-007909227ba0b387fb70cd39dcaee8c0.stex" ]
+source_file="res://Characters/Spartan_Male/attackUnarmed3_2.png"
+dest_files=[ "res://.import/attackUnarmed3_2.png-ce0dd1f97546145771595105bc14a3d9.stex" ]
 
 [params]
 
