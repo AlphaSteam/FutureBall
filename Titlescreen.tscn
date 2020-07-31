@@ -20,8 +20,8 @@
 script = ExtResource( 5 )
 
 [node name="bg" type="Sprite" parent="."]
-position = Vector2( 199.271, 112.827 )
-scale = Vector2( 0.210233, 0.212739 )
+position = Vector2( 198.134, 112.258 )
+scale = Vector2( 0.210826, 0.212739 )
 texture = ExtResource( 1 )
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
