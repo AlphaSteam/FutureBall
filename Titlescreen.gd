@@ -24,12 +24,24 @@ func _on_TextureButton_pressed():
 	get_tree().change_scene("res://LevelSelection.tscn")
 
 
-func _on_TextureButton3_pressed():
-
-	get_tree().change_scene("res://GodotCredits.tscn")
+#func _on_TextureButton3_pressed():
+#	get_tree().change_scene("res://Extra.tscn")
 
 
 func _on_TextureButton4_pressed():
 	get_tree().quit()
 	
 
+
+
+func _on_TextureButton_mouse_entered():
+	$SFXHover.play()
+	
+func _on_TextureButton2_mouse_entered():
+	$SFXHover.play()
+
+func _on_TextureButton3_mouse_entered():
+	$SFXHover.play()
+	
+func _on_TextureButton4_mouse_entered():
+	$SFXHover.play()

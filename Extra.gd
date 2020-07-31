@@ -1,12 +1,12 @@
 extends Control
 
 
-func _on_TextureButton2_pressed():
+func _on_TextureButton3_pressed():
 	var estado_nuevo = not visible
 	visible = estado_nuevo
 
 
-func _on_TextureButton4_pressed():
+func _on_Close_pressed():
 	var estado_nuevo = not visible
 	visible = estado_nuevo
 
@@ -22,7 +22,13 @@ func _on_TextureButton4_pressed():
 
 
 
-func _on_TextureButton4_mouse_entered():
+
+
+
+
+func _on_Credits_mouse_entered():
 	$SFXHover.play()
 
 
+func _on_Credits_pressed():
+	get_tree().change_scene("res://GodotCredits.tscn")

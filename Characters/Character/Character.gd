@@ -67,7 +67,9 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("Right_%s" % id):
 		$AnimatedSprite.flip_h = false
 	if Input.is_action_pressed("Right_%s" % id):
+		#$SFXStep.play()
 		$AnimatedSprite.play("run")
+		
 		
 		input_velocity.x += 1
 		if Input.is_action_just_pressed("Dash_%s" % id):
@@ -76,7 +78,9 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("Left_%s" % id):
 		$AnimatedSprite.flip_h = true	
 	if Input.is_action_pressed("Left_%s" % id):
+		#$SFXStep.play()
 		$AnimatedSprite.play("run")
+		
 		input_velocity.x -= 1
 		if Input.is_action_just_pressed("Dash_%s" % id):
 			_dash()
@@ -181,6 +185,8 @@ func _end_jump():
 
 func _dash():
 	if(cooldown == false && dashes_available > 0):
+		SfxDash.play() #global
+#		$SFXDash.play()
 		acceleration = 0.5
 		speed = speed + (DEFSPEED * 3 - speed) * 0.8
 		velocity.y = 0

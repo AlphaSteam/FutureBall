@@ -168,6 +168,7 @@ func _physics_process(delta):
 			power = 0
 		if Input.is_action_just_released("attack_%s" % pick_id) && cancel == false:
 #			yield(get_tree().create_timer(0.01), "timeout")
+			$SFXLaunch.play()
 			$Sprite.texture = ball_live
 			drop()
 			apply_central_impulse(normalized * power * PlayerGlobals.Players[pick_id].Character.POWER)
@@ -198,6 +199,7 @@ func _physics_process(delta):
 	for i in players:
 		if area2.overlaps_body(i):
 			if !picked and attacking:
+				$SFXBoom.play()
 				$Area2D/Particles2D.emitting = true
 				$Area2D/Particles2D/Particles2D.emitting = true
 				$Area2D/Particles2D/Particles2D2.emitting = true

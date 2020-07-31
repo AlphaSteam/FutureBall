@@ -1,9 +1,10 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://Ball/Scripts/ball_dead.gd" type="Script" id=1]
 [ext_resource path="res://Ball/Scripts/Bola.gd" type="Script" id=2]
 [ext_resource path="res://Ball/ball_dead.png" type="Texture" id=3]
 [ext_resource path="res://sounds/boom4.wav" type="AudioStream" id=4]
+[ext_resource path="res://sfx/iceball.wav" type="AudioStream" id=5]
 
 [sub_resource type="PhysicsMaterial" id=1]
 bounce = 1.0
@@ -208,12 +209,16 @@ process_material = SubResource( 24 )
 
 [node name="Tween" type="Tween" parent="."]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="SFXBoom" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
-volume_db = 0.015
+volume_db = -0.5
+bus = "SFX"
 __meta__ = {
 "_editor_description_": ""
 }
+
+[node name="SFXLaunch" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
 [connection signal="body_entered" from="." to="." method="_on_Bola_body_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]

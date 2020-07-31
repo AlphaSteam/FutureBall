@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://buttons/StageSelectGreen.png" type="Texture" id=1]
 [ext_resource path="res://buttons/help.png" type="Texture" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://buttons/MainMenuRed.png" type="Texture" id=12]
 [ext_resource path="res://buttons/MainMenuGreen.png" type="Texture" id=13]
 [ext_resource path="res://buttons/StageSelectRed.png" type="Texture" id=14]
+[ext_resource path="res://sfx/hover.tres" type="AudioStream" id=15]
 
 [node name="Pausa" type="Control"]
 script = ExtResource( 10 )
@@ -23,7 +24,7 @@ __meta__ = {
 
 [node name="BG" type="ColorRect" parent="."]
 margin_right = 100.0
-margin_bottom = 120.0
+margin_bottom = 135.0
 color = Color( 0, 0, 0, 0.572549 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -79,12 +80,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CharSelect2" type="CenterContainer" parent="BG/MarginContainer2/VBoxContainer/VBoxContainer"]
+[node name="StageSelect" type="CenterContainer" parent="BG/MarginContainer2/VBoxContainer/VBoxContainer"]
 margin_top = 184.0
 margin_right = 875.0
 margin_bottom = 315.0
 
-[node name="StageSelectButton" type="TextureButton" parent="BG/MarginContainer2/VBoxContainer/VBoxContainer/CharSelect2"]
+[node name="StageSelectButton" type="TextureButton" parent="BG/MarginContainer2/VBoxContainer/VBoxContainer/StageSelect"]
 margin_right = 875.0
 margin_bottom = 131.0
 texture_normal = ExtResource( 14 )
@@ -150,7 +151,17 @@ margin_right = 803.0
 margin_bottom = 122.0
 texture_normal = ExtResource( 5 )
 texture_hover = ExtResource( 9 )
+
+[node name="SFXHover" type="AudioStreamPlayer" parent="BG"]
+stream = ExtResource( 15 )
+bus = "SFX"
+[connection signal="mouse_entered" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/CharSelect/TextureButton" to="." method="_on_TextureButton_mouse_entered"]
 [connection signal="pressed" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/CharSelect/TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="mouse_entered" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/StageSelect/StageSelectButton" to="." method="_on_StageSelectButton_mouse_entered"]
+[connection signal="pressed" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/StageSelect/StageSelectButton" to="." method="_on_StageSelectButton_pressed"]
+[connection signal="mouse_entered" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/Options/TextureButton2" to="." method="_on_TextureButton2_mouse_entered"]
 [connection signal="pressed" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/Options/TextureButton2" to="BG/MarginContainer2/VBoxContainer/VBoxContainer/Options/TextureButton2/Opciones" method="_on_TextureButton2_pressed"]
+[connection signal="mouse_entered" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/Help/TextureButton3" to="." method="_on_TextureButton3_mouse_entered"]
+[connection signal="mouse_entered" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/MainMenu/TextureButton5" to="." method="_on_TextureButton5_mouse_entered"]
 [connection signal="pressed" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/MainMenu/TextureButton5" to="." method="_on_TextureButton5_pressed"]
 [connection signal="pressed" from="BG/MarginContainer2/VBoxContainer/VBoxContainer/Exit/TextureButton4" to="." method="_on_TextureButton4_pressed"]

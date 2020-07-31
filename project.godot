@@ -47,6 +47,9 @@ config/icon="res://icon.png"
 Globals="*res://Global_vars.gd"
 PlayerGlobals="*res://PlayerGlobals.gd"
 LevelGlobals="*res://LevelGlobals.gd"
+SfxHover="*res://SFXHover.tscn"
+SfxDash="*res://SFXDash.tscn"
+SFXStep="*res://SFXStep.tscn"
 
 [display]
 
