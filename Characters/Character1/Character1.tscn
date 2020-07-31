@@ -1,8 +1,15 @@
 [gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://arrow_body.png" type="Texture" id=1]
+<<<<<<< HEAD
 [ext_resource path="res://Resources/kenney_tooncharacters1/Female person/Tilesheet/character_femalePerson_sheetHD.png" type="Texture" id=2]
 [ext_resource path="res://Characters/Character1/Character1.gd" type="Script" id=3]
+=======
+[ext_resource path="res://Characters/Character1/Character1.gd" type="Script" id=2]
+[ext_resource path="res://Resources/kenney_tooncharacters1/Female person/Tilesheet/character_femalePerson_sheetHD.png" type="Texture" id=3]
+[ext_resource path="res://sounds/melee sound.wav" type="AudioStream" id=4]
+[ext_resource path="res://sfx/wood03.tres" type="AudioStream" id=5]
+>>>>>>> 9da1eecb7847a3835cf063f2fda1ca6642859310
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4

@@ -24,7 +24,11 @@ __meta__ = {
 
 [node name="BG" type="ColorRect" parent="."]
 margin_right = 100.0
+<<<<<<< HEAD
 margin_bottom = 135.0
+=======
+margin_bottom = 120.0
+>>>>>>> 9da1eecb7847a3835cf063f2fda1ca6642859310
 color = Color( 0, 0, 0, 0.572549 )
 __meta__ = {
 "_edit_use_anchors_": false
