@@ -20,3 +20,7 @@ func _on_TextureButton4_pressed():
 
 
 
+
+
+func _on_TextureButton4_mouse_entered():
+	$SFXHover.play()
