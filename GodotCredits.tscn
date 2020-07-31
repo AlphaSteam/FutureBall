@@ -1,11 +1,15 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://GodotCredits.gd" type="Script" id=1]
 [ext_resource path="res://Resources/logo.png" type="Texture" id=2]
 [ext_resource path="res://Backgrounds/tall-buildings-cityscape-art.jpg" type="Texture" id=3]
 [ext_resource path="res://sounds/music/Diossel-Sunflower-Liquid.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Fonts/Futured/Futured.TTF" type="DynamicFontData" id=5]
 
-[sub_resource type="GradientTexture" id=1]
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 5 )
+
+[sub_resource type="GradientTexture" id=2]
 
 [node name="GodotCredits" type="Node2D"]
 script = ExtResource( 1 )
@@ -45,6 +49,7 @@ anchor_right = 1.0
 margin_top = 1080.0
 margin_bottom = 1094.0
 size_flags_horizontal = 3
+custom_fonts/font = SubResource( 1 )
 text = "Credits line"
 align = 1
 __meta__ = {
@@ -57,7 +62,7 @@ self_modulate = Color( 1, 0.952941, 0.952941, 0.882353 )
 position = Vector2( 53.3194, 89.8221 )
 scale = Vector2( 0.937749, 0.937749 )
 texture = ExtResource( 2 )
-normal_map = SubResource( 1 )
+normal_map = SubResource( 2 )
 centered = false
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

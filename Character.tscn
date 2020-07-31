@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Robot/PNG/Poses/character_robot_idle.png" type="Texture" id=1]
 [ext_resource path="res://Character.gd" type="Script" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://Robot/PNG/Poses/character_robot_fall.png" type="Texture" id=7]
 [ext_resource path="res://Robot/PNG/Poses/character_robot_run0.png" type="Texture" id=8]
 [ext_resource path="res://Robot/PNG/Poses/character_robot_jump.png" type="Texture" id=9]
+[ext_resource path="res://SFXStep.tscn" type="PackedScene" id=10]
+[ext_resource path="res://sfx/wood03.tres" type="AudioStream" id=11]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -89,6 +91,10 @@ wait_time = 0.15
 one_shot = true
 
 [node name="SFXDash" parent="." instance=ExtResource( 4 )]
+
+[node name="SFXStep" parent="." instance=ExtResource( 10 )]
+stream = ExtResource( 11 )
+bus = "SFX"
 [connection signal="timeout" from="Dash Cooldown" to="." method="_on_Dash_Cooldown_timeout"]
 [connection signal="timeout" from="Dash Time" to="." method="_on_Dash_Time_timeout"]
 [connection signal="timeout" from="New jump threshold" to="." method="_on_New_jump_threshold_timeout"]

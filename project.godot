@@ -37,6 +37,7 @@ PlayerGlobals="*res://PlayerGlobals.gd"
 LevelGlobals="*res://LevelGlobals.gd"
 SfxHover="*res://SFXHover.tscn"
 SfxDash="*res://SFXDash.tscn"
+SFXStep="*res://SFXStep.tscn"
 
 [display]
 
