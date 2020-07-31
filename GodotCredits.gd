@@ -38,10 +38,10 @@ var credits = [
 		"Medieval Fantasy Characters Pack by CleanCutGames",
 		"Warped City by ansimuz",
 		"Cyberpunk City Art - Jonas Roscinas",
-		"",
+		"Sideview Sci-Fi - Patreon Collection",
 		"Neonglow by Josef Bartoñ",
-		"Permitted to use by the author",
-		"from https://www.artstation.com/artwork/rR0XYJ"
+		"(Permitted to use by the author",
+		"from https://www.artstation.com/artwork/rR0XYJ)"
 	],[
 		"Music",
 		"AeronMusic - Infinite",
