@@ -5,7 +5,7 @@
 [ext_resource path="res://buttons/MainMenuRed.png" type="Texture" id=3]
 [ext_resource path="res://Resources/Gameplay.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://Winscreen.gd" type="Script" id=5]
-[ext_resource path="res://sounds/music/938610_Rise-Up-Now.ogg" type="AudioStream" id=6]
+[ext_resource path="res://sounds/music/148006__dwsd__drumloop126-1.wav" type="AudioStream" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 outline_size = 1
@@ -117,6 +117,8 @@ autostart = true
 
 [node name="SFXWin" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
+volume_db = 2.108
+autoplay = true
 bus = "SFX"
 [connection signal="mouse_entered" from="MarginContainer/VBoxContainer/VBoxContainer/TextureButton" to="." method="_on_TextureButton_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/TextureButton" to="." method="_on_TextureButton_pressed"]
