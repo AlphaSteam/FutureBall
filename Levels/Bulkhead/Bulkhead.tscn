@@ -225,9 +225,6 @@ margin_top = 48.0
 margin_right = 250.0
 margin_bottom = 192.0
 
-[node name="VBoxContainer" parent="CanvasLayer/Pausa/BG/MarginContainer2" index="0"]
-margin_bottom = 995.0
-
 [node name="Camera2D" parent="." instance=ExtResource( 2 )]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]

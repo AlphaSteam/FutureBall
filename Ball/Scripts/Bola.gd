@@ -5,13 +5,13 @@ const DEFPOWMULT = 4
 
 var pick_id = -1
 
-
 var power_multiplier = DEFPOWMULT
 var power = 0
 var rebote = 0
+var steal = false
 #Variables para los distintos jugadores dependiendo de su control
 onready var area2 = get_node("Area2D")
-onready var timer = get_parent().get_node("Camera2D/CanvasLayer/TimerLabel/Timer")
+
 #Path para los jugadores, de momento solo se utilizan dos
 
 #onready var arrow_head = player.get_node("ArrowHead")
@@ -43,26 +43,19 @@ var attacking = false
 var force_reset = false
 var controller
 onready var reset_position = global_position
+var timer = PlayerGlobals.timer;
 
-#func _on_joy_connection_changed(device_id, connected):
-#	if connected:
-#		controller = true
-#	else:
-#		controller = false
 
 
 
 #Detectar contactos
 func _ready():
+	PlayerGlobals.timer.stop()
+	PlayerGlobals.timer.start()
 	for i in PlayerGlobals.Number_of_players:
 		arrows.append(PlayerGlobals.Players[i].Character.get_node("Arrow"))
 		players.append(PlayerGlobals.Players[i].Character)
 		reset_arrows.append(arrows[i].rect_size)
-
-	
-		
-		
-	
 	#set_physics_process(false)
 	#get_parent().remove_child(self)
 	#new_parent.add_child(node)
@@ -72,20 +65,15 @@ func _ready():
 	for i in arrows:
 		i.hide()
 
-#func _physics_change(mode):
-#	if picked == true:
-#		mode = MODE_STATIC 
-#	elif picked == false:
-#		mode = MODE_RIGID
-	
 
-
-#Señal de que la bola tocó algo
-func _on_Bola_body_entered(body: Node):
-	#print("Bola entered")
+func killBall():
 	if live_ball == true: #Si la bola esta viva
 		live_ball = false
 		$Sprite.texture = ball_dead	
+#Señal de que la bola tocó algo
+func _on_Bola_body_entered(body: Node):
+	killBall()
+	
 
 
 func pick():
@@ -114,25 +102,28 @@ func _on_Area2D_body_entered(body):
 		#print("Jugador area")
 		if pick_id != body.id:
 			if live_ball == true:
-				picked = false			
-				attacking = true			
-				PlayerGlobals.Players[pick_id].changePoints(1)
-				pick_id = -1
+				if PlayerGlobals.Players[body.id].Character.block == true:
+					pick_id = body.id
+					killBall()
+					call_deferred("pick")
+				else:
+					picked = false			
+					attacking = true			
+					PlayerGlobals.Players[pick_id].changePoints(1)
+					pick_id = -1
 			elif live_ball == false and not picked:
 				pick_id = body.id
 				#call_deferred("pick")
-				pick()
+				call_deferred("pick")
 		else:
 			if live_ball == false and not picked:
 				pick_id = body.id
 				#call_deferred("pick")
-				pick()
-
-				#print("agarra la bola")
-
-		
+				call_deferred("pick")
 
 func _physics_process(delta):
+	#print(picked)
+
 	var init = global_position
 	var mouse =  get_global_mouse_position()
 	var analog = Vector2(Input.get_joy_axis(pick_id,JOY_AXIS_2), Input.get_joy_axis(pick_id,JOY_AXIS_3))
@@ -185,13 +176,26 @@ func _physics_process(delta):
 			arrows[pick_id].rect_size.x = reset_arrows[pick_id].x
 			arrows[pick_id].hide()
 			power = 0
-		
+	else:
+		pass
 			
 			
 	if position.y > 400:
 		position = reset_position
 		linear_velocity = Vector2.ZERO
 	
+	if PlayerGlobals.round_over:
+		$Area2D/Particles2D.emitting = true
+		$Area2D/Particles2D/Particles2D.emitting = true
+		$Area2D/Particles2D/Particles2D2.emitting = true
+		$Area2D/Particles2D/Particles2D3.emitting = true			
+		drop()
+		linear_velocity = Vector2.ZERO
+		for i in players:
+			i.position = i.reset_position2
+		PlayerGlobals.round_over = false
+		PlayerGlobals.timer.start()	
+			
 	for i in players:
 		if area2.overlaps_body(i):
 			if !picked and attacking:
@@ -211,52 +215,12 @@ func _physics_process(delta):
 		for i in players:
 			i.position = i.reset_position2
 		attacking = false
-#		timer.stop()
-#		timer.set_wait_time(60)
-#		timer.start()
-
-func _on_Timer_timeout():
-	$Area2D/Particles2D.emitting = true
-	$Area2D/Particles2D/Particles2D.emitting = true
-	$Area2D/Particles2D/Particles2D2.emitting = true
-	$Area2D/Particles2D/Particles2D3.emitting = true	
-		
-	#emit_signal("sd%s" % pick_id)		
-	#drop()
-	#linear_velocity = Vector2.ZERO
-	##for i in players:
-			#i.position = i.reset_position2
+		timer.stop()
+		timer.start()
 
 
 	
 
-
-#Mecanica de lanzamiento con mouse
-
-#func _input(event):
-##Detecta posición inicial	
-#	var just_pressed = event.is_pressed() and not event.is_echo()
-#	if picked == true:
-#		if event.is_action_pressed("attack") and just_pressed:
-#			drag_start = get_global_mouse_position()
-#
-##		if event.is_action_pressed("attack") and not dragging:
-##			dragging = true
-###			mode = MODE_STATIC
-##			drag_start = get_global_mouse_position()
-#
-##Detecta posición final, cambia estado de la bola a viva
-#		if event.is_action_released("attack") and dragging:
-#			dragging = false
-#			set_mode(0)
-#			yield(get_tree().create_timer(0.01), "timeout")
-#			$Sprite.texture = load("res://Ball/ball_live.png")
-#			var drag_end = get_global_mouse_position()
-#			var dir = -(drag_start - drag_end)
-#			apply_central_impulse(dir * 3)
-##			apply_impulse(Vector2(), dir * 5)
-#			live_ball = true
-#			picked = false
 
 
 
