@@ -1,7 +1,14 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Pausa.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Resources/Overlay.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Gameplay.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Timer.gd" type="Script" id=4]
 [ext_resource path="res://CamaraMultiplayer.gd" type="Script" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+outline_size = 1
+font_data = ExtResource( 3 )
 
 [node name="Camera2D" type="Camera2D"]
 position = Vector2( 0, -100 )
@@ -29,19 +36,24 @@ margin_top = 56.7985
 margin_right = 146.233
 margin_bottom = 56.7985
 
+[node name="Sprite" type="Sprite" parent="CanvasLayer"]
+position = Vector2( 200, 116.298 )
+scale = Vector2( 0.222369, 0.222369 )
+texture = ExtResource( 2 )
+
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
-margin_left = 17.0
-margin_top = 199.271
-margin_right = 331.0
-margin_bottom = 239.271
-custom_constants/separation = 40
-alignment = 1
+margin_left = 149.233
+margin_right = 341.233
+margin_bottom = 24.0
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_constants/separation = 130
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="CanvasLayer"]
-visible = false
 anchor_left = 1.0
 anchor_top = 0.012
 anchor_right = 1.0
@@ -51,8 +63,12 @@ margin_top = -2.7
 margin_right = -184.0
 margin_bottom = 16.3
 rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.752941, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "40"
-align = 2
+align = 1
+script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false,
 "_editor_description_": ""
