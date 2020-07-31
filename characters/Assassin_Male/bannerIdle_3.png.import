@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bannerIdle_3.png-aba4604e10f88c874097341869861098.stex"
+path="res://.import/bannerIdle_3.png-4847b73087133d7143eaac555ab9ba80.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Assassin_Male/bannerIdle_3.png"
-dest_files=[ "res://.import/bannerIdle_3.png-aba4604e10f88c874097341869861098.stex" ]
+source_file="res://Characters/Assassin_Male/bannerIdle_3.png"
+dest_files=[ "res://.import/bannerIdle_3.png-4847b73087133d7143eaac555ab9ba80.stex" ]
 
 [params]
 

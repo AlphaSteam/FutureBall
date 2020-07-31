@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/attackWeapon3_2.png-2feb2b49e6afdd64561de9501cec9267.stex"
+path="res://.import/attackWeapon3_2.png-2743c6b6173986608ca6a76c3603a82f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Knight_Female/attackWeapon3_2.png"
-dest_files=[ "res://.import/attackWeapon3_2.png-2feb2b49e6afdd64561de9501cec9267.stex" ]
+source_file="res://Characters/Knight_Female/attackWeapon3_2.png"
+dest_files=[ "res://.import/attackWeapon3_2.png-2743c6b6173986608ca6a76c3603a82f.stex" ]
 
 [params]
 

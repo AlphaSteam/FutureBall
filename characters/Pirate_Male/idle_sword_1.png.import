@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/idle_sword_1.png-b665ae19556983e648f6c2bfe656edbc.stex"
+path="res://.import/idle_sword_1.png-d7203852b0379fe126eec3ae779f8453.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Pirate_Male/idle_sword_1.png"
-dest_files=[ "res://.import/idle_sword_1.png-b665ae19556983e648f6c2bfe656edbc.stex" ]
+source_file="res://Characters/Pirate_Male/idle_sword_1.png"
+dest_files=[ "res://.import/idle_sword_1.png-d7203852b0379fe126eec3ae779f8453.stex" ]
 
 [params]
 

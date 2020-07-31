@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/run_3.png-0db77fa26911ca0c9d4e22acead05ca9.stex"
+path="res://.import/run_3.png-d62f9b4e13354f748c002bf4839329cb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Fire_Knight_Female/run_3.png"
-dest_files=[ "res://.import/run_3.png-0db77fa26911ca0c9d4e22acead05ca9.stex" ]
+source_file="res://Characters/Fire_Knight_Female/run_3.png"
+dest_files=[ "res://.import/run_3.png-d62f9b4e13354f748c002bf4839329cb.stex" ]
 
 [params]
 

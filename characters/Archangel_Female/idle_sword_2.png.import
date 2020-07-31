@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/idle_sword_2.png-5b9ba8333143d24570b4a4ec5a4ed567.stex"
+path="res://.import/idle_sword_2.png-52e5b37fc657ad2da448f620c82d630d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Archangel_Female/idle_sword_2.png"
-dest_files=[ "res://.import/idle_sword_2.png-5b9ba8333143d24570b4a4ec5a4ed567.stex" ]
+source_file="res://Characters/Archangel_Female/idle_sword_2.png"
+dest_files=[ "res://.import/idle_sword_2.png-52e5b37fc657ad2da448f620c82d630d.stex" ]
 
 [params]
 

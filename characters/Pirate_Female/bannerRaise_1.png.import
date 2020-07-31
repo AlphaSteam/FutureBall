@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bannerRaise_1.png-5cc7de15e3ef28435ba1329d9f1890fa.stex"
+path="res://.import/bannerRaise_1.png-54a8967a29204149f348dd805f13a6a5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Pirate_Female/bannerRaise_1.png"
-dest_files=[ "res://.import/bannerRaise_1.png-5cc7de15e3ef28435ba1329d9f1890fa.stex" ]
+source_file="res://Characters/Pirate_Female/bannerRaise_1.png"
+dest_files=[ "res://.import/bannerRaise_1.png-54a8967a29204149f348dd805f13a6a5.stex" ]
 
 [params]
 

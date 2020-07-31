@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/dash_1.png-dc7ada56a25fdf17885700447a45e990.stex"
+path="res://.import/dash_1.png-5771c0ca55e09a6fe76ba41a338bd9f8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Ninja_Female/dash_1.png"
-dest_files=[ "res://.import/dash_1.png-dc7ada56a25fdf17885700447a45e990.stex" ]
+source_file="res://Characters/Ninja_Female/dash_1.png"
+dest_files=[ "res://.import/dash_1.png-5771c0ca55e09a6fe76ba41a338bd9f8.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/idle_3.png-cabf4d8c7fc40689131adf83e3fda579.stex"
+path="res://.import/idle_3.png-a89b68c12148e8d1ac3543cc90d26642.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/Viking_Male/idle_3.png"
-dest_files=[ "res://.import/idle_3.png-cabf4d8c7fc40689131adf83e3fda579.stex" ]
+source_file="res://Characters/Viking_Male/idle_3.png"
+dest_files=[ "res://.import/idle_3.png-a89b68c12148e8d1ac3543cc90d26642.stex" ]
 
 [params]
 
